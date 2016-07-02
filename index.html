@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<title>Travel Planner</title>
+	
+	<link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/bower_components/iCheck/skins/minimal/grey.css">
+	<link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+<aside class="sidebar" id="sidebar">
+		<header>
+			<div class="logo-area">
+				<a href="index.html"><img src="assets/images/logo.png" alt="Travel Plan"></a>
+			</div> <!-- End Logo Area -->
+		</header>
+
+		<div class="user-info">
+			<img src="assets/images/user.jpg" alt="John Doe">
+
+			<div class="info">
+					<span class="block bold">Welcome</span>
+					<span>My Account</span>
+			</div> <!-- End Info -->
+		</div> <!-- End -->
+
+		<nav>
+			<ul class="sidebar-nav">
+				<li class="active-nav"><a href="#">  <span class="fa fa-calendar nav-icon"></span> ITINERARY</a></li>
+				<li><a href="#"> <span class="fa fa-map-marker nav-icon"></span> TRIPS</a></li>
+				<li><a href="#"> <span class="fa fa-location-arrow nav-icon"></span> DISCOVER</a></li>
+				<li><a href="#"> <span class="fa fa-usd nav-icon"></span> WALLET</a></li>
+			</ul>
+		</nav>
+</aside> <!-- End aside -->
+	
+
+	<div class="container-fluid container-margin" id="mainBlock">
+		<div class="row">
+			<div class="col-sm-8 col-xs-12">
+					<header class="content-header">
+							<div class="toggle-menu visible-xs" id="toggleMenu">
+								<span class="fa fa-bars"></span>
+							</div> <!-- End Toggle Menu -->
+							<ul class="inline-list header-link">
+								<li> <a href="#"><span class="tab-name"> Itinerary</a></span></li>
+								<li><a href="#" class="btn btn-gray">View on Map</a></li>
+							</ul>
+
+							<div class="access-link">
+									<ul class="inline-list">
+										<li><a href="#"> <span class="fa fa-sign-in"></span> Login | </a></li>
+										<li class="hidden-xs"><a href="#"> <span class="fa fa-question"></span> Help</a></li>
+									</ul>
+							</div> <!-- End -->
+					</header>
+
+					<section class="trip-section">
+				<div class="row">
+					<div class="col-sm-12">
+							<ul class="inline-list day-tab">
+								<li class="active-tab"><a href="#">Day 01</a></li>
+								<li><a href="#">Day 02</a></li>
+								<li><a href="#">Day 03</a></li>
+								<li><a href="#">Day 04</a></li>
+								<li><a href="#">Day 05</a></li>
+								<li><a href="#">Day 06</a></li>
+							</ul>
+						</div> <!-- End col 12 -->
+					</div> <!-- End row -->
+
+					<article class="tab-content">
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="trip-info">
+									<span class="trip-name">Our Trip 2016 <span class="fa fa-pencil trip-edit-icon"></span></span>
+									<span class="period">8th April to 16th April 2016</span>
+        			
+								</div> <!-- End Trip Duration -->
+							</div> <!-- End col 3 -->
+							<div class="col-sm-9">
+									<div class="action-block">
+											<button class="btn brand-btn mr-10">Send Package Request <span class="fa fa-chevron-right chevron-icon"></span></button>
+											<select id="city" class="form-control city-option">
+												<option value="0">Select City</option>
+												<option value="oslo">Oslo</option>
+												<option value="chicago">Chicago</option>
+												<option value="london">London</option>
+												<option value="abu-dhabi">Abu Dhabi</option>
+												<option value="capetown">Capetown</option>
+												<option value="berlin">Berlin</option>
+											</select>
+									</div> <!-- End Action Block -->
+							</div> <!-- End col 9 -->
+						</div> <!-- End row -->
+
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="tour-details">
+									
+										<ul class="info-tab-list" role="tablist">
+											<li role="presentation" data-target="#Tour" aria-controls="Tour" role="tab" data-toggle="tab">
+
+											 <span class="fa fa-map-marker mr-5"></span> Tour </li>
+
+											<li role="presentation" data-target="#Hotels" aria-controls="Hotels" role="tab" data-toggle="tab">
+											<span class="fa fa-bed mr-5"></span> Hotels</li>
+
+											<li class="active" role="presentation" data-target="#Car" aria-controls="Car" role="tab" data-toggle="tab"> 
+											<span class="fa fa-car mr-5"></span> Car Rental </li>
+
+											<li role="presentation" data-target="#Flights" aria-controls="Flights" role="tab" data-toggle="tab">
+											<span class="fa fa-plane mr-5"></span>  Flights </li>
+										</ul>
+									  <div class="tab-content">
+									  	 <div role="tabpanel" class="tab-pane" id="Tour">Flights Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil a explicabo velit! Ipsum, ad.</div>
+
+									    <div role="tabpanel" class="tab-pane" id="Hotels"> Hotels Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, totam?</div>
+
+
+											<div role="tabpanel" class="tour-info-block tab-pane active" id="Car">
+												<ul class="spot-li">
+													<li class="border-yellow">
+														<div class="row">
+																<div class="col-sm-8 col-xs-8">
+																		<span class="spot-name"> <span class="fa fa-map-marker spot-icon bg-yellow"></span> Tour At Manila City</span>
+																</div> <!-- End col 8 -->
+																<div class="col-sm-4 col-xs-4">
+																		<ul class="inline-list action-list">
+																			<li><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#carModal"></span></li>
+																			<li> <span class="trash-icon fa fa-trash"></span></li>
+																		</ul>
+																</div> <!-- End col 4 -->
+														</div> <!-- End row	 -->
+														<div class="row">	
+															<div class="col-sm-12">
+																	<div class="spot-img">
+																		<img src="assets/images/spot/1.jpg" alt="Cape town">
+																	</div> <!-- End Spot Name -->
+
+																	<div class="spot-quick-info">
+																		<h4><span class="spot-name">Manila City</span></h4>
+																		<span class="spot-desc">Lorem imsum doler somet</span>
+																		<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																	</div> <!-- End Spot Quick Info -->
+																	
+															</div> <!-- End 8 -->
+														</div> <!-- End row -->
+													</li>
+
+													<li class="border-blue">
+														<div class="row">
+																<div class="col-sm-8 col-xs-8">
+																		<span class="spot-name"> <span class="fa fa-map-marker spot-icon bg-blue"></span> NAIA Airport -Cuba </span>
+																</div> <!-- End col 8 -->
+																<div class="col-sm-4 col-xs-4">
+																		<ul class="inline-list action-list">
+																			<li><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#carModal"></span></li>
+																			<li> <span class="trash-icon fa fa-trash"></span></li>
+																		</ul>
+																</div> <!-- End col 4 -->
+														</div> <!-- End row	 -->
+														<div class="row">	
+															<div class="col-sm-12">
+																	<div class="spot-img">
+																		<img src="assets/images/spot/1.jpg" alt="Cape town">
+																	</div> <!-- End Spot Name -->
+
+																	<div class="spot-quick-info">
+																		<h4><span class="spot-name">Toyota Innova</span></h4>
+																		<span class="spot-desc">Lorem imsum doler somet</span>
+																		<span class="tour-cost">Total-cost: Ph 600.00</span>
+																	</div> <!-- End Spot Quick Info -->
+																	
+															</div> <!-- End 8 -->
+														</div> <!-- End row -->
+													</li>
+
+													<li class="border-red">
+														<div class="row">
+																<div class="col-sm-8 col-xs-8">
+																		<span class="spot-name"> <span class="fa fa-car spot-icon bg-red"></span> Tour At Manila City</span>
+																</div> <!-- End col 8 -->
+																<div class="col-sm-4 col-xs-4">
+																		<ul class="inline-list action-list">
+																			<li><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#carModal""></span></li>
+																			<li> <span class="trash-icon fa fa-trash"></span></li>
+																		</ul>
+																</div> <!-- End col 4 -->
+														</div> <!-- End row	 -->
+														<div class="row">	
+															<div class="col-sm-12">
+																	<div class="spot-img">
+																		<img src="assets/images/spot/1.jpg" alt="Cape town">
+																	</div> <!-- End Spot Name -->
+
+																	<div class="spot-quick-info">
+																		<h4><span class="spot-name">Manila City</span></h4>
+																		<span class="spot-desc">Lorem imsum doler somet</span>
+																		<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																	</div> <!-- End Spot Quick Info -->
+																	
+															</div> <!-- End 8 -->
+														</div> <!-- End row -->
+													</li>
+
+													<li>
+														<div class="row">
+																<div class="col-sm-8 col-xs-8">
+																		<span class="spot-name"> <span class="fa fa-map-marker spot-icon"></span> Tour At Manila City</span>
+																</div> <!-- End col 8 -->
+																<div class="col-sm-4 col-xs-4">
+																		<ul class="inline-list action-list">
+																			<li><span class="edit-icon fa fa-pencil"></span></li>
+																			<li> <span class="trash-icon fa fa-trash"></span></li>
+																		</ul>
+																</div> <!-- End col 4 -->
+														</div> <!-- End row	 -->
+														<div class="row">	
+															<div class="col-sm-12">
+																	<div class="spot-img">
+																		<img src="assets/images/spot/1.jpg" alt="Cape town">
+																	</div> <!-- End Spot Name -->
+
+																	<div class="spot-quick-info">
+																		<h4><span class="spot-name">Manila City</span></h4>
+																		<span class="spot-desc">Lorem imsum doler somet</span>
+																		<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																	</div> <!-- End Spot Quick Info -->
+																	
+															</div> <!-- End 8 -->
+														</div> <!-- End row -->
+													</li>
+
+												</ul>
+											</div> <!-- End Tour Block -->
+
+											<div role="tabpanel" class="tour-info-block tab-pane" id="Flights">
+												<ul class="spot-li">
+													<li class="border-yellow">
+														<div class="row">
+																<div class="col-sm-8 col-xs-8">
+																		<span class="spot-name"> <span class="fa fa-map-marker spot-icon bg-yellow"></span> Tour At Manila City</span>
+																</div> <!-- End col 8 -->
+																<div class="col-sm-4 col-xs-4">
+																		<ul class="inline-list action-list">
+																			<li><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#flightModal"></span></li>
+																			<li> <span class="trash-icon fa fa-trash"></span></li>
+																		</ul>
+																</div> <!-- End col 4 -->
+														</div> <!-- End row	 -->
+														<div class="row">	
+															<div class="col-sm-12">
+																	<div class="spot-img">
+																		<img src="assets/images/spot/2.jpg" alt="Cape town">
+																	</div> <!-- End Spot Name -->
+
+																	<div class="spot-quick-info">
+																		<h4><span class="spot-name">Manila City</span></h4>
+																		<span class="spot-desc">Lorem imsum doler somet</span>
+																		<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																	</div> <!-- End Spot Quick Info -->
+																	
+															</div> <!-- End 8 -->
+														</div> <!-- End row -->
+													</li>
+
+													<li class="border-blue">
+														<div class="row">
+																<div class="col-sm-8 col-xs-8">
+																		<span class="spot-name"> <span class="fa fa-map-marker spot-icon bg-blue"></span> NAIA Airport -Cuba </span>
+																</div> <!-- End col 8 -->
+																<div class="col-sm-4 col-xs-4">
+																		<ul class="inline-list action-list">
+																			<li><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#flightModal"></span></li>
+																			<li> <span class="trash-icon fa fa-trash"></span></li>
+																		</ul>
+																</div> <!-- End col 4 -->
+														</div> <!-- End row	 -->
+														<div class="row">	
+															<div class="col-sm-12">
+																	<div class="spot-img">
+																		<img src="assets/images/spot/2.jpg" alt="Cape town">
+																	</div> <!-- End Spot Name -->
+
+																	<div class="spot-quick-info">
+																		<h4><span class="spot-name">Toyota Innova</span></h4>
+																		<span class="spot-desc">Lorem imsum doler somet</span>
+																		<span class="tour-cost">Total-cost: Ph 600.00</span>
+																	</div> <!-- End Spot Quick Info -->
+																	
+															</div> <!-- End 8 -->
+														</div> <!-- End row -->
+													</li>
+
+													<li class="border-red">
+														<div class="row">
+																<div class="col-sm-8 col-xs-8">
+																		<span class="spot-name"> <span class="fa fa-car spot-icon bg-red"></span> Tour At Manila City</span>
+																</div> <!-- End col 8 -->
+																<div class="col-sm-4 col-xs-4">
+																		<ul class="inline-list action-list">
+																			<li><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#flightModal"></span></li>
+																			<li> <span class="trash-icon fa fa-trash"></span></li>
+																		</ul>
+																</div> <!-- End col 4 -->
+														</div> <!-- End row	 -->
+														<div class="row">	
+															<div class="col-sm-12">
+																	<div class="spot-img">
+																		<img src="assets/images/spot/2.jpg" alt="Cape town">
+																	</div> <!-- End Spot Name -->
+
+																	<div class="spot-quick-info">
+																		<h4><span class="spot-name">Manila City</span></h4>
+																		<span class="spot-desc">Lorem imsum doler somet</span>
+																		<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																	</div> <!-- End Spot Quick Info -->
+																	
+															</div> <!-- End 8 -->
+														</div> <!-- End row -->
+													</li>
+
+													<li>
+														<div class="row">
+																<div class="col-sm-8 col-xs-8">
+																		<span class="spot-name"> <span class="fa fa-map-marker spot-icon"></span> Tour At Manila City</span>
+																</div> <!-- End col 8 -->
+																<div class="col-sm-4 col-xs-4">
+																		<ul class="inline-list action-list">
+																			<li><span class="edit-icon fa fa-pencil"></span></li>
+																			<li> <span class="trash-icon fa fa-trash"></span></li>
+																		</ul>
+																</div> <!-- End col 4 -->
+														</div> <!-- End row	 -->
+														<div class="row">	
+															<div class="col-sm-12">
+																	<div class="spot-img">
+																		<img src="assets/images/spot/2.jpg" alt="Cape town">
+																	</div> <!-- End Spot Name -->
+
+																	<div class="spot-quick-info">
+																		<h4><span class="spot-name">Manila City</span></h4>
+																		<span class="spot-desc">Lorem imsum doler somet</span>
+																		<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																	</div> <!-- End Spot Quick Info -->
+																	
+															</div> <!-- End 8 -->
+														</div> <!-- End row -->
+													</li>
+
+												</ul>
+											</div> <!-- End Tour Block -->
+									  </div> <!-- End Tab Content -->
+								</div> <!-- End Tour Details -->
+							</div> <!-- End Col 12 -->
+						</div> <!-- End row -->
+					</article> <!-- End Tab Content -->
+			</section> <!-- End Section -->
+			</div> <!-- End col 8 -->
+			<div class="col-sm-4 col-xs-12 set-padding">
+					<div class="google-map" id="mapArea">
+						<div class="iframe-block">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202845.11502961593!2d-122.18118132341327!3d37.40272092024147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb68ad0cfc739%3A0x7eb356b66bd4b50e!2sSilicon+Valley%2C+CA!5e0!3m2!1sen!2sus!4v1467302392621" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+						</div> <!-- End Iframe Block -->
+					</div> <!-- End Map -->
+			</div> <!-- End Col sm 4 -->
+		</div> <!-- End row -->
+	</div> <!-- End Container Fluid -->
+
+
+
+<div class="modal fade" id="carModal" tabindex="-1" role="dialog" aria-labelledby="carModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header this">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
+        <h4 class="modal-title modal-brand-title">Add Transportation to Your Itinerary</h4>
+      </div>
+      <div class="modal-body">
+        	<span class="transportation-info">Booking Car on <span class="selected-date">Tue Apr 8th, 2016</span></span>
+        	<div class="transportation-form">
+        		<form action="#" method="post">	
+        				<div class="row">
+        			<div class="col-sm-12 col-xs-12">
+        					<div class="form-group">
+        						<label for="change-car">CHANGE CAR </label>
+        							<select class="form-control">
+				      					<option value="toyota-innova">Toyota Innova</option>
+				      					<option value="toyota-innova">Toyota Innova</option>
+				      					<option value="toyota-innova">Toyota Innova</option>
+				      					<option value="toyota-innova">Toyota Innova</option>
+			      					</select>	
+        					</div> <!-- End form-group -->
+
+        					<div class="form-group">
+        							<div class="row">
+        									<div class="col-sm-6 col-xs-12">
+		        								<label for="pick-up-location">PICK-UP LOCATION</label>
+		        									<select name="pick-up-location" class="form-control">
+		        										<option value="Naia Airport">Naia Airport</option>
+		        										<option value="Naia Airport">Naia Airport</option>
+		        										<option value="Naia Airport">Naia Airport</option>
+		        									</select>
+		        							</div>  <!-- End col -->
+		        							<div class="col-sm-6 col-xs-12">
+		        									<label for="drop-location">DROP LOCATION</label>
+		        									<select name="drop-location" class="form-control">
+		        										<option value="Cubao">Cubao</option>
+		        										<option value="Cubao">Cubao</option>
+		        										<option value="Cubao">Cubao</option>
+		        									</select>
+		        							</div> <!-- End col -->
+        							</div> <!-- End row -->
+        					</div> <!-- End form group -->
+
+        					<div class="form-group">
+        							<div class="row">
+        									<div class="col-sm-6 col-xs-12">
+		        								<label for="pick-up-date">PICK-UP Date</label>
+		        									<select name="pick-up-date" class="form-control">
+		        										<option value="Apr-22-2016">Apr 22, 2016</option>
+		        										<option value="Apr-22-2016">Apr 22, 2016</option>
+		        										<option value="Apr-22-2016">Apr 22, 2016</option>
+		        									</select>
+		        							</div>  <!-- End col -->
+		        							<div class="col-sm-6 col-xs-12">
+		        									<label for="pick-up-time">PICK-UP Time</label>
+		        									<select name="pick-up-time" class="form-control">
+		        										<option value="11.00-AM">11.00 AM</option>
+		        										<option value="11.00-AM">11.00 AM</option>
+		        										<option value="11.00-AM">11.00 AM</option>
+		        									</select>
+		        							</div> <!-- End col -->
+        							</div> <!-- End row -->
+        					</div> <!-- End form group -->
+
+        					<div class="form-group">
+        							<div class="row">
+        									<div class="col-sm-6 col-xs-12">
+		        								<label for="No-of-Adults">NUMBER OF ADULTS</label>
+		        									<input type="text" class="form-control" placeholder="Number of Adults" value="5 Adults">
+		        							</div>  <!-- End col -->
+		        							<div class="col-sm-6 col-xs-12">
+		        									<label for="No-of-children">NUMBER OF CHILDREN (0-12 yrs old)</label>
+		        									<input type="text" class="form-control" placeholder="Number of Children" value="3 Childrens">
+		        							</div>  <!-- End col -->
+		        							</div> <!-- End col -->
+        							</div> <!-- End row -->
+        					</div> <!-- End form group -->
+        			</div> <!-- End col -->
+        		</div> <!-- End row -->
+
+        		<div class="row">
+        			<div class="col-sm-6 col-xs-12">
+        					<img class="vehicle-thumb" src="assets/images/car/1.jpg" alt="Toyota">
+        			</div> <!-- End col -->
+        			<div class="col-sm-6 col-xs-12">
+        				<div class="vehicle-info">
+      							<span class="info">Car Info</span>
+		        				<span class="vehicle-name">Toyota Innova or equivalent</span>
+		        				<span>AC Minivan</span>
+		        				<span class="info f-18">PH 1200</span>
+        				</div> <!-- End Vehicle Info -->
+        				<button class="btn btn-yellow mtb-20">Add to Itinerary</button>
+        			</div> <!-- End col -->
+        		</div> <!-- End row -->
+        			
+        		</form> <!-- End form -->
+        	</div> <!-- End Booking Form -->
+      </div> <!-- End modal Body -->
+    </div> <!-- End Modal Content -->
+  </div> <!-- End Modal Dialog -->
+</div> <!-- End Modal -->
+
+
+
+<!-- Start Flight Modal -->
+<div class="modal fade" id="flightModal" tabindex="-1" role="dialog" aria-labelledby="flightModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header this">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
+        <h4 class="modal-title modal-brand-title">Add Flight to Your Itinerary</h4>
+      </div>
+      <div class="modal-body">
+        	<span class="transportation-info">Booking Car on <span class="selected-date">Tue Apr 8th, 2016</span></span>
+        	<div class="transportation-form flight">
+        		<form action="#" method="post">	
+
+        			<div class="row">
+	        			<div class="col-sm-12">
+	        				<span>Search Flights</span>
+
+	        				<input type="radio" checked>
+									<input type="radio">
+	        			</div> <!-- End col sm 12 -->
+        			</div> <!-- End row -->
+
+        			<div class="row">
+        			<div class="col-sm-12 col-xs-12">
+        					<div class="form-group">
+        						<label for="change-car">CHANGE CAR </label>
+        							<select class="form-control">
+				      					<option value="toyota-innova">Toyota Innova</option>
+				      					<option value="toyota-innova">Toyota Innova</option>
+				      					<option value="toyota-innova">Toyota Innova</option>
+				      					<option value="toyota-innova">Toyota Innova</option>
+			      					</select>	
+        					</div> <!-- End form-group -->
+
+        					<div class="form-group">
+        							<div class="row">
+        									<div class="col-sm-6 col-xs-12">
+		        								<label for="pick-up-location">PICK-UP LOCATION</label>
+		        									<select name="pick-up-location" class="form-control">
+		        										<option value="Naia Airport">Naia Airport</option>
+		        										<option value="Naia Airport">Naia Airport</option>
+		        										<option value="Naia Airport">Naia Airport</option>
+		        									</select>
+		        							</div>  <!-- End col -->
+		        							<div class="col-sm-6 col-xs-12">
+		        									<label for="drop-location">DROP LOCATION</label>
+		        									<select name="drop-location" class="form-control">
+		        										<option value="Cubao">Cubao</option>
+		        										<option value="Cubao">Cubao</option>
+		        										<option value="Cubao">Cubao</option>
+		        									</select>
+		        							</div> <!-- End col -->
+        							</div> <!-- End row -->
+        					</div> <!-- End form group -->
+
+        					<div class="form-group">
+        							<div class="row">
+        									<div class="col-sm-6 col-xs-12">
+		        								<label for="pick-up-date">PICK-UP Date</label>
+		        									<select name="pick-up-date" class="form-control">
+		        										<option value="Apr-22-2016">Apr 22, 2016</option>
+		        										<option value="Apr-22-2016">Apr 22, 2016</option>
+		        										<option value="Apr-22-2016">Apr 22, 2016</option>
+		        									</select>
+		        							</div>  <!-- End col -->
+		        							<div class="col-sm-6 col-xs-12">
+		        									<label for="pick-up-time">PICK-UP Time</label>
+		        									<select name="pick-up-time" class="form-control">
+		        										<option value="11.00-AM">11.00 AM</option>
+		        										<option value="11.00-AM">11.00 AM</option>
+		        										<option value="11.00-AM">11.00 AM</option>
+		        									</select>
+		        							</div> <!-- End col -->
+        							</div> <!-- End row -->
+        					</div> <!-- End form group -->
+
+        					<div class="form-group">
+        							<div class="row">
+        									<div class="col-sm-6 col-xs-12">
+		        								<label for="No-of-Adults">NUMBER OF ADULTS</label>
+		        									<input type="text" class="form-control" placeholder="Number of Adults" value="5 Adults">
+		        							</div>  <!-- End col -->
+		        							<div class="col-sm-6 col-xs-12">
+		        									<label for="No-of-children">NUMBER OF CHILDREN (0-12 yrs old)</label>
+		        									<input type="text" class="form-control" placeholder="Number of Children" value="3 Childrens">
+		        							</div>  <!-- End col -->
+		        							</div> <!-- End col -->
+        							</div> <!-- End row -->
+        					</div> <!-- End form group -->
+        			</div> <!-- End col -->
+        		</div> <!-- End row -->
+
+        		<div class="row">
+        			<div class="col-sm-6 col-xs-12">
+        					<img class="vehicle-thumb" src="assets/images/car/1.jpg" alt="Toyota">
+        			</div> <!-- End col -->
+        			<div class="col-sm-6 col-xs-12">
+        				<div class="vehicle-info">
+      							<span class="info">Car Info</span>
+		        				<span class="vehicle-name">Toyota Innova or equivalent</span>
+		        				<span>AC Minivan</span>
+		        				<span class="info f-18">PH 1200</span>
+        				</div> <!-- End Vehicle Info -->
+        				<button class="btn btn-yellow mtb-20">Add to Itinerary</button>
+        			</div> <!-- End col -->
+        		</div> <!-- End row -->
+        			
+        		</form> <!-- End form -->
+        	</div> <!-- End Booking Form -->
+      </div> <!-- End modal Body -->
+    </div> <!-- End Modal Content -->
+  </div> <!-- End Modal Dialog -->
+</div> <!-- End Modal -->
+
+<!-- End Flight Modal -->
+	<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="assets/bower_components/iCheck/icheck.min.js"></script>
+	<script src="live.js"></script>
+
+	<script>
+			$('#toggleMenu').click(function(){
+				$('#sidebar').toggleClass('visible-sidebar');
+				$('#mainBlock').toggleClass('move-right');
+		});
+
+			var w = window,
+			    d = document,
+			    e = d.documentElement,
+			    g = d.getElementsByTagName('body')[0],
+			    x = w.innerWidth || e.clientWidth || g.clientWidth,
+			    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+
+			    if (x > 900) {
+			    	document.getElementById('mapArea').style.height = y + 'px';
+			    }
+			    else if (x < 560){
+			    		var a = document.getElementById('mapArea').style.height = 400 + 'px';
+							console.log(a);
+			    }
+			    else {
+			    	var b = document.getElementById('mapArea').style.height = y + 'px';
+						console.log(b);
+			    }
+
+	
+
+			$(document).ready(function(){
+			  $('input').iCheck({
+				    checkboxClass: 'icheckbox_minimal-grey',
+				    radioClass: 'iradio_minimal-grey',
+				    increaseArea: '20%',
+				    labelHover: false,
+	  				cursor: true
+			  });
+			});
+
+
+	</script>
+
+</body>
+</html>

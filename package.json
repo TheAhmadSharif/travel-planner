@@ -1,0 +1,31 @@
+{
+  "name": "travel-planner",
+  "version": "1.0.0",
+  "description": "Travel planner",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/TheAhmadSharif/travel-planner.git"
+  },
+  "keywords": [
+    "travel",
+    "planner"
+  ],
+  "author": "Ahmad Sharif",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheAhmadSharif/travel-planner/issues"
+  },
+  "dependencies": {
+    "bower": "^1.7.7",
+    "http-server": "^0.8.5"
+  },
+  "scripts": {
+  	"start": "http-server -a localhost -p 8800 -c-1",
+    "prestart": "npm install"
+  },
+  "homepage": "https://github.com/TheAhmadSharif/travel-planner#readme"
+}
