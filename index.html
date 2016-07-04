@@ -7,10 +7,12 @@
 
 
 	<title>Travel Planner</title>
+
+	<link rel="shortcut icon" href="assets/images/favicon.png">
 	
 	<link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.css">
-	<link rel="stylesheet" href="assets/bower_components/iCheck/skins/minimal/grey.css">
 	<link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="assets/bower_components/bxslider-4/dist/jquery.bxslider.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -119,10 +121,81 @@
 											<li role="presentation" data-target="#Flights" aria-controls="Flights" role="tab" data-toggle="tab">
 											<span class="fa fa-plane mr-5"></span>  Flights </li>
 										</ul>
-									  <div class="tab-content">
-									  	 <div role="tabpanel" class="tab-pane" id="Tour">Flights Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil a explicabo velit! Ipsum, ad.</div>
 
-									    <div role="tabpanel" class="tab-pane" id="Hotels"> Hotels Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, totam?</div>
+
+									    <div class="tab-content">
+
+
+									  	 <div role="tabpanel" class="tab-pane" id="Tour">
+									  	 		<button class="btn btn-brand" data-target="#hotelBookingForm" role="modal" data-toggle="modal">Add Hotel</button>
+									  	 </div> <!-- End Tour -->
+
+
+
+
+									    <div role="tabpanel" class="tour-info-block tab-pane" id="Hotels">
+												<ul class="spot-li">
+													<li class="border-yellow">
+														<div class="row">
+																<div class="col-sm-8 col-xs-8">
+																		<span class="spot-name"> <span class="fa fa-bed spot-icon bg-yellow"></span> Check in at Shangrila Hotel</span>
+																</div> <!-- End col 8 -->
+																<div class="col-sm-4 col-xs-4">
+																		<ul class="inline-list action-list">
+																			<li><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																			<li> <span class="trash-icon fa fa-trash"></span></li>
+																		</ul>
+																</div> <!-- End col 4 -->
+														</div> <!-- End row	 -->
+														<div class="row">	
+															<div class="col-sm-12">
+																	<div class="spot-img">
+																		<img src="assets/images/spot/1.jpg" alt="Cape town">
+																	</div> <!-- End Spot Name -->
+
+																	<div class="spot-quick-info">
+																		<h4><span class="spot-name"> Shangrila Hotel </span></h4>
+																		<span class="spot-desc">Lorem imsum doler somet</span>
+																		<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																	</div> <!-- End Spot Quick Info -->
+																	
+															</div> <!-- End 8 -->
+														</div> <!-- End row -->
+													</li>
+
+								
+
+													<li class="border-yellow">
+														<div class="row">
+																<div class="col-sm-8 col-xs-8">
+																		<span class="spot-name"> <span class="fa fa-bed spot-icon bg-yellow"></span> Check in at Shangrila Hotel</span>
+																</div> <!-- End col 8 -->
+																<div class="col-sm-4 col-xs-4">
+																		<ul class="inline-list action-list">
+																		<li><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																			<li><span class="trash-icon fa fa-trash"></span></li>
+																		</ul>
+																</div> <!-- End col 4 -->
+														</div> <!-- End row	 -->
+														<div class="row">	
+															<div class="col-sm-12">
+																	<div class="spot-img">
+																		<img src="assets/images/spot/2.jpg" alt="Cape town">
+																	</div> <!-- End Spot Name -->
+
+																	<div class="spot-quick-info">
+																		<h4><span class="spot-name">Shangrila Hotel</span></h4>
+																		<span class="spot-desc">Lorem imsum doler somet</span>
+																		<span class="booking-author">Booking through expedia.com <span class="fa fa-info-circle red-icon"></span></span>
+																	</div> <!-- End Spot Quick Info -->
+
+																	
+															</div> <!-- End 8 -->
+														</div> <!-- End row -->
+													</li>
+
+												</ul>
+											</div> <!-- End Tour Block -->
 
 
 											<div role="tabpanel" class="tour-info-block tab-pane active" id="Car">
@@ -170,7 +243,7 @@
 														<div class="row">	
 															<div class="col-sm-12">
 																	<div class="spot-img">
-																		<img src="assets/images/spot/1.jpg" alt="Cape town">
+																		<img src="assets/images/spot/2.jpg" alt="Cape town">
 																	</div> <!-- End Spot Name -->
 
 																	<div class="spot-quick-info">
@@ -198,7 +271,7 @@
 														<div class="row">	
 															<div class="col-sm-12">
 																	<div class="spot-img">
-																		<img src="assets/images/spot/1.jpg" alt="Cape town">
+																		<img src="assets/images/spot/3.jpg" alt="Cape town">
 																	</div> <!-- End Spot Name -->
 
 																	<div class="spot-quick-info">
@@ -287,7 +360,7 @@
 														<div class="row">	
 															<div class="col-sm-12">
 																	<div class="spot-img">
-																		<img src="assets/images/spot/2.jpg" alt="Cape town">
+																		<img src="assets/images/spot/1.jpg" alt="Cape town">
 																	</div> <!-- End Spot Name -->
 
 																	<div class="spot-quick-info">
@@ -343,7 +416,7 @@
 														<div class="row">	
 															<div class="col-sm-12">
 																	<div class="spot-img">
-																		<img src="assets/images/spot/2.jpg" alt="Cape town">
+																		<img src="assets/images/spot/3.jpg" alt="Cape town">
 																	</div> <!-- End Spot Name -->
 
 																	<div class="spot-quick-info">
@@ -388,74 +461,73 @@
         	<span class="transportation-info">Booking Car on <span class="selected-date">Tue Apr 8th, 2016</span></span>
         	<div class="transportation-form">
         		<form action="#" method="post">	
-        				<div class="row">
-        			<div class="col-sm-12 col-xs-12">
-        					<div class="form-group">
-        						<label for="change-car">CHANGE CAR </label>
-        							<select class="form-control">
-				      					<option value="toyota-innova">Toyota Innova</option>
-				      					<option value="toyota-innova">Toyota Innova</option>
-				      					<option value="toyota-innova">Toyota Innova</option>
-				      					<option value="toyota-innova">Toyota Innova</option>
-			      					</select>	
-        					</div> <!-- End form-group -->
+        			<div class="row">
+		        			<div class="col-sm-12 col-xs-12">
+		        					<div class="form-group">
+		        						<label for="change-car">CHANGE CAR </label>
+		        							<select class="form-control">
+						      					<option value="toyota-innova">Toyota Innova</option>
+						      					<option value="toyota-innova">Toyota Innova</option>
+						      					<option value="toyota-innova">Toyota Innova</option>
+						      					<option value="toyota-innova">Toyota Innova</option>
+					      					</select>	
+		        					</div> <!-- End form-group -->
 
-        					<div class="form-group">
-        							<div class="row">
-        									<div class="col-sm-6 col-xs-12">
-		        								<label for="pick-up-location">PICK-UP LOCATION</label>
-		        									<select name="pick-up-location" class="form-control">
-		        										<option value="Naia Airport">Naia Airport</option>
-		        										<option value="Naia Airport">Naia Airport</option>
-		        										<option value="Naia Airport">Naia Airport</option>
-		        									</select>
-		        							</div>  <!-- End col -->
-		        							<div class="col-sm-6 col-xs-12">
-		        									<label for="drop-location">DROP LOCATION</label>
-		        									<select name="drop-location" class="form-control">
-		        										<option value="Cubao">Cubao</option>
-		        										<option value="Cubao">Cubao</option>
-		        										<option value="Cubao">Cubao</option>
-		        									</select>
-		        							</div> <!-- End col -->
-        							</div> <!-- End row -->
-        					</div> <!-- End form group -->
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="pick-up-location">PICK-UP LOCATION</label>
+				        									<select name="pick-up-location" class="form-control">
+				        										<option value="Naia Airport">Naia Airport</option>
+				        										<option value="Naia Airport">Naia Airport</option>
+				        										<option value="Naia Airport">Naia Airport</option>
+				        									</select>
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="drop-location">DROP LOCATION</label>
+				        									<select name="drop-location" class="form-control">
+				        										<option value="Cubao">Cubao</option>
+				        										<option value="Cubao">Cubao</option>
+				        										<option value="Cubao">Cubao</option>
+				        									</select>
+				        							</div> <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
 
-        					<div class="form-group">
-        							<div class="row">
-        									<div class="col-sm-6 col-xs-12">
-		        								<label for="pick-up-date">PICK-UP Date</label>
-		        									<select name="pick-up-date" class="form-control">
-		        										<option value="Apr-22-2016">Apr 22, 2016</option>
-		        										<option value="Apr-22-2016">Apr 22, 2016</option>
-		        										<option value="Apr-22-2016">Apr 22, 2016</option>
-		        									</select>
-		        							</div>  <!-- End col -->
-		        							<div class="col-sm-6 col-xs-12">
-		        									<label for="pick-up-time">PICK-UP Time</label>
-		        									<select name="pick-up-time" class="form-control">
-		        										<option value="11.00-AM">11.00 AM</option>
-		        										<option value="11.00-AM">11.00 AM</option>
-		        										<option value="11.00-AM">11.00 AM</option>
-		        									</select>
-		        							</div> <!-- End col -->
-        							</div> <!-- End row -->
-        					</div> <!-- End form group -->
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="pick-up-date">PICK-UP Date</label>
+				        									<select name="pick-up-date" class="form-control">
+				        										<option value="Apr-22-2016">Apr 22, 2016</option>
+				        										<option value="Apr-22-2016">Apr 22, 2016</option>
+				        										<option value="Apr-22-2016">Apr 22, 2016</option>
+				        									</select>
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="pick-up-time">PICK-UP Time</label>
+				        									<select name="pick-up-time" class="form-control">
+				        										<option value="11.00-AM">11.00 AM</option>
+				        										<option value="11.00-AM">11.00 AM</option>
+				        										<option value="11.00-AM">11.00 AM</option>
+				        									</select>
+				        							</div> <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
 
-        					<div class="form-group">
-        							<div class="row">
-        									<div class="col-sm-6 col-xs-12">
-		        								<label for="No-of-Adults">NUMBER OF ADULTS</label>
-		        									<input type="text" class="form-control" placeholder="Number of Adults" value="5 Adults">
-		        							</div>  <!-- End col -->
-		        							<div class="col-sm-6 col-xs-12">
-		        									<label for="No-of-children">NUMBER OF CHILDREN (0-12 yrs old)</label>
-		        									<input type="text" class="form-control" placeholder="Number of Children" value="3 Childrens">
-		        							</div>  <!-- End col -->
-		        							</div> <!-- End col -->
-        							</div> <!-- End row -->
-        					</div> <!-- End form group -->
-        			</div> <!-- End col -->
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="No-of-Adults">NUMBER OF ADULTS</label>
+				        									<input type="text" class="form-control" placeholder="Number of Adults" value="5 Adults">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="No-of-children">NUMBER OF CHILDREN (0-12 yrs old)</label>
+				        									<input type="text" class="form-control" placeholder="Number of Children" value="3 Childrens">
+				        							</div>  <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+		        			</div> <!-- End col -->
         		</div> <!-- End row -->
 
         		<div class="row">
@@ -475,6 +547,239 @@
         			
         		</form> <!-- End form -->
         	</div> <!-- End Booking Form -->
+      </div> <!-- End modal Body -->
+    </div> <!-- End Modal Content -->
+  </div> <!-- End Modal Dialog -->
+</div> <!-- End Modal -->
+
+
+
+<div class="modal fade" id="hotelBookingForm" tabindex="-1" role="dialog" aria-labelledby="hotelBookingForm">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header this">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
+        <h4 class="modal-title modal-brand-title">Add Hotel to Your Itinerary</h4>
+      </div>
+      <div class="modal-body">
+					<ul class="info-tab-list at-modal" role="tablist">
+						<li class="active" role="presentation" data-target="#bookHotel" aria-controls="bookHotel" role="tab" data-toggle="tab">
+
+						 <span class="fa fa-calendar-check-o mr-5"></span> Book Hotel </li>
+
+						<li id="bxsliderClick" role="presentation" data-target="#hotelDetails" aria-controls="hotelDetails" role="tab" data-toggle="tab">
+						<span class="fa fa-bed mr-5"></span> Hotel Details</li>
+
+						<li role="presentation" data-target="#hotelList" aria-controls="hotelList" role="tab" data-toggle="tab"> 
+						<span class="fa fa-list-alt mr-5"></span> Hotel List </li>
+				
+					</ul>
+
+					<div class="tab-content">
+				  	 <div role="tabpanel" class="tab-pane active" id="bookHotel">
+			        	<span class="transportation-info">Booking Hotel on <span class="selected-date">Tue Apr 19th, 2016</span></span>
+			        	<div class="transportation-form">
+			        		<form action="#" method="post">	
+			        			<div class="row">
+					        			<div class="col-sm-12 col-xs-12">
+					        					<div class="form-group">
+					        						<label for="change-car">STAYING AT </label>
+					        							<select class="form-control">
+									      					<option value="Shingrila">Shingrila</option>
+									      					<option value="Shingrila">Shingrila</option>
+									      					<option value="Shingrila">Shingrila</option>
+									      					<option value="Shingrila">Shingrila</option>
+								      					</select>	
+					        					</div> <!-- End form-group -->
+
+					        					<div class="form-group">
+					        							<div class="row">
+					        									<div class="col-sm-6 col-xs-12">
+							        								<label for="check-in">CHECK IN</label>
+							        									<input type="text" class="form-control" placeholder="Check in" value="8th April">
+							        							</div>  <!-- End col -->
+							        							<div class="col-sm-6 col-xs-12">
+							        									<label for="check-out">CHECK OUT</label>
+							        									<input type="text" class="form-control" placeholder="Check in" value="9th April">
+							        							</div> <!-- End col -->
+					        							</div> <!-- End row -->
+					        					</div> <!-- End form group -->
+
+
+					        					 <div class="form-group">
+					        							<div class="row">
+					        									<div class="col-sm-6 col-xs-12">
+							        								<label for="No-of-Adults">NUMBER OF ADULTS</label>
+							        									<input type="text" class="form-control" placeholder="Number of Adults" value="5 Adults">
+							        							</div>  <!-- End col -->
+							        							<div class="col-sm-6 col-xs-12">
+							        									<label for="No-of-children">NUMBER OF CHILDREN (0-12 yrs old)</label>
+							        									<input type="text" class="form-control" placeholder="Number of Children" value="3 Childrens">
+							        							</div>  <!-- End col -->
+							        					</div> <!-- End row -->
+					        					 </div> <!-- End form Group -->
+
+					        					<div class="form-group">
+					        							<div class="row">
+					        									<div class="col-sm-6 col-xs-12">
+							        								<label for="room-type">ROOM TYPES</label>
+							        									<select name="pick-up-date" class="form-control">
+							        										<option value="single-room">single-room</option>
+							        										<option value="single-room">single-room</option>
+							        									</select>
+							        							</div>  <!-- End col -->
+							        							<div class="col-sm-6 col-xs-12">
+							        									<label for="pick-up-time">NUMBER OF ROOMS</label>
+							        									<select name="no-of-rooms" class="form-control">
+							        										<option value="4-Rooms">4 Rooms</option>
+							        										<option value="4-Rooms">4 Rooms</option>
+							        										<option value="4-Rooms">4 Rooms</option>
+							        									</select>
+							        							</div> <!-- End col -->
+					        							</div> <!-- End row -->
+					        					</div> <!-- End form group -->
+
+
+					        					<div class="form-group">
+					        							<div class="row">
+					        									<div class="col-sm-6 col-xs-12">
+							        								<label for="room-type">EXTRA BEDDING</label>
+							        									<select name="extra-bedding" class="form-control">
+							        										<option value="2 Beds">2 Beds</option>
+							        										<option value="2 Beds">2 Beds</option>
+							        									</select>
+							        							</div>  <!-- End col -->
+							        							<div class="col-sm-6 col-xs-12">
+							        									<label for="meal">MEAL</label>
+							        									<select name="no-of-rooms" class="form-control">
+							        										<option value="breakfast-lunch-dinner">Breakfast,Lunch, Dinner</option>
+							        										<option value="breakfast-lunch-dinner">Breakfast,Lunch, Dinner</option>
+							        										<option value="breakfast-lunch-dinner">Breakfast,Lunch, Dinner</option>
+							        									</select>
+							        							</div> <!-- End col -->
+					        							</div> <!-- End row -->
+					        					</div> <!-- End form group -->
+
+					        			 </div> <!-- End col sm 12 -->
+			        	  	</div> <!-- End row -->
+			        		</form> <!-- End form -->
+			        	</div> <!-- End Booking Form -->
+				  	 </div> <!-- End BookHotel Tab Content -->
+
+				  	 <div role="tabpanel" class="tab-pane" id="hotelDetails">
+			  		 		<div class="hotel-details-tab">
+			  		 			<div class="hotel-info">
+			  		 				<div class="row">
+			  		 					<header>
+					  		 					<div class="col-sm-9 col-xs-12">
+					  		 						<div class="hotel-title">
+					  		 							<span class="hotel-name">Shangrila</span> Booking through expedia.com
+					  		 						</div> <!-- End -->
+					  		 					</div> <!-- End col 9 -->
+					  		 					<div class="col-sm-3 col-xs-12">
+					  		 						<ul class="rating-list">
+					  		 							<li>&#9733;</li>
+					  		 							<li>&#9733;</li>
+					  		 							<li>&#9733;</li>
+					  		 							<li>&#9733;</li>
+					  		 							<li>&#9733;</li>
+					  		 						</ul>
+					  		 					</div> <!-- End col 3 -->
+				  		 				</header>
+					  		 		</div> <!-- End row -->
+					  		 		<div class="row">
+					  		 			<div class="col-sm-12">
+					  		 				<div class="slider-block">
+					  		 					<ul class="bxslider" id="hotelSlider">
+								  		 					<li><img src="assets/images/hotel/1.jpg" alt="Hotel name"></li>
+								  		 					<li><img src="assets/images/hotel/2.jpg" alt="Hotel name"></li>
+								  		 					<li><img src="assets/images/hotel/3.jpg" alt="Hotel name"></li>
+								  		 				</ul>
+
+							  		 				<div class="slider-nav">
+							  		 					<ul class="nav-list">
+							  		 						<li><span id="slider-prev"></span></li>
+							  		 						<li><span id="slider-next"></span></li>
+							  		 					</ul>
+														</div> <!-- End Slider Nav -->
+					  		 					
+					  		 				</div> <!-- End slider block -->
+					  		 			</div>
+					  		 		</div> <!-- End row -->
+
+
+					  		 		<div class="row">
+					  		 			<div class="col-sm-12 col-xs-12">
+					  		 					<span class="title">
+					  		 						Hotel Details
+					  		 					</span>
+					  		 			</div> <!-- End Col -->
+					  		 		</div> <!-- End row -->
+								  		 			
+
+					  		 		<div class="row">
+					  		 			<div class="col-sm-8 col-xs-12">
+					  		 				<div class="hotel-details">
+					  		 					<table class="table borderless">
+					  		 						<tbody>
+					  		 							<tr>
+					  		 								<td>Hotel Name</td>
+					  		 								<td>Shangrilla</td>
+					  		 							</tr>
+
+					  		 							<tr>
+					  		 								<td> Free</td>
+					  		 								<td> Breakfast/launch /dinner</td>
+					  		 							</tr>
+
+					  		 							<tr>
+					  		 								<td> Room Type</td>
+					  		 								<td>Delux-Single Room</td>
+					  		 							</tr>
+
+					  		 							<tr>
+					  		 								<td> Price avg/height</td>
+					  		 								<td> <span class="price">&#0163; 120</span> </td>
+					  		 							</tr>
+					  		 						</tbody>
+					  		 					</table>
+					  		 				</div>
+					  		 			</div> <!-- End col 6 -->
+
+					  		 			<div class="col-sm-4 col-xs-12">
+					  		 					<button class="btn btn-yellow table-btn">Add to Itinerary</button>
+					  		 			</div> <!-- End col -->
+					  		 		</div> <!-- End row -->
+					  		 	</div> <!-- End Hotel Info -->	
+
+
+					  		 	<div class="row">
+					  		 		<div class="col-sm-12 col-xs-12">
+					  		 			<div class="tab-list-block">
+					  		 					<ul class="tab-list">
+					  		 						<li class="active">Summary</li>
+					  		 						<li>Room Type</li>
+					  		 						<li>Preferences</li>
+					  		 						<li>Map</li>
+					  		 					</ul>
+
+					  		 					<div class="tab-content">
+					  		 						
+					  		 					</div> <!-- End Tab Content -->
+					  		 			</div> <!-- End tab List -->
+					  		 		</div> <!-- End col 12 -->
+					  		 	</div> <!-- End row -->
+				  			 </div> <!-- End Hotel Details Tab -->
+					  	</div> <!-- End Tab Pane -->
+
+   					 <div role="tabpanel" class="tab-pane" id="hotelList">
+							Hotel List
+   					 </div> <!-- End Hotel List -->
+
+					</div> <!-- End tab Content -->
+
+
+
       </div> <!-- End modal Body -->
     </div> <!-- End Modal Content -->
   </div> <!-- End Modal Dialog -->
@@ -491,47 +796,54 @@
         <h4 class="modal-title modal-brand-title">Add Flight to Your Itinerary</h4>
       </div>
       <div class="modal-body">
-        	<span class="transportation-info">Booking Car on <span class="selected-date">Tue Apr 8th, 2016</span></span>
+        	<span class="transportation-info">Booking Flight on <span class="selected-date">Tue Apr 8th, 2016</span></span>
         	<div class="transportation-form flight">
         		<form action="#" method="post">	
 
         			<div class="row">
 	        			<div class="col-sm-12">
-	        				<span>Search Flights</span>
-
-	        				<input type="radio" checked>
-									<input type="radio">
+	        				<span class="search-flights">Search Flights</span>
+	        					<ul class="inline-list radio-block">
+	        						<li>
+												<input type="radio" class="form-control" id="oneWay" name="flight-type" checked>
+						                     	<label for="oneWay"> 
+						                     		  <div class="radio-div">
+											         				 <span class="fa fa-circle"></span>
+											         				 </div> 
+											          			ONE WAY
+											           </label>
+											</li>
+											<li>
+												<input type="radio" class="form-control" id="round" name="flight-type">
+					                     		<label for="round"> 
+					                     		  <div class="radio-div">
+										         		 <span class="fa fa-circle"></span>
+										          </div> 
+										          ROUND TRIP
+											</li>
+	        					</ul>
 	        			</div> <!-- End col sm 12 -->
         			</div> <!-- End row -->
 
         			<div class="row">
         			<div class="col-sm-12 col-xs-12">
         					<div class="form-group">
-        						<label for="change-car">CHANGE CAR </label>
-        							<select class="form-control">
-				      					<option value="toyota-innova">Toyota Innova</option>
-				      					<option value="toyota-innova">Toyota Innova</option>
-				      					<option value="toyota-innova">Toyota Innova</option>
-				      					<option value="toyota-innova">Toyota Innova</option>
-			      					</select>	
-        					</div> <!-- End form-group -->
-
-        					<div class="form-group">
         							<div class="row">
         									<div class="col-sm-6 col-xs-12">
-		        								<label for="pick-up-location">PICK-UP LOCATION</label>
-		        									<select name="pick-up-location" class="form-control">
-		        										<option value="Naia Airport">Naia Airport</option>
-		        										<option value="Naia Airport">Naia Airport</option>
-		        										<option value="Naia Airport">Naia Airport</option>
-		        									</select>
+						        					<label for="departure">DEPARTURE </label>
+				        							<select class="form-control">
+								      					<option value="Manila">Manila</option>
+								      					<option value="Manila">Manila</option>
+								      					<option value="Manila">Manila</option>
+								      					<option value="Manila">Manila</option>
+							      					</select>	
 		        							</div>  <!-- End col -->
 		        							<div class="col-sm-6 col-xs-12">
-		        									<label for="drop-location">DROP LOCATION</label>
-		        									<select name="drop-location" class="form-control">
-		        										<option value="Cubao">Cubao</option>
-		        										<option value="Cubao">Cubao</option>
-		        										<option value="Cubao">Cubao</option>
+		        									<label for="arrival">ARRIVAL</label>
+		        									<select name="arrival" class="form-control">
+		        										<option value="Cebu">Cebu</option>
+		        										<option value="Cebu">Cebu</option>
+		        										<option value="Cebu">Cebu</option>
 		        									</select>
 		        							</div> <!-- End col -->
         							</div> <!-- End row -->
@@ -540,7 +852,7 @@
         					<div class="form-group">
         							<div class="row">
         									<div class="col-sm-6 col-xs-12">
-		        								<label for="pick-up-date">PICK-UP Date</label>
+		        									<label for="travel-date">TRAVEL DATE</label>
 		        									<select name="pick-up-date" class="form-control">
 		        										<option value="Apr-22-2016">Apr 22, 2016</option>
 		        										<option value="Apr-22-2016">Apr 22, 2016</option>
@@ -548,21 +860,32 @@
 		        									</select>
 		        							</div>  <!-- End col -->
 		        							<div class="col-sm-6 col-xs-12">
-		        									<label for="pick-up-time">PICK-UP Time</label>
-		        									<select name="pick-up-time" class="form-control">
-		        										<option value="11.00-AM">11.00 AM</option>
-		        										<option value="11.00-AM">11.00 AM</option>
-		        										<option value="11.00-AM">11.00 AM</option>
+		        									<label for="travel-class">TRAVEL CLASS</label>
+		        									<select name="travel-class" class="form-control">
+		        										<option value="Business">Business</option>
+		        										<option value="Economy">Economy</option>
 		        									</select>
 		        							</div> <!-- End col -->
         							</div> <!-- End row -->
         					</div> <!-- End form group -->
 
+        					
+
+
         					<div class="form-group">
         							<div class="row">
+        									<div class="col-sm-6 col-xs-12" id="roundForm">
+		        									<label for="travel-date">ARRIVAL DATE</label>
+		        									<select name="pick-up-date" class="form-control mb-10">
+		        										<option value="Apr-22-2016">Apr 22, 2016</option>
+		        										<option value="Apr-22-2016">Apr 22, 2016</option>
+		        										<option value="Apr-22-2016">Apr 22, 2016</option>
+		        									</select>
+		        							</div>  <!-- End col -->
+
         									<div class="col-sm-6 col-xs-12">
 		        								<label for="No-of-Adults">NUMBER OF ADULTS</label>
-		        									<input type="text" class="form-control" placeholder="Number of Adults" value="5 Adults">
+		        									<input type="text" class="form-control mb-10" placeholder="Number of Adults" value="5 Adults">
 		        							</div>  <!-- End col -->
 		        							<div class="col-sm-6 col-xs-12">
 		        									<label for="No-of-children">NUMBER OF CHILDREN (0-12 yrs old)</label>
@@ -571,24 +894,112 @@
 		        							</div> <!-- End col -->
         							</div> <!-- End row -->
         					</div> <!-- End form group -->
+
+
         			</div> <!-- End col -->
         		</div> <!-- End row -->
 
-        		<div class="row">
-        			<div class="col-sm-6 col-xs-12">
-        					<img class="vehicle-thumb" src="assets/images/car/1.jpg" alt="Toyota">
-        			</div> <!-- End col -->
-        			<div class="col-sm-6 col-xs-12">
-        				<div class="vehicle-info">
-      							<span class="info">Car Info</span>
-		        				<span class="vehicle-name">Toyota Innova or equivalent</span>
-		        				<span>AC Minivan</span>
-		        				<span class="info f-18">PH 1200</span>
-        				</div> <!-- End Vehicle Info -->
-        				<button class="btn btn-yellow mtb-20">Add to Itinerary</button>
-        			</div> <!-- End col -->
-        		</div> <!-- End row -->
-        			
+	        		<div class="row">
+	        			<div class="col-sm-12 col-xs-12">
+	        				<table class="table flight-info-table" id="onewayFlightTable">
+	        					<thead>
+	        						<tr>
+	        							<th>Airline</th>
+	        							<th>Deaprt</th>
+	        							<th>Arrive</th>
+	        							<th>Duration</th>
+	        							<th>Price</th>
+	        						</tr>
+	        					</thead>
+	        					<tbody>
+	        						<tr>
+	        							<td><img src="assets/images/airline/cebu.png" alt="cebu"></td>
+	        							<td>
+			        							11.50
+			        							<span class="additional-flight-info">CEB &rarr; MNL</span>
+			        							
+	        							</td>
+	        							<td>1.05</td>
+	        							<td>
+	        								1h 15m
+	        								<span class="additional-flight-info">Non-stop</span>
+	        							</td>
+	        							<td>
+	        									<span class="black-bold">$2,457</span>
+	        								<a href="#"><span class="link">See Details</span></a>
+	        								<a href="#" class="btn btn-sm btn-yellow">Add to Itinerary</a>
+	        							</td>
+	        						</tr>
+
+	        						<tr>
+	        							<td><img src="assets/images/airline/philippine.png" alt="philippine"></td>
+	        							<td>
+	        							08:15
+	        							<span class="additional-flight-info">CEB &rarr; MNL</span>
+	        							</td>
+	        							<td>09:30</td>
+	        							<td>
+	        									1h 15m
+	        									<span class="additional-flight-info">Non-stop</span>
+	        							</td>
+	        							<td>
+	        								<span class="black-bold">$2,457</span>
+	        								<a href="#"><span class="link">See Details</span></a>
+	        								<a href="#" class="btn btn-sm btn-yellow">Add to Itinerary</a>
+	        							</td>
+	        						</tr>
+	        					</tbody>
+	        				</table>
+
+
+
+	        				<table class="table flight-info-table" id="roundFlightTable">
+	        					<thead>
+	        						<tr>
+	        							<th>Airline</th>
+	        							<th>Deaprt</th>
+	        							<th>Arrive</th>
+	        							<th>Duration</th>
+	        							<th>Price</th>
+	        						</tr>
+	        					</thead>
+	        					<tbody>
+	        						<tr>
+	        							<td><img src="assets/images/airline/cebu.png" alt="cebu"></td>
+	        							<td>
+			        							
+	        									<span class="block"> 11.50</span>
+			        							<span class="additional-flight-info mb-10"> CEB &rarr; MNL </span>
+
+			        							<span class="block"> 08:15 </span>
+	        									<span class="additional-flight-info"> MNL &rarr; CEB </span>
+			        							
+			        							
+	        							</td>
+	        							<td>
+	        							<span class="block">1:05</span>
+	        								<span class="block">09:30</span>
+	        							</td>
+	        							<td>
+	        								
+	        								<span class="block">1h 15m</span>
+	        								<span class="additional-flight-info mb-10">Non-stop</span>
+
+	        								<span class="block">1h 15m</span>
+	        								<span class="additional-flight-info">Non-stop</span>
+	        								
+	        							</td>
+	        							<td>
+	        									<span class="black-bold">$2,457</span>
+	        								<a href="#"><span class="link">See Details</span></a>
+	        								<a href="#" class="btn btn-sm btn-yellow">Add to Itinerary</a>
+	        							</td>
+	        						</tr>
+	        					</tbody>
+	        				</table>
+	        				<span class="booking-author">Booking through Travelfusion.com <span class="fa fa-info-circle red-icon"></span></span>
+	        			</div> <!-- End col -->
+	        		</div> <!-- End row -->
         		</form> <!-- End form -->
         	</div> <!-- End Booking Form -->
       </div> <!-- End modal Body -->
@@ -599,15 +1010,47 @@
 <!-- End Flight Modal -->
 	<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-	<script src="assets/bower_components/iCheck/icheck.min.js"></script>
+	<script src="assets/bower_components/bxslider-4/dist/jquery.bxslider.min.js"></script>
 	<script src="live.js"></script>
 
 	<script>
-			$('#toggleMenu').click(function(){
-				$('#sidebar').toggleClass('visible-sidebar');
-				$('#mainBlock').toggleClass('move-right');
-		});
 
+			jQuery(document).ready(function($) {
+				$('#toggleMenu').click(function(){
+						$('#sidebar').toggleClass('visible-sidebar');
+						$('#mainBlock').toggleClass('move-right');
+				});
+
+			$('#oneWay').click(function() {
+				$('#roundForm').hide();
+				$('#roundFlightTable').hide();
+				$('#onewayFlightTable').show();
+				console.log('One Way selected');
+			});
+			$('#round').click(function() {
+				$('#roundForm').show();
+				$('#roundFlightTable').show();
+				$('#onewayFlightTable').hide();
+				console.log('Round Trip selected');
+			})
+
+
+
+				$('#bxsliderClick').one('shown.bs.tab', function (e) {
+				    $('#hotelSlider').bxSlider({
+				    		nextSelector: '#slider-next',
+							  prevSelector: '#slider-prev',
+							  nextText: '<span class="fa fa-chevron-right"></span>',
+							  prevText: '<span class="fa fa-chevron-left"></span>',
+						    pager: false
+						});
+				});
+				
+
+
+
+			});
+					
 			var w = window,
 			    d = document,
 			    e = d.documentElement,
@@ -626,20 +1069,6 @@
 			    	var b = document.getElementById('mapArea').style.height = y + 'px';
 						console.log(b);
 			    }
-
-	
-
-			$(document).ready(function(){
-			  $('input').iCheck({
-				    checkboxClass: 'icheckbox_minimal-grey',
-				    radioClass: 'iradio_minimal-grey',
-				    increaseArea: '20%',
-				    labelHover: false,
-	  				cursor: true
-			  });
-			});
-
-
 	</script>
 
 </body>

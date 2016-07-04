@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Travel Planner | Home </title>
+
+
+	<link rel="shortcut icon" href="assets/images/favicon.png">
+	
+	<link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="assets/bower_components/jquery-ui/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body class="home-page" id="pageHeight">
+<header class="top-header">
+	<div class="container">
+		<div class="row">
+			
+				<div class="col-sm-6 col-xs-12">
+					<a href="#"><img src="assets/images/logo-1.png" alt="Travel Planner"></a>
+				</div> <!-- End col sm -->
+				<div class="col-sm-6 col-xs-12">
+						<ul class="header-link-list">
+							<li><a href="#signupForm" data-toggle="modal"><span class="fa fa-user-plus"></span> Signup</a></li>
+							<li><a href="#loginForm" data-toggle="modal"><span class="fa fa-sign-in"></span> Login</a></li>
+							<li><a href="#"><span class="fa fa-question"></span> Help</a></li>
+						</ul>
+				</div> <!-- End col sm -->
+		</div> <!-- End row --> 
+	</div> <!-- End Container -->
+</header> <!-- End Top Header -->
+
+
+<section class="tour-planning-section">
+	<div class="container">
+		<div class="main-content">
+		<div class="row">
+			<div class="col-sm-12 col-xs-12">
+					<header class="main-content-header">
+						<h1 class="form-heading">The Easiest Online &amp; Mobile Group <span class="bold">TRAVEL PLANNER</span></h1>
+					</header>
+			</div> <!-- End row -->
+		</div> <!-- End Tour Form -->
+
+		<div class="planning-form">
+			<form action="#">
+				<div class="row">
+					<div class="col-sm-6 col-xs-12">
+						<div class="form-group">
+								<label for="destinition">DESTINITION</label>
+								<input type="text" class="form-control" placeholder="Select Destinition">
+								<span class="fa fa-map-marker"></span>
+						</div> <!-- End form Group -->
+					</div> <!-- End col 4 -->
+					<div class="col-sm-3 col-xs-12">
+						<div class="form-group">
+								<label for="start-date">START DATE</label>
+								<input type="text" class="form-control" placeholder="Start Date" id="startDate">
+								<span class="fa fa-calendar"></span>
+								<span class="fa fa-caret-down dropdwon-icon"></span>
+						</div> <!-- End form Group -->
+					</div> <!-- End col 4 -->
+					<div class="col-sm-3 col-xs-12">
+						<div class="form-group">
+								<label for="end-date">END DATE</label>
+								<input type="text" class="form-control" placeholder="End Date" id="endDate">
+								<span class="fa fa-calendar"></span>
+								<span class="fa fa-caret-down dropdwon-icon"></span>
+						</div> <!-- End form Group -->
+					</div> <!-- End col 4 -->
+				</div> <!-- End row -->
+
+
+				<div class="row">
+					<div class="col-sm-4 col-xs-12">
+						<div class="form-group">
+								<label for="destinition">ADULTS</label>
+								<input type="text" class="form-control pl-20" placeholder="Select Destinition" value="0 Adults">
+								<span class="fa fa-caret-down dropdwon-icon"></span>
+						</div> <!-- End form Group -->
+					</div> <!-- End col 4 -->
+					<div class="col-sm-4 col-xs-12">
+						<div class="form-group child-form">
+								<label for="start-date">CHILDREN</label>
+								<input type="text" class="form-control pl-20" placeholder="Start Date" value="0-12 yrs Old" id="childrenVerbose">
+								<span class="fa fa-caret-down dropdwon-icon"></span>
+
+								<div class="child-input" id="childBlock">
+									<header>
+										SELECT CHILDREN
+									</header>
+									<div class="content">
+												<div class="input-block">
+														<div class="row">
+															<div class="col-sm-8">
+																Child (2y-11y)
+															</div> <!-- End col 8 -->
+															<div class="col-sm-4">
+																<input type="number" class="form-control pull-right" value="0">
+															</div> <!-- End col 4 -->
+														</div>  <!-- End  row -->
+												</div> <!-- End Form Group -->
+
+												<div class="input-block no-border">
+														<div class="row">
+																<div class="col-sm-8">
+																	Infact on lap (16d-23)
+																</div> <!-- End col 8 -->
+																<div class="col-sm-4">
+																	<input type="number" class="form-control pull-right" value="0">
+															</div> <!-- End col 4 -->
+													</div>  <!-- End  row -->
+												</div> <!-- End  Input Block-->
+
+												<button class="btn btn-confirm">CONFIRM</button>
+									</div> <!-- End Content -->
+								</div> <!-- End Child Input -->
+						</div> <!-- End form Group -->
+					</div> <!-- End col 4 -->
+				</div> <!-- End row -->
+
+				<div class="row">
+					<div class="col-sm-12">
+							<button class="btn btn-brand">Strat Planning</button>
+					</div> <!-- End col -->
+				</div> <!-- End row -->
+			</form> <!-- End form -->
+		</div> <!-- End Tour Form -->
+	</div> <!-- End Main Content -->
+	</div> <!-- End Container -->
+</section>
+
+
+<!-- Start Flight Modal -->
+<div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="loginForm">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header user-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        	<h4>Login</h4>
+      </div>
+      <div class="modal-body">
+      	<div class="user-form">
+      			<form action="#">
+      				<div class="form-group">
+      					<label for="email">YOUR EMAIL</label>
+      					<input type="text" class="form-control" placeholder="Your Email Address" required>
+      				</div> <!-- End form group -->
+
+
+      				<div class="form-group">
+      					<label for="password">PASSWORD</label>
+      					<input type="password" class="form-control" placeholder="Password Please" required>
+      				</div> <!-- End form group -->
+
+      				<div class="form-group">
+      					<button class="btn btn-action btn-brand">Sign In</button>
+      				</div> <!-- End form group -->
+
+      				<div class="form-group">
+      					<a href="#resetForm" data-toggle="modal" class="btn btn-action forgot"  onclick="hideThis()">Forgot Password ?</a>
+      				</div> <!-- End form group -->
+
+      				<div class="form-group">
+      						<span class="alter-sigin-text">OR SIGN IN WITH</span>
+      				</div> <!-- End Form Group -->
+
+      				<div class="form-group">
+      						<a href="#" class="btn btn-action btn-facebook"><span class="fa fa-facebook fb"></span> Facebook</a>
+      				</div> <!-- End Form Group -->
+
+      				<div class="form-group">
+      						<span class="not-having-ac">Have n&#39;t Account ? Sign Up for Travel Planner </span>
+      				</div> <!-- End Form Group -->
+
+      			</form> <!-- End form -->
+      	</div> <!-- End Login Form -->
+      </div> <!-- End modal Body -->
+    </div> <!-- End Modal Content -->
+  </div> <!-- End Modal Dialog -->
+</div> <!-- End Modal -->
+
+
+
+
+<div class="modal fade" id="signupForm" tabindex="-1" role="dialog" aria-labelledby="signupForm">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header user-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        	<h4>Signup</h4>
+      </div>
+      <div class="modal-body">
+      	<div class="user-form">
+      			<form action="#">
+      				<div class="form-group">
+      					<label for="name">YOUR NAME</label>
+      					<input type="text" class="form-control" placeholder="Your Name" required>
+      				</div> <!-- End form group -->
+
+      				<div class="form-group">
+      					<label for="email">YOUR EMAIL</label>
+      					<input type="email" class="form-control" placeholder="Your Email" required>
+      				</div> <!-- End form group -->
+
+
+      				<div class="form-group">
+      					<label for="password">CREATE PASSWORD</label>
+      					<input type="password" class="form-control" placeholder="Password Please" required>
+      				</div> <!-- End form group -->
+
+      				<div class="form-group">
+      					<button class="btn btn-action btn-brand">Let&#39;s Go</button>
+      				</div> <!-- End form group -->
+
+      				<div class="form-group">
+      						<span class="license-info">By creating and account. I accept Travel planner&#39;s <a href="#"><span class="brand-bold">Terms of use</span></a> and <a href="#"><span class="brand-bold">policy.</span></a></span>
+      				</div> <!-- End Form Group -->
+
+      				<div class="form-group">
+      					<button class="btn btn-action btn-grey">Already have a Travel account ?</button>
+      				</div> <!-- End form group -->
+
+
+      			</form> <!-- End form -->
+      	</div> <!-- End Login Form -->
+      </div> <!-- End modal Body -->
+    </div> <!-- End Modal Content -->
+  </div> <!-- End Modal Dialog -->
+</div> <!-- End Modal -->
+
+
+
+
+
+<div class="modal fade" id="resetForm" tabindex="-1" role="dialog" aria-labelledby="signupForm">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header user-header no-border">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+      	<div class="user-form">
+      		<span class="reset-header">
+      			Forgot Your Password ?
+      		</span>
+      		<span class="reset-message">
+      			No problem ! Enter your email you use to sign in yo Travel Planner (or if you user facebook to sign in, the email associated with that Facebook account) and we will send you instructions on how to reset it.
+      		</span>
+      			<form action="#">
+      				<div class="form-group">
+      					<label for="email">YOUR EMAIL</label>
+      					<input type="email" class="form-control" placeholder="Your Email" required>
+      				</div> <!-- End form group -->
+
+
+      				<div class="form-group">
+      					<button class="btn btn-action btn-brand">Send Reset Instructions</button>
+      				</div> <!-- End form group -->
+      			</form> <!-- End form -->
+      	</div> <!-- End Login Form -->
+      </div> <!-- End modal Body -->
+    </div> <!-- End Modal Content -->
+  </div> <!-- End Modal Dialog -->
+</div> <!-- End Modal -->
+
+
+
+
+
+
+
+	<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="assets/bower_components/jquery-ui/jquery-ui.min.js""></script>
+	<script src="assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="live.js"></script>
+
+	<script>
+		$(function() {
+	    $('#startDate').datepicker();
+	    $('#endDate').datepicker();
+
+	    $('#childrenVerbose').click(function() {
+	    		$('#childBlock').toggle();
+	    });
+
+	  });
+
+
+	  function hideThis () {
+	  		document.getElementById('loginForm').style.display = 'none';
+	  		$('#loginForm').modal('hide');
+	  }
+
+
+			var w = window,
+			    d = document,
+			    e = d.documentElement,
+			    g = d.getElementsByTagName('body')[0],
+			    x = w.innerWidth || e.clientWidth || g.clientWidth,
+			    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+
+			    if (x > 900) {
+			    	document.getElementById('pageHeight').style.height = y + 'px';
+			    }
+			   
+	</script>
+</body>
+</html>
