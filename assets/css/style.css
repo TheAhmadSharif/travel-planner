@@ -231,6 +231,64 @@ input[type="radio"]:checked + label span {
   outline: 0 !important;
   box-shadow: none; }
 
+.btn {
+  border-radius: 3px;
+  padding: 8px 15px;
+  line-height: 1em;
+  font-weight: bold; }
+
+.btn-gray {
+  background-color: #515254;
+  color: #FFF;
+  border: 0; }
+
+.btn-grey {
+  background-color: #2A3030 !important;
+  color: #FFF;
+  border: 0; }
+
+.btn-grey:hover {
+  color: #FFF;
+  background-color: #404040 !important; }
+
+.btn-gray:hover, .btn-gray:focus, .btn-gray:active {
+  color: #FFF;
+  background-color: #333; }
+
+.brand-btn {
+  background-color: #00ADEF;
+  color: #FFF; }
+
+.brand-btn:hover, .brand-btn:focus, .brand-btn:active {
+  color: #FFF;
+  background-color: #515254; }
+
+.btn-facebook {
+  background-color: #3B5999;
+  color: #FFF;
+  font-size: 20px; }
+
+.btn-facebook:hover {
+  background-color: #3B5999;
+  color: #FFF; }
+
+.btn-action {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 20px 10px;
+  border-radius: 4px;
+  border: 0;
+  outline: 0;
+  font-size: 20px;
+  font-weight: bold; }
+
+.btn-yellow {
+  background-color: #F8B912;
+  color: #FFF;
+  border: 0;
+  outline: 0; }
+
 /* Side bar  */
 .sidebar {
   width: 180px;
@@ -343,20 +401,6 @@ input[type="radio"]:checked + label span {
   margin: 0;
   margin-top: 5px; }
 
-.btn {
-  border-radius: 3px;
-  padding: 8px 15px;
-  line-height: 1em;
-  font-weight: bold; }
-
-.btn-gray {
-  background-color: #515254;
-  color: #FFF; }
-
-.btn-gray:hover, .btn-gray:focus, .btn-gray:active {
-  color: #FFF;
-  background-color: #333; }
-
 .tab-name {
   color: #00ADEF;
   font-size: 16px; }
@@ -407,14 +451,6 @@ input[type="radio"]:checked + label span {
   cursor: pointer;
   margin-top: 5px;
   margin-left: 10px; }
-
-.brand-btn {
-  background-color: #00ADEF;
-  color: #FFF; }
-
-.brand-btn:hover, .brand-btn:focus, .brand-btn:active {
-  color: #FFF;
-  background-color: #515254; }
 
 .action-block {
   float: right;
@@ -651,12 +687,6 @@ input[type="radio"]:checked + label span {
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   /* Styles */ }
-.btn-yellow {
-  background-color: #F8B912;
-  color: #FFF;
-  border: 0;
-  outline: 0; }
-
 .vehicle-thumb {
   border: 1px solid #E0DFDF; }
 
@@ -993,26 +1023,6 @@ body.home-page {
 .user-form .btn-facebook {
   margin-top: 10px; }
 
-.btn-facebook {
-  background-color: #3B5999;
-  color: #FFF;
-  font-size: 20px; }
-
-.btn-facebook:hover {
-  background-color: #3B5999;
-  color: #FFF; }
-
-.btn-action {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 100%;
-  padding: 20px 10px;
-  border-radius: 4px;
-  border: 0;
-  outline: 0;
-  font-size: 20px;
-  font-weight: bold; }
-
 .signin:hover {
   background-color: #333;
   color: #FFF; }
@@ -1026,14 +1036,6 @@ body.home-page {
   width: 100%;
   padding: 0 65px;
   display: table; }
-
-.btn-grey {
-  background-color: #2A3030 !important;
-  color: #FFF; }
-
-.btn-grey:hover {
-  color: #FFF;
-  background-color: #404040 !important; }
 
 .reset-header {
   font-size: 34px;
