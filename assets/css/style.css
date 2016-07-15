@@ -227,6 +227,7 @@ input[type="radio"]:checked + label span {
 .btn:focus, .btn:active, .btn:hover {
   outline: 0; }
 
+/* Scroll Style */
 .btn:hover, .btn:active, .btn:focus {
   outline: 0 !important;
   box-shadow: none; }
@@ -690,6 +691,9 @@ input[type="radio"]:checked + label span {
 .vehicle-thumb {
   border: 1px solid #E0DFDF; }
 
+#tourBookingForm .transportation-form {
+  padding-bottom: 60px; }
+
 .transportation-form label {
   color: #586063;
   font-size: 13px;
@@ -764,7 +768,7 @@ input[type="radio"]:checked + label span {
   display: block;
   margin-bottom: 5px; }
 
-.booking-author {
+.booking-source {
   color: #F20B2D;
   font-size: 14px;
   display: block;
@@ -1053,29 +1057,40 @@ body.home-page {
   float: left;
   padding: 20px 0; }
 
+.title {
+  color: #F8B912;
+  font-size: 18px;
+  font-weight: bold;
+  float: left;
+  margin-top: 14px;
+  margin-left: 0;
+  border-bottom: 1px solid #DDD;
+  width: 100%;
+  padding-bottom: 10px; }
+
 /*  Tour Tab  */
-.hotel-info .hotel-title {
+.object-info .object-title {
   display: block;
   font-size: 18px; }
-.hotel-info header {
+.object-info header {
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
   float: left;
   width: 100%; }
-.hotel-info .hotel-name {
+.object-info .object-name {
   font-weight: bold;
   color: #00ADEF;
   font-size: 20px; }
-.hotel-info .rating-list {
+.object-info .rating-list {
   float: right; }
-.hotel-info .rating-list > li {
+.object-info .rating-list > li {
   display: inline-block;
   margin-right: 0;
   color: #0ACC16;
   font-size: 20px;
   font-weight: bold; }
-.hotel-info .title {
+.object-info .title {
   color: #F8B912;
   font-size: 18px;
   font-weight: bold;
@@ -1085,14 +1100,15 @@ body.home-page {
   border-bottom: 1px solid #DDD;
   width: 100%;
   padding-bottom: 10px; }
-.hotel-info .table-btn {
+.object-info .table-btn {
   float: right;
   padding: 15px 20px;
   margin-top: 30px; }
 
 .slider-block {
   position: relative;
-  z-index: 10; }
+  z-index: 10;
+  min-height: 200px; }
   .slider-block .bx-wrapper {
     margin-bottom: 0;
     border: 0;
@@ -1153,5 +1169,139 @@ body.home-page {
   color: #FFF; }
 .tab-list-block .tab-content {
   min-height: 200px; }
+
+/*  select Style  */
+select {
+  width: 100%;
+  padding: 10px 20px;
+  background: #FFF;
+  border: none;
+  /*   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; */
+  cursor: pointer;
+  background: url("../images/arrow-down-gray.png") no-repeat 230px 8px;
+  background-size: 25px 24px; }
+
+select::-ms-expand {
+  display: none; }
+
+.dropdown-filter {
+  outline: 0;
+  position: relative;
+  z-index: 10;
+  border: 1px solid #43c2f3;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("../images/arrow-down.png") no-repeat 230px 8px;
+  background-size: 25px 24px; }
+
+.dropdown-filter:active, .dropdown-filter:focus {
+  border-color: #00ADEF; }
+
+.object-summary-list {
+  max-height: 660px;
+  overflow: auto; }
+  .object-summary-list .booking-source {
+    width: auto;
+    display: inline-block;
+    font-size: 16px; }
+  .object-summary-list header {
+    margin-top: 20px; }
+  .object-summary-list .title {
+    color: #F8B912;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #DDD;
+    padding-bottom: 10px;
+    display: block;
+    margin-top: 10px; }
+  .object-summary-list p {
+    margin-top: 10px;
+    font-size: 16px; }
+  .object-summary-list .amount {
+    font-weight: bold;
+    color: #F8B912;
+    font-size: 20px; }
+  .object-summary-list .price-tag {
+    font-size: 18px; }
+  .object-summary-list .btn {
+    padding: 10px 12px;
+    font-size: 18px; }
+  .object-summary-list .pound {
+    margin-left: 10px; }
+  .object-summary-list .list-block {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #DDD; }
+
+#hotelSlider {
+  max-height: 280px;
+  overflow: hidden; }
+
+.more-details-block .more-details-tab li {
+  cursor: pointer; }
+.more-details-block .more-details-tab li.active, .more-details-block .more-details-tab li.active a {
+  color: #FFF; }
+.more-details-block p {
+  margin: 5px;
+  margin-top: 10px;
+  float: left; }
+.more-details-block .title-list {
+  border-bottom: 1px solid #DDD;
+  padding-bottom: 5px; }
+.more-details-block .title-list li {
+  display: block;
+  margin: 2px 0; }
+
+#hotelBookingForm .modal-body {
+  max-height: 660px;
+  overflow: auto; }
+
+.sub-title {
+  font-size: 16px; }
+
+.yellow-title {
+  color: #F8B912;
+  font-size: 18px;
+  font-weight: bold;
+  display: block; }
+
+.room-feature-div {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #DDD;
+  margin-bottom: 20px; }
+  .room-feature-div .fa {
+    color: #15CC1D; }
+  .room-feature-div ul.feature-list {
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden; }
+  .room-feature-div ul.feature-list > li {
+    line-height: 2em;
+    float: left;
+    display: inline;
+    width: 33.33%;
+    font-size: 13px; }
+
+.preferences-block ul > li {
+  display: block;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #E8E8E8; }
+  .preferences-block ul > li:nth-child(2n+1) {
+    color: #F8B912;
+    font-size: 17px;
+    font-weight: bold; }
+  .preferences-block ul > li span {
+    color: #15CC1D;
+    margin-left: 5px; }
+
+/*  Tour List Modal  */
+.tour-duration {
+  color: #0ACC16;
+  font-size: 18px;
+  font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */
