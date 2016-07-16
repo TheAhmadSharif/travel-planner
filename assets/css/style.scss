@@ -74,6 +74,14 @@ body {
 .logo-area {
     background-color: #00ADEF;
     padding: 10px 10px;
+    box-shadow: 0px 1px 1px #0985b5;
+    position: relative;
+    z-index: 11;
+	  
+		img {
+
+		}
+
 }
 .user-info img {
     float: left;
@@ -147,11 +155,10 @@ body {
 }
 .content-header {
     background-color: #FFF;
-    padding: 10px;
+    padding: 20px 10px;
     box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.2);
     margin-left: -15px;
     margin-right: -15px;
-
 }
 .header-link {
 	margin: 0;
@@ -184,6 +191,7 @@ body {
   border-radius: 0;
   display: inline-block;
   border: 1px solid #D9E0F0;
+  cursor: pointer;
   
 }
 .day-tab li a {
@@ -194,10 +202,9 @@ body {
 	border: 2px solid #FFF;
 	background-color: #00ADEF;
 	box-shadow: 2px 2px 1px rgba(0,0,0,0.3);
-}
-.day-tab li.active-tab a {
 	color: #FFF;
 }
+
 .trip-section {
 	margin-top: 10px;
 	background-color: #EDF0F5;
@@ -1205,7 +1212,7 @@ select::-ms-expand {
 }
 
 
-#hotelSlider {
+#hotelSlider,#spotSlider {
 	max-height: 280px;
 	overflow: hidden;
 }
@@ -1296,4 +1303,171 @@ select::-ms-expand {
 	color: $green-color;
 	font-size: 18px;
 	font-weight: bold;
+}
+
+
+/* Trips Page  */
+.page-name {
+	color: #00ADEF;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.7em;
+}
+
+
+
+.search-trip::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #999;
+    font-size: 20px;
+}
+.search-trip:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #999;
+   font-size: 20px;
+   opacity:  1;
+}
+.search-trip::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #999;
+   font-size: 20px;
+   opacity:  1;
+}
+.search-trip:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:#999;
+   font-size: 20px;
+}
+
+.search-section {
+	.search-div {
+		position: relative;
+		z-index: 10;
+		span {
+			position: absolute;
+	    z-index: 11;
+	    left: -1px;
+	    top: 0;
+	    font-size: 20px;
+	    color: #FFF;
+	    background: #00ADEF;
+	    border-radius: 30px;
+	    width: 54px;
+	    height: 52px;
+	    text-align: center;
+	    line-height: 2.5em;
+		}
+
+	.search-trip {
+    margin-bottom: 10px;
+    padding: 25px;
+    padding-left: 60px;
+    border-color: #00ADEF;
+    border-radius: 40px;
+    font-size: 20px;
+    width: 84%;
+    float: left;
+	}
+
+}
+
+	.new-trip {
+		padding: 15px 20px;
+		font-size: 18px;
+		width: 15%;
+		min-width: 180px;
+		float: left;
+		margin-left: 1%;
+	}
+}
+
+
+.trip-list-section {
+	background: #FFF;
+	.table > thead > tr > th {
+	 vertical-align: bottom;
+    border-bottom: 0;
+    font-style: italic;
+    color: #00ADEF;
+    font-size: 18px;
+    padding: 15px 40px;
+    border: 1px dashed;
+    border-top: 0;
+    border-bottom: 1px dashed #00ADEF;
+    font-size: 17px;
+	}
+	.table > thead > tr > th:first-child {
+		border-left: 0;
+	}
+	.table > thead > tr > th:last-child {
+		border-right: 0;
+	}
+	.table tr > td {
+			padding: 15px 40px;
+			border-top: 0;
+	}
+	.table > thead  {
+		 border-bottom: 1px dashed #00ADEF;
+	}
+	.table > thead tr {
+		border-bottom: 1px dashed #00ADEF;
+	}
+	.table tbody tr {
+		border-bottom: 1px solid #94DBF7;
+		font-size: 16px;
+		color: #333;
+		font-weight: bold;
+	}
+	.draft-trip {
+		background-color: #E9F8FD;
+	}
+	.cancel-btn {
+		background: #FFF;
+    border: 1px solid #8c8c8c;
+    margin-right: 10px;
+	}
+	.not-focus {
+		background: #c7d1d3;
+		color: #747577;
+	}
+	.focus {
+		background: #FFF;
+		outline: 0;
+		border: 1px solid #00ADEF;
+	}
+}
+
+
+/* Create New Trip Mdoal */
+.create-new-trip {
+	padding-bottom: 60px;
+}
+.form-title {
+	color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: block;
+}
+.brand-name {
+	color: $brand-color;
+	font-weight: bold;
+}
+.form-holder {
+	
+	label {
+		color: #586063;
+    font-size: 13px;
+    font-weight: lighter;
+	}
+}
+.border-brand-btn {
+	border-color: $brand-color;
+	background-color: transparent;
+	color: $brand-color;
+}
+.border-brand-btn:hover {
+	border-color: #333;
+}
+
+
+/*  User Account Page  */
+.user-info-section {
+	background-color: #FFF;
+	min-height: 400px;
 }

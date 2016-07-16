@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<title>Travel Planner</title>
+
+	<link rel="shortcut icon" href="assets/images/favicon.png">
+	
+	<link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="assets/bower_components/bxslider-4/dist/jquery.bxslider.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+<aside class="sidebar" id="sidebar">
+		<header>
+			<div class="logo-area">
+				<a href="index.html"><img src="assets/images/logo.png" alt="Travel Plan"></a>
+			</div> <!-- End Logo Area -->
+		</header>
+
+		<div class="user-info">
+			<img src="assets/images/user.jpg" alt="John Doe">
+
+			<div class="info">
+					<span class="block bold">Welcome</span>
+					<span>My Account</span>
+			</div> <!-- End Info -->
+		</div> <!-- End -->
+
+		<nav>
+			<ul class="sidebar-nav" id="sidebarLink">
+				<li><a href="index.html">  <span class="fa fa-calendar nav-icon"></span> ITINERARY</a></li>
+				<li><a href="trips.html"> <span class="fa fa-map-marker nav-icon"></span> TRIPS</a></li>
+				<li><a href="#"> <span class="fa fa-location-arrow nav-icon"></span> DISCOVER</a></li>
+				<li><a href="#"> <span class="fa fa-usd nav-icon"></span> WALLET</a></li>
+				<li class="active-nav"><a href="payment-history.html"> <span class="fa fa-undo nav-icon"></span> Payment History</a></li>
+			</ul>
+		</nav>
+</aside> <!-- End aside -->
+	
+
+	<div class="container-fluid container-margin">
+		<div class="row">
+			<div class="col-sm-12 col-xs-12">
+					<header class="content-header">
+							<div class="toggle-menu visible-xs" id="toggleMenu">
+								<span class="fa fa-bars"></span>
+							</div> <!-- End Toggle Menu -->
+							<ul class="inline-list header-link">
+								<li> <a href="#"><span class="page-name">Payment History</a></span></li>
+							</ul>
+
+							<div class="access-link">
+									<ul class="inline-list">
+										<li><a href="#loginForm" data-toggle="modal" aria-controls="loginForm"> <span class="fa fa-sign-in"></span> Login | </a></li>
+										<li class="hidden-xs"><a href="#"> <span class="fa fa-question"></span> Help</a></li>
+									</ul>
+							</div> <!-- End -->
+					</header>
+
+			
+
+			<section class="trip-list-section mt-10">
+				 <table class="table">
+					 	<thead>
+					 		<tr>
+					 			<th> TRIP DATE </th>
+					 			<th> PAYMENT DATE </th>
+					 			<th> INSTALLMENT STATUS </th>
+					 			<th> AMOUNT </th>
+					 		</tr>
+					 	</thead>
+
+					 	<tbody>
+					 		<tr class="draft-trip">
+					 			<td>Out Trip 2016/ 20 April, 2016</td>
+					 			<td>17 April, 2016</td>
+					 			<td>Final Payment</td>
+					 			<td>PH 66,150.00</td>
+					 			<td> 
+					 				<button class="btn border-brand-btn"> View Trip Details </button> 
+					 			</td>
+					 		</tr>
+
+
+					 		<tr>
+					 			<td>Out Trip 2016/ 20 April, 2016</td>
+					 			<td>17 April, 2016</td>
+					 			<td>Final Payment</td>
+					 			<td>PH 66,150.00</td>
+					 			<td> 
+					 				<button class="btn border-brand-btn"> View Trip Details </button> 
+					 			</td>
+					 		</tr>
+					 	
+					 	</tbody>
+				 </table>
+			</section> <!-- End Trip List Section -->
+	 </div> <!-- End col 12 -->
+	</div> <!-- End row -->
+</div> <!-- End Container Fluid -->
+
+
+<!-- Start Login Modal -->
+<div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="loginForm">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header user-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        	<h4>Login</h4>
+      </div>
+      <div class="modal-body">
+      	<div class="user-form">
+      			<form action="#">
+      				<div class="form-group">
+      					<label for="email">YOUR EMAIL</label>
+      					<input type="text" class="form-control" placeholder="Your Email Address" required>
+      				</div> <!-- End form group -->
+
+
+      				<div class="form-group">
+      					<label for="password">PASSWORD</label>
+      					<input type="password" class="form-control" placeholder="Password Please" required>
+      				</div> <!-- End form group -->
+
+      				<div class="form-group">
+      					<button class="btn btn-action brand-btn">Login</button>
+      				</div> <!-- End form group -->
+
+      				<div class="form-group">
+      					<a href="#resetForm" data-toggle="modal" class="btn btn-action forgot"  onclick="hideThis()">Forgot Password ?</a>
+      				</div> <!-- End form group -->
+
+      				<div class="form-group">
+      						<span class="alter-sigin-text">OR SIGN IN WITH</span>
+      				</div> <!-- End Form Group -->
+
+      				<div class="form-group">
+      						<a href="#" class="btn btn-action btn-facebook"><span class="fa fa-facebook fb"></span> Facebook</a>
+      				</div> <!-- End Form Group -->
+
+      				<div class="form-group">
+      						<span class="not-having-ac">Have n&#39;t Account ? Sign Up for Travel Planner </span>
+      				</div> <!-- End Form Group -->
+
+      			</form> <!-- End form -->
+      	</div> <!-- End Login Form -->
+      </div> <!-- End modal Body -->
+    </div> <!-- End Modal Content -->
+  </div> <!-- End Modal Dialog -->
+</div> <!-- End Login Modal -->
+
+
+
+<div class="modal fade" id="createNewTrip" tabindex="-1" role="dialog" aria-labelledby="createNewTrip">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header this">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
+        <h4 class="modal-title modal-brand-title">Create New Trip</h4>
+      </div>
+      <div class="modal-body create-new-trip">
+
+				  	 <span class="form-title">Create Your Trip With <span class="brand-name">Trip Planner</span></span>
+	        	<div class="form-holder">
+	        		<form action="#" method="post">	
+	        			<div class="row">
+			        			<div class="col-sm-12 col-xs-12">
+			        					<div class="form-group">
+			        						<label for="destinition">
+			        							SELECT DESTINATION
+			        						</label>
+			        						<input type="text" class="form-control" placeholder="Select Destinition">
+			        					</div> <!-- End form group -->
+			        				
+
+			        					<div class="form-group">
+			        							<div class="row">
+			        									<div class="col-sm-6 col-xs-12">
+					        									<label for="start-date">START DATE</label>
+					        									<select name="start-date" class="form-control">
+					        										<option value="0">Select Date</option>
+					        										<option value="8th-april">8th April</option>
+					        										<option value="8th-april">8th April</option>
+					        										<option value="8th-april">8th April</option>
+					        									</select>
+					        							</div>  <!-- End col -->
+					        							<div class="col-sm-6 col-xs-12">
+					        									<label for="end-date">Select DATE</label>
+					        									<select name="0" class="form-control">
+					        										<option value="8th-april">End Date</option>
+					        										<option value="8th-april">8th April</option>
+					        										<option value="8th-april">8th April</option>
+					        										<option value="8th-april">8th April</option>
+					        									</select>
+					        							</div> <!-- End col -->
+			        							</div> <!-- End row -->
+			        					</div> <!-- End form group -->
+
+
+			        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="No-of-Adults">NUMBER OF ADULTS</label>
+				        									<select name="0" class="form-control">
+					        										<option value="5_adults">5 Adults</option>
+					        										<option value="6_adults">6 Adults</option>
+					        										<option value="7_adults">7 Adults</option>
+					        										<option value="8_adults">8 Adults</option>
+					        									</select>
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        								<div class="child-form">
+				        									<label for="No-of-children">NUMBER OF CHILDREN (0-12 yrs old)</label>
+				        									<input type="text" id="childrenVerbose" class="form-control" placeholder="Number of Children" value="3 Childrens">
+
+				        									<div class="child-input" id="childBlock">
+																		<header>
+																			SELECT CHILDREN
+																		</header>
+																		<div class="content">
+																					<div class="input-block">
+																							<div class="row">
+																								<div class="col-sm-8">
+																									Child (2y-11y)
+																								</div> <!-- End col 8 -->
+																								<div class="col-sm-4">
+																									<input type="number" class="form-control pull-right" value="0">
+																								</div> <!-- End col 4 -->
+																							</div>  <!-- End  row -->
+																					</div> <!-- End Form Group -->
+
+																					<div class="input-block no-border">
+																							<div class="row">
+																									<div class="col-sm-8">
+																										Infact on lap (16d-23)
+																									</div> <!-- End col 8 -->
+																									<div class="col-sm-4">
+																										<input type="number" class="form-control pull-right" value="0">
+																								</div> <!-- End col 4 -->
+																						</div>  <!-- End  row -->
+																					</div> <!-- End  Input Block-->
+
+																					<button class="btn btn-confirm">CONFIRM</button>
+																		</div> <!-- End Content -->
+																	</div> <!-- End Child Input -->
+				        								</div> <!-- End Child Form -->
+				        							</div>  <!-- End col -->
+				        					</div> <!-- End row -->
+					        			</div> <!-- End Form Group -->
+
+
+					        			<button class="btn btn-lg brand-btn">START PLANNING</button>
+
+
+
+				        			</div> <!-- End col -->
+		        				</div> <!-- End row -->
+
+	        			
+	        		</form> <!-- End form -->
+	        	</div> <!-- End Booking Form -->
+
+
+        	
+      </div> <!-- End modal Body -->
+    </div> <!-- End Modal Content -->
+  </div> <!-- End Modal Dialog -->
+</div> <!-- End Modal Tour-->
+
+
+
+
+	<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="assets/js/scripts.js"></script>
+	<script src="live.js"></script>
+
+
+</body>
+</html>

@@ -34,9 +34,9 @@
 		</div> <!-- End -->
 
 		<nav>
-			<ul class="sidebar-nav">
-				<li class="active-nav"><a href="#">  <span class="fa fa-calendar nav-icon"></span> ITINERARY</a></li>
-				<li><a href="#"> <span class="fa fa-map-marker nav-icon"></span> TRIPS</a></li>
+			<ul class="sidebar-nav" id="sidebarLink">
+				<li class="active-nav"><a href="index.html">  <span class="fa fa-calendar nav-icon"></span> ITINERARY</a></li>
+				<li><a href="trips.html"> <span class="fa fa-map-marker nav-icon"></span> TRIPS</a></li>
 				<li><a href="#"> <span class="fa fa-location-arrow nav-icon"></span> DISCOVER</a></li>
 				<li><a href="#"> <span class="fa fa-usd nav-icon"></span> WALLET</a></li>
 			</ul>
@@ -64,16 +64,19 @@
 							</div> <!-- End -->
 					</header>
 
+				
+
+
 		<section class="trip-section">
 			<div class="row">
 				<div class="col-sm-12">
 						<ul class="day-tab" role="tablist" id="dayTabList">
-							<li role="presentation" class="active-tab active"><a role="tab" data-toggle="tab" href="#day_01">Day 01</a></li>
-							<li role="presentation"><a href="#day_02" role="tab" data-toggle="tab">Day 02</a></li>
-							<li role="presentation"><a href="#day_03" role="tab" data-toggle="tab">Day 03</a></li>
-							<li role="presentation"><a href="#day_04" role="tab" data-toggle="tab">Day 04</a></li>
-							<li role="presentation"><a href="#day_05" role="tab" data-toggle="tab">Day 05</a></li>
-							<li role="presentation"><a href="#day_06" role="tab" data-toggle="tab">Day 06</a></li>
+							<li role="presentation" class="active-tab active" data-toggle="tab" role="tab" aria-controls="day_01"  data-target="#day_01">Day 01</a></li>
+							<li data-toggle="tab" data-target="#day_02" role="tab" aria-controls="day_02"> Day 02 </li>
+							<li data-toggle="tab" data-target="#day_03" role="tab" aria-controls="day_03"> Day 03 </li>
+							<li data-toggle="tab" data-target="#day_04" role="tab" aria-controls="day_04"> Day 04 </li>
+							<li data-toggle="tab" data-target="#day_05" role="tab" aria-controls="day_05"> Day 05 </li>
+							<li data-toggle="tab" data-target="#day_06" role="tab" aria-controls="day_06"> Day 06 </li>
 						</ul>
 					<div class="tab-content">
 						<div role="tabpanel" class="tab-pane active" id="day_01">
@@ -411,7 +414,7 @@
 
 			  	 </div> <!-- End  -->
 
-			  	 <div role="tabpanel" class="tab-pane" id="tourDetails">
+			  	 <div role="tabpanel" class="tab-pane active" id="tourDetails">
 
 			  	 	<div class="hotel-details-tab">
 
@@ -439,8 +442,8 @@
 
 							  		 				<div class="slider-nav">
 							  		 					<ul class="nav-list">
-							  		 						<li><span id="slider-prev"></span></li>
-							  		 						<li><span id="slider-next"></span></li>
+							  		 						<li><span id="spotSlider-prev"></span></li>
+							  		 						<li><span id="spotSlider-next"></span></li>
 							  		 					</ul>
 														</div> <!-- End Slider Nav -->
 					  		 					
@@ -1623,6 +1626,7 @@
 	<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 	<script src="assets/bower_components/bxslider-4/dist/jquery.bxslider.min.js"></script>
+	<script src="assets/js/scripts.js"></script>
 	<script src="live.js"></script>
 
 	<script>
@@ -1664,14 +1668,7 @@
 				  $('[data-toggle="tooltip"]').tooltip();
 
 
-				  /* Bx Slider */
-				  $('#spotSlider').bxSlider({
-						    		nextSelector: '#slider-next',
-									  prevSelector: '#slider-prev',
-									  nextText: '<span class="fa fa-chevron-right"></span>',
-									  prevText: '<span class="fa fa-chevron-left"></span>',
-								    pager: false
-								});
+				 
 
 
 				  $('.bookingForm').click(function() {
@@ -1696,6 +1693,20 @@
 
 				  $('.tourBookingForm').click(function() {
 				  		$('#spotListModal').modal('hide');
+
+				  	 /* Bx Slider */
+				  	 setTimeout(function () {
+				  	 		 $('#spotSlider').bxSlider({
+						    		nextSelector: '#spotSlider-next',
+									  prevSelector: '#spotSlider-prev',
+									  nextText: '<span class="fa fa-chevron-right"></span>',
+									  prevText: '<span class="fa fa-chevron-left"></span>',
+								    pager: false
+								});
+
+				  	 },500);
+						 
+
 				  });
 
 
