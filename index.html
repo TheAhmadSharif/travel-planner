@@ -25,12 +25,14 @@
 		</header>
 
 		<div class="user-info">
-			<img src="assets/images/user.jpg" alt="John Doe">
+			<a href="account.html">
+				<img src="assets/images/user.jpg" alt="John Doe">
 
-			<div class="info">
-					<span class="block bold">Welcome</span>
-					<span>My Account</span>
-			</div> <!-- End Info -->
+				<div class="info">
+						<span class="block bold">Welcome</span>
+						<span>My Account</span>
+				</div> <!-- End Info -->
+			</a>
 		</div> <!-- End -->
 
 		<nav>
@@ -46,7 +48,7 @@
 
 	<div class="container-fluid container-margin" id="mainBlock">
 		<div class="row">
-			<div class="col-sm-8 col-xs-12">
+			<div class="col-md-8 col-sm-12 col-xs-12">
 					<header class="content-header">
 							<div class="toggle-menu visible-xs" id="toggleMenu">
 								<span class="fa fa-bars"></span>
@@ -58,7 +60,7 @@
 
 							<div class="access-link">
 									<ul class="inline-list">
-										<li><a href="#"> <span class="fa fa-sign-in"></span> Login | </a></li>
+										<li><a href="#loginForm" data-toggle="modal" aria-controls="loginForm"> <span class="fa fa-sign-in"></span> Login <span class="hidden-xs">|</span> </a></li>
 										<li class="hidden-xs"><a href="#"> <span class="fa fa-question"></span> Help</a></li>
 									</ul>
 							</div> <!-- End -->
@@ -259,7 +261,7 @@
 
 	</section> <!-- End Section -->
 			</div> <!-- End col 8 -->
-			<div class="col-sm-4 col-xs-12 set-padding">
+			<div class="col-md-4 col-sm-12 col-xs-12 set-padding">
 					<div class="google-map" id="mapArea">
 						<div class="iframe-block">
 							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202845.11502961593!2d-122.18118132341327!3d37.40272092024147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb68ad0cfc739%3A0x7eb356b66bd4b50e!2sSilicon+Valley%2C+CA!5e0!3m2!1sen!2sus!4v1467302392621" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -1632,10 +1634,7 @@
 	<script>
 
 			jQuery(document).ready(function($) {
-				$('#toggleMenu').click(function(){
-						$('#sidebar').toggleClass('visible-sidebar');
-						$('#mainBlock').toggleClass('move-right');
-				});
+				
 
 			$('#oneWay').click(function() {
 				$('#roundForm').hide();

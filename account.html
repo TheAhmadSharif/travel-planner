@@ -33,7 +33,6 @@
 						<span>My Account</span>
 				</div> <!-- End Info -->
 			</a>
-			
 		</div> <!-- End -->
 
 		<nav>
@@ -48,7 +47,7 @@
 </aside> <!-- End aside -->
 	
 
-	<div class="container-fluid container-margin">
+	<div class="container-fluid container-margin" id="mainBlock">
 		<div class="row">
 			<div class="col-sm-12 col-xs-12">
 					<header class="content-header">
@@ -61,19 +60,77 @@
 
 							<div class="access-link">
 									<ul class="inline-list">
-										<li><a href="#loginForm" data-toggle="modal" aria-controls="loginForm"> <span class="fa fa-sign-in"></span> Login | </a></li>
+										<li><a href="#loginForm" data-toggle="modal" aria-controls="loginForm"> <span class="fa fa-sign-in"></span> Login <span class="hidden-xs">|</span> </a></li>
 										<li class="hidden-xs"><a href="#"> <span class="fa fa-question"></span> Help</a></li>
 									</ul>
 							</div> <!-- End -->
 					</header>
-
-					<section class="user-info-section mt-10">
-						
-					</section> <!-- End User Info -->
-
 			
 	 </div> <!-- End col 12 -->
 	</div> <!-- End row -->
+
+	<section class="user-info-section mt-10" id="userInfoHeight">
+		<div class="row">
+				<div class="col-sm-6 col-xs-12">
+					<form action="#">
+					<div class="form-group">
+						<label for="Display_name">DISPLAY NAME</label>
+						<input type="text" class="form-control" placeholder="Display Name">
+					</div> <!-- End Form Group -->	
+
+					<div class="form-group">
+						<label for="Email_Address">EMAIL ADDRESS</label>
+						<input type="text" class="form-control" placeholder="Email Address">
+					</div> <!-- End Form Group -->	
+
+					<div class="form-group">
+						<button class="btn brand-btn">Update Profile</button>
+					</div> <!-- End Form Group -->		
+				</form>
+				<form action="#">
+					<div class="form-group">
+						<label for="old_password">Old (Existing Password)</label>
+						<input type="password" class="form-control" value="*********">
+					</div> <!-- End Form Group -->
+
+
+						<div class="row">
+							<div class="col-sm-6">
+							<div class="form-group">
+								<label for="New_password">New Password</label>
+								<input type="password" class="form-control" value="">
+							</div> <!-- End Form Group -->
+
+							</div> <!-- End col sm 6 -->
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label for="confirm_password">Confirm Password</label>
+									<input type="password" class="form-control" value="">
+								</div> <!-- End Form Group -->
+								
+							</div> <!-- End col sm 6 -->
+						</div>
+						<div class="form-group">
+							<button class="btn btn-gray">Update Password</button>
+						</div> <!-- End Form Group -->
+				</form>
+				</div> <!-- End col 6 -->	
+				<div class="col-sm-6">
+					<div class="user-photo-block">
+
+							<div class="img-blcok">
+									<img src="assets/images/user.jpg" alt="John">
+									<span class="edit-text">
+										Edit
+									</span>
+							</div> <!-- End Img Blokc -->
+
+							<span class="photo-text">Your Photo</span>
+						
+					</div> <!-- End User Photo Block -->
+				</div> <!-- End col 6 -->
+			</div> <!-- End row -->
+	</section> <!-- End User Info -->
 </div> <!-- End Container Fluid -->
 
 
@@ -82,6 +139,22 @@
 	<script src="assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 	<script src="assets/js/scripts.js"></script>
 	<script src="live.js"></script>
+
+	<script>
+		
+			var w = window,
+			    d = document,
+			    e = d.documentElement,
+			    g = d.getElementsByTagName('body')[0],
+			    x = w.innerWidth || e.clientWidth || g.clientWidth,
+			    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+
+			    if (x > 900) {
+			    	var h = document.getElementById('userInfoHeight').style.minHeight= y - 100 + 'px';
+			    	console.log(h);
+			    }
+			    
+	</script>
 
 
 

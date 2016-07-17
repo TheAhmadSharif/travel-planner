@@ -13,7 +13,7 @@ body {
   line-height: 1.5em;
   color: #333;
   letter-spacing: 0.4px;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
@@ -21,6 +21,7 @@ body {
   position: relative;
   background-color: #FFF;
   background-color: #EDF0F5;
+  height: 100%;
   transition-timing-function: ease-in-out;
   -moz-transition-timing-function: ease-in-out;
   -webkit-transition-timing-function: ease-in-out;
@@ -227,6 +228,9 @@ input[type="radio"]:checked + label span {
 .btn:focus, .btn:active, .btn:hover {
   outline: 0; }
 
+.table-responsive {
+  overflow-x: auto; }
+
 /* Scroll Style */
 .btn:hover, .btn:active, .btn:focus {
   outline: 0 !important;
@@ -367,12 +371,14 @@ input[type="radio"]:checked + label span {
   z-index: 11;
   right: -1px;
   top: 50%;
-  position: absolute;
   pointer-events: none;
   margin-top: -10px;
   border: solid transparent;
   border-width: 10px;
   border-right-color: #FFF; }
+
+.user-info.active-nav:before {
+  top: 100px; }
 
 .nav-icon {
   width: 32px;
@@ -680,7 +686,14 @@ input[type="radio"]:checked + label span {
     left: 180px;
     transition-property: margin;
     transition-duration: 0.2s;
-    transition-timing-function: ease-in-out; } }
+    transition-timing-function: ease-in-out; }
+
+  .search-section .new-trip {
+    min-width: 120px;
+    margin-bottom: 10px; }
+
+  .trip-list-section {
+    overflow-x: auto; } }
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width: 321px) {
   /* Styles */ }
@@ -689,7 +702,8 @@ input[type="radio"]:checked + label span {
   /* Styles */ }
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* Styles */ }
+  .trip-list-section {
+    overflow-x: auto; } }
 .vehicle-thumb {
   border: 1px solid #E0DFDF; }
 
@@ -1358,15 +1372,13 @@ select::-ms-expand {
     border-color: #00ADEF;
     border-radius: 40px;
     font-size: 20px;
-    width: 84%;
+    width: 100%;
     float: left; }
 .search-section .new-trip {
   padding: 15px 20px;
   font-size: 18px;
-  width: 15%;
-  min-width: 180px;
-  float: left;
-  margin-left: 1%; }
+  width: 100%;
+  min-width: 120px; }
 
 .trip-list-section {
   background: #FFF; }
@@ -1381,6 +1393,8 @@ select::-ms-expand {
     border-top: 0;
     border-bottom: 1px dashed #00ADEF;
     font-size: 17px; }
+  .trip-list-section table {
+    background-color: #FFF; }
   .trip-list-section .table > thead > tr > th:first-child {
     border-left: 0; }
   .trip-list-section .table > thead > tr > th:last-child {
@@ -1402,7 +1416,8 @@ select::-ms-expand {
   .trip-list-section .cancel-btn {
     background: #FFF;
     border: 1px solid #8c8c8c;
-    margin-right: 10px; }
+    margin-right: 10px;
+    margin-bottom: 10px; }
   .trip-list-section .not-focus {
     background: #c7d1d3;
     color: #747577; }
@@ -1441,6 +1456,61 @@ select::-ms-expand {
 /*  User Account Page  */
 .user-info-section {
   background-color: #FFF;
-  min-height: 400px; }
+  min-height: 400px;
+  padding: 40px;
+  border-radius: 3px;
+  height: 100%; }
+  .user-info-section label {
+    color: #8A9dAB;
+    font-size: 14px;
+    font-weight: lighter; }
+  .user-info-section .btn {
+    padding: 16px 14px;
+    letter-spacing: 0.6px;
+    font-size: 18px; }
+  .user-info-section .form-group {
+    margin-bottom: 20px; }
+  .user-info-section .form-control {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: inherit; }
+
+.user-photo-block {
+  margin-top: 25px;
+  border: 2px dashed #8A9dAB;
+  padding: 30px;
+  margin-left: 30px;
+  min-height: 200px; }
+  .user-photo-block img {
+    width: 120px;
+    height: auto;
+    border-radius: 60px;
+    margin-right: 0; }
+  .user-photo-block .img-blcok {
+    position: relative;
+    z-index: 10;
+    top: 0;
+    display: inline-block;
+    border-radius: 60px;
+    background-color: #F2F2F2;
+    width: 120px;
+    overflow: hidden; }
+  .user-photo-block .edit-text {
+    position: absolute;
+    z-index: 11;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    color: #FFF;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 3px 45px; }
+  .user-photo-block .edit-text:hover {
+    background-color: #333; }
+  .user-photo-block .photo-text {
+    font-size: 20px;
+    margin-left: 30px; }
 
 /*# sourceMappingURL=style.css.map */

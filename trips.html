@@ -25,7 +25,8 @@
 		</header>
 
 		<div class="user-info">
-			<a href="account.html">
+			<li>
+				<a href="account.html">
 				<img src="assets/images/user.jpg" alt="John Doe">
 
 				<div class="info">
@@ -33,7 +34,7 @@
 						<span>My Account</span>
 				</div> <!-- End Info -->
 			</a>
-			
+			</li>
 		</div> <!-- End -->
 
 		<nav>
@@ -48,7 +49,7 @@
 </aside> <!-- End aside -->
 	
 
-	<div class="container-fluid container-margin">
+	<div class="container-fluid container-margin" id="mainBlock">
 		<div class="row">
 			<div class="col-sm-12 col-xs-12">
 					<header class="content-header">
@@ -61,31 +62,35 @@
 
 							<div class="access-link">
 									<ul class="inline-list">
-										<li><a href="#loginForm" data-toggle="modal" aria-controls="loginForm"> <span class="fa fa-sign-in"></span> Login | </a></li>
+										<li><a href="#loginForm" data-toggle="modal" aria-controls="loginForm"> <span class="fa fa-sign-in"></span> Login <span class="hidden-xs">|</span> </a></li>
 										<li class="hidden-xs"><a href="#"> <span class="fa fa-question"></span> Help</a></li>
 									</ul>
 							</div> <!-- End -->
 					</header>
-
-				
-
+			 </div> <!-- End col 12 -->
+		</div> <!-- End row -->
 
 			<section class="search-section">
 					<div class="row mt-10">
-						<div class="col-sm-12 col-xs-12">
+						<div class="col-md-9 col-sm-12 col-xs-12">
 							<div class="search-div">
 								<form action="#">
 									<input type="search" placeholder="Search your Trips" id="tripSearch" class="form-control search-trip">
 									<span class="fa fa-search"></span>
 									</form> <!-- End form -->
-									<button class="btn brand-btn new-trip"  role="presentation" data-toggle="modal" data-target="#createNewTrip"> Create New trip </button>
 								</div> <!-- End Search Div -->
 				  	</div> <!-- End col 12-->
+				  	<div class="col-md-3 col-sm-12 col-xs-12">
+				  		<button class="btn brand-btn new-trip"  role="presentation" data-toggle="modal" data-target="#createNewTrip"> Create New trip </button>
+				  	</div> <!-- End col sm 3 -->
 					</div> <!-- End row -->
 			</section> <!-- End Section -->
 
 			<section class="trip-list-section">
-				 <table class="table">
+				 <div class="row">
+				 		<div class="col-sm-12 col-xs-12">
+
+				 				<table class="table table-responsive">
 					 	<thead>
 					 		<tr>
 					 			<th> TRIP NAME </th>
@@ -142,9 +147,11 @@
 					 		</tr>
 					 	</tbody>
 				 </table>
+				 			
+				 		</div> <!-- End col -->
+				 </div> <!-- End row -->
 			</section> <!-- End Trip List Section -->
-	 </div> <!-- End col 12 -->
-	</div> <!-- End row -->
+	
 </div> <!-- End Container Fluid -->
 
 
