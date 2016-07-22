@@ -36,6 +36,7 @@
 .brand-btn {
 	background-color: $brand-color;
 	color: #FFF;
+	border: $brand-color;
 }
 .brand-btn:hover,.brand-btn:focus,.brand-btn:active {
 	color: #FFF;
@@ -73,3 +74,17 @@
 	border: 0;
 	outline: 0;
 }
+
+
+.brand-btn {
+    background-color: #00ADEF;
+    color: #FFF;
+    border: #00ADEF;
+    font-weight: bold;
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+
+ .brand-btn:hover,.brand-btn:focus {
+	background-color: #666 !important;
+} 
