@@ -39,11 +39,7 @@
 			<ul class="sidebar-nav" id="sidebarLink">
 				<li class="active-nav"><a href="index.html">  <span class="fa fa-calendar nav-icon"></span> ITINERARY</a></li>
 				<li><a href="trips.html"> <span class="fa fa-map-marker nav-icon"></span> TRIPS</a></li>
-				<li><a href="#"> <span class="fa fa-location-arrow nav-icon"></span> DISCOVER</a></li>
-				<li><a href="wallet.html"> <span class="fa fa-usd nav-icon"></span> WALLET</a></li>
-				<li><a href="payment-history.html"> <span class="fa fa-undo nav-icon"></span> Payment History</a></li>
-
-
+				<li><a href="payment-history.html"> <span class="fa fa-undo nav-icon"></span> PAYMENT HISTORY</a></li>
 			</ul>
 		</nav>
 </aside> <!-- End aside -->
@@ -274,6 +270,57 @@
 			</div> <!-- End Col sm 4 -->
 		</div> <!-- End row -->
 	</div> <!-- End Container Fluid -->
+
+
+
+<!-- Start Login Modal -->
+<div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="loginForm">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header user-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        	<h4>Login</h4>
+      </div>
+      <div class="modal-body">
+      	<div class="user-form">
+      			<form action="#">
+      				<div class="form-group">
+      					<label for="email">YOUR EMAIL</label>
+      					<input type="text" class="form-control" placeholder="Your Email Address" required>
+      				</div> <!-- End form group -->
+
+
+      				<div class="form-group">
+      					<label for="password">PASSWORD</label>
+      					<input type="password" class="form-control" placeholder="Password Please" required>
+      				</div> <!-- End form group -->
+
+      				<div class="form-group">
+      					<button class="btn btn-action brand-btn">Login</button>
+      				</div> <!-- End form group -->
+
+      				<div class="form-group">
+      					<a href="#resetForm" data-toggle="modal" class="btn btn-action forgot"  onclick="hideThis()">Forgot Password ?</a>
+      				</div> <!-- End form group -->
+
+      				<div class="form-group">
+      						<span class="alter-sigin-text">OR SIGN IN WITH</span>
+      				</div> <!-- End Form Group -->
+
+      				<div class="form-group">
+      						<a href="#" class="btn btn-action btn-facebook"><span class="fa fa-facebook fb"></span> Facebook</a>
+      				</div> <!-- End Form Group -->
+
+      				<div class="form-group">
+      						<span class="not-having-ac">Have n&#39;t Account ? Sign Up for Travel Planner </span>
+      				</div> <!-- End Form Group -->
+
+      			</form> <!-- End form -->
+      	</div> <!-- End Login Form -->
+      </div> <!-- End modal Body -->
+    </div> <!-- End Modal Content -->
+  </div> <!-- End Modal Dialog -->
+</div> <!-- End Login Modal -->
 
 
 	<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>

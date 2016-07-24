@@ -279,12 +279,14 @@ body {
 	padding-right: 0 !important;
 }
 
+
 .tour-details {
-	padding: 10px;
-	padding-top: 0;
-	float: left;
-	width: 100%;
+    padding: 10px;
+    padding-top: 0;
+    float: left;
+    width: 100%;
 }
+
 .info-tab-list {
 	float: left;
   width: 100%;
@@ -306,9 +308,13 @@ body {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	 span {
+	span {
 	 	color: #7D97A4;
 	 }
+}
+.info-tab-list > li:hover {
+	  background-color: #E9F8FD;
+    color: #00ADF0;
 }
 .info-tab-list > li:last-child {
 	border: 0;
@@ -345,6 +351,13 @@ body {
 	transform: scale(1.15,1.15);
 }
 
+.spot-holder {
+	width: 100%;
+	display: block;
+	max-height: 600px;
+	overflow: hidden;
+	overflow-y: scroll;
+}
 .spot-li > li {
 	border: 1px solid $brand-color;
 	border-radius: 2px;
@@ -1467,6 +1480,8 @@ select::-ms-expand {
 	.not-focus {
 		background: #c7d1d3;
 		color: #747577;
+		border: 0;
+		outline: 0;
 	}
 	.focus {
 		background: #FFF;
@@ -1779,4 +1794,8 @@ select::-ms-expand {
 
 .table {
 	background-color: #FFF;
+}
+
+#mapBlock {
+	display: none;
 }
