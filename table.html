@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Table Responsive</title>
+	<link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+
+	<style>
+		.container {
+			margin-top: 40px;
+	    background-color: #f1f1f1;
+	    padding: 40px;
+		}
+		thead {
+			color: #333;
+			font-weight: bold;
+		}
+		.table {
+			overflow-x: scroll;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				
+			</div> <!-- End col -->
+		</div> <!-- End row -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="table-responsive">
+                        <table class="table w-order-list table-striped">
+                            <thead>
+                            <tr>
+                                <th class="col-sm-1">
+                                    Serial
+                                </th>
+                                <th class="col-sm-8">
+                                    Issue
+                                </th>
+                                <th class="col-sm-1">
+                                    Status
+                                </th>
+                                <th class="col-sm-2">
+                                    Remarks
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    01
+                                </td>
+                                <td>
+                                  # I told you we don't have "wallet" &amp; "Discovery" tab in left menu. Please remove them.
+                                </td>
+                                <td>
+                                    <span class="label label-success">Done</span>
+                                </td>
+                                <td>
+                                    N/A
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    02
+                                </td>
+                                <td>
+                                    # I noticed when i click on trip tab left and then click on "Pay now". You change selected left tab "trip" into "Wallet". Please remove wallet tab and Selected tab should be "Trip". And html page name should should be "Trip_Details.html" not wallet.html. And when i click on "Back" button it should go back "trip.html"
+
+                                </td>
+                                <td>
+                                    <span class="label label-success">Done</span>
+                                </td>
+                                <td>
+                                    N/A
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    03
+                                </td>
+                                <td>
+                                   # What is the content of Day 02, Day 03 .... tab ? 
+                                </td>
+                                <td>
+                                    <span class="label label-success">Done</span>
+                                </td>
+                                <td>
+                                    N/A
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   04
+                                </td>
+                                <td>
+                                    # What is the content of Day 02, Day 03 .... tab ? 
+                                      It will show same content like Day01 just remove added items  
+                                </td>
+                                <td>
+                                    <span class="label label-success">Done</span>
+                                </td>
+                                <td>
+                                    N/A
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    05
+                                </td>
+                                <td>
+                                    # I noticed when i click on "view on map" you load view.html page. It is possible that we can change on that div instead load new page. I wanted it like toogle button so if i click on "view on map" it shows map and button label will change "Itinerary Map" now if i will click again it will load previous map and again label will change,
+                                </td>
+                                <td>
+                                    <span class="label label-success">Done</span>
+                                </td>
+                                <td>
+                                    N/A
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>06</td>
+                                <td> # Please also add rollover effect on Tours, Hotels, Car Rental, Flights tab just just same light blue which is selected state.</td>
+                                <td>
+                                    <span class="label label-success">Done</span>
+                                </td>
+                                <td>N/A</td>
+                            </tr>
+
+                            <tr>
+                                <td>07</td>
+                                <td># "Tour" should be "Tours" </td>
+                                <td> <span class="label label-success">Done</span></td>
+                                <td>N/A</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>08</td>
+                                <td># Under "Car Rental" , Pick up date should be just text field not drop down.</td>
+                                 <td> <span class="label label-success">Done</span></td>
+                                <td>N/A</td>
+                            </tr>
+
+                            <tr>
+                                <td>09</td>
+                                <td># Please check pop-up of Tours, Hotels because it doesn't scroll complete bottom from top. 
+I clicked Tour pop-up and scroll it scrolled properly but when i click "More details" then scroll doesn't scroll 100% from bottom. And when i back to Tours list then list scroll also doesn't scroll 100%. Same issue with hotel.</td>
+                                 <td> <span class="label label-danger">Pending</span></td>
+                                <td>Please send me the sanpshot of this Modal</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td># There is issue, for example Day01 has 4 items added. Now problem is it that if i have 10 items in day01 then whole page will scroll which is not good. Left, right &amp; top area shouldn't scroll. Only items area should be scroll. 
+You should define items area height as user browser height-top area height. For example my browser height is 700px and page top area height is 200. Now items area is 700-200px= 500px. So this is area for items now in this area only 2-3 items can fit and it there are more items then items area will scroll.</td>
+                                 <td> <span class="label label-success">Done</span></td>
+                                <td>N/A</td>
+                            </tr>
+
+
+                            </tbody>
+                        </table>
+
+
+            </div>
+			</div> <!-- End col sm 12 -->
+		</div> <!-- Enf row -->
+	</div> <!-- End  -->
+</body>
+</html>
+
