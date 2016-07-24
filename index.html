@@ -122,7 +122,7 @@
 												<li role="presentation" data-target="#flightBookingForm" aria-controls="flightBookingForm" data-toggle="modal">
 												<span class="fa fa-plane mr-5"></span>  Flights </li>
 											</ul>
-										    <div class="spot-holder">
+										    <div class="spot-holder" id="spotHolder">
 										  	 		<ul class="spot-li">
 															<li class="border-yellow">
 																<div class="row">
@@ -2627,7 +2627,9 @@
 			    	var b = document.getElementById('mapBlock').style.height = y + 'px';
 			    }
 
-			    var x = 1;
+			    document.getElementById('spotHolder').style.maxHeight = (y-210) + 'px';
+			    
+
 			    $(document).ready(function() {
 			    	$('#viewMapTrigger').click(function(e) {
 			    			e.preventDefault();
