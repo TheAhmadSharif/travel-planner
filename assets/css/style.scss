@@ -111,6 +111,8 @@ body {
 	padding: 10px;
 	position: relative;
 	z-index: 10;
+	float: left;
+	width: 100%;
 }
 .sidebar-nav > li a {
 	font-size: 14px;
@@ -152,7 +154,12 @@ body {
 	text-align: center;
 	padding: 7px;
 	margin-right: 10px;
-	color: #515254;
+	float: left;
+}
+.nav-name {
+	width: 100px;
+	margin-top: 4px;
+	float: left;
 }
 .content-header {
     background-color: #FFF;
@@ -1420,9 +1427,9 @@ select::-ms-expand {
     color: #00ADEF;
     font-size: 18px;
     padding: 15px 40px;
-    border: 1px dashed;
-    border-top: 0;
-    border-bottom: 1px dashed #00ADEF;
+    border: 0;
+    border-right: 1px dashed #00ADEF !important;
+    border-bottom: 1px dashed #00ADEF !important;
     font-size: 17px;
 	}
 	.btn {
@@ -1441,6 +1448,13 @@ select::-ms-expand {
 
 
 
+.trip-info-table {
+	.brand-btn, .cancel-btn {
+		width: 100px;
+		float: left;
+		margin-right: 10px;
+	}
+}
 
 	table {
 		background-color: #FFF;
@@ -1797,4 +1811,7 @@ select::-ms-expand {
 
 #mapBlock {
 	display: none;
+}
+.tab-pane {
+	overflow: hidden;
 }
