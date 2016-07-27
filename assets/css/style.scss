@@ -114,16 +114,28 @@ body {
 	float: left;
 	width: 100%;
 }
+
 .sidebar-nav > li a {
 	font-size: 14px;
 }
 .sidebar-nav > li a:hover {
-	color: #333;
+	color: $brand-color;
 }
 .sidebar-nav > li a:hover span {
+	color: $brand-color;
+	border-color: $brand-color;
+}
+
+
+.sidebar-nav > li.active-nav a:hover {
+	color: #333;
+}
+.sidebar-nav > li.active-nav a:hover span {
 	color: #333;
 	border-color: #333;
 }
+
+
 .active-nav, .active-nav a,.active-nav span {
 	background-color: #00ADEF;
 	color: #FFF;
@@ -516,8 +528,9 @@ body {
 		padding-bottom: 60px;
 	}
 	.modal-body {
-		max-height: 660px;
-    overflow: auto;
+		max-height: 600px;
+    overflow: hidden;
+    overflow-y: scroll; 
 	}
 }
 .transportation-form {
@@ -612,7 +625,7 @@ body {
 	margin-bottom: 5px;
 }
 .booking-source {
-	color: #F20B2D;
+	color: $brand-color;
 	font-size: 14px;
 	display: block;
 	width: 100%;
@@ -897,7 +910,7 @@ body.home-page {
 		font-weight: normal;
 	}
 	.form-control {
-		padding: 25px 10px;
+		padding: 20px 10px;
 		border-color: #D7DFE2;
 	}
 	.form-control:focus {
@@ -1030,9 +1043,12 @@ body.home-page {
 	.rating-list > li {
 		display: inline-block;
 		margin-right: 0;
-		color: #0ACC16;
 		font-size: 20px;
 		font-weight: bold;
+
+		span {
+			color: #0ACC16;
+		}
 	}	
 
 	.title {
@@ -1194,13 +1210,17 @@ select::-ms-expand {
 	border-color: $brand-color;
 }
 .object-summary-list {
-		max-height: 660px;
+		max-height: 580px;
 		overflow: auto;
 
 	.booking-source {
 		width: auto;
-		display: inline-block;
 		font-size: 16px;
+		color: #009eda;
+
+		.fa {
+				color: $brand-color;
+		}
 	}
 	header {
 		margin-top: 20px;
@@ -1282,7 +1302,8 @@ select::-ms-expand {
 
 #hotelBookingForm .modal-body{
 	max-height: 660px;
-	overflow: auto;
+	overflow: hidden;
+	overflow-y: scroll;
 }
 .sub-title {
 		font-size: 16px;
@@ -1812,6 +1833,32 @@ select::-ms-expand {
 #mapBlock {
 	display: none;
 }
-.tab-pane {
+
+
+#flightBookingForm .modal-body {
+	max-height: 600px;
 	overflow: hidden;
+	overflow-y: auto;
+}
+
+.trip-details {
+	tab-pane {
+		overflow: hidden;
+		overflow-y: scroll;
+	}
+}
+
+select.form-control {
+	  min-width: 120px;
+	  padding-right: 20px;  
+    position: relative;
+    z-index: 10;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("../images/icons/select-arrow.png") no-repeat 98% 10px;
+}
+select.city-option {
+	    background: url("../images/icons/select-arrow.png") no-repeat 94% 10px;
+
 }

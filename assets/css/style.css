@@ -283,7 +283,7 @@ input[type="radio"]:checked + label span {
   margin-top: 10px;
   margin-bottom: 10px;
   width: 100%;
-  padding: 20px 10px;
+  padding: 15px 10px;
   border-radius: 4px;
   border: 0;
   outline: 0;
@@ -369,9 +369,16 @@ input[type="radio"]:checked + label span {
   font-size: 14px; }
 
 .sidebar-nav > li a:hover {
-  color: #333; }
+  color: #00ADEF; }
 
 .sidebar-nav > li a:hover span {
+  color: #00ADEF;
+  border-color: #00ADEF; }
+
+.sidebar-nav > li.active-nav a:hover {
+  color: #333; }
+
+.sidebar-nav > li.active-nav a:hover span {
   color: #333;
   border-color: #333; }
 
@@ -744,8 +751,9 @@ input[type="radio"]:checked + label span {
 #tourBookingForm .transportation-form {
   padding-bottom: 60px; }
 #tourBookingForm .modal-body {
-  max-height: 660px;
-  overflow: auto; }
+  max-height: 600px;
+  overflow: hidden;
+  overflow-y: scroll; }
 
 .transportation-form label {
   color: #586063;
@@ -822,7 +830,7 @@ input[type="radio"]:checked + label span {
   margin-bottom: 5px; }
 
 .booking-source {
-  color: #F20B2D;
+  color: #00ADEF;
   font-size: 14px;
   display: block;
   width: 100%; }
@@ -1047,7 +1055,7 @@ body.home-page {
   font-size: 14px;
   font-weight: normal; }
 .user-form .form-control {
-  padding: 25px 10px;
+  padding: 20px 10px;
   border-color: #D7DFE2; }
 .user-form .form-control:focus {
   border-color: #A9A9A9; }
@@ -1148,9 +1156,10 @@ body.home-page {
 .object-info .rating-list > li {
   display: inline-block;
   margin-right: 0;
-  color: #0ACC16;
   font-size: 20px;
   font-weight: bold; }
+  .object-info .rating-list > li span {
+    color: #0ACC16; }
 .object-info .title {
   color: #F8B912;
   font-size: 18px;
@@ -1263,12 +1272,14 @@ select::-ms-expand {
   border-color: #00ADEF; }
 
 .object-summary-list {
-  max-height: 660px;
+  max-height: 580px;
   overflow: auto; }
   .object-summary-list .booking-source {
     width: auto;
-    display: inline-block;
-    font-size: 16px; }
+    font-size: 16px;
+    color: #009eda; }
+    .object-summary-list .booking-source .fa {
+      color: #00ADEF; }
   .object-summary-list header {
     margin-top: 20px; }
   .object-summary-list .title {
@@ -1318,7 +1329,8 @@ select::-ms-expand {
 
 #hotelBookingForm .modal-body {
   max-height: 660px;
-  overflow: auto; }
+  overflow: hidden;
+  overflow-y: scroll; }
 
 .sub-title {
   font-size: 16px; }
@@ -1717,7 +1729,26 @@ select::-ms-expand {
 #mapBlock {
   display: none; }
 
-.tab-pane {
-  overflow: hidden; }
+#flightBookingForm .modal-body {
+  max-height: 600px;
+  overflow: hidden;
+  overflow-y: auto; }
+
+.trip-details tab-pane {
+  overflow: hidden;
+  overflow-y: scroll; }
+
+select.form-control {
+  min-width: 120px;
+  padding-right: 20px;
+  position: relative;
+  z-index: 10;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("../images/icons/select-arrow.png") no-repeat 98% 10px; }
+
+select.city-option {
+  background: url("../images/icons/select-arrow.png") no-repeat 94% 10px; }
 
 /*# sourceMappingURL=style.css.map */
