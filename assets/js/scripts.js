@@ -8,12 +8,10 @@ jQuery(document).ready(function($) {
 		$('#sidebar').css('left', '-180px');
 		$('.container-margin').css('margin-left', '0');
 		$(this).hide('0');
-		console.log('Hi CloseBar Clicked');
 	});
 
 
 	/* Closebar */
-	
 	function sideabrVisibility () {
 				var w = $( window ).width();
 				if ( w < 769) {
@@ -28,7 +26,6 @@ jQuery(document).ready(function($) {
 						$('.container-margin').css('margin-left', '180px');
 						$('#toggleMenu').hide('0');
 				}
-				console.log('Hello Resize');
 		}
 
 		sideabrVisibility();
@@ -36,3 +33,5 @@ jQuery(document).ready(function($) {
 
 
 });
+
+console.log('Hi, This is Ahmad Sharif', 'https://github.com/TheAhmadSharif');
