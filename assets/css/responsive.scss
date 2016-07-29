@@ -13,7 +13,6 @@
 	}
 
 	.container-margin {
-		left: 0;
 		margin-left: 0;
 		-webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -139,6 +138,20 @@
 .user-info-section .btn {
 		min-width: 210px;
 	}
+.payment-section .btn-back {
+	float: left;
+}
+
+.user-photo-block {
+    padding: 10px;
+    margin-left: 0;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 30px;
+    min-height: 150px;
+}
+.content-header {
+}
 }
 
 
@@ -159,6 +172,81 @@
 .trip-list-section {
 		overflow-x: auto;
 	}
+
+	.payment-section .btn-back {
+	    float: left;
+	}
 }
 
 
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
+
+/* iPhone 6 landscape */
+@media only screen and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2){ 
+
+		.trip-info {
+			border: 0;
+		}
+
+		.action-block {
+		    float: right;
+		}
+
+		.payment-section .btn-back {
+			    float: right;
+			}
+
+			.user-photo-block {
+			    padding: 10px;
+			    margin-left: 0;
+			    width: 100%;
+			    margin-top: 0;
+			    margin-bottom: 30px;
+			    min-height: 150px;
+			}
+ }
+/* iPhone 5 landscape */
+ @media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape) { 
+	.action-block {
+		    float: left;
+		    width: 100%;
+		    .brand-btn {
+		    	width: 48%;
+		    }
+		}
+		.city-option {
+		    width: 48%;
+		    float: right;
+		}
+		.payment-section .btn-back {
+			    float: left;
+			}
+
+			.user-photo-block {
+			    padding: 10px;
+			    margin-left: 0;
+			    width: 100%;
+			    margin-top: 0;
+			    margin-bottom: 30px;
+			    min-height: 150px;
+			}
+
+}
