@@ -20,6 +20,7 @@ jQuery(document).ready(function($) {
 					 	$('#toggleMenu').fadeIn('100');
 						$('#sidebar').css('left', '-300px');
 						$('.container-margin').css('margin-left', '0');
+						$('#closeTrigger').fadeOut('100');
 				}
 
 				if (w > 769) {
