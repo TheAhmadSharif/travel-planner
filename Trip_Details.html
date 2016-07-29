@@ -18,6 +18,7 @@
 </head>
 <body>
 <aside class="sidebar" id="sidebar">
+		<span id="closeTrigger" class="fa fa-close"></span>
 		<header>
 			<div class="logo-area">
 				<a href="index.html"><img src="assets/images/logo.png" alt="Travel Plan"></a>
@@ -45,11 +46,11 @@
 </aside> <!-- End aside -->
 	
 
-	<div class="container-fluid container-margin" id="mainBlock">
+	<div class="container-fluid container-margin">
 		<div class="row">
 			<div class="col-sm-12 col-xs-12">
 					<header class="content-header">
-							<div class="toggle-menu visible-xs" id="toggleMenu">
+							<div class="toggle-menu" id="toggleMenu">
 								<span class="fa fa-bars"></span>
 							</div> <!-- End Toggle Menu -->
 							<ul class="inline-list header-link">
@@ -58,7 +59,8 @@
 
 							<div class="access-link">
 									<ul class="inline-list">
-										<li><a href="#loginForm" data-toggle="modal" aria-controls="loginForm"> <span class="fa fa-sign-in"></span> Login <span class="hidden-xs">|</span> </a></li>
+										<li><a href="#loginForm" data-target="#loginForm" data-toggle="modal" aria-controls="loginForm">
+										 <span class="fa fa-sign-in hidden-xs"></span> Login <span class="hidden-xs">|</span> </a></li>
 										<li class="hidden-xs"><a href="#"> <span class="fa fa-question"></span> Help</a></li>
 									</ul>
 							</div> <!-- End -->
@@ -154,24 +156,25 @@
 						
 					</div> <!-- End Table Responsive -->
 				<div class="row">
-						<div class="calculation-block">
-							<table class="table">
-							 	<tr>
-							 		<td>TOTAL COST OF TRIP PACKAGE</td>
-							 		<td>PH 2,20,500.00</td>
-							 		
-							 	</tr>
+					<div class="col-sm-12 col-xs-12">
+							<div class="calculation-block">
+									<table class="table">
+									 	<tr>
+									 		<td>TOTAL COST OF TRIP PACKAGE</td>
+									 		<td>PH 2,20,500.00</td>
+									 		
+									 	</tr>
 
-							 	<tr>
-							 		<td>70% PAID IN 9TH APRIL, 2016</td>
-							 		<td>PH 154,350,00</td>
-							 	</tr>
-							 	<tr>
-							 		<td><button class="btn brand-btn">Pay Now</button></td>
-							 		<td> <span class="total">PH 66,150.00</span></td>
-							 	</tr>
-							 </table>
-						</div> <!-- End calculation Block -->
+									 	<tr>
+									 		<td>70% PAID IN 9TH APRIL, 2016</td>
+									 		<td>PH 154,350,00</td>
+									 	</tr>
+									 	<tr>
+									 		<td><button class="btn brand-btn">Pay Now</button></td>
+									 		<td> <span class="total">PH 66,150.00</span></td>
+									 	</tr>
+									 </table>
+							</div> <!-- End Calculation Block --> 	
 
 							<div class="link-div hidden-xs">
 								<table>
@@ -181,8 +184,7 @@
 									</tr>
 								</table>
 							</div> <!-- End -->
-
-
+					</div> <!-- End col 12 -->
 				</div> <!-- End row -->
 			</section> <!-- End Trip List Section -->
 		</div> <!-- End col 12 -->

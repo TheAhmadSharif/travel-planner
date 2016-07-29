@@ -18,6 +18,7 @@
 </head>
 <body>
 <aside class="sidebar" id="sidebar">
+		<span id="closeTrigger" class="fa fa-close"></span>
 		<header>
 			<div class="logo-area">
 				<a href="index.html"><img src="assets/images/logo.png" alt="Travel Plan"></a>
@@ -45,11 +46,11 @@
 </aside> <!-- End aside -->
 	
 
-	<div class="container-fluid container-margin" id="mainBlock">
+	<div class="container-fluid container-margin">
 		<div class="row">
 			<div class="col-md-8 col-sm-12 col-xs-12">
 					<header class="content-header">
-							<div class="toggle-menu visible-xs" id="toggleMenu">
+							<div class="toggle-menu" id="toggleMenu">
 								<span class="fa fa-bars"></span>
 							</div> <!-- End Toggle Menu -->
 							<ul class="inline-list header-link">
@@ -57,9 +58,11 @@
 								<li><a href="#" class="btn btn-gray">View on Map</a></li>
 							</ul>
 
+							
 							<div class="access-link">
 									<ul class="inline-list">
-										<li><a href="#loginForm" data-toggle="modal" aria-controls="loginForm"> <span class="fa fa-sign-in"></span> Login <span class="hidden-xs">|</span> </a></li>
+										<li><a href="#loginForm" data-target="#loginForm" data-toggle="modal" aria-controls="loginForm">
+										 <span class="fa fa-sign-in hidden-xs"></span> Login <span class="hidden-xs">|</span> </a></li>
 										<li class="hidden-xs"><a href="#"> <span class="fa fa-question"></span> Help</a></li>
 									</ul>
 							</div> <!-- End -->

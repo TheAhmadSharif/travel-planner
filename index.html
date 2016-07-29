@@ -18,6 +18,7 @@
 </head>
 <body>
 <aside class="sidebar" id="sidebar">
+		<span id="closeTrigger" class="fa fa-close"></span>
 		<header>
 			<div class="logo-area">
 				<a href="index.html"><img src="assets/images/logo.png" alt="Travel Plan"></a>
@@ -45,11 +46,11 @@
 </aside> <!-- End aside -->
 	
 
-	<div class="container-fluid container-margin" id="mainBlock">
+	<div class="container-fluid container-margin">
 		<div class="row">
 			<div class="col-md-8 col-sm-12 col-xs-12">
 					<header class="content-header">
-							<div class="toggle-menu visible-xs" id="toggleMenu">
+							<div class="toggle-menu" id="toggleMenu">
 								<span class="fa fa-bars"></span>
 							</div> <!-- End Toggle Menu -->
 							<ul class="inline-list header-link">
@@ -59,7 +60,8 @@
 
 							<div class="access-link">
 									<ul class="inline-list">
-										<li><a href="#loginForm" data-target="#loginForm" data-toggle="modal" aria-controls="loginForm"> <span class="fa fa-sign-in"></span> Login <span class="hidden-xs">|</span> </a></li>
+										<li><a href="#loginForm" data-target="#loginForm" data-toggle="modal" aria-controls="loginForm">
+										 <span class="fa fa-sign-in hidden-xs"></span> Login <span class="hidden-xs">|</span> </a></li>
 										<li class="hidden-xs"><a href="#"> <span class="fa fa-question"></span> Help</a></li>
 									</ul>
 							</div> <!-- End -->
@@ -71,6 +73,7 @@
 		<section class="trip-section">
 			<div class="row">
 				<div class="col-sm-12">
+
 						<ul class="day-tab" role="tablist" id="dayTabList">
 							<li role="presentation" class="active-tab active" data-toggle="tab" role="tab" aria-controls="day_01"  data-target="#day_01">Day 01</a></li>
 							<li data-toggle="tab" data-target="#day_02" role="tab" aria-controls="day_02"> Day 02 </li>
@@ -79,6 +82,7 @@
 							<li data-toggle="tab" data-target="#day_05" role="tab" aria-controls="day_05"> Day 05 </li>
 							<li data-toggle="tab" data-target="#day_06" role="tab" aria-controls="day_06"> Day 06 </li>
 						</ul>
+						
 					<div class="tab-content trip-details">
 						<div role="tabpanel" class="tab-pane active" id="day_01">
 							<div class="row">
@@ -89,7 +93,7 @@
 		      			
 									</div> <!-- End Trip Duration -->
 								</div> <!-- End col 3 -->
-								<div class="col-sm-8">
+								<div class="col-sm-8 col-xs-12">
 										<div class="action-block">
 												<button class="btn brand-btn mr-10">Send Package Request <span class="fa fa-chevron-right chevron-icon"></span></button>
 												<select id="city" class="form-control city-option">
@@ -111,23 +115,24 @@
 											<ul class="info-tab-list" id="tabList">
 												<li role="presentation" data-target="#spotListModal" aria-controls="spotListModal" data-toggle="modal">
 
-												 <span class="fa fa-map-marker mr-5"></span> Tours </li>
+												 <span class="fa fa-map-marker mr-5 hidden-xs hidden-xs"></span> Tours </li>
 
 												<li role="presentation" data-target="#hotelListModal" aria-controls="hotelListModal" data-toggle="modal">
-												<span class="fa fa-bed mr-5"></span> Hotels</li>
+												<span class="fa fa-bed mr-5 hidden-xs"></span> Hotels</li>
 
 												<li role="presentation" data-target="#carBookingForm" aria-controls="carBookingForm" data-toggle="modal"> 
-												<span class="fa fa-car mr-5"></span> Car Rental </li>
+												<span class="fa fa-car mr-5 hidden-xs"></span> Transfer </li>
 
 												<li role="presentation" data-target="#flightBookingForm" aria-controls="flightBookingForm" data-toggle="modal">
-												<span class="fa fa-plane mr-5"></span>  Flights </li>
+												<span class="fa fa-plane mr-5 hidden-xs"></span>  Flights </li>
 											</ul>
 										    <div class="spot-holder spotHolder">
 										  	 		<ul class="spot-li">
 															<li class="border-yellow">
 																<div class="row">
 																		<div class="col-sm-8 col-xs-8">
-																				<span class="spot-name"> <span class="fa fa-bed spot-icon bg-yellow"></span> Check in at Shangrila Hotel</span>
+																				<span class="fa fa-bed spot-icon bg-yellow"></span> <span class="spot-name"> Check in at Shangrila Hotel</span>
+
 																		</div> <!-- End col 8 -->
 																		<div class="col-sm-4 col-xs-4">
 																				<ul class="inline-list action-list">
@@ -138,7 +143,7 @@
 																		</div> <!-- End col 4 -->
 																</div> <!-- End row	 -->
 																<div class="row">	
-																	<div class="col-sm-12">
+																	<div class="col-sm-12 col-xs-12">
 																			<div class="spot-img">
 																				<img src="assets/images/spot/1.jpg" alt="Cape town">
 																			</div> <!-- End Spot Name -->
@@ -158,7 +163,7 @@
 															<li>
 																<div class="row">
 																		<div class="col-sm-8 col-xs-8">
-																				<span class="spot-name"> <span class="fa fa-map-marker spot-icon"></span> Tour at Manila City</span>
+																				<span class="fa fa-map-marker spot-icon"></span><span class="spot-name">  Tour at Manila City</span>
 																		</div> <!-- End col 8 -->
 																		<div class="col-sm-4 col-xs-4">
 																				<ul class="inline-list action-list">
@@ -187,7 +192,7 @@
 														<li class="border-red">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-car spot-icon bg-red"></span> Tour At Manila City</span>
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -215,7 +220,7 @@
 														<li class="border-yellow">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-map-marker spot-icon bg-yellow"></span> Tour At Manila City</span>
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -245,7 +250,7 @@
 														<li class="border-red">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-car spot-icon bg-red"></span> Tour At Manila City</span>
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -273,7 +278,7 @@
 														<li class="border-yellow">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-map-marker spot-icon bg-yellow"></span> Tour At Manila City</span>
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -336,23 +341,23 @@
 											<ul class="info-tab-list" id="tabList">
 												<li role="presentation" data-target="#spotListModal" aria-controls="spotListModal" data-toggle="modal">
 
-												 <span class="fa fa-map-marker mr-5"></span> Tours </li>
+												 <span class="fa fa-map-marker mr-5 hidden-xs"></span> Tours </li>
 
 												<li role="presentation" data-target="#hotelListModal" aria-controls="hotelListModal" data-toggle="modal">
-												<span class="fa fa-bed mr-5"></span> Hotels</li>
+												<span class="fa fa-bed mr-5 hidden-xs"></span> Hotels</li>
 
 												<li role="presentation" data-target="#carBookingForm" aria-controls="carBookingForm" data-toggle="modal"> 
-												<span class="fa fa-car mr-5"></span> Car Rental </li>
+												<span class="fa fa-car mr-5 hidden-xs"></span> Transfer </li>
 
 												<li role="presentation" data-target="#flightBookingForm" aria-controls="flightBookingForm" data-toggle="modal">
-												<span class="fa fa-plane mr-5"></span>  Flights </li>
+												<span class="fa fa-plane mr-5 hidden-xs"></span>  Flights </li>
 											</ul>
 										    <div class="spot-holder spotHolder">
 										  	 		<ul class="spot-li">
 															<li class="border-yellow">
 																<div class="row">
 																		<div class="col-sm-8 col-xs-8">
-																				<span class="spot-name"> <span class="fa fa-bed spot-icon bg-yellow"></span> Check in at Shangrila Hotel</span>
+																				<span class="fa fa-bed spot-icon bg-yellow"></span> <span class="spot-name">  Check in at Shangrila Hotel</span>
 																		</div> <!-- End col 8 -->
 																		<div class="col-sm-4 col-xs-4">
 																				<ul class="inline-list action-list">
@@ -383,7 +388,7 @@
 															<li>
 																<div class="row">
 																		<div class="col-sm-8 col-xs-8">
-																				<span class="spot-name"> <span class="fa fa-map-marker spot-icon"></span> Tour at Manila City</span>
+																				<span class="fa fa-map-marker spot-icon"></span> <span class="spot-name">  Tour at Manila City</span>
 																		</div> <!-- End col 8 -->
 																		<div class="col-sm-4 col-xs-4">
 																				<ul class="inline-list action-list">
@@ -412,7 +417,7 @@
 														<li class="border-red">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-car spot-icon bg-red"></span> Tour At Manila City</span>
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -440,7 +445,7 @@
 														<li class="border-yellow">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-map-marker spot-icon bg-yellow"></span> Tour At Manila City</span>
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -470,7 +475,7 @@
 														<li class="border-red">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-car spot-icon bg-red"></span> Tour At Manila City</span>
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -498,7 +503,7 @@
 														<li class="border-yellow">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-map-marker spot-icon bg-yellow"></span> Tour At Manila City</span>
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -561,23 +566,23 @@
 											<ul class="info-tab-list" id="tabList">
 												<li role="presentation" data-target="#spotListModal" aria-controls="spotListModal" data-toggle="modal">
 
-												 <span class="fa fa-map-marker mr-5"></span> Tours </li>
+												 <span class="fa fa-map-marker mr-5 hidden-xs"></span> Tours </li>
 
 												<li role="presentation" data-target="#hotelListModal" aria-controls="hotelListModal" data-toggle="modal">
-												<span class="fa fa-bed mr-5"></span> Hotels</li>
+												<span class="fa fa-bed mr-5 hidden-xs"></span> Hotels</li>
 
 												<li role="presentation" data-target="#carBookingForm" aria-controls="carBookingForm" data-toggle="modal"> 
-												<span class="fa fa-car mr-5"></span> Car Rental </li>
+												<span class="fa fa-car mr-5 hidden-xs"></span> Transfer </li>
 
 												<li role="presentation" data-target="#flightBookingForm" aria-controls="flightBookingForm" data-toggle="modal">
-												<span class="fa fa-plane mr-5"></span>  Flights </li>
+												<span class="fa fa-plane mr-5 hidden-xs"></span>  Flights </li>
 											</ul>
 										    <div class="spot-holder spotHolder">
 										  	 		<ul class="spot-li">
 															<li class="border-yellow">
 																<div class="row">
 																		<div class="col-sm-8 col-xs-8">
-																				<span class="spot-name"> <span class="fa fa-bed spot-icon bg-yellow"></span> Check in at Shangrila Hotel</span>
+																				<span class="fa fa-bed spot-icon bg-yellow"></span> <span class="spot-name">  Check in at Shangrila Hotel</span>
 																		</div> <!-- End col 8 -->
 																		<div class="col-sm-4 col-xs-4">
 																				<ul class="inline-list action-list">
@@ -608,7 +613,7 @@
 															<li>
 																<div class="row">
 																		<div class="col-sm-8 col-xs-8">
-																				<span class="spot-name"> <span class="fa fa-map-marker spot-icon"></span> Tour at Manila City</span>
+																				<span class="fa fa-map-marker spot-icon"></span> <span class="spot-name">  Tour at Manila City</span>
 																		</div> <!-- End col 8 -->
 																		<div class="col-sm-4 col-xs-4">
 																				<ul class="inline-list action-list">
@@ -637,7 +642,7 @@
 														<li class="border-red">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-car spot-icon bg-red"></span> Tour At Manila City</span>
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -665,7 +670,7 @@
 														<li class="border-yellow">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-map-marker spot-icon bg-yellow"></span> Tour At Manila City</span>
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -695,7 +700,7 @@
 														<li class="border-red">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-car spot-icon bg-red"></span> Tour At Manila City</span>
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -723,7 +728,7 @@
 														<li class="border-yellow">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-map-marker spot-icon bg-yellow"></span> Tour At Manila City</span>
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -786,23 +791,23 @@
 											<ul class="info-tab-list" id="tabList">
 												<li role="presentation" data-target="#spotListModal" aria-controls="spotListModal" data-toggle="modal">
 
-												 <span class="fa fa-map-marker mr-5"></span> Tours </li>
+												 <span class="fa fa-map-marker mr-5 hidden-xs"></span> Tours </li>
 
 												<li role="presentation" data-target="#hotelListModal" aria-controls="hotelListModal" data-toggle="modal">
-												<span class="fa fa-bed mr-5"></span> Hotels</li>
+												<span class="fa fa-bed mr-5 hidden-xs"></span> Hotels</li>
 
 												<li role="presentation" data-target="#carBookingForm" aria-controls="carBookingForm" data-toggle="modal"> 
-												<span class="fa fa-car mr-5"></span> Car Rental </li>
+												<span class="fa fa-car mr-5 hidden-xs"></span> Transfer </li>
 
 												<li role="presentation" data-target="#flightBookingForm" aria-controls="flightBookingForm" data-toggle="modal">
-												<span class="fa fa-plane mr-5"></span>  Flights </li>
+												<span class="fa fa-plane mr-5 hidden-xs"></span>  Flights </li>
 											</ul>
 										    <div class="spot-holder spotHolder">
 										  	 		<ul class="spot-li">
 															<li class="border-yellow">
 																<div class="row">
 																		<div class="col-sm-8 col-xs-8">
-																				<span class="spot-name"> <span class="fa fa-bed spot-icon bg-yellow"></span> Check in at Shangrila Hotel</span>
+																				<span class="fa fa-bed spot-icon bg-yellow"></span> <span class="spot-name">  Check in at Shangrila Hotel</span>
 																		</div> <!-- End col 8 -->
 																		<div class="col-sm-4 col-xs-4">
 																				<ul class="inline-list action-list">
@@ -833,7 +838,7 @@
 															<li>
 																<div class="row">
 																		<div class="col-sm-8 col-xs-8">
-																				<span class="spot-name"> <span class="fa fa-map-marker spot-icon"></span> Tour at Manila City</span>
+																				<span class="fa fa-map-marker spot-icon"></span> <span class="spot-name">  Tour at Manila City</span>
 																		</div> <!-- End col 8 -->
 																		<div class="col-sm-4 col-xs-4">
 																				<ul class="inline-list action-list">
@@ -862,7 +867,7 @@
 														<li class="border-red">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-car spot-icon bg-red"></span> Tour At Manila City</span>
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -890,7 +895,7 @@
 														<li class="border-yellow">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-map-marker spot-icon bg-yellow"></span> Tour At Manila City</span>
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -920,7 +925,7 @@
 														<li class="border-red">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-car spot-icon bg-red"></span> Tour At Manila City</span>
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -948,7 +953,7 @@
 														<li class="border-yellow">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-map-marker spot-icon bg-yellow"></span> Tour At Manila City</span>
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -1011,23 +1016,23 @@
 											<ul class="info-tab-list" id="tabList">
 												<li role="presentation" data-target="#spotListModal" aria-controls="spotListModal" data-toggle="modal">
 
-												 <span class="fa fa-map-marker mr-5"></span> Tours </li>
+												 <span class="fa fa-map-marker mr-5 hidden-xs"></span> Tours </li>
 
 												<li role="presentation" data-target="#hotelListModal" aria-controls="hotelListModal" data-toggle="modal">
-												<span class="fa fa-bed mr-5"></span> Hotels</li>
+												<span class="fa fa-bed mr-5 hidden-xs"></span> Hotels</li>
 
 												<li role="presentation" data-target="#carBookingForm" aria-controls="carBookingForm" data-toggle="modal"> 
-												<span class="fa fa-car mr-5"></span> Car Rental </li>
+												<span class="fa fa-car mr-5 hidden-xs"></span> Transfer </li>
 
 												<li role="presentation" data-target="#flightBookingForm" aria-controls="flightBookingForm" data-toggle="modal">
-												<span class="fa fa-plane mr-5"></span>  Flights </li>
+												<span class="fa fa-plane mr-5 hidden-xs"></span>  Flights </li>
 											</ul>
 										    <div class="spot-holder spotHolder">
 										  	 		<ul class="spot-li">
 															<li class="border-yellow">
 																<div class="row">
 																		<div class="col-sm-8 col-xs-8">
-																				<span class="spot-name"> <span class="fa fa-bed spot-icon bg-yellow"></span> Check in at Shangrila Hotel</span>
+																				<span class="fa fa-bed spot-icon bg-yellow"></span> <span class="spot-name">  Check in at Shangrila Hotel</span>
 																		</div> <!-- End col 8 -->
 																		<div class="col-sm-4 col-xs-4">
 																				<ul class="inline-list action-list">
@@ -1058,7 +1063,7 @@
 															<li>
 																<div class="row">
 																		<div class="col-sm-8 col-xs-8">
-																				<span class="spot-name"> <span class="fa fa-map-marker spot-icon"></span> Tour at Manila City</span>
+																				<span class="fa fa-map-marker spot-icon"></span> <span class="spot-name">  Tour at Manila City</span>
 																		</div> <!-- End col 8 -->
 																		<div class="col-sm-4 col-xs-4">
 																				<ul class="inline-list action-list">
@@ -1087,7 +1092,7 @@
 														<li class="border-red">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-car spot-icon bg-red"></span> Tour At Manila City</span>
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -1115,7 +1120,7 @@
 														<li class="border-yellow">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-map-marker spot-icon bg-yellow"></span> Tour At Manila City</span>
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -1145,7 +1150,7 @@
 														<li class="border-red">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-car spot-icon bg-red"></span> Tour At Manila City</span>
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -1173,7 +1178,7 @@
 														<li class="border-yellow">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-map-marker spot-icon bg-yellow"></span> Tour At Manila City</span>
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -1237,23 +1242,23 @@
 											<ul class="info-tab-list" id="tabList">
 												<li role="presentation" data-target="#spotListModal" aria-controls="spotListModal" data-toggle="modal">
 
-												 <span class="fa fa-map-marker mr-5"></span> Tours </li>
+												 <span class="fa fa-map-marker mr-5 hidden-xs"></span> Tours </li>
 
 												<li role="presentation" data-target="#hotelListModal" aria-controls="hotelListModal" data-toggle="modal">
-												<span class="fa fa-bed mr-5"></span> Hotels</li>
+												<span class="fa fa-bed mr-5 hidden-xs"></span> Hotels</li>
 
 												<li role="presentation" data-target="#carBookingForm" aria-controls="carBookingForm" data-toggle="modal"> 
-												<span class="fa fa-car mr-5"></span> Car Rental </li>
+												<span class="fa fa-car mr-5 hidden-xs"></span> Transfer </li>
 
 												<li role="presentation" data-target="#flightBookingForm" aria-controls="flightBookingForm" data-toggle="modal">
-												<span class="fa fa-plane mr-5"></span>  Flights </li>
+												<span class="fa fa-plane mr-5 hidden-xs"></span>  Flights </li>
 											</ul>
 										    <div class="spot-holder spotHolder">
 										  	 		<ul class="spot-li">
 															<li class="border-yellow">
 																<div class="row">
 																		<div class="col-sm-8 col-xs-8">
-																				<span class="spot-name"> <span class="fa fa-bed spot-icon bg-yellow"></span> Check in at Shangrila Hotel</span>
+																				<span class="fa fa-bed spot-icon bg-yellow"></span> <span class="spot-name">  Check in at Shangrila Hotel</span>
 																		</div> <!-- End col 8 -->
 																		<div class="col-sm-4 col-xs-4">
 																				<ul class="inline-list action-list">
@@ -1284,7 +1289,7 @@
 															<li>
 																<div class="row">
 																		<div class="col-sm-8 col-xs-8">
-																				<span class="spot-name"> <span class="fa fa-map-marker spot-icon"></span> Tour at Manila City</span>
+																				<span class="fa fa-map-marker spot-icon"></span> <span class="spot-name">  Tour at Manila City</span>
 																		</div> <!-- End col 8 -->
 																		<div class="col-sm-4 col-xs-4">
 																				<ul class="inline-list action-list">
@@ -1313,7 +1318,7 @@
 														<li class="border-red">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-car spot-icon bg-red"></span> Tour At Manila City</span>
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -1341,7 +1346,7 @@
 														<li class="border-yellow">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-map-marker spot-icon bg-yellow"></span> Tour At Manila City</span>
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -1371,7 +1376,7 @@
 														<li class="border-red">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-car spot-icon bg-red"></span> Tour At Manila City</span>
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -1399,7 +1404,7 @@
 														<li class="border-yellow">
 															<div class="row">
 																	<div class="col-sm-8 col-xs-8">
-																			<span class="spot-name"> <span class="fa fa-map-marker spot-icon bg-yellow"></span> Tour At Manila City</span>
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
 																	</div> <!-- End col 8 -->
 																	<div class="col-sm-4 col-xs-4">
 																			<ul class="inline-list action-list">
@@ -1473,13 +1478,13 @@
       <ul class="info-tab-list at-modal" role="tablist">
 						<li role="presentation" data-target="#bookTour" aria-controls="bookTour" role="tab" data-toggle="tab">
 
-						 <span class="fa fa-calendar-check-o mr-5"></span> Book Tour </li>
+						 <span class="fa fa-calendar-check-o mr-5 hidden-xs"></span> Book Tour </li>
 
 						<li class="active" role="presentation" data-target="#tourDetails" aria-controls="tourDetails" role="tab" data-toggle="tab">
-						<span class="fa fa-bed mr-5"></span> Tour Details</li>
+						<span class="fa fa-bed mr-5 hidden-xs"></span> Tour Details</li>
 
 						<li id="spotListTrigger" data-target="#spotListModal" aria-controls="spotListModal" role="tab" data-toggle="modal"> 
-						<span class="fa fa-list-alt mr-5"></span> Tour List </li>
+						<span class="fa fa-list-alt mr-5 hidden-xs"></span> Tour List </li>
 				
 					</ul>
 
@@ -1678,7 +1683,7 @@
 						  		 	<div class="row">
 						  		 		<div class="col-sm-12 col-xs-12">
 						  		 			<div class="tab-list-block more-details-block">
-					  		 					<ul class="tab-list more-details-tab" role="tablist">
+					  		 					<ul class="tab-list more-details-tab tab-2" role="tablist">
 
 						  		 					<li role="presentation" class="active" data-target="#summaryTour" aria-controls="summaryTour" role="tab" data-toggle="tab">Summary</li>
 
@@ -1733,12 +1738,12 @@
 					<ul class="info-tab-list at-modal" role="tablist">
 						<li role="presentation" id="hotelFormTab" data-target="#bookHotel" aria-controls="bookHotel" role="tab" data-toggle="tab">
 
-						 <span class="fa fa-calendar-check-o mr-5"></span> Book Hotel </li>
+						 <span class="fa fa-calendar-check-o mr-5 hidden-xs"></span> Book Hotel </li>
 
 						<li class="active" id="hotelDetailsTab" role="presentation" data-target="#hotelDetails" aria-controls="hotelDetails" role="tab" data-toggle="tab">
-						<span class="fa fa-bed mr-5"></span> Hotel Details</li>
+						<span class="fa fa-bed mr-5 hidden-xs"></span> Hotel Details</li>
 
-						<li id="hotelListTrigger" role="presentation" data-target="#hotelListModal" aria-controls="hotelListModal" data-toggle="modal"><span class="fa fa-bed mr-5"></span> Hotel List </li>
+						<li id="hotelListTrigger" role="presentation" data-target="#hotelListModal" aria-controls="hotelListModal" data-toggle="modal"><span class="fa fa-bed mr-5 hidden-xs"></span> Hotel List </li>
 				
 					</ul>
 
@@ -1924,7 +1929,7 @@
 						  		 	<div class="row">
 						  		 		<div class="col-sm-12 col-xs-12">
 						  		 			<div class="tab-list-block more-details-block">
-					  		 					<ul class="tab-list more-details-tab" role="tablist">
+					  		 					<ul class="tab-list more-details-tab tab-4" role="tablist">
 
 						  		 					<li role="presentation" class="active" data-target="#summary" aria-controls="summary" role="tab" data-toggle="tab">Summary</li>
 
@@ -2143,7 +2148,7 @@
 												
 									</div> <!-- End col sm 8 -->
 
-									<div class="col-sm-4">
+									<div class="col-sm-4 col-xs-12">
 										<button class="btn btn-yellow pull-right bookingForm" data-toggle="modal" data-target="#hotelBookingForm">More Details</button>
 									</div> <!-- End col sm 8 -->
 								</div> <!-- End -->
@@ -2202,7 +2207,7 @@
 												
 									</div> <!-- End col sm 8 -->
 
-									<div class="col-sm-4">
+									<div class="col-sm-4 col-xs-12">
 										<button class="btn btn-yellow pull-right bookingForm" data-toggle="modal" data-target="#hotelBookingForm">More Details</button>
 									</div> <!-- End col sm 8 -->
 								</div> <!-- End -->
@@ -2261,7 +2266,7 @@
 												
 									</div> <!-- End col sm 8 -->
 
-									<div class="col-sm-4">
+									<div class="col-sm-4 col-xs-12">
 										<button class="btn btn-yellow pull-right bookingForm" data-toggle="modal" data-target="#hotelBookingForm">More Details</button>
 									</div> <!-- End col sm 8 -->
 								</div> <!-- End -->
@@ -2580,15 +2585,6 @@
 											          			ONE WAY
 											           </label>
 											</li>
-											<li>
-												<input type="radio" class="form-control" id="round" name="flight-type">
-					                     		<label for="round"> 
-					                     		  <div class="radio-div">
-										         		 <span class="fa fa-circle"></span>
-										          </div> 
-										          ROUND TRIP
-
-											</li>
 	        					</ul>
 	        			</div> <!-- End col sm 12 -->
         			</div> <!-- End row -->
@@ -2629,34 +2625,6 @@
 		        							</div> <!-- End col -->
         							</div> <!-- End row -->
         					</div> <!-- End form group -->
-
-        					
-
-
-        					<div class="form-group">
-        							<div class="row">
-        									<div class="col-sm-6 col-xs-12" id="roundForm">
-		        									<label for="return-date">RETURN DATE</label>
-		        									<select name="return-date" class="form-control mb-10">
-		        										<option value="Apr-22-2016">Apr 22, 2016</option>
-		        										<option value="Apr-22-2016">Apr 22, 2016</option>
-		        										<option value="Apr-22-2016">Apr 22, 2016</option>
-		        									</select>
-		        							</div>  <!-- End col -->
-
-        									<div class="col-sm-6 col-xs-12">
-		        								<label for="No-of-Adults">NUMBER OF ADULTS</label>
-		        									<input type="text" class="form-control mb-10" placeholder="Number of Adults" value="5 Adults">
-		        							</div>  <!-- End col -->
-		        							<div class="col-sm-6 col-xs-12">
-		        									<label for="No-of-children">NUMBER OF CHILDREN (0-12 yrs old)</label>
-		        									<input type="text" class="form-control" placeholder="Number of Children" value="3 Childrens">
-		        							</div>  <!-- End col -->
-		        							</div> <!-- End col -->
-        							</div> <!-- End row -->
-        					</div> <!-- End form group -->
-
-
         			</div> <!-- End col -->
         		</div> <!-- End row -->
 
@@ -2715,55 +2683,7 @@
 
 	        					
 	        				</div> <!-- End Table Responsive -->
-	        				
-	        				<div class="table-responsive">
-	        					<table class="table table-responsive flight-info-table" id="roundFlightTable">
-	        					<thead>
-	        						<tr>
-												<th class="col-sm-1">Airline</th>
-	        							<th class="col-sm-4">Departure</th>
-	        							<th class="col-sm-1">Arrive</th>
-	        							<th class="col-sm-2">Duration</th>
-	        							<th class="col-sm-3">Price</th>
-	        						</tr>
-	        					</thead>
-	        					<tbody>
-	        						<tr>
-	        							<td><img src="assets/images/airline/cebu.png" alt="cebu"></td>
-	        							<td>
-			        							
-	        									<span class="block"> 11.50</span>
-			        							<span class="additional-flight-info mb-10"> CEB &rarr; MNL </span>
-
-			        							<span class="block"> 08:15 </span>
-	        									<span class="additional-flight-info"> MNL &rarr; CEB </span>
-			        							
-			        							
-	        							</td>
-	        							<td>
-	        							<span class="block">1:05</span>
-	        								<span class="block">09:30</span>
-	        							</td>
-	        							<td>
-	        								
-	        								<span class="block">1h 15m</span>
-	        								<span class="additional-flight-info mb-10">Non-stop</span>
-
-	        								<span class="block">1h 15m</span>
-	        								<span class="additional-flight-info">Non-stop</span>
-	        								
-	        							</td>
-	        							<td>
-	        									<span class="black-bold">$2,457</span>
-	        								<a href="#"><span class="link">See Details</span></a>
-	        								<a href="#" class="btn btn-sm btn-yellow">Add to Itinerary</a>
-	        							</td>
-	        						</tr>
-	        					</tbody>
-	        					</table> 
-	        					
-	        				</div> <!-- End Table Responsive -->
-	        				<span class="booking-source">Booking through Travelfusion.com <span class="fa fa-info-circle red-icon"></span></span>
+	        				<span class="booking-source">Booking through Travelfusion.com <span class="fa fa-info-circle"></span></span>
 	        			</div> <!-- End col -->
 	        		</div> <!-- End row -->
         		</form> <!-- End form -->
@@ -2836,23 +2756,6 @@
 	<script>
 
 			jQuery(document).ready(function($) {
-				
-
-			$('#oneWay').click(function() {
-				$('#roundForm').hide();
-				$('#roundFlightTable').hide();
-				$('#onewayFlightTable').show();
-				console.log('One Way selected');
-			});
-			$('#round').click(function() {
-				$('#roundForm').show();
-				$('#roundFlightTable').show();
-				$('#onewayFlightTable').hide();
-				console.log('Round Trip selected');
-			});
-
-
-
 
 				/* Tab Active onClick*/
 				$('#tabList > li').click(function() {
@@ -2945,8 +2848,9 @@
 
 
 			});
-					
 
+
+			function resizeEvent () {
 			var w = window,
 			    d = document,
 			    e = d.documentElement,
@@ -2959,7 +2863,6 @@
 			    }
 			    else if (x < 560){
 			    		var a = document.getElementById('mapArea').style.height = 400 + 'px';
-							console.log(a);
 			    }
 			    else {
 			    	var b = document.getElementById('mapArea').style.height = y + 'px';
@@ -2971,16 +2874,38 @@
 			    	document.getElementById('mapBlock').style.height = (y-10) + 'px';
 			    }
 			    else if (x < 560){
-			    		var a = document.getElementById('mapBlock').style.height = 400 + 'px';
+			    		var a = document.getElementById('mapBlock').style.height = 600 + 'px';
 			    }
 			    else {
 			    	var b = document.getElementById('mapBlock').style.height = y + 'px';
 			    }
 
 			    var h = (y-255) + 'px';
+			    console.log(h, 'Cool');
+
+			}
+
+			resizeEvent();
+					
+
+		
 
 			    $(document).ready(function() {
-			    	 $('.spotHolder').css('max-height',h);
+			    		var w = window;
+			    		var y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+			    		var w = $( window ).width();
+			    		var h = (y-255) + 'px';
+
+			    		function maxHeight () {
+				    		if (w > 480) {
+				    			$('.spotHolder').css('max-height',h);
+				    		}
+			    		}
+			    		maxHeight();
+
+			  		  window.addEventListener('resize', maxHeight, resizeEvent);
+			    	
+			    	 
 
 
 			    	$('#viewMapTrigger').click(function(e) {

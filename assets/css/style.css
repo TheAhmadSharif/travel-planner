@@ -423,6 +423,12 @@ input[type="radio"]:checked + label span {
   box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.2);
   margin-left: -15px;
   margin-right: -15px; }
+  .content-header .btn-gray {
+    width: 120px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 13px; }
 
 .header-link {
   margin: 0;
@@ -464,7 +470,8 @@ input[type="radio"]:checked + label span {
 
 .trip-section {
   margin-top: 10px;
-  background-color: #EDF0F5; }
+  background-color: #EDF0F5;
+  overflow: hidden; }
 
 .tab-content {
   background-color: #FFF;
@@ -473,11 +480,13 @@ input[type="radio"]:checked + label span {
   padding: 0;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
 
-.trip-info .trip-name {
-  font-size: 16px; }
-.trip-info .period {
-  color: #A5B6C0;
-  display: block; }
+.trip-info {
+  float: left; }
+  .trip-info .trip-name {
+    font-size: 16px; }
+  .trip-info .period {
+    color: #A5B6C0;
+    display: block; }
 
 .trip-info {
   border-right: 1px solid #95DBF5;
@@ -604,7 +613,8 @@ input[type="radio"]:checked + label span {
   .spot-li > li .action-list {
     float: right; }
   .spot-li > li .action-list > li {
-    margin-right: 10px; }
+    margin-right: 10px;
+    margin-bottom: 5px; }
     .spot-li > li .action-list > li span {
       font-size: 18px;
       width: 36px;
@@ -630,7 +640,8 @@ input[type="radio"]:checked + label span {
   color: #333;
   font-weight: bold;
   margin-bottom: 10px;
-  display: block; }
+  display: block;
+  margin-top: 8px; }
 
 .spot-img img {
   width: 100%;
@@ -647,8 +658,8 @@ input[type="radio"]:checked + label span {
   font-size: 16px;
   line-height: 34px;
   text-align: center;
-  vertical-align: middle;
-  margin-right: 10px; }
+  margin-right: 10px;
+  float: left; }
 
 .spot-desc {
   color: #7D97A4;
@@ -703,48 +714,6 @@ input[type="radio"]:checked + label span {
 .info-tab-list .active span {
   color: #00ADF0; }
 
-/* responsive */
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* Styles */
-  #sidebar {
-    left: -180px; }
-
-  .visible-sidebar {
-    left: 0 !important;
-    transition-property: margin;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in-out; }
-
-  .container-margin {
-    left: 0;
-    margin-left: 0; }
-
-  .move-right {
-    left: 180px;
-    transition-property: margin;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in-out; }
-
-  .search-section .new-trip {
-    min-width: 120px;
-    margin-bottom: 10px; }
-
-  .trip-list-section {
-    overflow-x: auto; }
-
-  .dropdown-filter {
-    margin-bottom: 10px; } }
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width: 321px) {
-  /* Styles */ }
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width: 320px) {
-  /* Styles */ }
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .trip-list-section {
-    overflow-x: auto; } }
 .vehicle-thumb {
   border: 1px solid #E0DFDF; }
 
@@ -1312,8 +1281,19 @@ select::-ms-expand {
   max-height: 280px;
   overflow: hidden; }
 
+.more-details-block .more-details-tab.tab-2 li {
+  width: 50%; }
+
+.more-details-block .more-details-tab.tab-3 li {
+  width: 33%; }
+
 .more-details-block .more-details-tab li {
-  cursor: pointer; }
+  cursor: pointer;
+  width: 25%;
+  float: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; }
 .more-details-block .more-details-tab li.active, .more-details-block .more-details-tab li.active a {
   color: #FFF; }
 .more-details-block p {
@@ -1749,6 +1729,179 @@ select.form-control {
   background: url("../images/icons/select-arrow.png") no-repeat 98% 10px; }
 
 select.city-option {
-  background: url("../images/icons/select-arrow.png") no-repeat 94% 10px; }
+  background: url("../images/icons/select-arrow.png") no-repeat 94% 8px; }
+
+.day-tab {
+  white-space: nowrap;
+  overflow: auto;
+  padding-bottom: 12px; }
+
+.booking-source .fa {
+  color: #00ADEF; }
+
+.tab-holder {
+  width: 800px;
+  overflow-x: scroll; }
+
+#closeTrigger {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 180px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  font-size: 15px;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-weight: 100;
+  line-height: 1em; }
+
+#closeTrigger:hover {
+  background: #000; }
+
+#sidebar {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.visible-sidebar {
+  position: fixed;
+  height: 100%;
+  z-index: 100;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+/* responsive */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+  #sidebar {
+    left: -180px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+
+  .container-margin {
+    left: 0;
+    margin-left: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+
+  .spot-holder {
+    max-height: 700px;
+    overflow: hidden;
+    overflow-y: auto; }
+
+  .search-section .new-trip {
+    min-width: 120px;
+    margin-bottom: 10px; }
+
+  .trip-list-section {
+    overflow-x: auto; }
+
+  .trip-info {
+    border: 0; }
+
+  .dropdown-filter {
+    margin-bottom: 10px; }
+
+  .info-tab-list > li {
+    font-size: 14px; }
+
+  .day-tab li {
+    margin: 4px 2px; }
+
+  .more-details-block .more-details-tab.tab-4 li {
+    font-size: 13px; }
+
+  .action-block {
+    float: left; }
+    .action-block .brand-btn {
+      width: 100%;
+      clear: both; }
+    .action-block .city-option {
+      width: 100%;
+      clear: both;
+      float: left; }
+
+  .object-info .table-btn, .object-summary-list .btn {
+    float: left !important;
+    margin-top: 10px; }
+
+  .slider-block {
+    min-height: 100px; }
+
+  .tour-duration {
+    float: left !important; }
+
+  .calculation-block {
+    float: none;
+    font-style: italic;
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 15px;
+    overflow-y: hidden; }
+    .calculation-block table {
+      float: none; }
+
+  .header-link {
+    max-width: 68%; }
+
+  .header-link > li {
+    margin-right: 5px; }
+
+  .spot-li {
+    float: left;
+    width: 100%; }
+
+  .spot-li > li .action-list {
+    display: table;
+    margin: auto;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center; }
+
+  .spot-img {
+    margin-left: 0;
+    margin-right: 0; }
+    .spot-img img {
+      max-width: 100%; }
+
+  .object-info .rating-list {
+    float: left;
+    margin: 5px 0; }
+
+  .user-form .alter-sigin-text:before, .user-form .alter-sigin-text:after {
+    width: 20%; }
+
+  .spot-li > li .action-list > li:last-child {
+    margin-right: 10px; }
+
+  .spot-name {
+    font-size: 14px;
+    margin-top: 6px;
+    min-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
+  .user-info-section .btn {
+    min-width: 210px; } }
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */ }
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  /* Styles */ }
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .trip-list-section {
+    overflow-x: auto; } }
 
 /*# sourceMappingURL=style.css.map */
