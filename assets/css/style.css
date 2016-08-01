@@ -509,7 +509,8 @@ input[type="radio"]:checked + label span {
 .city-option {
   display: inline-block;
   border-radius: 3px;
-  width: auto; }
+  width: auto;
+  min-width: 300px; }
 
 .city-option:focus, .city-option:active {
   box-shadow: none;
@@ -1190,6 +1191,11 @@ body.home-page {
 .hotel-details .table tr > td:nth-child(2n) {
   font-weight: bold; }
 
+.object-featured-img img {
+  max-height: 350px;
+  width: 100%;
+  overflow: hidden; }
+
 .tab-list-block .tab-list {
   float: left;
   width: 100%;
@@ -1235,13 +1241,17 @@ select::-ms-expand {
   -moz-appearance: none;
   appearance: none;
   background: url("../images/arrow-down.png") no-repeat 96% 8px;
-  background-size: 25px 24px; }
+  background-size: 25px 24px;
+  padding-left: 15px; }
+
+.rating-list {
+  color: #333; }
 
 .dropdown-filter:active, .dropdown-filter:focus {
   border-color: #00ADEF; }
 
 .object-summary-list {
-  max-height: 580px;
+  max-height: 570px;
   overflow: auto; }
   .object-summary-list .booking-source {
     width: auto;
@@ -1258,10 +1268,11 @@ select::-ms-expand {
     border-bottom: 1px solid #DDD;
     padding-bottom: 10px;
     display: block;
-    margin-top: 10px; }
+    margin-top: 10px;
+    margin-bottom: 10px; }
   .object-summary-list p {
     margin-top: 10px;
-    font-size: 16px; }
+    font-size: 14px; }
   .object-summary-list .amount {
     font-weight: bold;
     color: #F8B912;
@@ -1775,6 +1786,11 @@ select.city-option {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
 
+.color-red {
+  color: #F00 !important; }
+  .color-red .fa {
+    color: #F00 !important; }
+
 /* responsive */
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
@@ -1962,5 +1978,12 @@ select.city-option {
     margin-top: 0;
     margin-bottom: 30px;
     min-height: 150px; } }
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  select.city-option {
+    width: 240px; } }
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */ }
 
 /*# sourceMappingURL=style.css.map */

@@ -250,3 +250,17 @@ and (orientation : landscape) {
 			}
 
 }
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+	select.city-option {
+		width: 240px;
+	}
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
