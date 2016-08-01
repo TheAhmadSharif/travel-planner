@@ -2715,10 +2715,50 @@
         <h4 class="modal-title modal-brand-title">Add Transportation to Your Itinerary</h4>
       </div>
       <div class="modal-body">
-        	<span class="transportation-info">Booking Car on <span class="selected-date">Tue Apr 8th, 2016</span></span>
         	<div class="transportation-form">
         		<form action="#" method="post">	
         			<div class="row">
+        				<div class="col-sm-12 col-xs-12">
+        						<ul class="inline-list radio-block">
+	        						<li>
+												<input type="radio" class="form-control" id="carRadioOption" name="flight-type" checked>
+						                     	<label for="carRadioOption"> 
+						                     		  <div class="radio-div">
+											         				 <span class="fa fa-circle"></span>
+											         				 </div> 
+											          			Car
+											           </label>
+											</li>
+											<li>
+												<input type="radio" class="form-control" id="trainRadioOption" name="flight-type">
+						                     	<label for="trainRadioOption"> 
+						                     		  <div class="radio-div">
+											         				 <span class="fa fa-circle"></span>
+											         				 </div> 
+											          			Train
+											           </label>
+											</li>
+
+
+											<li>
+												<input type="radio" class="form-control" id="ferryRadioOption" name="flight-type">
+						                     	<label for="ferryRadioOption"> 
+						                     		  <div class="radio-div">
+											         				 <span class="fa fa-circle"></span>
+											         				 </div> 
+											          			Ferry
+											           </label>
+											</li>
+	        					</ul>
+        					</div> <!-- End col 12 -->
+        			</div> <!-- End row -->
+        			<div id="carTranportUserForm" class="transportForm">
+        				<div class="row">
+        					<div class="col-sm-12">
+        						<span class="transportation-info">Booking Car on <span class="selected-date">Tue Apr 8th, 2016</span></span>
+        					</div> <!-- End col -->
+        				</div> <!-- End row -->
+        				<div class="row">
 		        			<div class="col-sm-12 col-xs-12">
 		        					<div class="form-group">
 		        						<label for="change-car">CHANGE CAR </label>
@@ -2777,23 +2817,156 @@
 		        							</div> <!-- End row -->
 		        					</div> <!-- End form group -->
 		        			</div> <!-- End col -->
-        		</div> <!-- End row -->
+		        		</div> <!-- End row -->
 
-        		<div class="row">
-        			<div class="col-sm-6 col-xs-12">
-        					<img class="vehicle-thumb" src="assets/images/car/1.jpg" alt="Toyota">
-        			</div> <!-- End col -->
-        			<div class="col-sm-6 col-xs-12">
-        				<div class="vehicle-info">
-      							<span class="info">Car Info</span>
-		        				<span class="vehicle-name">Toyota Innova or equivalent</span>
-		        				<span>AC Minivan</span>
-		        				<span class="info f-18">PH 1200</span>
-        				</div> <!-- End Vehicle Info -->
-        				<button class="btn btn-yellow mtb-20">Add to Itinerary</button>
-        			</div> <!-- End col -->
-        		</div> <!-- End row -->
-        			
+		        		<div class="row">
+		        			<div class="col-sm-6 col-xs-12">
+		        					<img class="vehicle-thumb" src="assets/images/car/1.jpg" alt="Toyota">
+		        			</div> <!-- End col -->
+		        			<div class="col-sm-6 col-xs-12">
+		        				<div class="vehicle-info">
+		      							<span class="info">Car Info</span>
+				        				<span class="vehicle-name">Toyota Innova or equivalent</span>
+				        				<span>AC Minivan</span>
+				        				<span class="info f-18">PH 1200</span>
+		        				</div> <!-- End Vehicle Info -->
+		        				<button class="btn btn-yellow mtb-20">Add to Itinerary</button>
+		        			</div> <!-- End col -->
+		        		</div> <!-- End row -->
+        			</div> <!-- End carTransportUserForm -->
+
+        			<div id="trainTranportUserForm" class="transportForm">
+        				<div class="row">
+		        			<div class="col-sm-12 col-xs-12">
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="pick-up-location">ORIGIN LOCATION</label>
+				        									<input type="text" class="form-control" placeholder="Origin Location" value="Naia Airport">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="drop-location">DESTINATION LOCATION</label>
+				        									<select name="drop-location" class="form-control">
+				        										<option value="Cubao">Cubao</option>
+				        										<option value="Cubao">Cubao</option>
+				        										<option value="Cubao">Cubao</option>
+				        									</select>
+				        							</div> <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="pick-up-date">Departure Date</label>
+				        								<input type="text" class="form-control" placeholder="Departure Date" value="Apr 22, 2016">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="Available-time">Available Time</label>
+				        									<select name="pick-up-time" class="form-control">
+				        										<option value="11.00-AM">11.00 AM</option>
+				        										<option value="11.00-AM">11.00 AM</option>
+				        										<option value="11.00-AM">11.00 AM</option>
+				        									</select>
+				        							</div> <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="No-of-Adults">NUMBER OF ADULTS</label>
+				        									<input type="text" class="form-control" placeholder="Number of Adults" value="5 Adults">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="No-of-children">NUMBER OF CHILDREN (0-12 yrs old)</label>
+				        									<input type="text" class="form-control" placeholder="Number of Children" value="3 Childrens">
+				        							</div>  <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+
+		        					<p>
+		        						Train info Train Number: A3024 Journey Time: 8hrs Cost per adult: 180 pesos Cost per child: 140 pesos
+		        					</p>
+
+
+		        			</div> <!-- End col -->
+		        		</div> <!-- End row -->
+        			</div> <!-- End carTransportUserForm -->
+        			<div id="ferryTranportUserForm" class="transportForm">
+        				<div class="row">
+		        			<div class="col-sm-12 col-xs-12">
+		        					
+
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="pick-up-location">Origin port LOCATION</label>
+				        									<input type="text" class="form-control" placeholder="Pick up Location" value="Naia Airport">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="drop-location">Destination port LOCATION</label>
+				        									<select name="drop-location" class="form-control">
+				        										<option value="Cubao">Cubao</option>
+				        										<option value="Cubao">Cubao</option>
+				        										<option value="Cubao">Cubao</option>
+				        									</select>
+				        							</div> <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="pick-up-date">Departure Date</label>
+				        								<input type="text" class="form-control" placeholder="Departure Date" value="Apr 22, 2016">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="pick-up-time">Available Time</label>
+				        									<select name="pick-up-time" class="form-control">
+				        										<option value="11.00-AM">11.00 AM</option>
+				        										<option value="11.00-AM">11.00 AM</option>
+				        										<option value="11.00-AM">11.00 AM</option>
+				        									</select>
+				        							</div> <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="No-of-Adults">NUMBER OF ADULTS</label>
+				        									<input type="text" class="form-control" placeholder="Number of Adults" value="5 Adults">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="No-of-children">NUMBER OF CHILDREN (0-12 yrs old)</label>
+				        									<input type="text" class="form-control" placeholder="Number of Children" value="3 Childrens">
+				        							</div>  <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+		        			</div> <!-- End col -->
+		        		</div> <!-- End row -->
+
+		        		<div class="row">
+		        			<div class="col-sm-6 col-xs-12">
+		        					<img class="vehicle-thumb" src="assets/images/vehicle/ferry.jpg" alt="ferry">
+		        			</div> <!-- End col -->
+		        			<div class="col-sm-6 col-xs-12">
+		        				<div class="vehicle-info">
+		      							<span class="info">Ferry Info</span>
+				        				<span class="vehicle-name">Ferry info Ferry Number: A3024 Journey Time: 8hrs Cost per adult: 180 pesos Cost per child: 140 pesos</span>
+				        				<span>AC Minivan</span>
+				        				<span class="info f-18">PH 1200</span>
+		        				</div> <!-- End Vehicle Info -->
+		        				<button class="btn btn-yellow mtb-20">Add to Itinerary</button>
+		        			</div> <!-- End col -->
+		        		</div> <!-- End row -->
+
+
+        				
+
+
+        			</div> <!-- End carTransportUserForm -->
         		</form> <!-- End form -->
         	</div> <!-- End Booking Form -->
       </div> <!-- End modal Body -->
@@ -3141,6 +3314,10 @@
 				    		if (w > 480) {
 				    			$('.spotHolder').css('max-height',h);
 				    		}
+
+					    		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+									 	$('.spotHolder').css('max-height', 400);
+									}
 			    		}
 			    		maxHeight();
 
@@ -3159,6 +3336,30 @@
 	    		  	$('#mapArea').slideToggle();
 	    		    $('#mapBlock').slideToggle();
 			    	});
+
+
+			    	/* Transpot Radio Option */
+
+			    	$('#trainTranportUserForm').fadeOut(0);		
+			 			$('#ferryTranportUserForm').fadeOut(0);
+
+			    	$('#carRadioOption').click(function() {		
+			 					$('#carTranportUserForm').show();		
+			 					$('#trainTranportUserForm').hide();		
+			 					$('#ferryTranportUserForm').hide();		
+			 					
+			 				});		
+			 				$('#trainRadioOption').click(function() {		
+			 					$('#trainTranportUserForm').show();		
+			 					$('#carTranportUserForm').hide();		
+			 					$('#ferryTranportUserForm').hide();	
+			 				});
+
+			 				$('#ferryRadioOption').click(function() {		
+			 					$('#ferryTranportUserForm').show();	
+			 					$('#trainTranportUserForm').hide();		
+			 					$('#carTranportUserForm').hide();		
+			 				});
 			    });
 			    
 
