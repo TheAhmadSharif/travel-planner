@@ -94,9 +94,9 @@
 									</div> <!-- End Trip Duration -->
 
 										<div class="action-block">
-												<button class="btn brand-btn mr-10">Send Package Request <span class="fa fa-chevron-right chevron-icon"></span></button>
+												<button class="btn brand-btn mr-10">View Itinerary <span class="fa fa-chevron-right chevron-icon"></span></button>
 												<select id="city" class="form-control city-option">
-													<option value="0">Select City</option>
+													<option value="0">Select Destination</option>
 													<option value="oslo">Oslo</option>
 													<option value="chicago">Chicago</option>
 													<option value="london">London</option>
@@ -2185,7 +2185,7 @@
 													    <div role="tabpanel" class="tab-pane" id="room_type">
 													    	<div class="room-feature-div">
 													    		<ul class="title-list">
-																		<li><span class="yellow-title">Single Room</span></li>	
+																		<li><span class="yellow-title">Single Room - $ 90/night</span></li>	
 																		<li><span class="sub-title">Max Occupancy: 1 Adult, 1 Child</span></li>	
 																	</ul>
 
@@ -2214,7 +2214,7 @@
 																			<span class="sub-title">Surface: 75m <sup>2</sup></span>
 																		</div> <!-- End col 12 -->
 																		<div class="col-sm-6 col-xs-12">
-																			<button class="btn btn-yellow pull-right">Price avg/hight &nbsp; &pound;</button>
+																			<button class="btn btn-yellow pull-right">Add to Itinerary</button>
 																		</div> <!-- End col 12 -->
 																	</div> <!-- End row -->
 														    		
@@ -2224,7 +2224,7 @@
 
 														  	<div class="room-feature-div">
 													    		<ul class="title-list">
-																		<li><span class="yellow-title">Double Room</span></li>	
+																		<li><span class="yellow-title">Double Room - $ 120/night</span></li>	
 																		<li><span class="sub-title">Max Occupancy: 2 Adult, 2 Child</span></li>	
 																	</ul>
 
@@ -2253,7 +2253,7 @@
 																			<span class="sub-title">Surface: 150m <sup>2</sup></span>
 																		</div> <!-- End col 12 -->
 																		<div class="col-sm-6 col-xs-12">
-																			<button class="btn btn-yellow pull-right">Price avg/hight &nbsp; &pound;</button>
+																			<button class="btn btn-yellow pull-right">Add to Itinerary</button>
 																		</div> <!-- End col 12 -->
 																	</div> <!-- End row -->
 														    		
@@ -2729,6 +2729,17 @@
 											          			Car
 											           </label>
 											</li>
+
+											<li>
+												<input type="radio" class="form-control" id="busRadioOption" name="flight-type">
+						                     	<label for="busRadioOption"> 
+						                     		  <div class="radio-div">
+											         				 <span class="fa fa-circle"></span>
+											         				 </div> 
+											          			Bus
+											           </label>
+											</li>
+
 											<li>
 												<input type="radio" class="form-control" id="trainRadioOption" name="flight-type">
 						                     	<label for="trainRadioOption"> 
@@ -2842,6 +2853,86 @@
 		        				<button class="btn btn-yellow mtb-20">Add to Itinerary</button>
 		        			</div> <!-- End col -->
 		        		</div> <!-- End row -->
+        			</div> <!-- End carTransportUserForm -->
+
+
+        			<div id="busTranportUserForm" class="transportForm">
+        				<div class="row">
+        					<div class="col-sm-12">
+        						<span class="transportation-info">Booking Car on <span class="selected-date">Tue Apr 8th, 2016</span></span>
+        					</div> <!-- End col -->
+        				</div> <!-- End row -->
+        				<div class="row">
+		        			<div class="col-sm-12 col-xs-12">
+		        					<div class="form-group">
+		        						<label for="change-car">CHANGE BUS </label>
+		        							<select class="form-control">
+						      					<option value="toyota-innova">Toyota Innova</option>
+						      					<option value="toyota-innova">Toyota Innova</option>
+						      					<option value="toyota-innova">Toyota Innova</option>
+						      					<option value="toyota-innova">Toyota Innova</option>
+					      					</select>	
+		        					</div> <!-- End form-group -->
+
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="pick-up-location">PICK-UP LOCATION</label>
+				        									<input type="text" class="form-control" placeholder="Pick up Location" value="Naia Airport">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="drop-location">DROP LOCATION</label>
+				        									<select name="drop-location" class="form-control">
+				        										<option value="Cubao">Cubao</option>
+				        										<option value="Cubao">Cubao</option>
+				        										<option value="Cubao">Cubao</option>
+				        									</select>
+				        							</div> <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="pick-up-date">PICK-UP Date</label>
+				        								<input type="text" class="form-control" placeholder="Pick-up Date" value="Apr 22, 2016">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="pick-up-time">PICK-UP Time</label>
+				        									<select name="pick-up-time" class="form-control">
+				        										<option value="11.00-AM">11.00 AM</option>
+				        										<option value="11.00-AM">11.00 AM</option>
+				        										<option value="11.00-AM">11.00 AM</option>
+				        									</select>
+				        							</div> <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="No-of-Adults">NUMBER OF ADULTS</label>
+				        									<input type="text" class="form-control" placeholder="Number of Adults" value="5 Adults">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="No-of-children">NUMBER OF CHILDREN (0-12 yrs old)</label>
+				        									<input type="text" class="form-control" placeholder="Number of Children" value="3 Childrens">
+				        							</div>  <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+
+		        					<div class="form-group">
+		        						<div class="row">
+		        							<div class="col-sm-12 col-xs-12">
+		        								<label for="No-of-Adults">DESCRIPTION</label>
+		        								<textarea class="form-control" placeholder="Please provide your flight details"></textarea>
+		        							</div>	<!-- End col -->
+		        						</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+		        			</div> <!-- End col -->
+		        		</div> <!-- End row -->
+
+		        	
         			</div> <!-- End carTransportUserForm -->
 
         			<div id="trainTranportUserForm" class="transportForm">
@@ -3357,16 +3448,19 @@
 
 			    	$('#trainTranportUserForm').fadeOut(0);		
 			 			$('#ferryTranportUserForm').fadeOut(0);
+			 			$('#busTranportUserForm').fadeOut(0);
 
 			    	$('#carRadioOption').click(function() {		
 			 					$('#carTranportUserForm').show();		
+			 					$('#busTranportUserForm').hide();		
 			 					$('#trainTranportUserForm').hide();		
 			 					$('#ferryTranportUserForm').hide();		
 			 					
 			 				});		
 			 				$('#trainRadioOption').click(function() {		
 			 					$('#trainTranportUserForm').show();		
-			 					$('#carTranportUserForm').hide();		
+			 					$('#carTranportUserForm').hide();	
+			 					$('#busTranportUserForm').hide();	
 			 					$('#ferryTranportUserForm').hide();	
 			 				});
 
@@ -3374,7 +3468,15 @@
 			 					$('#ferryTranportUserForm').show();	
 			 					$('#trainTranportUserForm').hide();		
 			 					$('#carTranportUserForm').hide();		
+			 					$('#busTranportUserForm').hide();
 			 				});
+
+			 				$('#busRadioOption').click(function() {		
+			 					$('#busTranportUserForm').show();
+			 					$('#ferryTranportUserForm').hide();	
+			 					$('#trainTranportUserForm').hide();		
+			 					$('#carTranportUserForm').hide();	
+			 				});	
 			    });
 			    
 
