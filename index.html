@@ -322,9 +322,9 @@
 								</div> <!-- End col 3 -->
 								<div class="col-sm-8">
 										<div class="action-block">
-												<button class="btn brand-btn mr-10">Send Package Request <span class="fa fa-chevron-right chevron-icon"></span></button>
+												<button class="btn brand-btn mr-10"> View Itinerary <span class="fa fa-chevron-right chevron-icon"></span></button>
 												<select id="city" class="form-control city-option">
-													<option value="0">Select City</option>
+													<option value="0">Select Destination</option>
 													<option value="oslo">Oslo</option>
 													<option value="chicago">Chicago</option>
 													<option value="london">London</option>
@@ -548,9 +548,9 @@
 								</div> <!-- End col 3 -->
 								<div class="col-sm-8">
 										<div class="action-block">
-												<button class="btn brand-btn mr-10">Send Package Request <span class="fa fa-chevron-right chevron-icon"></span></button>
+												<button class="btn brand-btn mr-10"> View Itinerary <span class="fa fa-chevron-right chevron-icon"></span></button>
 												<select id="city" class="form-control city-option">
-													<option value="0">Select City</option>
+													<option value="0">Select Destination</option>
 													<option value="oslo">Oslo</option>
 													<option value="chicago">Chicago</option>
 													<option value="london">London</option>
@@ -774,9 +774,9 @@
 								</div> <!-- End col 3 -->
 								<div class="col-sm-8">
 										<div class="action-block">
-												<button class="btn brand-btn mr-10">Send Package Request <span class="fa fa-chevron-right chevron-icon"></span></button>
+												<button class="btn brand-btn mr-10"> View Itinerary <span class="fa fa-chevron-right chevron-icon"></span></button>
 												<select id="city" class="form-control city-option">
-													<option value="0">Select City</option>
+													<option value="0">Select Destination</option>
 													<option value="oslo">Oslo</option>
 													<option value="chicago">Chicago</option>
 													<option value="london">London</option>
@@ -1000,9 +1000,9 @@
 								</div> <!-- End col 3 -->
 								<div class="col-sm-8">
 										<div class="action-block">
-												<button class="btn brand-btn mr-10">Send Package Request <span class="fa fa-chevron-right chevron-icon"></span></button>
+												<button class="btn brand-btn mr-10"> View Itinerary <span class="fa fa-chevron-right chevron-icon"></span></button>
 												<select id="city" class="form-control city-option">
-													<option value="0">Select City</option>
+													<option value="0">Select Destination</option>
 													<option value="oslo">Oslo</option>
 													<option value="chicago">Chicago</option>
 													<option value="london">London</option>
@@ -1227,9 +1227,9 @@
 								</div> <!-- End col 3 -->
 								<div class="col-sm-8">
 										<div class="action-block">
-												<button class="btn brand-btn mr-10">Send Package Request <span class="fa fa-chevron-right chevron-icon"></span></button>
+												<button class="btn brand-btn mr-10"> View Itinerary <span class="fa fa-chevron-right chevron-icon"></span></button>
 												<select id="city" class="form-control city-option">
-													<option value="0">Select City</option>
+													<option value="0">Select Destination</option>
 													<option value="oslo">Oslo</option>
 													<option value="chicago">Chicago</option>
 													<option value="london">London</option>
@@ -1453,9 +1453,9 @@
 								</div> <!-- End col 3 -->
 								<div class="col-sm-8">
 										<div class="action-block">
-												<button class="btn brand-btn mr-10">Send Package Request <span class="fa fa-chevron-right chevron-icon"></span></button>
+												<button class="btn brand-btn mr-10"> View Itinerary <span class="fa fa-chevron-right chevron-icon"></span></button>
 												<select id="city" class="form-control city-option">
-													<option value="0">Select City</option>
+													<option value="0">Select Destination</option>
 													<option value="oslo">Oslo</option>
 													<option value="chicago">Chicago</option>
 													<option value="london">London</option>
@@ -2314,10 +2314,8 @@
 						<div class="col-sm-6 col-xs-12">
 								<select class="dropdown-filter">
 									<option value="0">Hotel Price (per night) </option>
-									<option value="20"> 20   &pound; </option>
-									<option value="50"> 50   &pound; </option>
-									<option value="80"> 80   &pound; </option>
-									<option value="100"> 100  &pound; </option>
+									<option value="0_50"> 0- $50  </option>
+									<option value="50_100"> $50 - $100 </option>
 								</select>
 						</div> <!-- End col 6 -->
 						<div class="col-sm-6 col-xs-12">
@@ -2375,7 +2373,7 @@
 								<div class="row mt-15">
 									<div class="col-sm-8">
 											<span class="price-tag">
-												Price avg/height <span class="amount"> 120 &pound;</span> 
+												Price start at/from <span class="amount"> 120 &pound;</span> 
 											</span>
 												
 									</div> <!-- End col sm 8 -->
@@ -2434,7 +2432,7 @@
 								<div class="row mt-15">
 									<div class="col-sm-8">
 											<span class="price-tag">
-												Price avg/height <span class="amount"> 120 &pound;</span> 
+												Price start at/from <span class="amount"> 120 &pound;</span> 
 											</span>
 												
 									</div> <!-- End col sm 8 -->
@@ -2493,7 +2491,7 @@
 								<div class="row mt-15">
 									<div class="col-sm-8">
 											<span class="price-tag">
-												Price avg/height <span class="amount"> 120 &pound;</span> 
+												Price start at/from <span class="amount"> 120 &pound;</span> 
 											</span>
 												
 									</div> <!-- End col sm 8 -->
@@ -2850,7 +2848,8 @@
 				        				<span>AC Minivan</span>
 				        				<span class="info f-18">PH 1200</span>
 		        				</div> <!-- End Vehicle Info -->
-		        				<button class="btn btn-yellow mtb-20">Add to Itinerary</button>
+		        				
+		        				<a href="#" data-target="#confirmModal" data-toggle="modal" class="btn btn-sm btn-yellow">Add to Itinerary</a>
 		        			</div> <!-- End col -->
 		        		</div> <!-- End row -->
         			</div> <!-- End carTransportUserForm -->
@@ -2859,7 +2858,7 @@
         			<div id="busTranportUserForm" class="transportForm">
         				<div class="row">
         					<div class="col-sm-12">
-        						<span class="transportation-info">Booking Car on <span class="selected-date">Tue Apr 8th, 2016</span></span>
+        						<span class="transportation-info">Booking Bus on <span class="selected-date">Tue Apr 8th, 2016</span></span>
         					</div> <!-- End col -->
         				</div> <!-- End row -->
         				<div class="row">
@@ -3178,7 +3177,7 @@
 	        							<td>
 	        									<span class="black-bold">$2,457</span>
 	        								<a href="#"><span class="link">See Details</span></a>
-	        								<a href="#" class="btn btn-sm btn-yellow">Add to Itinerary</a>
+	        								<a href="#" data-target="#confirmModal" data-toggle="modal" class="btn btn-sm btn-yellow">Add to Itinerary</a>
 	        							</td>
 	        						</tr>
 
@@ -3196,7 +3195,7 @@
 	        							<td>
 	        								<span class="black-bold">$2,457</span>
 	        								<a href="#"><span class="link">See Details</span></a>
-	        								<a href="#" class="btn btn-sm btn-yellow">Add to Itinerary</a>
+	        								<a href="#" class="btn btn-sm btn-yellow" data-target="#confirmModal" data-toggle="modal">Add to Itinerary</a>
 	        							</td>
 	        						</tr>
 	        					</tbody>
@@ -3264,6 +3263,25 @@
 </div> <!-- End Login Modal -->
 
 
+<!-- set up the modal to start hidden and fade in and out -->
+<div id="confirmModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- dialog body -->
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        This flight added in your itinerary. Would you like to book transfer
+      </div>
+      <!-- dialog buttons -->
+      <div class="modal-footer">
+	      <button type="button" class="btn btn-default dismissBtn" data-dismiss="modal" target="_blank">No</button>
+	      <button type="button" class="btn btn-success dismissBtn" data-dismiss="modal" target="_blank" data-target="#carBookingForm" data-toggle="modal">Yes</button>
+      </div> <!-- End Modal Footer -->
+    </div>
+  </div>
+</div> <!-- End Confirm Modal -->
+
+
 
 
 
@@ -3271,12 +3289,20 @@
 	<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 	<script src="assets/bower_components/bxslider-4/dist/jquery.bxslider.min.js"></script>
+	<script src="assets/js/bootbox.js"></script>
 	<script src="assets/js/scripts.js"></script>
 	<script src="live.js"></script>
 
 	<script>
 
+
+
 			jQuery(document).ready(function($) {
+
+				$('.dismissBtn').click(function(event) {
+					$('#flightBookingForm').modal('hide');
+/*					$('#carBookingForm').modal('hide');
+*/				});
 
 				/* Tab Active onClick*/
 				$('#tabList > li').click(function() {
