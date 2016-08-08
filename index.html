@@ -1905,7 +1905,7 @@
 						  		 			</div> <!-- End col 6 -->
 
 						  		 			<div class="col-sm-4 col-xs-12">
-						  		 					<button class="btn btn-yellow table-btn">Add to Itinerary</button>
+						  		 					<button class="btn btn-yellow table-btn tourPopup" data-target="#confirmModal" data-toggle="modal" >Add to Itinerary</button>
 						  		 			</div> <!-- End col 4 -->
 						  		 		</div> <!-- End row -->
 						  	</div> <!-- End Hotel Info -->	
@@ -2151,7 +2151,7 @@
 						  		 			</div> <!-- End col 6 -->
 
 						  		 			<div class="col-sm-4 col-xs-12">
-						  		 					<button class="btn btn-yellow table-btn">Add to Itinerary</button>
+						  		 					<button class="btn btn-yellow table-btn hotelPopup" data-toggle="modal" data-target="#confirmModal">Add to Itinerary</button>
 						  		 			</div> <!-- End col 4 -->
 						  		 		</div> <!-- End row -->
 						  	</div> <!-- End Hotel Info -->	
@@ -2214,7 +2214,7 @@
 																			<span class="sub-title">Surface: 75m <sup>2</sup></span>
 																		</div> <!-- End col 12 -->
 																		<div class="col-sm-6 col-xs-12">
-																			<button class="btn btn-yellow pull-right">Add to Itinerary</button>
+																			<button class="btn btn-yellow pull-right hotelPopup" data-target="#confirmModal" data-toggle="modal">Add to Itinerary</button>
 																		</div> <!-- End col 12 -->
 																	</div> <!-- End row -->
 														    		
@@ -2253,7 +2253,7 @@
 																			<span class="sub-title">Surface: 150m <sup>2</sup></span>
 																		</div> <!-- End col 12 -->
 																		<div class="col-sm-6 col-xs-12">
-																			<button class="btn btn-yellow pull-right">Add to Itinerary</button>
+																			<button class="btn btn-yellow pull-right hotelPopup" data-target="#confirmModal" data-toggle="modal">Add to Itinerary</button>
 																		</div> <!-- End col 12 -->
 																	</div> <!-- End row -->
 														    		
@@ -2849,7 +2849,7 @@
 				        				<span class="info f-18">PH 1200</span>
 		        				</div> <!-- End Vehicle Info -->
 		        				
-		        				<a href="#" data-target="#confirmModal" data-toggle="modal" class="btn btn-sm btn-yellow">Add to Itinerary</a>
+		        				<a href="#" data-target="#confirmModal" data-toggle="modal" class="btn btn-sm btn-yellow transferPopup">Add to Itinerary</a>
 		        			</div> <!-- End col -->
 		        		</div> <!-- End row -->
         			</div> <!-- End carTransportUserForm -->
@@ -3177,7 +3177,7 @@
 	        							<td>
 	        									<span class="black-bold">$2,457</span>
 	        								<a href="#"><span class="link">See Details</span></a>
-	        								<a href="#" data-target="#confirmModal" data-toggle="modal" class="btn btn-sm btn-yellow">Add to Itinerary</a>
+	        								<a href="#" data-target="#confirmModal" data-toggle="modal" class="btn btn-sm btn-yellow flightPopup">Add to Itinerary</a>
 	        							</td>
 	        						</tr>
 
@@ -3195,7 +3195,7 @@
 	        							<td>
 	        								<span class="black-bold">$2,457</span>
 	        								<a href="#"><span class="link">See Details</span></a>
-	        								<a href="#" class="btn btn-sm btn-yellow" data-target="#confirmModal" data-toggle="modal">Add to Itinerary</a>
+	        								<a href="#" data-target="#confirmModal" data-toggle="modal" class="btn btn-sm btn-yellow flightPopup">Add to Itinerary</a>
 	        							</td>
 	        						</tr>
 	        					</tbody>
@@ -3268,15 +3268,61 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <!-- dialog body -->
-      <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        This flight added in your itinerary. Would you like to book transfer
-      </div>
-      <!-- dialog buttons -->
-      <div class="modal-footer">
-	      <button type="button" class="btn btn-default dismissBtn" data-dismiss="modal" target="_blank">No</button>
-	      <button type="button" class="btn btn-success dismissBtn" data-dismiss="modal" target="_blank" data-target="#carBookingForm" data-toggle="modal">Yes</button>
-      </div> <!-- End Modal Footer -->
+
+      <div id="flightConfirm">
+      	 <div class="modal-body">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        This flight added in your itinerary. Would you like to book transfer
+	      </div>
+	      <!-- dialog buttons -->
+	      <div class="modal-footer">
+		      <button type="button" class="btn btn-default dismissBtn" data-dismiss="modal" target="_blank">No</button>
+		      <button type="button" class="btn btn-success dismissBtn" data-dismiss="modal" target="_blank" data-target="#carBookingForm" data-toggle="modal">Yes</button>
+	      </div> <!-- End Modal Footer -->
+      </div> <!-- End Flight Confirm -->
+
+
+      <div id="transferConfirm">
+      	 <div class="modal-body">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	       		 Transfer added in your itinerary. Would you like to book Hotel ?
+	      </div>
+	      <!-- dialog buttons -->
+	      <div class="modal-footer">
+		      <button type="button" class="btn btn-default dismissBtn" data-dismiss="modal" target="_blank">No</button>
+		      <button type="button" class="btn btn-success dismissBtn" data-dismiss="modal" target="_blank" data-target="#hotelListModal" data-toggle="modal">Yes</button>
+	      </div> <!-- End Modal Footer -->
+      </div> <!-- End Flight Confirm -->
+
+
+      <div id="hotelConfirm">
+      	 <div class="modal-body">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        This hotel added in your itinerary. Would you like to book tour ?
+	      </div>
+	      <!-- dialog buttons -->
+	      <div class="modal-footer">
+		      <button type="button" class="btn btn-default dismissBtn" data-dismiss="modal" target="_blank">No</button>
+		      <button type="button" class="btn btn-success dismissBtn" data-dismiss="modal" target="_blank" data-target="#spotListModal" data-toggle="modal">Yes</button>
+	      </div> <!-- End Modal Footer -->
+      </div> <!-- End Flight Confirm -->
+
+
+
+      <div id="tourConfirm">
+      	 <div class="modal-body">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	              This tour added in your itinerary. Would you like to book another tour ?
+	      </div>
+	      <!-- dialog buttons -->
+	      <div class="modal-footer">
+		      <button type="button" class="btn btn-default dismissBtn" data-dismiss="modal" target="_blank">No</button>
+		      <button type="button" class="btn btn-success dismissBtn" data-dismiss="modal" target="_blank" data-target="#spotListModal" data-toggle="modal">Yes</button>
+	      </div> <!-- End Modal Footer -->
+      </div> <!-- End Flight Confirm -->
+
+
+     
     </div>
   </div>
 </div> <!-- End Confirm Modal -->
@@ -3285,7 +3331,7 @@
 
 
 
-<!-- End Flight Modal -->
+
 	<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 	<script src="assets/bower_components/bxslider-4/dist/jquery.bxslider.min.js"></script>
@@ -3299,10 +3345,61 @@
 
 			jQuery(document).ready(function($) {
 
-				$('.dismissBtn').click(function(event) {
-					$('#flightBookingForm').modal('hide');
-/*					$('#carBookingForm').modal('hide');
-*/				});
+
+				$('#flightConfirm .dismissBtn').click(function(event) {
+						$('#flightBookingForm').modal('hide');
+						$('#carBookingForm').modal('hide');
+				});
+
+
+				$('#transferConfirm .dismissBtn').click(function(event) {
+					$('#carBookingForm').modal('hide');
+				});
+
+
+				$('#hotelConfirm .dismissBtn').click(function(event) {
+						$('#hotelListModal').modal('hide');
+						$('#hotelBookingForm').modal('hide');
+				});
+
+				$('#tourConfirm .dismissBtn').click(function(event) {
+						$('#tourBookingForm').modal('hide');
+				});
+
+
+
+
+				$('.flightPopup').click(function(event) {
+						$('#flightConfirm').show();
+						$('#transferConfirm').hide();
+						$('#hotelConfirm').hide();
+						$('#tourConfirm').hide();
+				});
+
+
+				$('.transferPopup').click(function(event) {
+						$('#transferConfirm').show();
+						$('#flightConfirm').hide();
+						$('#hotelConfirm').hide();
+						$('#tourConfirm').hide();
+				});
+
+
+				$('.hotelPopup').click(function(event) {
+						$('#hotelConfirm').show();
+						$('#transferConfirm').hide();
+						$('#flightConfirm').hide();
+						$('#tourConfirm').hide();
+				});
+
+				$('.tourPopup').click(function(event) {
+						$('#tourConfirm').show();
+						$('#hotelConfirm').hide();
+						$('#transferConfirm').hide();
+						$('#flightConfirm').hide();
+				});
+
+			
 
 				/* Tab Active onClick*/
 				$('#tabList > li').click(function() {
