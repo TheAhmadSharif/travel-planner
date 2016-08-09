@@ -2183,7 +2183,15 @@
 								  		 					</p>
 							  		 					</div> <!-- End Summary tab -->
 													    <div role="tabpanel" class="tab-pane" id="room_type">
-													    	<div class="room-feature-div">
+
+													    	<div class="form-group">
+													    		<select class="form-control" id="roomTypeDropdown" onchange="roomTypeChange()">
+													    			<option value="single_room">Single Room</option>
+													    			<option value="double_room">Double Room</option>
+													    		</select>
+													    	</div> <!-- End Form Group -->
+
+													    	<div class="room-feature-div singleRoom">
 													    		<ul class="title-list">
 																		<li><span class="yellow-title">Single Room - $ 90/night</span></li>	
 																		<li><span class="sub-title">Max Occupancy: 1 Adult, 1 Child</span></li>	
@@ -2222,7 +2230,7 @@
 														  	</div> <!-- Feature List Div -->
 
 
-														  	<div class="room-feature-div">
+														  	<div class="room-feature-div doubleRoom">
 													    		<ul class="title-list">
 																		<li><span class="yellow-title">Double Room - $ 120/night</span></li>	
 																		<li><span class="sub-title">Max Occupancy: 2 Adult, 2 Child</span></li>	
@@ -3344,10 +3352,25 @@
 
 	<script>
 
+			function roomTypeChange () {
+					var room_type = document.getElementById('roomTypeDropdown').value;
+					switch (room_type) {
+						case 'single_room':
+							$('.doubleRoom').fadeOut();
+							$('.singleRoom').fadeIn();
+							break;
 
+						case 'double_room': 
+							$('.doubleRoom').fadeIn();
+							$('.singleRoom').fadeOut();
+							break;
+					} 
+				}
+				
 
 			jQuery(document).ready(function($) {
 
+				$('.doubleRoom').fadeOut();
 
 				$('#flightConfirm .dismissBtn').click(function(event) {
 						$('#flightBookingForm').modal('hide');

@@ -1056,7 +1056,7 @@ body.home-page {
 	.rating-list > li {
 		display: inline-block;
 		margin-right: 0;
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: bold;
 
 		span {
@@ -1156,11 +1156,12 @@ body.home-page {
 }
 
 .object-featured-img {
+		max-height: 240px;
+		overflow: hidden;
 
 	img {
-		max-height: 350px;
+		max-height: 230px;
 		width: 100%;
-		overflow: hidden;
 	}
 }
 
@@ -1223,7 +1224,8 @@ select::-ms-expand {
     -moz-appearance: none;
     appearance: none;
     background: url("../images/arrow-down.png") no-repeat 96% 8px;
-    background-size: 25px 24px;
+    background-size: 22px 20px;
+    padding: 5px 10px;
     padding-left: 15px;
 
 }
@@ -1276,8 +1278,8 @@ select::-ms-expand {
 	}
 
 	.btn {
-		padding: 10px 12px;
-		font-size: 18px;
+		padding: 6px 8px;
+		font-size: 14px;
 	}
 
 	.pound {
@@ -1337,7 +1339,7 @@ select::-ms-expand {
 }
 
 #hotelBookingForm .modal-body{
-	max-height: 660px;
+	max-height: 600px;
 	overflow: hidden;
 	overflow-y: scroll;
 }

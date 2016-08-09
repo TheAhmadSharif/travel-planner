@@ -1126,7 +1126,7 @@ body.home-page {
 .object-info .rating-list > li {
   display: inline-block;
   margin-right: 0;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold; }
   .object-info .rating-list > li span {
     color: #0ACC16; }
@@ -1191,10 +1191,12 @@ body.home-page {
 .hotel-details .table tr > td:nth-child(2n) {
   font-weight: bold; }
 
-.object-featured-img img {
-  max-height: 350px;
-  width: 100%;
+.object-featured-img {
+  max-height: 240px;
   overflow: hidden; }
+  .object-featured-img img {
+    max-height: 230px;
+    width: 100%; }
 
 .tab-list-block .tab-list {
   float: left;
@@ -1241,7 +1243,8 @@ select::-ms-expand {
   -moz-appearance: none;
   appearance: none;
   background: url("../images/arrow-down.png") no-repeat 96% 8px;
-  background-size: 25px 24px;
+  background-size: 22px 20px;
+  padding: 5px 10px;
   padding-left: 15px; }
 
 .rating-list {
@@ -1280,8 +1283,8 @@ select::-ms-expand {
   .object-summary-list .price-tag {
     font-size: 18px; }
   .object-summary-list .btn {
-    padding: 10px 12px;
-    font-size: 18px; }
+    padding: 6px 8px;
+    font-size: 14px; }
   .object-summary-list .pound {
     margin-left: 10px; }
   .object-summary-list .list-block {
@@ -1319,7 +1322,7 @@ select::-ms-expand {
   margin: 2px 0; }
 
 #hotelBookingForm .modal-body {
-  max-height: 660px;
+  max-height: 600px;
   overflow: hidden;
   overflow-y: scroll; }
 
