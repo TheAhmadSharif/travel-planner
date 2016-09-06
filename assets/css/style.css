@@ -2012,7 +2012,8 @@ select.city-option {
     color: #000; }
 
 .travelres-list {
-  max-width: 260px; }
+  max-width: 260px;
+  float: left; }
 
 .travelres-list > li {
   position: relative;
