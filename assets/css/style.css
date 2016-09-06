@@ -1789,11 +1789,6 @@ select.city-option {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
 
-.color-red {
-  color: #F00 !important; }
-  .color-red .fa {
-    color: #F00 !important; }
-
 /* responsive */
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
@@ -1988,5 +1983,69 @@ select.city-option {
 /* Large screens ----------- */
 @media only screen and (min-width: 1824px) {
   /* Styles */ }
+.color-red {
+  color: #F00 !important; }
+  .color-red .fa {
+    color: #F00 !important; }
+
+.travller-spotlist > li {
+  margin-bottom: 0;
+  font-size: 20px;
+  display: block;
+  border-bottom: 1px solid #e6e9ee;
+  padding: 6px 10px;
+  cursor: pointer; }
+  .travller-spotlist > li:hover {
+    color: #000; }
+
+.traveller-pic img {
+  width: 40px;
+  height: auto;
+  float: left;
+  margin-right: 10px; }
+.traveller-pic .traveller-name {
+  cursor: pointer;
+  float: left;
+  font-size: 16px;
+  color: #666; }
+  .traveller-pic .traveller-name:hover {
+    color: #000; }
+
+.travelres-list {
+  max-width: 260px; }
+
+.travelres-list > li {
+  position: relative;
+  z-index: 10;
+  display: block;
+  width: 100%;
+  float: left;
+  border-bottom: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+  border-left: 1px solid #dfdfdf;
+  border-top: 0;
+  padding: 5px; }
+  .travelres-list > li .fa {
+    color: #666;
+    margin-top: 15px;
+    float: right;
+    display: none; }
+
+.travelres-list > li:first-child {
+  border-top: 1px solid #DFDFDF; }
+
+.travelres-list > li:hover .fa {
+  display: block; }
+
+.traveller-details {
+  position: relative;
+  z-index: 12;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  min-height: 300px; }
+  .traveller-details .traveller-pic {
+    float: left; }
 
 /*# sourceMappingURL=style.css.map */

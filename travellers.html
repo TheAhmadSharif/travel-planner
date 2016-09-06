@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-	<title>Travel Planner</title>
+	<title>Travel Planner | Travellers </title>
 
 	<link rel="shortcut icon" href="assets/images/favicon.png">
 	
@@ -26,8 +26,7 @@
 		</header>
 
 		<div class="user-info">
-			<li>
-				<a href="account.html">
+			<a href="account.html">
 				<img src="assets/images/user.jpg" alt="John Doe">
 
 				<div class="info">
@@ -35,16 +34,15 @@
 						<span>My Account</span>
 				</div> <!-- End Info -->
 			</a>
-			</li>
 		</div> <!-- End -->
 
 		<nav>
 			<ul class="sidebar-nav" id="sidebarLink">
 				<li><a href="index.html">  <span class="fa fa-calendar nav-icon"></span>  <span class="nav-name">ITINERARY</span></a></li>
-				<li class="active-nav"><a href="trips.html"> <span class="fa fa-map-marker nav-icon"></span>  <span class="nav-name">TRIPS</span></a></li>
-				<li><a href="payment-history.html"> <span class="fa fa-undo nav-icon"></span> PAYMENT HISTORY</a></li>
-				<li><a href="travellers.html"> <span class="fa fa-undo nav-icon"></span> <span class="nav-name">TRAVELLERS</span></a></li>
-				
+				<li><a href="trips.html"> <span class="fa fa-map-marker nav-icon"></span>  <span class="nav-name">TRIPS</span></a></li>
+				<li><a href="payment-history.html"> <span class="fa fa-undo nav-icon"></span> <span class="nav-name">PAYMENT HISTORY</span></a></li>
+
+				<li class="active-nav"><a href="travellers.html"> <span class="fa fa-undo nav-icon"></span> <span class="nav-name">TRAVELLERS</span></a></li>
 			</ul>
 		</nav>
 </aside> <!-- End aside -->
@@ -58,7 +56,7 @@
 								<span class="fa fa-bars"></span>
 							</div> <!-- End Toggle Menu -->
 							<ul class="inline-list header-link">
-								<li> <a href="#"><span class="page-name">Trips</a></span></li>
+								<li> <a href="#"><span class="page-name"> My Travellers  >> Our Trip 2016 </a></span></li>
 							</ul>
 
 							
@@ -70,91 +68,19 @@
 									</ul>
 							</div> <!-- End -->
 					</header>
-			 </div> <!-- End col 12 -->
-		</div> <!-- End row -->
-
-			<section class="search-section">
-					<div class="row mt-10">
-						<div class="col-md-9 col-sm-12 col-xs-12">
-							<div class="search-div">
-								<form action="#">
-									<input type="search" placeholder="Search your Trips" id="tripSearch" class="form-control search-trip">
-									<span class="fa fa-search"></span>
-									</form> <!-- End form -->
-								</div> <!-- End Search Div -->
-				  	</div> <!-- End col 12-->
-				  	<div class="col-md-3 col-sm-12 col-xs-12">
-				  		<button class="btn brand-btn new-trip"  role="presentation" data-toggle="modal" data-target="#createNewTrip"> Create New trip </button>
-				  	</div> <!-- End col sm 3 -->
-					</div> <!-- End row -->
-			</section> <!-- End Section -->
-
+	  </div> <!-- End col 12 -->
+	</div> <!-- End row -->
+	<div class="row">
+		<div class="col-sm-12 col-xs-12">
 			<section class="section-type-1">
-				 <div class="row">
-				 		<div class="col-sm-12 col-xs-12">
-				 			<div class="table-responsive">
-				 				<table class="table trip-info-table">
-								 	<thead>
-								 		<tr>
-								 			<th class="col-sm-3"> TRIP NAME </th>
-								 			<th class="col-sm-2 hidden-xs"> START DATE </th>
-								 			<th class="col-sm-2"> TOTAL COST </th>
-								 			<th class="col-sm-1"> STATUS </th>
-								 			<th class="col-sm-1"> PAYMENT </th>
-								 			<th class="col-sm-3"> &nbsp; </th>
-								 		</tr>
-								 	</thead>
-
-								 	<tbody>
-								 		<tr class="highlighted-tr">
-								 			<td>Out Trip 2016</td>
-								 			<td>Apr 8, 2016</td>
-								 			<td>PH 2,20,500.00</td>
-								 			<td>Draft</td>
-								 			<td> 
-								 				<a href="Trip_Details.html" class="btn not-focus">Pay Now </a>
-								 			</td>
-								 			<td>
-								 				<button class="btn cancel-btn"> Cancel </button> 
-								 				<button class="btn brand-btn"> View</button> 
-								 			</td>
-								 		</tr>
-
-								 		<tr>
-								 			<td>Trip to Cube</td>
-								 			<td>Apr 8, 2016</td>
-								 			<td>PH 2,20,500.00</td>
-								 			<td>Pending</td>
-								 			<td> 
-								 				<a href="Trip_Details.html" class="btn not-focus">Pay Now </a>
-								 			</td>
-								 			<td>
-								 				<button class="btn cancel-btn"> Cancel </button> 
-								 				<button class="btn brand-btn"> View</button> 
-								 			</td>
-								 		</tr>
-
-
-								 		<tr>
-								 			<td>Trip to Cube</td>
-								 			<td>Apr 8, 2016</td>
-								 			<td>PH 2,20,500.00</td>
-								 			<td> Payment Request </td>
-								 			<td> 
-								 				<a href="Trip_Details.html" class="btn focus">Pay Now </a>
-								 			</td>
-								 			<td>
-								 				<button class="btn cancel-btn"> Cancel </button> 
-								 				<button class="btn brand-btn"> View </button> 
-								 			</td>
-								 		</tr>
-								 	</tbody>
-							 </table>
-				 			</div> <!-- End Table responsive -->
-				 		</div> <!-- End col -->
-				 </div> <!-- End row -->
+					<ul class="travller-spotlist">
+						<li> <a href="travellers-list.html">Trip Name</a></li>
+						<li> <a href="travellers-list.html">Trip To Cebu</a></li>
+						<li> <a href="travellers-list.html">Our Trip 2016</a></li>
+					</ul>
 			</section> <!-- End Trip List Section -->
-	
+		</div> <!-- End col 12 -->
+	</div> <!-- End row -->
 </div> <!-- End Container Fluid -->
 
 
@@ -332,18 +258,6 @@
 	<script src="assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 	<script src="assets/js/scripts.js"></script>
 	<script src="live.js"></script>
-
-	<script>
-
-	$(function() {
-			$('#childrenVerbose').click(function() {
-	    		$('#childBlock').toggle();
-	    });
-	});
-		 
-	</script>
-
-
 
 
 </body>
