@@ -2049,4 +2049,8 @@ select.city-option {
   .traveller-details .traveller-pic {
     float: left; }
 
+.action-list > li {
+  display: inline-block;
+  margin-right: 2px; }
+
 /*# sourceMappingURL=style.css.map */
