@@ -2037,7 +2037,7 @@ select.city-option {
 .traveller-block {
   float: left;
   width: 14%;
-  min-width: 220px;
+  min-width: 160px;
   position: relative;
   z-index: 10;
   display: block;
@@ -2069,11 +2069,11 @@ select.city-option {
 .traveller-quickinfo, .traveller-edit-block {
   position: absolute;
   z-index: 12;
-  width: 84%;
+  width: 85%;
   background: #f1f1f1;
   padding: 10px;
   border: 1px solid #e6e6e6;
-  left: 16%;
+  left: 15%;
   right: 0;
   top: 6px; }
   .traveller-quickinfo .traveller-pic, .traveller-edit-block .traveller-pic {
@@ -2149,6 +2149,75 @@ select.city-option {
 .traveller-edit-block label {
   font-weight: normal;
   text-align: left; }
+.traveller-edit-block .msg {
+  float: left;
+  padding: 5px 10px; }
+  .traveller-edit-block .msg .fa {
+    color: #8a6d3b; }
+.traveller-edit-block .click {
+  color: #00ADEF;
+  font-weight: bold; }
+.traveller-edit-block .list-block {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 20px;
+  float: left;
+  clear: both;
+  width: 100%; }
+  .traveller-edit-block .list-block .traveller-list {
+    display: none; }
+  .traveller-edit-block .list-block .traveller-list {
+    position: absolute;
+    z-index: 12;
+    left: 340px;
+    width: 166px;
+    background: #FFF;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    top: -30px; }
+    .traveller-edit-block .list-block .traveller-list:before, .traveller-edit-block .list-block .traveller-list:after {
+      content: ' ';
+      top: 20%; }
+    .traveller-edit-block .list-block .traveller-list:before {
+      right: 101%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(136, 183, 213, 0);
+      border-right-color: #d0d0d0;
+      border-width: 10px;
+      margin-top: -11px; }
+    .traveller-edit-block .list-block .traveller-list:after {
+      right: 100%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(136, 183, 213, 0);
+      border-right-color: #FFF;
+      border-width: 10px;
+      margin-top: -10px; }
+    .traveller-edit-block .list-block .traveller-list ul > li {
+      display: block;
+      float: left;
+      clear: both;
+      margin: 0;
+      border-bottom: 1px solid #e1e1e1;
+      width: 100%;
+      padding: 6px 0;
+      cursor: pointer; }
+      .traveller-edit-block .list-block .traveller-list ul > li:hover {
+        color: #000; }
+    .traveller-edit-block .list-block .traveller-list img {
+      width: 20px;
+      height: auto;
+      margin-right: 10px; }
 
 .form-block {
   float: left;

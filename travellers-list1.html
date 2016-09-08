@@ -56,7 +56,7 @@
 								<span class="fa fa-bars"></span>
 							</div> <!-- End Toggle Menu -->
 							<ul class="inline-list header-link">
-								<li> <a href="#"><span class="page-name"> My Travellers </a></span></li>
+								<li> <a href="#"><span class="page-name"> My Travellers >> Trip To Cebu </a></span></li>
 							</ul>
 
 							
@@ -78,7 +78,7 @@
 							<div class="traveller-block">
 								<div class="traveller-pic" title="Click Here To See Details">
 									<img src="assets/images/user/2.jpg" alt="">
-									<span class="traveller-name">John Doe</span>
+									<span class="traveller-name">Adult 1</span>
 								</div> <!-- End Traveller Pic -->
 								<span class="fa fa-chevron-right"></span>
 							</div> <!-- End Traveller Block -->
@@ -87,7 +87,7 @@
 								<span class="fa fa-close close-span travellerCloseTrigger"> </span> 
 								<div class="traveller-pic">
 									<img src="assets/images/user/2.jpg" alt="">
-									<span class="traveller-name">John Doe</span>
+									<span class="traveller-name">Adult 1</span>
 								</div> <!-- End Traveller Pic -->
 								<div class="action-block">
 									<ul class="action-list">
@@ -101,13 +101,32 @@
 								<span class="fa fa-close close-span travellerCloseTrigger"> </span> 
 								<div class="row">
 									<div class="col-sm-1 col-xs-4">
-										
 										<div class="traveller-pic">
 											<img src="assets/images/user/2.jpg" alt="">
 										</div> <!-- End Traveller Pic -->
 									</div> <!-- End col sm 3 -->
 									<div class="col-sm-11 col-xs-12">
 										<div class="form-group holder">
+
+										<p class="msg alert alert-warning" role="alert">
+											<span class="fa fa-info-circle"></span> Make Sure the names you enter match the way they appear on your passport /ID Proof.
+										</p>
+
+
+
+										<span class="list-block">You Select traveller from other trips <a href="#" class="click">Click here</a>
+												<div class="traveller-list">
+													<ul>
+														<li>Pick a Traveller</li>
+														<li><span><img src="assets/images/user/1.jpg" alt=""></span>Mr John Doe</li>
+														<li><span><img src="assets/images/user/1.jpg" alt=""></span>Mr John Doe</li>
+														<li><span><img src="assets/images/user/1.jpg" alt=""></span>Mr John Doe</li>
+														<li><span><img src="assets/images/user/1.jpg" alt=""></span>Mr John Doe</li>
+														<li><span><img src="assets/images/user/1.jpg" alt=""></span>Mr John Doe</li>
+													</ul>
+												</div>
+										</span>
+
 									    <label for="Title" class="col-sm-2 control-label">Title</label>
 									    <div class="col-sm-10">
 											    <select class="form-control sm-select">
@@ -739,6 +758,10 @@
 		$('.editTrigger').click(function() {
 			var a = $(this).parents('li').find('.traveller-quickinfo').hide();
 			$(this).parents('li').find('.traveller-edit-block').show();
+		});
+
+		$('.click').click(function() {
+			$('.traveller-list').toggle();
 		});
 		
 	});
