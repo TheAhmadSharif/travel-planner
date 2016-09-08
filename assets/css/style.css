@@ -2134,7 +2134,8 @@ select.city-option {
   width: 100%;
   margin-bottom: 15px; }
 .traveller-edit-block .holder {
-  margin-top: 10px; }
+  margin-top: 10px;
+  position: relative; }
   .traveller-edit-block .holder .form-control {
     float: left;
     max-width: 120px; }
@@ -2148,7 +2149,9 @@ select.city-option {
   margin-right: 0; }
 .traveller-edit-block label {
   font-weight: normal;
-  text-align: left; }
+  text-align: left;
+  float: left;
+  clear: both; }
 .traveller-edit-block .msg {
   float: left;
   padding: 5px 10px; }
@@ -2163,13 +2166,14 @@ select.city-option {
   margin-bottom: 20px;
   float: left;
   clear: both;
-  width: 100%; }
+  width: 100%;
+  top: 0; }
   .traveller-edit-block .list-block .traveller-list {
     display: none; }
   .traveller-edit-block .list-block .traveller-list {
     position: absolute;
     z-index: 12;
-    left: 340px;
+    right: 40%;
     width: 166px;
     background: #FFF;
     padding: 10px;

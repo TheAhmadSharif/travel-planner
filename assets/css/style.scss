@@ -2128,6 +2128,7 @@ select.city-option {
 	}
 	.holder {
 		margin-top: 10px;
+		position: relative;
 		.form-control {
 			float: left;
 			max-width: 120px;
@@ -2146,7 +2147,9 @@ select.city-option {
 	
 	label {
 		font-weight: normal;
-		text-align: left;
+    text-align: left;
+    float: left;
+    clear: both;
 	}
 
 	.msg {
@@ -2169,6 +2172,7 @@ select.city-option {
     float: left;
     clear: both;
     width: 100%;
+    top: 0;
 
     .traveller-list {
     	display: none;
@@ -2178,7 +2182,7 @@ select.city-option {
 		.traveller-list {
 			position: absolute;
 	    z-index: 12;
-	    left: 340px;
+	    right: 40%;
 	    width: 166px;
 	    background: #FFF;
 	    padding: 10px;
