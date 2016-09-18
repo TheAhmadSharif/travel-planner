@@ -84,7 +84,6 @@
 							</div> <!-- End Traveller Block -->
 
 							<div class="traveller-quickinfo">
-								<span class="fa fa-close close-span travellerCloseTrigger"> </span> 
 								<div class="traveller-pic">
 									<img src="assets/images/user/2.jpg" alt="">
 									<span class="traveller-name">John Doe</span>
@@ -92,13 +91,11 @@
 								<div class="action-block">
 									<ul class="action-list">
 										<li><a href="#" class="btn btn-default editTrigger"><span class="fa fa-pencil mr-5"></span> Edit</a></li>
-										<li><a href="#" class="btn btn-default"><span class="fa fa-trash"></span> Delete </a></li>
 									</ul>
 								</div> <!-- End -->
 							</div> <!-- End Traveller Details -->
 
 							<div class="traveller-edit-block">
-								<span class="fa fa-close close-span travellerCloseTrigger"> </span> 
 								<div class="row">
 									<div class="col-sm-1 col-xs-4">
 										
@@ -219,6 +216,11 @@
 														<input type="text" class="form-control" placeholder="Passport Issuing Country">
 													</div> <!-- End col sm 9 -->
 											</div>	<!-- End Form Group --> 
+
+											<div class="edit-button-block">
+													<a href="#" class="btn btn-default travellerCloseTrigger prevent-default"> Cancel</a>
+													<button class="btn btn-primary"> Update</button>
+											</div> <!-- End Form Grouop -->
 												
 										</div> <!-- End Form Block -->
 									</div> <!-- End col sm 11 -->
@@ -236,7 +238,6 @@
 							</div> <!-- End Traveller Block -->
 
 							<div class="traveller-quickinfo">
-								<span class="fa fa-close close-span travellerCloseTrigger"> </span> 
 								<div class="traveller-pic">
 									<img src="assets/images/user/1.jpg" alt="">
 									<span class="traveller-name">Bob Marley</span>
@@ -244,13 +245,11 @@
 								<div class="action-block">
 									<ul class="action-list">
 										<li><a href="#" class="btn btn-default editTrigger"><span class="fa fa-pencil mr-5"></span> Edit</a></li>
-										<li><a href="#" class="btn btn-default"><span class="fa fa-trash"></span> Delete </a></li>
 									</ul>
 								</div> <!-- End -->
 							</div> <!-- End Traveller Details -->
 
 							<div class="traveller-edit-block">
-								<span class="fa fa-close close-span travellerCloseTrigger"> </span> 
 								<div class="row">
 									<div class="col-sm-1 col-xs-4">
 										<div class="traveller-pic">
@@ -368,6 +367,11 @@
 														<input type="text" class="form-control" placeholder="Passport Issuing Country">
 													</div> <!-- End col sm 9 -->
 											</div>	<!-- End Form Group --> 
+
+											<div class="edit-button-block">
+													<a href="#" class="btn btn-default travellerCloseTrigger prevent-default"> Cancel</a>
+													<button class="btn btn-primary"> Update</button>
+											</div> <!-- End Form Grouop -->
 												
 										</div> <!-- End Form Block -->
 									</div> <!-- End col sm 11 -->
@@ -385,7 +389,6 @@
 							</div> <!-- End Traveller Block -->
 
 							<div class="traveller-quickinfo">
-								<span class="fa fa-close close-span travellerCloseTrigger"> </span> 
 								<div class="traveller-pic">
 									<img src="assets/images/user/3.jpg" alt="">
 									<span class="traveller-name">Harry Poter</span>
@@ -393,13 +396,11 @@
 								<div class="action-block">
 									<ul class="action-list">
 										<li><a href="#" class="btn btn-default editTrigger"><span class="fa fa-pencil mr-5"></span> Edit</a></li>
-										<li><a href="#" class="btn btn-default"><span class="fa fa-trash"></span> Delete </a></li>
 									</ul>
 								</div> <!-- End -->
 							</div> <!-- End Traveller Details -->
 
 							<div class="traveller-edit-block">
-								<span class="fa fa-close close-span travellerCloseTrigger"> </span> 
 								<div class="row">
 									<div class="col-sm-1 col-xs-4">
 										<div class="traveller-pic">
@@ -517,6 +518,11 @@
 														<input type="text" class="form-control" placeholder="Passport Issuing Country">
 													</div> <!-- End col sm 9 -->
 											</div>	<!-- End Form Group --> 
+
+											<div class="edit-button-block">
+													<a href="#" class="btn btn-default travellerCloseTrigger prevent-default"> Cancel</a>
+													<button class="btn btn-primary"> Update</button>
+											</div> <!-- End Form Grouop -->
 												
 										</div> <!-- End Form Block -->
 									</div> <!-- End col sm 11 -->
@@ -732,8 +738,9 @@
 			$('.traveller-quickinfo').hide();
 		});
 
-		$('.travellerCloseTrigger').click(function() {
-				$(this).parent('.traveller-edit-block').hide();
+		$('.travellerCloseTrigger').click(function(e) {
+				e.preventDefault();
+				$(this).parents('.traveller-edit-block').hide();
 			});
 
 		$('.editTrigger').click(function() {

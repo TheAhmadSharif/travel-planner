@@ -2183,7 +2183,7 @@ select.city-option {
 			position: absolute;
 	    z-index: 12;
 	    right: 40%;
-	    width: 166px;
+	    width: 140px;
 	    background: #FFF;
 	    padding: 10px;
 	    border: 1px solid #ccc;
@@ -2260,3 +2260,14 @@ select.city-option {
     margin-bottom: 40px;
 	}
 }
+.edit-button-block {
+	width: 100%;
+	margin-right: 10px;
+	
+	.btn {
+		margin-right: 5px;
+		padding: 8px 10px;
+		float: right;
+	}
+}
+
