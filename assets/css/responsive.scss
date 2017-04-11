@@ -6,28 +6,155 @@
 	
 	#sidebar {
 		left: -180px;
+		-webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 	}
-	.visible-sidebar{
-			left: 0 !important;
-			transition-property: margin;
-			transition-duration: 0.2s;
-			transition-timing-function: ease-in-out;
-		}
 
 	.container-margin {
-		left: 0;
 		margin-left: 0;
+		-webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 	}
 
-	.move-right {
-		left: 180px;
-
-		transition-property: margin;
-		transition-duration: 0.2s;
-		transition-timing-function: ease-in-out;
+	.spot-holder {
+		max-height: 700px;
+		overflow: hidden;
+		overflow-y: auto;
 	}
 
+
+	.search-section .new-trip {
+    min-width: 120px;
+    margin-bottom: 10px;	
+	}
+
+
+	.trip-list-section {
+		overflow-x: auto;
+	}
+	.trip-info {
+		border: 0;
+	}
+	.dropdown-filter {
+		margin-bottom: 10px;
+	}
+	.info-tab-list > li {
+		font-size: 14px;
+	}
+	.day-tab li {
+		margin: 4px 2px;
+	}
+
+	.more-details-block .more-details-tab.tab-4 li{ 
+			font-size: 13px;
+	}
+	
+
+	.action-block {
+		float: left;
+		.brand-btn {
+			width: 100%;
+			clear: both;
+		}
+		.city-option {
+			width: 100%;
+			clear: both;
+			float: left;
+		}
+	}
+
+	.object-info .table-btn,.object-summary-list .btn {
+		float: left !important;
+		margin-top: 10px;
+	}
+	.slider-block {
+		min-height: 100px;
+	}
+.tour-duration {
+	float: left !important;
 }
+
+
+
+.calculation-block {
+		float: none;
+    font-style: italic;
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+
+     table {
+    	float: none;
+    }
+}
+
+.header-link {
+	max-width: 68%;
+	}
+.header-link > li {
+	margin-right: 5px;
+}
+.spot-li {
+	float: left;
+	width: 100%;
+}
+.spot-li > li .action-list {
+    display: table;
+    margin: auto;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+	}
+.spot-img {
+	margin-left: 0;
+	margin-right: 0;
+	img {
+		max-width: 100%;
+		}
+	}
+
+.object-info .rating-list {
+	    float: left;
+	    margin: 5px 0;
+	}
+.user-form .alter-sigin-text:before, .user-form .alter-sigin-text:after {
+	    width: 20%;
+	}
+	.spot-li > li .action-list > li:last-child {
+		margin-right: 10px;
+	}
+.spot-name {
+		font-size: 14px;
+		margin-top: 6px;
+		min-width: 100px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+.user-info-section .btn {
+		min-width: 210px;
+	}
+.payment-section .btn-back {
+	float: left;
+}
+
+.user-photo-block {
+    padding: 10px;
+    margin-left: 0;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 30px;
+    min-height: 150px;
+}
+.content-header {
+}
+}
+
+
 
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width : 321px) {
@@ -41,7 +168,99 @@
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+.trip-list-section {
+		overflow-x: auto;
+	}
+
+	.payment-section .btn-back {
+	    float: left;
+	}
+}
+
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
 /* Styles */
 }
 
 
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
+
+/* iPhone 6 landscape */
+@media only screen and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2){ 
+
+		.trip-info {
+			border: 0;
+		}
+
+		.action-block {
+		    float: right;
+		}
+
+		.payment-section .btn-back {
+			    float: right;
+			}
+
+			.user-photo-block {
+			    padding: 10px;
+			    margin-left: 0;
+			    width: 100%;
+			    margin-top: 0;
+			    margin-bottom: 30px;
+			    min-height: 150px;
+			}
+ }
+/* iPhone 5 landscape */
+ @media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape) { 
+	.action-block {
+		    float: left;
+		    width: 100%;
+		    .brand-btn {
+		    	width: 48%;
+		    }
+		}
+		.city-option {
+		    width: 48%;
+		    float: right;
+		}
+		.payment-section .btn-back {
+			    float: left;
+			}
+
+			.user-photo-block {
+			    padding: 10px;
+			    margin-left: 0;
+			    width: 100%;
+			    margin-top: 0;
+			    margin-bottom: 30px;
+			    min-height: 150px;
+			}
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+	select.city-option {
+		width: 240px;
+	}
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}

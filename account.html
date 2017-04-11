@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<title>Travel Planner</title>
+
+	<link rel="shortcut icon" href="assets/images/favicon.png">
+	
+	<link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="assets/bower_components/bxslider-4/dist/jquery.bxslider.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+<aside class="sidebar" id="sidebar">
+		<span id="closeTrigger" class="fa fa-close"></span>
+		<header>
+			<div class="logo-area">
+				<a href="index.html"><img src="assets/images/logo.png" alt="Travel Plan"></a>
+			</div> <!-- End Logo Area -->
+		</header>
+
+		<div class="user-info active-nav">
+			<a href="account.html">
+				<img src="assets/images/user.jpg" alt="John Doe">
+
+				<div class="info">
+						<span class="block bold">Welcome</span>
+						<span>My Account</span>
+				</div> <!-- End Info -->
+			</a>
+		</div> <!-- End -->
+
+		<nav>
+			<ul class="sidebar-nav" id="sidebarLink">
+				<li><a href="index.html">  <span class="fa fa-calendar nav-icon"></span> ITINERARY</a></li>
+				<li><a href="trips.html"> <span class="fa fa-map-marker nav-icon"></span> TRIPS</a></li>
+				<li><a href="payment-history.html"> <span class="fa fa-undo nav-icon"></span> PAYMENT HISTORY</a></li>
+			</ul>
+		</nav>
+</aside> <!-- End aside -->
+	
+
+	<div class="container-fluid container-margin">
+		<div class="row">
+			<div class="col-sm-12 col-xs-12">
+					<header class="content-header">
+							<div class="toggle-menu" id="toggleMenu">
+								<span class="fa fa-bars"></span>
+							</div> <!-- End Toggle Menu -->
+							<ul class="inline-list header-link">
+								<li> <a href="#"><span class="page-name">My Account</a></span></li>
+							</ul>
+
+							
+							<div class="access-link">
+									<ul class="inline-list">
+										<li><a href="#loginForm" data-target="#loginForm" data-toggle="modal" aria-controls="loginForm">
+										 <span class="fa fa-sign-in hidden-xs"></span> Login <span class="hidden-xs">|</span> </a></li>
+										<li class="hidden-xs"><a href="#"> <span class="fa fa-question"></span> Help</a></li>
+									</ul>
+							</div> <!-- End -->
+					</header>
+			
+	 </div> <!-- End col 12 -->
+	</div> <!-- End row -->
+
+	<section class="user-info-section mt-10" id="userInfoHeight">
+		<div class="row">
+				<div class="col-sm-6 col-xs-12 visible-xs">
+					<div class="user-photo-block">
+							<div class="img-blcok">
+									<img src="assets/images/user.jpg" alt="John">
+									<span class="edit-text">
+										Edit
+									</span>
+							</div> <!-- End Img Blokc -->
+							<span class="photo-text">Your Photo</span>
+					</div> <!-- End User Photo Block -->
+				</div> <!-- End col 6 -->
+
+
+				<div class="col-sm-6 col-xs-12">
+					<form action="#">
+					<div class="form-group">
+						<label for="Display_name">DISPLAY NAME</label>
+						<input type="text" class="form-control" placeholder="Display Name">
+					</div> <!-- End Form Group -->	
+
+					<div class="form-group">
+						<label for="Email_Address">EMAIL ADDRESS</label>
+						<input type="text" class="form-control" placeholder="Email Address">
+					</div> <!-- End Form Group -->	
+
+					<div class="form-group">
+						<button class="btn brand-btn">Update Profile</button>
+					</div> <!-- End Form Group -->		
+				</form>
+				<form action="#">
+					<div class="form-group">
+						<label for="old_password">Old (Existing Password)</label>
+						<input type="password" class="form-control" value="*********">
+					</div> <!-- End Form Group -->
+
+
+						<div class="row">
+							<div class="col-sm-6">
+							<div class="form-group">
+								<label for="New_password">New Password</label>
+								<input type="password" class="form-control" value="">
+							</div> <!-- End Form Group -->
+
+							</div> <!-- End col sm 6 -->
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label for="confirm_password">Confirm Password</label>
+									<input type="password" class="form-control" value="">
+								</div> <!-- End Form Group -->
+								
+							</div> <!-- End col sm 6 -->
+						</div>
+						<div class="form-group">
+							<button class="btn btn-gray">Update Password</button>
+						</div> <!-- End Form Group -->
+				</form>
+				</div> <!-- End col 6 -->	
+				<div class="col-sm-6 col-xs-12 hidden-xs">
+					<div class="user-photo-block">
+							<div class="img-blcok">
+									<img src="assets/images/user.jpg" alt="John">
+									<span class="edit-text">
+										Edit
+									</span>
+							</div> <!-- End Img Blokc -->
+							<span class="photo-text">Your Photo</span>
+					</div> <!-- End User Photo Block -->
+
+					<div class="account-type-block hidden-xs">
+							<div class="info">
+									<span class="title"> <span class="fa fa-facebook"></span>This Account is connected With Facebook</span>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quo suscipit ipsum id laborum quia, numquam ab alias explicabo, vel perferendis fugiat perspiciatis. Nobis nihil, sequi, praesentium provident eligendi facilis non. Quas numquam quidem ratione rerum doloribus facilis vel ut!
+									</p>
+							</div> <!-- End info -->
+					</div> <!-- End  -->
+				</div> <!-- End col 6 -->
+			</div> <!-- End row -->
+	</section> <!-- End User Info -->
+</div> <!-- End Container Fluid -->
+
+
+	<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="assets/js/scripts.js"></script>
+	<script src="live.js"></script>
+
+	<script>
+		
+			var w = window,
+			    d = document,
+			    e = d.documentElement,
+			    g = d.getElementsByTagName('body')[0],
+			    x = w.innerWidth || e.clientWidth || g.clientWidth,
+			    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+
+			    if (x > 900) {
+			    	var h = document.getElementById('userInfoHeight').style.minHeight= y - 100 + 'px';
+			    	console.log(h);
+			    }
+			    
+	</script>
+
+
+
+
+</body>
+</html>

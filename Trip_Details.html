@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<title>Travel Planner</title>
+
+	<link rel="shortcut icon" href="assets/images/favicon.png">
+	
+	<link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="assets/bower_components/bxslider-4/dist/jquery.bxslider.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+<aside class="sidebar" id="sidebar">
+		<span id="closeTrigger" class="fa fa-close"></span>
+		<header>
+			<div class="logo-area">
+				<a href="index.html"><img src="assets/images/logo.png" alt="Travel Plan"></a>
+			</div> <!-- End Logo Area -->
+		</header>
+
+		<div class="user-info">
+			<a href="account.html">
+				<img src="assets/images/user.jpg" alt="John Doe">
+
+				<div class="info">
+						<span class="block bold">Welcome</span>
+						<span>My Account</span>
+				</div> <!-- End Info -->
+			</a>
+		</div> <!-- End -->
+
+		<nav>
+			<ul class="sidebar-nav" id="sidebarLink">
+				<li><a href="index.html">  <span class="fa fa-calendar nav-icon"></span>  <span class="nav-name">ITINERARY</span></a></li>
+				<li  class="active-nav"><a href="trips.html"> <span class="fa fa-map-marker nav-icon"></span>  <span class="nav-name">TRIPS</span></a></li>
+				<li><a href="payment-history.html"> <span class="fa fa-undo nav-icon"></span> <span class="nav-name">PAYMENT HISTORY</span></a></li>
+			</ul>
+		</nav>
+</aside> <!-- End aside -->
+	
+
+	<div class="container-fluid container-margin">
+		<div class="row">
+			<div class="col-sm-12 col-xs-12">
+					<header class="content-header">
+							<div class="toggle-menu" id="toggleMenu">
+								<span class="fa fa-bars"></span>
+							</div> <!-- End Toggle Menu -->
+							<ul class="inline-list header-link">
+								<li> <a href="#"><span class="page-name">Our Trip 2016, 8 Apr, 2016</a></span></li>
+							</ul>
+
+							<div class="access-link">
+									<ul class="inline-list">
+										<li><a href="#loginForm" data-target="#loginForm" data-toggle="modal" aria-controls="loginForm">
+										 <span class="fa fa-sign-in hidden-xs"></span> Login <span class="hidden-xs">|</span> </a></li>
+										<li class="hidden-xs"><a href="#"> <span class="fa fa-question"></span> Help</a></li>
+									</ul>
+							</div> <!-- End -->
+					</header>
+	    </div> <!-- End col 12 -->
+	</div> <!-- End row -->
+	<div class="row">
+		<div class="col-sm-12 col-xs-12">
+			<section class="section-type-1 payment-section">
+					<div class="table-responsive">
+						 <table class="table payment-table">
+						 	<thead>
+						 		<tr>
+						 			<th class="col-sm-6"> TRIP DATE &amp; DATE </th>
+						 			<th class="col-sm-3"> CITY/PLACE </th>
+						 			<th class="col-sm-3"> PER DAY COST </th>
+						 			<th>  </th>
+						 		</tr>
+						 	</thead>
+
+						 	<tbody>
+						 		<tr class="highlighted-tr">
+						 			<td>01, Monday, Apr 08</td>
+						 			<td>Cebu</td>
+						 			<td>PH 20,00</td>
+						 			<td> 
+						 				<button class="btn border-brand-btn"> View Trip Details </button> 
+						 			</td>
+						 		</tr>
+
+
+						 		<tr>
+						 			<td>Excluding items of the day Shangrila- <span class="red">Booking throught expedia.com <span class="fa fa-info-circle"></span></span>
+									<span class="block">(Adult: 2 Children:1)</span>
+						 			</td>
+						 			<td></td>
+						 			<td>8900.00</td>
+						 			<td> 
+						 				<button class="btn brand-btn"> Book Now </button> 
+						 			</td>
+						 		</tr>
+
+
+						 		<tr>
+						 			<td>
+						 			<img src="assets/images/airline/philippine.png" alt="philippine">
+								 			<ul class="info-list">
+								 				<li>08: 15
+													<span class="sub-info">CEB to MNL</span>
+								 				</li>
+								 				<li>09:30
+								 				</li>
+								 				<li>1h 15m
+														<span class="sub-info">non-stop</span>
+								 				</li>
+								 			</ul>
+
+						 			<span class="red">Booking throught travelfusion.com <span class="fa fa-info-circle"></span> </span> 
+						 			</td>
+						 			<td></td>
+						 			<td>PH 4500.00</td>
+						 			<td> 
+						 				<button class="btn brand-btn"> Book Now </button> 
+						 			</td>
+						 		</tr>
+
+
+
+						 		<tr>
+						 			<td>
+						 			 	04, Thursday, Apr 11
+						 			</td>
+						 			<td>Maanila</td>
+						 			<td>PH 5000.00</td>
+						 			<td> 
+						 				<button class="btn border-brand-btn"> View Trip Details </button> 
+						 			</td>
+						 		</tr>
+
+
+						 		<tr>
+						 			<td>
+						 			 	05, Thursday, Apr 12
+						 			</td>
+						 			<td>Davao</td>
+						 			<td>PH 15000.00</td>
+						 			<td> 
+						 				<button class="btn border-brand-btn"> View Trip Details </button> 
+						 			</td>
+						 		</tr>
+						 	</tbody>
+				 </table>
+						
+					</div> <!-- End Table Responsive -->
+				<div class="row">
+					<div class="col-sm-12 col-xs-12">
+							<div class="calculation-block">
+									<table class="table">
+									 	<tr>
+									 		<td>TOTAL COST OF TRIP PACKAGE</td>
+									 		<td>PH 2,20,500.00</td>
+									 		
+									 	</tr>
+
+									 	<tr>
+									 		<td>70% PAID IN 9TH APRIL, 2016</td>
+									 		<td>PH 154,350,00</td>
+									 	</tr>
+									 	<tr>
+									 		<td><button class="btn brand-btn">Pay Now</button></td>
+									 		<td> <span class="total">PH 66,150.00</span></td>
+									 	</tr>
+									 </table>
+
+									 <a href="trips.html" class="btn btn-back visible-xs"> Back </a>
+							</div> <!-- End Calculation Block --> 	
+
+							<div class="link-div hidden-xs">
+								<table>
+									<tr>
+										<td><a href="trips.html" class="btn btn-back"> Back </a></td>
+										<td> <span class="payment-text">FINAL PAYMENT</span></td>
+									</tr>
+								</table>
+							</div> <!-- End -->
+					</div> <!-- End col 12 -->
+				</div> <!-- End row -->
+			</section> <!-- End Trip List Section -->
+		</div> <!-- End col 12 -->
+	</div> <!-- End row -->
+</div> <!-- End Container Fluid -->
+
+
+<!-- Start Login Modal -->
+<div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="loginForm">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header user-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        	<h4>Login</h4>
+      </div>
+      <div class="modal-body">
+      	<div class="user-form">
+      			<form action="#">
+      				<div class="form-group">
+      					<label for="email">YOUR EMAIL</label>
+      					<input type="text" class="form-control" placeholder="Your Email Address" required>
+      				</div> <!-- End form group -->
+
+
+      				<div class="form-group">
+      					<label for="password">PASSWORD</label>
+      					<input type="password" class="form-control" placeholder="Password Please" required>
+      				</div> <!-- End form group -->
+
+      				<div class="form-group">
+      					<button class="btn btn-action brand-btn">Login</button>
+      				</div> <!-- End form group -->
+
+      				<div class="form-group">
+      					<a href="#resetForm" data-toggle="modal" class="btn btn-action forgot"  onclick="hideThis()">Forgot Password ?</a>
+      				</div> <!-- End form group -->
+
+      				<div class="form-group">
+      						<span class="alter-sigin-text">OR SIGN IN WITH</span>
+      				</div> <!-- End Form Group -->
+
+      				<div class="form-group">
+      						<a href="#" class="btn btn-action btn-facebook"><span class="fa fa-facebook fb"></span> Facebook</a>
+      				</div> <!-- End Form Group -->
+
+      				<div class="form-group">
+      						<span class="not-having-ac">Have n&#39;t Account ? Sign Up for Travel Planner </span>
+      				</div> <!-- End Form Group -->
+
+      			</form> <!-- End form -->
+      	</div> <!-- End Login Form -->
+      </div> <!-- End modal Body -->
+    </div> <!-- End Modal Content -->
+  </div> <!-- End Modal Dialog -->
+</div> <!-- End Login Modal -->
+
+
+
+
+	<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="assets/js/scripts.js"></script>
+	<script src="live.js"></script>
+
+
+</body>
+</html>

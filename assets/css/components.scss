@@ -35,7 +35,9 @@ img {
 	margin-top: 30px !important;
 }
 
-
+.mb-5 {
+	margin-bottom: 5px !important;
+}
 .mb-10 {
 	margin-bottom: 10px !important;
 }
@@ -238,3 +240,10 @@ input[type="radio"]:checked+label span {
 .btn:focus, .btn:active, .btn:hover {
 	outline: 0;
 }
+
+
+.table-responsive {
+    overflow-x: auto;
+}
+/* Scroll Style */
+

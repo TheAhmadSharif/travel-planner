@@ -18,6 +18,7 @@
 </head>
 <body>
 <aside class="sidebar" id="sidebar">
+		<span id="closeTrigger" class="fa fa-close"></span>
 		<header>
 			<div class="logo-area">
 				<a href="index.html"><img src="assets/images/logo.png" alt="Travel Plan"></a>
@@ -25,533 +26,1939 @@
 		</header>
 
 		<div class="user-info">
-			<img src="assets/images/user.jpg" alt="John Doe">
+			<a href="account.html">
+				<img src="assets/images/user.jpg" alt="John Doe">
 
-			<div class="info">
-					<span class="block bold">Welcome</span>
-					<span>My Account</span>
-			</div> <!-- End Info -->
+				<div class="info">
+						<span class="block bold">Welcome</span>
+						<span>My Account</span>
+				</div> <!-- End Info -->
+			</a>
 		</div> <!-- End -->
 
 		<nav>
-			<ul class="sidebar-nav">
-				<li class="active-nav"><a href="#">  <span class="fa fa-calendar nav-icon"></span> ITINERARY</a></li>
-				<li><a href="#"> <span class="fa fa-map-marker nav-icon"></span> TRIPS</a></li>
-				<li><a href="#"> <span class="fa fa-location-arrow nav-icon"></span> DISCOVER</a></li>
-				<li><a href="#"> <span class="fa fa-usd nav-icon"></span> WALLET</a></li>
+			<ul class="sidebar-nav" id="sidebarLink">
+				<li class="active-nav"><a href="index.html">  <span class="fa fa-calendar nav-icon"></span> <span class="nav-name">ITINERARY</span></a></li>
+				<li><a href="trips.html"> <span class="fa fa-map-marker nav-icon"></span> <span class="nav-name">TRIPS</span></a></li>
+				<li><a href="payment-history.html"> <span class="fa fa-undo nav-icon"></span> <span class="nav-name">PAYMENT HISTORY</span></a></li>
+
+				<li><a href="travellers.html"> <span class="fa fa-list nav-icon"></span> <span class="nav-name">TRAVELLERS</span></a></li>
 			</ul>
 		</nav>
 </aside> <!-- End aside -->
 	
 
-	<div class="container-fluid container-margin" id="mainBlock">
+	<div class="container-fluid container-margin">
 		<div class="row">
-			<div class="col-sm-8 col-xs-12">
+			<div class="col-md-8 col-sm-12 col-xs-12">
 					<header class="content-header">
-							<div class="toggle-menu visible-xs" id="toggleMenu">
+							<div class="toggle-menu" id="toggleMenu">
 								<span class="fa fa-bars"></span>
 							</div> <!-- End Toggle Menu -->
 							<ul class="inline-list header-link">
 								<li> <a href="#"><span class="tab-name"> Itinerary</a></span></li>
-								<li><a href="#" class="btn btn-gray">View on Map</a></li>
+								<li><a href="view-map.html" id="viewMapTrigger" class="btn btn-gray">View on Map</a></li>
 							</ul>
 
 							<div class="access-link">
 									<ul class="inline-list">
-										<li><a href="#"> <span class="fa fa-sign-in"></span> Login | </a></li>
+										<li><a href="#loginForm" data-target="#loginForm" data-toggle="modal" aria-controls="loginForm">
+										 <span class="fa fa-sign-in hidden-xs"></span> Login <span class="hidden-xs">|</span> </a></li>
 										<li class="hidden-xs"><a href="#"> <span class="fa fa-question"></span> Help</a></li>
 									</ul>
 							</div> <!-- End -->
 					</header>
 
-					<section class="trip-section">
-				<div class="row">
-					<div class="col-sm-12">
-							<ul class="inline-list day-tab">
-								<li class="active-tab"><a href="#">Day 01</a></li>
-								<li><a href="#">Day 02</a></li>
-								<li><a href="#">Day 03</a></li>
-								<li><a href="#">Day 04</a></li>
-								<li><a href="#">Day 05</a></li>
-								<li><a href="#">Day 06</a></li>
-							</ul>
-						</div> <!-- End col 12 -->
-					</div> <!-- End row -->
-
-					<article class="tab-content">
-						<div class="row">
-							<div class="col-sm-3">
-								<div class="trip-info">
-									<span class="trip-name">Our Trip 2016 <span class="fa fa-pencil trip-edit-icon"></span></span>
-									<span class="period">8th April to 16th April 2016</span>
-        			
-								</div> <!-- End Trip Duration -->
-							</div> <!-- End col 3 -->
-							<div class="col-sm-9">
-									<div class="action-block">
-											<button class="btn brand-btn mr-10">Send Package Request <span class="fa fa-chevron-right chevron-icon"></span></button>
-											<select id="city" class="form-control city-option">
-												<option value="0">Select City</option>
-												<option value="oslo">Oslo</option>
-												<option value="chicago">Chicago</option>
-												<option value="london">London</option>
-												<option value="abu-dhabi">Abu Dhabi</option>
-												<option value="capetown">Capetown</option>
-												<option value="berlin">Berlin</option>
-											</select>
-									</div> <!-- End Action Block -->
-							</div> <!-- End col 9 -->
-						</div> <!-- End row -->
-
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="tour-details">
-									
-										<ul class="info-tab-list" role="tablist">
-											<li role="presentation" data-target="#Tour" aria-controls="Tour" role="tab" data-toggle="tab">
-
-											 <span class="fa fa-map-marker mr-5"></span> Tour </li>
-
-											<li role="presentation" data-target="#Hotels" aria-controls="Hotels" role="tab" data-toggle="tab">
-											<span class="fa fa-bed mr-5"></span> Hotels</li>
-
-											<li class="active" role="presentation" data-target="#Car" aria-controls="Car" role="tab" data-toggle="tab"> 
-											<span class="fa fa-car mr-5"></span> Car Rental </li>
-
-											<li role="presentation" data-target="#Flights" aria-controls="Flights" role="tab" data-toggle="tab">
-											<span class="fa fa-plane mr-5"></span>  Flights </li>
-										</ul>
+				
 
 
-									    <div class="tab-content">
+		<section class="trip-section">
+			<div class="row">
+				<div class="col-sm-12">
+
+						<ul class="day-tab" role="tablist" id="dayTabList">
+							<li role="presentation" class="active-tab active" data-toggle="tab" role="tab" aria-controls="day_01"  data-target="#day_01">Day 01</a></li>
+							<li data-toggle="tab" data-target="#day_02" role="tab" aria-controls="day_02"> Day 02 </li>
+							<li data-toggle="tab" data-target="#day_03" role="tab" aria-controls="day_03"> Day 03 </li>
+							<li data-toggle="tab" data-target="#day_04" role="tab" aria-controls="day_04"> Day 04 </li>
+							<li data-toggle="tab" data-target="#day_05" role="tab" aria-controls="day_05"> Day 05 </li>
+							<li data-toggle="tab" data-target="#day_06" role="tab" aria-controls="day_06"> Day 06 </li>
+							<li data-toggle="tab" data-target="#last_day" role="tab" aria-controls="day_06"> Last Day of Trip </li>
+						</ul>
+						
+					<div class="tab-content trip-details">
+						<div role="tabpanel" class="tab-pane active" id="day_01">
+							<div class="row">
+								<div class="col-sm-12 col-xs-12">
+									<div class="trip-info">
+										<span class="trip-name">Our Trip 2016 <span class="fa fa-pencil trip-edit-icon"></span></span>
+										<span class="period">08th April to 16th April 2016</span>
+									</div> <!-- End Trip Duration -->
+
+										<div class="action-block">
+												<button class="btn brand-btn mr-10">View Itinerary <span class="fa fa-chevron-right chevron-icon"></span></button>
+												<select id="city" class="form-control city-option">
+													<option value="0">Select Destination</option>
+													<option value="oslo">Oslo</option>
+													<option value="chicago">Chicago</option>
+													<option value="london">London</option>
+													<option value="abu-dhabi">Abu Dhabi</option>
+													<option value="capetown">Capetown</option>
+													<option value="berlin">Berlin</option>
+												</select>
+										</div> <!-- End Action Block -->
+								</div> <!-- End col 3 -->
+							</div> <!-- End row -->
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="tour-details">
+										
+											<ul class="info-tab-list" id="tabList">
+												<li role="presentation" data-target="#flightBookingForm" aria-controls="flightBookingForm" data-toggle="modal">
+												<span class="fa fa-plane mr-5 hidden-xs"></span>  Flight </li>
+
+												<li role="presentation" data-target="#carBookingForm" aria-controls="carBookingForm" data-toggle="modal"> 
+												<span class="fa fa-car mr-5 hidden-xs"></span> Transfer </li>
+
+												<li role="presentation" data-target="#hotelListModal" aria-controls="hotelListModal" data-toggle="modal">
+												<span class="fa fa-bed mr-5 hidden-xs"></span> Hotels</li>
 
 
-									  	 <div role="tabpanel" class="tab-pane" id="Tour">
-									  	 		<button class="btn btn-brand" data-target="#hotelBookingForm" role="modal" data-toggle="modal">Add Hotel</button>
-									  	 </div> <!-- End Tour -->
+												<li role="presentation" data-target="#spotListModal" aria-controls="spotListModal" data-toggle="modal">
+
+												 <span class="fa fa-map-marker mr-5 hidden-xs hidden-xs"></span> Tours </li>
+												
+											</ul>
+										    <div class="spot-holder spotHolder">
+										  	 		<ul class="spot-li">
+															<li class="border-yellow">
+																<div class="row">
+																		<div class="col-sm-8 col-xs-8">
+																				<span class="fa fa-bed spot-icon bg-yellow"></span> <span class="spot-name"> Check in at Shangrila Hotel</span>
+
+																		</div> <!-- End col 8 -->
+																		<div class="col-sm-4 col-xs-4">
+																				<ul class="inline-list action-list">
+																					<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+
+																					<li> <span class="trash-icon fa fa-trash"></span></li>
+																				</ul>
+																		</div> <!-- End col 4 -->
+																</div> <!-- End row	 -->
+																<div class="row">	
+																	<div class="col-sm-12 col-xs-12">
+																			<div class="spot-img">
+																				<img src="assets/images/spot/1.jpg" alt="Cape town">
+																			</div> <!-- End Spot Name -->
+
+																			<div class="spot-quick-info">
+																				<h4><span class="spot-name"> Shangrila Hotel </span></h4>
+																				<span class="spot-desc">Lorem imsum doler somet</span>
+																				<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																			</div> <!-- End Spot Quick Info -->
+																			
+																	</div> <!-- End 8 -->
+																</div> <!-- End row -->
+															</li>
+
+										
+
+															<li>
+																<div class="row">
+																		<div class="col-sm-8 col-xs-8">
+																				<span class="fa fa-map-marker spot-icon"></span><span class="spot-name">  Tour at Manila City</span>
+																		</div> <!-- End col 8 -->
+																		<div class="col-sm-4 col-xs-4">
+																				<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																					<li><span class="trash-icon fa fa-trash"></span></li>
+																				</ul>
+																		</div> <!-- End col 4 -->
+																</div> <!-- End row	 -->
+																<div class="row">	
+																	<div class="col-sm-12">
+																			<div class="spot-img">
+																				<img src="assets/images/spot/2.jpg" alt="Cape town">
+																			</div> <!-- End Spot Name -->
+
+																			<div class="spot-quick-info">
+																				<h4><span class="spot-name">Manila City </span></h4>
+																				<span class="spot-desc">Lorem imsum doler somet</span>
+																				<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																			</div> <!-- End Spot Quick Info -->
+
+																			
+																	</div> <!-- End 8 -->
+																</div> <!-- End row -->
+															</li>
+
+														<li class="border-red">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm" "=""></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/3.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+														<li class="border-yellow">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/1.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
 
 
 
+														<li class="border-red">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm" "=""></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/3.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
 
-									    <div role="tabpanel" class="tour-info-block tab-pane" id="Hotels">
-												<ul class="spot-li">
-													<li class="border-yellow">
-														<div class="row">
-																<div class="col-sm-8 col-xs-8">
-																		<span class="spot-name"> <span class="fa fa-bed spot-icon bg-yellow"></span> Check in at Shangrila Hotel</span>
-																</div> <!-- End col 8 -->
-																<div class="col-sm-4 col-xs-4">
-																		<ul class="inline-list action-list">
-																			<li><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
-																			<li> <span class="trash-icon fa fa-trash"></span></li>
-																		</ul>
-																</div> <!-- End col 4 -->
-														</div> <!-- End row	 -->
-														<div class="row">	
-															<div class="col-sm-12">
-																	<div class="spot-img">
-																		<img src="assets/images/spot/1.jpg" alt="Cape town">
-																	</div> <!-- End Spot Name -->
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
 
-																	<div class="spot-quick-info">
-																		<h4><span class="spot-name"> Shangrila Hotel </span></h4>
-																		<span class="spot-desc">Lorem imsum doler somet</span>
-																		<span class="tour-cost">Total-cost: Ph 1600.00</span>
-																	</div> <!-- End Spot Quick Info -->
-																	
-															</div> <!-- End 8 -->
-														</div> <!-- End row -->
-													</li>
+														<li class="border-yellow">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/1.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
 
-								
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
 
-													<li class="border-yellow">
-														<div class="row">
-																<div class="col-sm-8 col-xs-8">
-																		<span class="spot-name"> <span class="fa fa-bed spot-icon bg-yellow"></span> Check in at Shangrila Hotel</span>
-																</div> <!-- End col 8 -->
-																<div class="col-sm-4 col-xs-4">
-																		<ul class="inline-list action-list">
-																		<li><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
-																			<li><span class="trash-icon fa fa-trash"></span></li>
-																		</ul>
-																</div> <!-- End col 4 -->
-														</div> <!-- End row	 -->
-														<div class="row">	
-															<div class="col-sm-12">
-																	<div class="spot-img">
-																		<img src="assets/images/spot/2.jpg" alt="Cape town">
-																	</div> <!-- End Spot Name -->
+													</ul>
+										  </div> <!-- End Tab Content -->
+									</div> <!-- End Tour Details -->
+								</div> <!-- End Col 12 -->
+							</div> <!-- End row -->
+						</div> <!-- End Day1 Tab -->
 
-																	<div class="spot-quick-info">
-																		<h4><span class="spot-name">Shangrila Hotel</span></h4>
-																		<span class="spot-desc">Lorem imsum doler somet</span>
-																		<span class="booking-author">Booking through expedia.com <span class="fa fa-info-circle red-icon"></span></span>
-																	</div> <!-- End Spot Quick Info -->
+						<div role="tabpanel" class="tab-pane" id="day_02">
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="trip-info">
+										<span class="trip-name">Our Trip 2016 <span class="fa fa-pencil trip-edit-icon"></span></span>
+										<span class="period">09th April to 16th April 2016</span>
+		      			
+									</div> <!-- End Trip Duration -->
+								</div> <!-- End col 3 -->
+								<div class="col-sm-8">
+										<div class="action-block">
+												<button class="btn brand-btn mr-10"> View Itinerary <span class="fa fa-chevron-right chevron-icon"></span></button>
+												<select id="city" class="form-control city-option">
+													<option value="0">Select Destination</option>
+													<option value="oslo">Oslo</option>
+													<option value="chicago">Chicago</option>
+													<option value="london">London</option>
+													<option value="abu-dhabi">Abu Dhabi</option>
+													<option value="capetown">Capetown</option>
+													<option value="berlin">Berlin</option>
+												</select>
+										</div> <!-- End Action Block -->
+								</div> <!-- End col 9 -->
+							</div> <!-- End row -->
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="tour-details">
+										
+											<ul class="info-tab-list" id="tabList">
+												<li role="presentation" data-target="#flightBookingForm" aria-controls="flightBookingForm" data-toggle="modal">
+												<span class="fa fa-plane mr-5 hidden-xs"></span>  Flight </li>
 
-																	
-															</div> <!-- End 8 -->
-														</div> <!-- End row -->
-													</li>
+												<li role="presentation" data-target="#carBookingForm" aria-controls="carBookingForm" data-toggle="modal"> 
+												<span class="fa fa-car mr-5 hidden-xs"></span> Transfer </li>
 
-												</ul>
-											</div> <!-- End Tour Block -->
+												<li role="presentation" data-target="#hotelListModal" aria-controls="hotelListModal" data-toggle="modal">
+												<span class="fa fa-bed mr-5 hidden-xs"></span> Hotels</li>
 
 
-											<div role="tabpanel" class="tour-info-block tab-pane active" id="Car">
-												<ul class="spot-li">
-													<li class="border-yellow">
-														<div class="row">
-																<div class="col-sm-8 col-xs-8">
-																		<span class="spot-name"> <span class="fa fa-map-marker spot-icon bg-yellow"></span> Tour At Manila City</span>
-																</div> <!-- End col 8 -->
-																<div class="col-sm-4 col-xs-4">
-																		<ul class="inline-list action-list">
-																			<li><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#carModal"></span></li>
-																			<li> <span class="trash-icon fa fa-trash"></span></li>
-																		</ul>
-																</div> <!-- End col 4 -->
-														</div> <!-- End row	 -->
-														<div class="row">	
-															<div class="col-sm-12">
-																	<div class="spot-img">
-																		<img src="assets/images/spot/1.jpg" alt="Cape town">
-																	</div> <!-- End Spot Name -->
+												<li role="presentation" data-target="#spotListModal" aria-controls="spotListModal" data-toggle="modal">
 
-																	<div class="spot-quick-info">
-																		<h4><span class="spot-name">Manila City</span></h4>
-																		<span class="spot-desc">Lorem imsum doler somet</span>
-																		<span class="tour-cost">Total-cost: Ph 1600.00</span>
-																	</div> <!-- End Spot Quick Info -->
-																	
-															</div> <!-- End 8 -->
-														</div> <!-- End row -->
-													</li>
+												 <span class="fa fa-map-marker mr-5 hidden-xs hidden-xs"></span> Tours </li>
+											</ul>
+										    <div class="spot-holder spotHolder">
+										  	 		<ul class="spot-li">
+															<li class="border-yellow">
+																<div class="row">
+																		<div class="col-sm-8 col-xs-8">
+																				<span class="fa fa-bed spot-icon bg-yellow"></span> <span class="spot-name">  Check in at Shangrila Hotel</span>
+																		</div> <!-- End col 8 -->
+																		<div class="col-sm-4 col-xs-4">
+																				<ul class="inline-list action-list">
+																					<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
 
-													<li class="border-blue">
-														<div class="row">
-																<div class="col-sm-8 col-xs-8">
-																		<span class="spot-name"> <span class="fa fa-map-marker spot-icon bg-blue"></span> NAIA Airport -Cuba </span>
-																</div> <!-- End col 8 -->
-																<div class="col-sm-4 col-xs-4">
-																		<ul class="inline-list action-list">
-																			<li><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#carModal"></span></li>
-																			<li> <span class="trash-icon fa fa-trash"></span></li>
-																		</ul>
-																</div> <!-- End col 4 -->
-														</div> <!-- End row	 -->
-														<div class="row">	
-															<div class="col-sm-12">
-																	<div class="spot-img">
-																		<img src="assets/images/spot/2.jpg" alt="Cape town">
-																	</div> <!-- End Spot Name -->
+																					<li> <span class="trash-icon fa fa-trash"></span></li>
+																				</ul>
+																		</div> <!-- End col 4 -->
+																</div> <!-- End row	 -->
+																<div class="row">	
+																	<div class="col-sm-12">
+																			<div class="spot-img">
+																				<img src="assets/images/spot/5.jpg" alt="Cape town">
+																			</div> <!-- End Spot Name -->
 
-																	<div class="spot-quick-info">
-																		<h4><span class="spot-name">Toyota Innova</span></h4>
-																		<span class="spot-desc">Lorem imsum doler somet</span>
-																		<span class="tour-cost">Total-cost: Ph 600.00</span>
-																	</div> <!-- End Spot Quick Info -->
-																	
-															</div> <!-- End 8 -->
-														</div> <!-- End row -->
-													</li>
+																			<div class="spot-quick-info">
+																				<h4><span class="spot-name"> Shangrila Hotel </span></h4>
+																				<span class="spot-desc">Lorem imsum doler somet</span>
+																				<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																			</div> <!-- End Spot Quick Info -->
+																			
+																	</div> <!-- End 8 -->
+																</div> <!-- End row -->
+															</li>
 
-													<li class="border-red">
-														<div class="row">
-																<div class="col-sm-8 col-xs-8">
-																		<span class="spot-name"> <span class="fa fa-car spot-icon bg-red"></span> Tour At Manila City</span>
-																</div> <!-- End col 8 -->
-																<div class="col-sm-4 col-xs-4">
-																		<ul class="inline-list action-list">
-																			<li><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#carModal""></span></li>
-																			<li> <span class="trash-icon fa fa-trash"></span></li>
-																		</ul>
-																</div> <!-- End col 4 -->
-														</div> <!-- End row	 -->
-														<div class="row">	
-															<div class="col-sm-12">
-																	<div class="spot-img">
-																		<img src="assets/images/spot/3.jpg" alt="Cape town">
-																	</div> <!-- End Spot Name -->
+										
 
-																	<div class="spot-quick-info">
-																		<h4><span class="spot-name">Manila City</span></h4>
-																		<span class="spot-desc">Lorem imsum doler somet</span>
-																		<span class="tour-cost">Total-cost: Ph 1600.00</span>
-																	</div> <!-- End Spot Quick Info -->
-																	
-															</div> <!-- End 8 -->
-														</div> <!-- End row -->
-													</li>
+															<li>
+																<div class="row">
+																		<div class="col-sm-8 col-xs-8">
+																				<span class="fa fa-map-marker spot-icon"></span> <span class="spot-name">  Tour at Manila City</span>
+																		</div> <!-- End col 8 -->
+																		<div class="col-sm-4 col-xs-4">
+																				<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																					<li><span class="trash-icon fa fa-trash"></span></li>
+																				</ul>
+																		</div> <!-- End col 4 -->
+																</div> <!-- End row	 -->
+																<div class="row">	
+																	<div class="col-sm-12">
+																			<div class="spot-img">
+																				<img src="assets/images/spot/4.jpg" alt="Cape town">
+																			</div> <!-- End Spot Name -->
 
-													<li>
-														<div class="row">
-																<div class="col-sm-8 col-xs-8">
-																		<span class="spot-name"> <span class="fa fa-map-marker spot-icon"></span> Tour At Manila City</span>
-																</div> <!-- End col 8 -->
-																<div class="col-sm-4 col-xs-4">
-																		<ul class="inline-list action-list">
-																			<li><span class="edit-icon fa fa-pencil"></span></li>
-																			<li> <span class="trash-icon fa fa-trash"></span></li>
-																		</ul>
-																</div> <!-- End col 4 -->
-														</div> <!-- End row	 -->
-														<div class="row">	
-															<div class="col-sm-12">
-																	<div class="spot-img">
-																		<img src="assets/images/spot/1.jpg" alt="Cape town">
-																	</div> <!-- End Spot Name -->
+																			<div class="spot-quick-info">
+																				<h4><span class="spot-name">Manila City </span></h4>
+																				<span class="spot-desc">Lorem imsum doler somet</span>
+																				<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																			</div> <!-- End Spot Quick Info -->
 
-																	<div class="spot-quick-info">
-																		<h4><span class="spot-name">Manila City</span></h4>
-																		<span class="spot-desc">Lorem imsum doler somet</span>
-																		<span class="tour-cost">Total-cost: Ph 1600.00</span>
-																	</div> <!-- End Spot Quick Info -->
-																	
-															</div> <!-- End 8 -->
-														</div> <!-- End row -->
-													</li>
+																			
+																	</div> <!-- End 8 -->
+																</div> <!-- End row -->
+															</li>
 
-												</ul>
-											</div> <!-- End Tour Block -->
+														<li class="border-red">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm" "=""></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/3.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
 
-											<div role="tabpanel" class="tour-info-block tab-pane" id="Flights">
-												<ul class="spot-li">
-													<li class="border-yellow">
-														<div class="row">
-																<div class="col-sm-8 col-xs-8">
-																		<span class="spot-name"> <span class="fa fa-map-marker spot-icon bg-yellow"></span> Tour At Manila City</span>
-																</div> <!-- End col 8 -->
-																<div class="col-sm-4 col-xs-4">
-																		<ul class="inline-list action-list">
-																			<li><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#flightModal"></span></li>
-																			<li> <span class="trash-icon fa fa-trash"></span></li>
-																		</ul>
-																</div> <!-- End col 4 -->
-														</div> <!-- End row	 -->
-														<div class="row">	
-															<div class="col-sm-12">
-																	<div class="spot-img">
-																		<img src="assets/images/spot/2.jpg" alt="Cape town">
-																	</div> <!-- End Spot Name -->
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
 
-																	<div class="spot-quick-info">
-																		<h4><span class="spot-name">Manila City</span></h4>
-																		<span class="spot-desc">Lorem imsum doler somet</span>
-																		<span class="tour-cost">Total-cost: Ph 1600.00</span>
-																	</div> <!-- End Spot Quick Info -->
-																	
-															</div> <!-- End 8 -->
-														</div> <!-- End row -->
-													</li>
+														<li class="border-yellow">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/2.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
 
-													<li class="border-blue">
-														<div class="row">
-																<div class="col-sm-8 col-xs-8">
-																		<span class="spot-name"> <span class="fa fa-map-marker spot-icon bg-blue"></span> NAIA Airport -Cuba </span>
-																</div> <!-- End col 8 -->
-																<div class="col-sm-4 col-xs-4">
-																		<ul class="inline-list action-list">
-																			<li><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#flightModal"></span></li>
-																			<li> <span class="trash-icon fa fa-trash"></span></li>
-																		</ul>
-																</div> <!-- End col 4 -->
-														</div> <!-- End row	 -->
-														<div class="row">	
-															<div class="col-sm-12">
-																	<div class="spot-img">
-																		<img src="assets/images/spot/1.jpg" alt="Cape town">
-																	</div> <!-- End Spot Name -->
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
 
-																	<div class="spot-quick-info">
-																		<h4><span class="spot-name">Toyota Innova</span></h4>
-																		<span class="spot-desc">Lorem imsum doler somet</span>
-																		<span class="tour-cost">Total-cost: Ph 600.00</span>
-																	</div> <!-- End Spot Quick Info -->
-																	
-															</div> <!-- End 8 -->
-														</div> <!-- End row -->
-													</li>
 
-													<li class="border-red">
-														<div class="row">
-																<div class="col-sm-8 col-xs-8">
-																		<span class="spot-name"> <span class="fa fa-car spot-icon bg-red"></span> Tour At Manila City</span>
-																</div> <!-- End col 8 -->
-																<div class="col-sm-4 col-xs-4">
-																		<ul class="inline-list action-list">
-																			<li><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#flightModal"></span></li>
-																			<li> <span class="trash-icon fa fa-trash"></span></li>
-																		</ul>
-																</div> <!-- End col 4 -->
-														</div> <!-- End row	 -->
-														<div class="row">	
-															<div class="col-sm-12">
-																	<div class="spot-img">
-																		<img src="assets/images/spot/2.jpg" alt="Cape town">
-																	</div> <!-- End Spot Name -->
 
-																	<div class="spot-quick-info">
-																		<h4><span class="spot-name">Manila City</span></h4>
-																		<span class="spot-desc">Lorem imsum doler somet</span>
-																		<span class="tour-cost">Total-cost: Ph 1600.00</span>
-																	</div> <!-- End Spot Quick Info -->
-																	
-															</div> <!-- End 8 -->
-														</div> <!-- End row -->
-													</li>
+														<li class="border-red">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm" "=""></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/1.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
 
-													<li>
-														<div class="row">
-																<div class="col-sm-8 col-xs-8">
-																		<span class="spot-name"> <span class="fa fa-map-marker spot-icon"></span> Tour At Manila City</span>
-																</div> <!-- End col 8 -->
-																<div class="col-sm-4 col-xs-4">
-																		<ul class="inline-list action-list">
-																			<li><span class="edit-icon fa fa-pencil"></span></li>
-																			<li> <span class="trash-icon fa fa-trash"></span></li>
-																		</ul>
-																</div> <!-- End col 4 -->
-														</div> <!-- End row	 -->
-														<div class="row">	
-															<div class="col-sm-12">
-																	<div class="spot-img">
-																		<img src="assets/images/spot/3.jpg" alt="Cape town">
-																	</div> <!-- End Spot Name -->
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
 
-																	<div class="spot-quick-info">
-																		<h4><span class="spot-name">Manila City</span></h4>
-																		<span class="spot-desc">Lorem imsum doler somet</span>
-																		<span class="tour-cost">Total-cost: Ph 1600.00</span>
-																	</div> <!-- End Spot Quick Info -->
-																	
-															</div> <!-- End 8 -->
-														</div> <!-- End row -->
-													</li>
+														<li class="border-yellow">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/1.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
 
-												</ul>
-											</div> <!-- End Tour Block -->
-									  </div> <!-- End Tab Content -->
-								</div> <!-- End Tour Details -->
-							</div> <!-- End Col 12 -->
-						</div> <!-- End row -->
-					</article> <!-- End Tab Content -->
-			</section> <!-- End Section -->
-			</div> <!-- End col 8 -->
-			<div class="col-sm-4 col-xs-12 set-padding">
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+													</ul>
+										  </div> <!-- End Tab Content -->
+									</div> <!-- End Tour Details -->
+								</div> <!-- End Col 12 -->
+							</div> <!-- End row -->
+						</div> <!-- End Day2 Tab -->
+
+						<div role="tabpanel" class="tab-pane" id="day_03">
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="trip-info">
+										<span class="trip-name">Our Trip 2016 <span class="fa fa-pencil trip-edit-icon"></span></span>
+										<span class="period">10th April to 16th April 2016</span>
+		      			
+									</div> <!-- End Trip Duration -->
+								</div> <!-- End col 3 -->
+								<div class="col-sm-8">
+										<div class="action-block">
+												<button class="btn brand-btn mr-10"> View Itinerary <span class="fa fa-chevron-right chevron-icon"></span></button>
+												<select id="city" class="form-control city-option">
+													<option value="0">Select Destination</option>
+													<option value="oslo">Oslo</option>
+													<option value="chicago">Chicago</option>
+													<option value="london">London</option>
+													<option value="abu-dhabi">Abu Dhabi</option>
+													<option value="capetown">Capetown</option>
+													<option value="berlin">Berlin</option>
+												</select>
+										</div> <!-- End Action Block -->
+								</div> <!-- End col 9 -->
+							</div> <!-- End row -->
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="tour-details">
+										
+											<ul class="info-tab-list" id="tabList">
+												<li role="presentation" data-target="#flightBookingForm" aria-controls="flightBookingForm" data-toggle="modal">
+												<span class="fa fa-plane mr-5 hidden-xs"></span>  Flight </li>
+
+												<li role="presentation" data-target="#carBookingForm" aria-controls="carBookingForm" data-toggle="modal"> 
+												<span class="fa fa-car mr-5 hidden-xs"></span> Transfer </li>
+
+												<li role="presentation" data-target="#hotelListModal" aria-controls="hotelListModal" data-toggle="modal">
+												<span class="fa fa-bed mr-5 hidden-xs"></span> Hotels</li>
+
+
+												<li role="presentation" data-target="#spotListModal" aria-controls="spotListModal" data-toggle="modal">
+
+												 <span class="fa fa-map-marker mr-5 hidden-xs hidden-xs"></span> Tours </li>
+											</ul>
+										    <div class="spot-holder spotHolder">
+										  	 		<ul class="spot-li">
+															<li class="border-yellow">
+																<div class="row">
+																		<div class="col-sm-8 col-xs-8">
+																				<span class="fa fa-bed spot-icon bg-yellow"></span> <span class="spot-name">  Check in at Shangrila Hotel</span>
+																		</div> <!-- End col 8 -->
+																		<div class="col-sm-4 col-xs-4">
+																				<ul class="inline-list action-list">
+																					<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+
+																					<li> <span class="trash-icon fa fa-trash"></span></li>
+																				</ul>
+																		</div> <!-- End col 4 -->
+																</div> <!-- End row	 -->
+																<div class="row">	
+																	<div class="col-sm-12">
+																			<div class="spot-img">
+																				<img src="assets/images/spot/1.jpg" alt="Cape town">
+																			</div> <!-- End Spot Name -->
+
+																			<div class="spot-quick-info">
+																				<h4><span class="spot-name"> Shangrila Hotel </span></h4>
+																				<span class="spot-desc">Lorem imsum doler somet</span>
+																				<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																			</div> <!-- End Spot Quick Info -->
+																			
+																	</div> <!-- End 8 -->
+																</div> <!-- End row -->
+															</li>
+
+										
+
+															<li>
+																<div class="row">
+																		<div class="col-sm-8 col-xs-8">
+																				<span class="fa fa-map-marker spot-icon"></span> <span class="spot-name">  Tour at Manila City</span>
+																		</div> <!-- End col 8 -->
+																		<div class="col-sm-4 col-xs-4">
+																				<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																					<li><span class="trash-icon fa fa-trash"></span></li>
+																				</ul>
+																		</div> <!-- End col 4 -->
+																</div> <!-- End row	 -->
+																<div class="row">	
+																	<div class="col-sm-12">
+																			<div class="spot-img">
+																				<img src="assets/images/spot/2.jpg" alt="Cape town">
+																			</div> <!-- End Spot Name -->
+
+																			<div class="spot-quick-info">
+																				<h4><span class="spot-name">Manila City </span></h4>
+																				<span class="spot-desc">Lorem imsum doler somet</span>
+																				<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																			</div> <!-- End Spot Quick Info -->
+
+																			
+																	</div> <!-- End 8 -->
+																</div> <!-- End row -->
+															</li>
+
+														<li class="border-red">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm" "=""></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/3.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+														<li class="border-yellow">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/1.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+
+
+														<li class="border-red">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm" "=""></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/3.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+														<li class="border-yellow">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/1.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+													</ul>
+										  </div> <!-- End Tab Content -->
+									</div> <!-- End Tour Details -->
+								</div> <!-- End Col 12 -->
+							</div> <!-- End row -->
+						</div> <!-- End Day3 Tab -->
+
+						<div role="tabpanel" class="tab-pane" id="day_04">
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="trip-info">
+										<span class="trip-name">Our Trip 2016 <span class="fa fa-pencil trip-edit-icon"></span></span>
+										<span class="period">11th April to 16th April 2016</span>
+		      			
+									</div> <!-- End Trip Duration -->
+								</div> <!-- End col 3 -->
+								<div class="col-sm-8">
+										<div class="action-block">
+												<button class="btn brand-btn mr-10"> View Itinerary <span class="fa fa-chevron-right chevron-icon"></span></button>
+												<select id="city" class="form-control city-option">
+													<option value="0">Select Destination</option>
+													<option value="oslo">Oslo</option>
+													<option value="chicago">Chicago</option>
+													<option value="london">London</option>
+													<option value="abu-dhabi">Abu Dhabi</option>
+													<option value="capetown">Capetown</option>
+													<option value="berlin">Berlin</option>
+												</select>
+										</div> <!-- End Action Block -->
+								</div> <!-- End col 9 -->
+							</div> <!-- End row -->
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="tour-details">
+										
+											<ul class="info-tab-list" id="tabList">
+												<li role="presentation" data-target="#flightBookingForm" aria-controls="flightBookingForm" data-toggle="modal">
+												<span class="fa fa-plane mr-5 hidden-xs"></span>  Flight </li>
+
+												<li role="presentation" data-target="#carBookingForm" aria-controls="carBookingForm" data-toggle="modal"> 
+												<span class="fa fa-car mr-5 hidden-xs"></span> Transfer </li>
+
+												<li role="presentation" data-target="#hotelListModal" aria-controls="hotelListModal" data-toggle="modal">
+												<span class="fa fa-bed mr-5 hidden-xs"></span> Hotels</li>
+
+
+												<li role="presentation" data-target="#spotListModal" aria-controls="spotListModal" data-toggle="modal">
+
+												 <span class="fa fa-map-marker mr-5 hidden-xs hidden-xs"></span> Tours </li>
+											</ul>
+										    <div class="spot-holder spotHolder">
+										  	 		<ul class="spot-li">
+															<li class="border-yellow">
+																<div class="row">
+																		<div class="col-sm-8 col-xs-8">
+																				<span class="fa fa-bed spot-icon bg-yellow"></span> <span class="spot-name">  Check in at Shangrila Hotel</span>
+																		</div> <!-- End col 8 -->
+																		<div class="col-sm-4 col-xs-4">
+																				<ul class="inline-list action-list">
+																					<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+
+																					<li> <span class="trash-icon fa fa-trash"></span></li>
+																				</ul>
+																		</div> <!-- End col 4 -->
+																</div> <!-- End row	 -->
+																<div class="row">	
+																	<div class="col-sm-12">
+																			<div class="spot-img">
+																				<img src="assets/images/spot/5.jpg" alt="Cape town">
+																			</div> <!-- End Spot Name -->
+
+																			<div class="spot-quick-info">
+																				<h4><span class="spot-name"> Shangrila Hotel </span></h4>
+																				<span class="spot-desc">Lorem imsum doler somet</span>
+																				<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																			</div> <!-- End Spot Quick Info -->
+																			
+																	</div> <!-- End 8 -->
+																</div> <!-- End row -->
+															</li>
+
+										
+
+															<li>
+																<div class="row">
+																		<div class="col-sm-8 col-xs-8">
+																				<span class="fa fa-map-marker spot-icon"></span> <span class="spot-name">  Tour at Manila City</span>
+																		</div> <!-- End col 8 -->
+																		<div class="col-sm-4 col-xs-4">
+																				<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																					<li><span class="trash-icon fa fa-trash"></span></li>
+																				</ul>
+																		</div> <!-- End col 4 -->
+																</div> <!-- End row	 -->
+																<div class="row">	
+																	<div class="col-sm-12">
+																			<div class="spot-img">
+																				<img src="assets/images/spot/4.jpg" alt="Cape town">
+																			</div> <!-- End Spot Name -->
+
+																			<div class="spot-quick-info">
+																				<h4><span class="spot-name">Manila City </span></h4>
+																				<span class="spot-desc">Lorem imsum doler somet</span>
+																				<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																			</div> <!-- End Spot Quick Info -->
+
+																			
+																	</div> <!-- End 8 -->
+																</div> <!-- End row -->
+															</li>
+
+														<li class="border-red">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm" "=""></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/3.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+														<li class="border-yellow">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/2.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+
+
+														<li class="border-red">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm" "=""></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/1.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+														<li class="border-yellow">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/1.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+													</ul>
+										  </div> <!-- End Tab Content -->
+									</div> <!-- End Tour Details -->
+								</div> <!-- End Col 12 -->
+							</div> <!-- End row -->
+						</div> <!-- End Day4 Tab -->
+
+						<div role="tabpanel" class="tab-pane" id="day_05">
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="trip-info">
+										<span class="trip-name">Our Trip 2016 <span class="fa fa-pencil trip-edit-icon"></span></span>
+										<span class="period">12th April to 16th April 2016</span>
+		      			
+									</div> <!-- End Trip Duration -->
+								</div> <!-- End col 3 -->
+								<div class="col-sm-8">
+										<div class="action-block">
+												<button class="btn brand-btn mr-10"> View Itinerary <span class="fa fa-chevron-right chevron-icon"></span></button>
+												<select id="city" class="form-control city-option">
+													<option value="0">Select Destination</option>
+													<option value="oslo">Oslo</option>
+													<option value="chicago">Chicago</option>
+													<option value="london">London</option>
+													<option value="abu-dhabi">Abu Dhabi</option>
+													<option value="capetown">Capetown</option>
+													<option value="berlin">Berlin</option>
+												</select>
+										</div> <!-- End Action Block -->
+								</div> <!-- End col 9 -->
+							</div> <!-- End row -->
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="tour-details">
+										
+											<ul class="info-tab-list" id="tabList">
+												<li role="presentation" data-target="#flightBookingForm" aria-controls="flightBookingForm" data-toggle="modal">
+												<span class="fa fa-plane mr-5 hidden-xs"></span>  Flight </li>
+
+												<li role="presentation" data-target="#carBookingForm" aria-controls="carBookingForm" data-toggle="modal"> 
+												<span class="fa fa-car mr-5 hidden-xs"></span> Transfer </li>
+
+												<li role="presentation" data-target="#hotelListModal" aria-controls="hotelListModal" data-toggle="modal">
+												<span class="fa fa-bed mr-5 hidden-xs"></span> Hotels</li>
+
+
+												<li role="presentation" data-target="#spotListModal" aria-controls="spotListModal" data-toggle="modal">
+
+												 <span class="fa fa-map-marker mr-5 hidden-xs hidden-xs"></span> Tours </li>
+											</ul>
+										    <div class="spot-holder spotHolder">
+										  	 		<ul class="spot-li">
+															<li class="border-yellow">
+																<div class="row">
+																		<div class="col-sm-8 col-xs-8">
+																				<span class="fa fa-bed spot-icon bg-yellow"></span> <span class="spot-name">  Check in at Shangrila Hotel</span>
+																		</div> <!-- End col 8 -->
+																		<div class="col-sm-4 col-xs-4">
+																				<ul class="inline-list action-list">
+																					<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+
+																					<li> <span class="trash-icon fa fa-trash"></span></li>
+																				</ul>
+																		</div> <!-- End col 4 -->
+																</div> <!-- End row	 -->
+																<div class="row">	
+																	<div class="col-sm-12">
+																			<div class="spot-img">
+																				<img src="assets/images/spot/1.jpg" alt="Cape town">
+																			</div> <!-- End Spot Name -->
+
+																			<div class="spot-quick-info">
+																				<h4><span class="spot-name"> Shangrila Hotel </span></h4>
+																				<span class="spot-desc">Lorem imsum doler somet</span>
+																				<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																			</div> <!-- End Spot Quick Info -->
+																			
+																	</div> <!-- End 8 -->
+																</div> <!-- End row -->
+															</li>
+
+										
+
+															<li>
+																<div class="row">
+																		<div class="col-sm-8 col-xs-8">
+																				<span class="fa fa-map-marker spot-icon"></span> <span class="spot-name">  Tour at Manila City</span>
+																		</div> <!-- End col 8 -->
+																		<div class="col-sm-4 col-xs-4">
+																				<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																					<li><span class="trash-icon fa fa-trash"></span></li>
+																				</ul>
+																		</div> <!-- End col 4 -->
+																</div> <!-- End row	 -->
+																<div class="row">	
+																	<div class="col-sm-12">
+																			<div class="spot-img">
+																				<img src="assets/images/spot/2.jpg" alt="Cape town">
+																			</div> <!-- End Spot Name -->
+
+																			<div class="spot-quick-info">
+																				<h4><span class="spot-name">Manila City </span></h4>
+																				<span class="spot-desc">Lorem imsum doler somet</span>
+																				<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																			</div> <!-- End Spot Quick Info -->
+
+																			
+																	</div> <!-- End 8 -->
+																</div> <!-- End row -->
+															</li>
+
+														<li class="border-red">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm" "=""></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/3.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+														<li class="border-yellow">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/1.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+
+
+														<li class="border-red">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm" "=""></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/3.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+														<li class="border-yellow">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/1.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+													</ul>
+										  </div> <!-- End Tab Content -->
+									</div> <!-- End Tour Details -->
+								</div> <!-- End Col 12 -->
+							</div> <!-- End row -->
+						</div> <!-- End Day5 Tab -->
+
+
+						<div role="tabpanel" class="tab-pane" id="day_06">
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="trip-info">
+										<span class="trip-name">Our Trip 2016 <span class="fa fa-pencil trip-edit-icon"></span></span>
+										<span class="period">13th April to 16th April 2016</span>
+		      			
+									</div> <!-- End Trip Duration -->
+								</div> <!-- End col 3 -->
+								<div class="col-sm-8">
+										<div class="action-block">
+												<button class="btn brand-btn mr-10"> View Itinerary <span class="fa fa-chevron-right chevron-icon"></span></button>
+												<select id="city" class="form-control city-option">
+													<option value="0">Select Destination</option>
+													<option value="oslo">Oslo</option>
+													<option value="chicago">Chicago</option>
+													<option value="london">London</option>
+													<option value="abu-dhabi">Abu Dhabi</option>
+													<option value="capetown">Capetown</option>
+													<option value="berlin">Berlin</option>
+												</select>
+										</div> <!-- End Action Block -->
+								</div> <!-- End col 9 -->
+							</div> <!-- End row -->
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="tour-details">
+										
+											<ul class="info-tab-list" id="tabList">
+												<li role="presentation" data-target="#flightBookingForm" aria-controls="flightBookingForm" data-toggle="modal">
+												<span class="fa fa-plane mr-5 hidden-xs"></span>  Flight </li>
+
+												<li role="presentation" data-target="#carBookingForm" aria-controls="carBookingForm" data-toggle="modal"> 
+												<span class="fa fa-car mr-5 hidden-xs"></span> Transfer </li>
+
+												<li role="presentation" data-target="#hotelListModal" aria-controls="hotelListModal" data-toggle="modal">
+												<span class="fa fa-bed mr-5 hidden-xs"></span> Hotels</li>
+
+
+												<li role="presentation" data-target="#spotListModal" aria-controls="spotListModal" data-toggle="modal">
+
+												 <span class="fa fa-map-marker mr-5 hidden-xs hidden-xs"></span> Tours </li>
+											</ul>
+										    <div class="spot-holder spotHolder">
+										  	 		<ul class="spot-li">
+															<li class="border-yellow">
+																<div class="row">
+																		<div class="col-sm-8 col-xs-8">
+																				<span class="fa fa-bed spot-icon bg-yellow"></span> <span class="spot-name">  Check in at Shangrila Hotel</span>
+																		</div> <!-- End col 8 -->
+																		<div class="col-sm-4 col-xs-4">
+																				<ul class="inline-list action-list">
+																					<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+
+																					<li> <span class="trash-icon fa fa-trash"></span></li>
+																				</ul>
+																		</div> <!-- End col 4 -->
+																</div> <!-- End row	 -->
+																<div class="row">	
+																	<div class="col-sm-12">
+																			<div class="spot-img">
+																				<img src="assets/images/spot/5.jpg" alt="Cape town">
+																			</div> <!-- End Spot Name -->
+
+																			<div class="spot-quick-info">
+																				<h4><span class="spot-name"> Shangrila Hotel </span></h4>
+																				<span class="spot-desc">Lorem imsum doler somet</span>
+																				<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																			</div> <!-- End Spot Quick Info -->
+																			
+																	</div> <!-- End 8 -->
+																</div> <!-- End row -->
+															</li>
+
+										
+
+															<li>
+																<div class="row">
+																		<div class="col-sm-8 col-xs-8">
+																				<span class="fa fa-map-marker spot-icon"></span> <span class="spot-name">  Tour at Manila City</span>
+																		</div> <!-- End col 8 -->
+																		<div class="col-sm-4 col-xs-4">
+																				<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																					<li><span class="trash-icon fa fa-trash"></span></li>
+																				</ul>
+																		</div> <!-- End col 4 -->
+																</div> <!-- End row	 -->
+																<div class="row">	
+																	<div class="col-sm-12">
+																			<div class="spot-img">
+																				<img src="assets/images/spot/4.jpg" alt="Cape town">
+																			</div> <!-- End Spot Name -->
+
+																			<div class="spot-quick-info">
+																				<h4><span class="spot-name">Manila City </span></h4>
+																				<span class="spot-desc">Lorem imsum doler somet</span>
+																				<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																			</div> <!-- End Spot Quick Info -->
+
+																			
+																	</div> <!-- End 8 -->
+																</div> <!-- End row -->
+															</li>
+
+														<li class="border-red">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm" "=""></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/3.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+														<li class="border-yellow">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/2.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+
+
+														<li class="border-red">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm" "=""></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/1.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+														<li class="border-yellow">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/1.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+													</ul>
+										  </div> <!-- End Tab Content -->
+									</div> <!-- End Tour Details -->
+								</div> <!-- End Col 12 -->
+							</div> <!-- End row -->
+						</div> <!-- End Day4 Tab -->
+
+						<div role="tabpanel" class="tab-pane" id="last_day">
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="trip-info">
+										<span class="trip-name">Our Trip 2016 <span class="fa fa-pencil trip-edit-icon"></span></span>
+										<span class="period">14th April to 16th April 2016</span>
+		      			
+									</div> <!-- End Trip Duration -->
+								</div> <!-- End col 3 -->
+								<div class="col-sm-8">
+										<div class="action-block">
+												<button class="btn brand-btn mr-10"> View Itinerary <span class="fa fa-chevron-right chevron-icon"></span></button>
+												<select id="city" class="form-control city-option">
+													<option value="0">Select Destination</option>
+													<option value="oslo">Oslo</option>
+													<option value="chicago">Chicago</option>
+													<option value="london">London</option>
+													<option value="abu-dhabi">Abu Dhabi</option>
+													<option value="capetown">Capetown</option>
+													<option value="berlin">Berlin</option>
+												</select>
+										</div> <!-- End Action Block -->
+								</div> <!-- End col 9 -->
+							</div> <!-- End row -->
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="tour-details">
+										
+											<ul class="info-tab-list" id="tabList">
+												<li role="presentation" data-target="#flightBookingForm" aria-controls="flightBookingForm" data-toggle="modal">
+												<span class="fa fa-plane mr-5 hidden-xs"></span>  Flight </li>
+
+												<li role="presentation" data-target="#carBookingForm" aria-controls="carBookingForm" data-toggle="modal"> 
+												<span class="fa fa-car mr-5 hidden-xs"></span> Transfer </li>
+
+												<li role="presentation" data-target="#hotelListModal" aria-controls="hotelListModal" data-toggle="modal">
+												<span class="fa fa-bed mr-5 hidden-xs"></span> Hotels</li>
+
+
+												<li role="presentation" data-target="#spotListModal" aria-controls="spotListModal" data-toggle="modal">
+
+												 <span class="fa fa-map-marker mr-5 hidden-xs hidden-xs"></span> Tours </li>
+											</ul>
+										    <div class="spot-holder spotHolder">
+										  	 		<ul class="spot-li">
+															<li class="border-yellow">
+																<div class="row">
+																		<div class="col-sm-8 col-xs-8">
+																				<span class="fa fa-bed spot-icon bg-yellow"></span> <span class="spot-name">  Check in at Shangrila Hotel</span>
+																		</div> <!-- End col 8 -->
+																		<div class="col-sm-4 col-xs-4">
+																				<ul class="inline-list action-list">
+																					<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+
+																					<li> <span class="trash-icon fa fa-trash"></span></li>
+																				</ul>
+																		</div> <!-- End col 4 -->
+																</div> <!-- End row	 -->
+																<div class="row">	
+																	<div class="col-sm-12">
+																			<div class="spot-img">
+																				<img src="assets/images/spot/1.jpg" alt="Cape town">
+																			</div> <!-- End Spot Name -->
+
+																			<div class="spot-quick-info">
+																				<h4><span class="spot-name"> Shangrila Hotel </span></h4>
+																				<span class="spot-desc">Lorem imsum doler somet</span>
+																				<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																			</div> <!-- End Spot Quick Info -->
+																			
+																	</div> <!-- End 8 -->
+																</div> <!-- End row -->
+															</li>
+
+										
+
+															<li>
+																<div class="row">
+																		<div class="col-sm-8 col-xs-8">
+																				<span class="fa fa-map-marker spot-icon"></span> <span class="spot-name">  Tour at Manila City</span>
+																		</div> <!-- End col 8 -->
+																		<div class="col-sm-4 col-xs-4">
+																				<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																					<li><span class="trash-icon fa fa-trash"></span></li>
+																				</ul>
+																		</div> <!-- End col 4 -->
+																</div> <!-- End row	 -->
+																<div class="row">	
+																	<div class="col-sm-12">
+																			<div class="spot-img">
+																				<img src="assets/images/spot/2.jpg" alt="Cape town">
+																			</div> <!-- End Spot Name -->
+
+																			<div class="spot-quick-info">
+																				<h4><span class="spot-name">Manila City </span></h4>
+																				<span class="spot-desc">Lorem imsum doler somet</span>
+																				<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																			</div> <!-- End Spot Quick Info -->
+
+																			
+																	</div> <!-- End 8 -->
+																</div> <!-- End row -->
+															</li>
+
+														<li class="border-red">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm" "=""></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/3.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+														<li class="border-yellow">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/1.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+
+
+														<li class="border-red">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-car spot-icon bg-red"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm" "=""></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/3.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+														<li class="border-yellow">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="fa fa-map-marker spot-icon bg-yellow"></span> <span class="spot-name">  Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li class="hotelEditFormTrigger"><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/1.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+													</ul>
+										  </div> <!-- End Tab Content -->
+									</div> <!-- End Tour Details -->
+								</div> <!-- End Col 12 -->
+							</div> <!-- End row -->
+						</div> <!-- End Last Day -->
+
+
+					</div> <!-- End Tab Content -->
+		  </div> <!-- End col 12 -->
+		</div> <!-- End row -->
+	</section> <!-- End Section -->
+</div> <!-- End col 8 -->
+
+			<div class="col-md-4 col-sm-12 col-xs-12 set-padding">
 					<div class="google-map" id="mapArea">
 						<div class="iframe-block">
 							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202845.11502961593!2d-122.18118132341327!3d37.40272092024147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb68ad0cfc739%3A0x7eb356b66bd4b50e!2sSilicon+Valley%2C+CA!5e0!3m2!1sen!2sus!4v1467302392621" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
 						</div> <!-- End Iframe Block -->
 					</div> <!-- End Map -->
+
+					<div class="view-map-block" id="mapBlock">
+								<li><img src="assets/images/icons/pin1.png" alt=""></li>
+								<li><img src="assets/images/icons/pin2.png" alt=""></li>
+								<li><img src="assets/images/icons/pin3.png" alt=""></li>
+								<li><img src="assets/images/icons/pin4.png" alt=""></li>
+					</div> <!-- End View Map -->
 			</div> <!-- End Col sm 4 -->
-		</div> <!-- End row -->
-	</div> <!-- End Container Fluid -->
+	</div> <!-- End row -->
+</div> <!-- End Container Fluid -->
 
 
 
-<div class="modal fade" id="carModal" tabindex="-1" role="dialog" aria-labelledby="carModal">
+
+
+
+
+<div class="modal fade" id="tourBookingForm" tabindex="-1" role="dialog" aria-labelledby="tourBookingForm">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header this">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
-        <h4 class="modal-title modal-brand-title">Add Transportation to Your Itinerary</h4>
+        <h4 class="modal-title modal-brand-title">Add Tour to Your Itinerary</h4>
       </div>
       <div class="modal-body">
-        	<span class="transportation-info">Booking Car on <span class="selected-date">Tue Apr 8th, 2016</span></span>
-        	<div class="transportation-form">
-        		<form action="#" method="post">	
-        			<div class="row">
-		        			<div class="col-sm-12 col-xs-12">
-		        					<div class="form-group">
-		        						<label for="change-car">CHANGE CAR </label>
-		        							<select class="form-control">
-						      					<option value="toyota-innova">Toyota Innova</option>
-						      					<option value="toyota-innova">Toyota Innova</option>
-						      					<option value="toyota-innova">Toyota Innova</option>
-						      					<option value="toyota-innova">Toyota Innova</option>
-					      					</select>	
-		        					</div> <!-- End form-group -->
 
-		        					<div class="form-group">
-		        							<div class="row">
-		        									<div class="col-sm-6 col-xs-12">
-				        								<label for="pick-up-location">PICK-UP LOCATION</label>
-				        									<select name="pick-up-location" class="form-control">
-				        										<option value="Naia Airport">Naia Airport</option>
-				        										<option value="Naia Airport">Naia Airport</option>
-				        										<option value="Naia Airport">Naia Airport</option>
-				        									</select>
-				        							</div>  <!-- End col -->
-				        							<div class="col-sm-6 col-xs-12">
-				        									<label for="drop-location">DROP LOCATION</label>
-				        									<select name="drop-location" class="form-control">
-				        										<option value="Cubao">Cubao</option>
-				        										<option value="Cubao">Cubao</option>
-				        										<option value="Cubao">Cubao</option>
-				        									</select>
-				        							</div> <!-- End col -->
-		        							</div> <!-- End row -->
-		        					</div> <!-- End form group -->
+      <ul class="info-tab-list at-modal" role="tablist">
+						<li role="presentation" data-target="#bookTour" aria-controls="bookTour" role="tab" data-toggle="tab">
 
-		        					<div class="form-group">
-		        							<div class="row">
-		        									<div class="col-sm-6 col-xs-12">
-				        								<label for="pick-up-date">PICK-UP Date</label>
-				        									<select name="pick-up-date" class="form-control">
-				        										<option value="Apr-22-2016">Apr 22, 2016</option>
-				        										<option value="Apr-22-2016">Apr 22, 2016</option>
-				        										<option value="Apr-22-2016">Apr 22, 2016</option>
-				        									</select>
-				        							</div>  <!-- End col -->
-				        							<div class="col-sm-6 col-xs-12">
-				        									<label for="pick-up-time">PICK-UP Time</label>
-				        									<select name="pick-up-time" class="form-control">
-				        										<option value="11.00-AM">11.00 AM</option>
-				        										<option value="11.00-AM">11.00 AM</option>
-				        										<option value="11.00-AM">11.00 AM</option>
-				        									</select>
-				        							</div> <!-- End col -->
-		        							</div> <!-- End row -->
-		        					</div> <!-- End form group -->
+						 <span class="fa fa-calendar-check-o mr-5 hidden-xs"></span> Book Tour </li>
 
-		        					<div class="form-group">
-		        							<div class="row">
-		        									<div class="col-sm-6 col-xs-12">
-				        								<label for="No-of-Adults">NUMBER OF ADULTS</label>
-				        									<input type="text" class="form-control" placeholder="Number of Adults" value="5 Adults">
-				        							</div>  <!-- End col -->
-				        							<div class="col-sm-6 col-xs-12">
-				        									<label for="No-of-children">NUMBER OF CHILDREN (0-12 yrs old)</label>
-				        									<input type="text" class="form-control" placeholder="Number of Children" value="3 Childrens">
-				        							</div>  <!-- End col -->
-		        							</div> <!-- End row -->
-		        					</div> <!-- End form group -->
-		        			</div> <!-- End col -->
-        		</div> <!-- End row -->
+						<li class="active" role="presentation" data-target="#tourDetails" aria-controls="tourDetails" role="tab" data-toggle="tab">
+						<span class="fa fa-bed mr-5 hidden-xs"></span> Tour Details</li>
 
-        		<div class="row">
-        			<div class="col-sm-6 col-xs-12">
-        					<img class="vehicle-thumb" src="assets/images/car/1.jpg" alt="Toyota">
-        			</div> <!-- End col -->
-        			<div class="col-sm-6 col-xs-12">
-        				<div class="vehicle-info">
-      							<span class="info">Car Info</span>
-		        				<span class="vehicle-name">Toyota Innova or equivalent</span>
-		        				<span>AC Minivan</span>
-		        				<span class="info f-18">PH 1200</span>
-        				</div> <!-- End Vehicle Info -->
-        				<button class="btn btn-yellow mtb-20">Add to Itinerary</button>
-        			</div> <!-- End col -->
-        		</div> <!-- End row -->
-        			
-        		</form> <!-- End form -->
-        	</div> <!-- End Booking Form -->
+						<li class="color-red" id="spotListTrigger" data-target="#spotListModal" aria-controls="spotListModal" role="tab" data-toggle="modal"> 
+						<span class="fa fa-list-alt mr-5 hidden-xs"></span> Back to List </li>
+				
+					</ul>
+
+					<div class="tab-content">
+			  	 <div role="tabpanel" class="tab-pane" id="bookTour">
+				  	 <span class="transportation-info">Booking Tour on <span class="selected-date">Tue Apr 8th, 2016</span></span>
+	        	<div class="transportation-form">
+	        		<form action="#" method="post">	
+	        			<div class="row">
+			        			<div class="col-sm-12 col-xs-12">
+			        					<div class="form-group">
+			        						<label for="select-tour">SELECT TOUR </label>
+			        						<input type="text" class="form-control" placeholder="Select Tour" value="Manila City Tour">
+			        					</div> <!-- End form-group -->
+
+			        					<div class="form-group">
+			        							<div class="row">
+			        									<div class="col-sm-6 col-xs-12">
+					        									<label for="start-date">START DATE</label>
+					        									<input type="text" class="form-control" placeholder="Start Date" value="8th April">
+
+					        							</div>  <!-- End col -->
+					        							<div class="col-sm-6 col-xs-12">
+					        									<label for="end-date">END DATE</label>
+					        									<select name="start-date" class="form-control">
+					        										<option value="8th-april">8th April</option>
+					        										<option value="8th-april">8th April</option>
+					        										<option value="8th-april">8th April</option>
+					        									</select>
+					        							</div> <!-- End col -->
+			        							</div> <!-- End row -->
+			        					</div> <!-- End form group -->
+
+			        					<div class="form-group">
+			        							<div class="row">
+			        									<div class="col-sm-6 col-xs-12">
+					        									<label for="start-time">START TIME</label>
+					        									<select name="start-time" class="form-control">
+					        										<option value="7:00am">07:00 am</option>
+					        										<option value="7:00am">07:00 am</option>
+					        										<option value="7:00am">07:00 am</option>
+					        									</select>
+					        							</div>  <!-- End col -->
+					        							<div class="col-sm-6 col-xs-12">
+					        									<label for="end-time">END TIME</label>
+					        									<input type="text" class="form-control" placeholder="End Time" value="07:00 am">
+					        							</div> <!-- End col -->
+			        							</div> <!-- End row -->
+			        					</div> <!-- End form group -->
+
+			        	
+
+			        					<div class="form-group">
+			        							<div class="row">
+			        									<div class="col-sm-6 col-xs-12">
+					        								<label for="No-of-Adults">NUMBER OF ADULTS</label>
+					        									<input type="text" class="form-control" placeholder="Number of Adults" value="5 Adults">
+					        							</div>  <!-- End col -->
+					        							<div class="col-sm-6 col-xs-12">
+					        									<label for="No-of-children">NUMBER OF CHILDREN (0-12 yrs old)</label>
+					        									<input type="text" class="form-control" placeholder="Number of Children" value="3 Childrens">
+					        							</div>  <!-- End col -->
+			        							</div> <!-- End row -->
+			        					</div> <!-- End form group -->
+
+			        					<div class="form-group">
+			        							<div class="row">
+			        									<div class="col-sm-6 col-xs-12">
+					        								<label for="Tour-duration">TOUR DURATION</label>
+					        									<input type="text" class="form-control" placeholder="Tour Duration" value="1/2 Day">
+					        							</div>  <!-- End col -->
+					        							<div class="col-sm-6 col-xs-12">
+					        									<label for="tour-guide">TOUR GUIDE</label>
+					        									<select name="tour-guide" class="form-control">
+					        										<option value="Yes">Yes</option>
+					        										<option value="No">No</option>
+					        									</select>
+					        							</div>  <!-- End col -->
+			        							</div> <!-- End row -->
+			        					</div> <!-- End form group -->
+
+
+			        					<div class="form-group">
+			        							<div class="row">
+			        									<div class="col-sm-6 col-xs-12">
+					        									<label for="start-time">TRANSPORTATION</label>
+					        									<select name="Transportation" class="form-control">
+					        										<option value="Toyata-Innova">Toyata-Innova</option>
+					        										<option value="Toyata-Innova">Toyata-Innova</option>
+					        										<option value="Toyata-Innova">Toyata-Innova</option>
+					        									</select>
+					        							</div>  <!-- End col -->
+					        							<div class="col-sm-6 col-xs-12">
+					        									<label for="meal">MEAL</label>
+					        									<select name="meal" class="form-control">
+					        										<option value="Breakfast, Lunch, Dinner">Breakfast, Lunch, Dinner</option>
+					        										<option value="Breakfast, Lunch, Dinner">Breakfast, Lunch, Dinner</option>
+					        										<option value="Breakfast, Lunch, Dinner">Breakfast, Lunch, Dinner</option>
+					        									</select>
+					        							</div> <!-- End col -->
+			        							</div> <!-- End row -->
+			        					</div> <!-- End form group -->
+				        			</div> <!-- End col -->
+		        				</div> <!-- End row -->
+
+	        			
+	        		</form> <!-- End form -->
+	        	</div> <!-- End Booking Form -->
+
+			  	 </div> <!-- End  -->
+
+			  	 <div role="tabpanel" class="tab-pane active" id="tourDetails">
+
+			  	 	<div class="hotel-details-tab">
+
+				  		 	<div class="object-info">
+				  		 			<div class="row">
+				  		 				<header>
+							  		 					<div class="col-sm-6 col-xs-12">
+							  		 						<div class="object-title">
+							  		 							<span class="object-name">Manila City Tour</span> 
+							  		 						</div> <!-- End Hotel Title -->
+							  		 					</div> <!-- End col 9 -->
+							  		 					<div class="col-sm-6 col-xs-12">
+							  		 						 <span class="tour-duration pull-right">Duration: 1/2 Days</span>
+							  		 					</div> <!-- End col 3 -->
+						  		 		</header>
+							  		 </div> <!-- End row -->
+					  		 		<div class="row">
+					  		 			<div class="col-sm-12">
+					  		 				<div class="slider-block">
+					  		 					<ul class="bxslider" id="spotSlider">
+								  		 					<li><img src="assets/images/hotel/1.jpg" alt="Hotel name"></li>
+								  		 					<li><img src="assets/images/hotel/2.jpg" alt="Hotel name"></li>
+								  		 					<li><img src="assets/images/hotel/3.jpg" alt="Hotel name"></li>
+								  		 				</ul>
+
+							  		 				<div class="slider-nav">
+							  		 					<ul class="nav-list">
+							  		 						<li><span id="spotSlider-prev"></span></li>
+							  		 						<li><span id="spotSlider-next"></span></li>
+							  		 					</ul>
+														</div> <!-- End Slider Nav -->
+					  		 					
+					  		 				</div> <!-- End slider block -->
+					  		 			</div>
+					  		 		</div><!--  End row -->
+	  		 			
+	  		 			
+					  		 		<div class="row">
+					  		 			<div class="col-sm-12 col-xs-12">
+					  		 					<span class="title">
+					  		 						Tour Details
+					  		 					</span>
+					  		 			</div> <!-- End Col -->
+					  		 		</div> <!-- End row -->
+	  		 											  		 			
+	  		 			
+						  		 		<div class="row">
+						  		 			<div class="col-sm-8 col-xs-12">
+						  		 				<div class="hotel-details">
+						  		 					<table class="table borderless">
+						  		 						<tbody>
+						  		 							<tr>
+						  		 								<td>Tour Name</td>
+						  		 								<td>Manila City Tour</td>
+						  		 							</tr>
+
+						  		 							<tr>
+						  		 								<td> Duration </td>
+						  		 								<td> 1/2 Day </td>
+						  		 							</tr>
+
+						  		 							<tr>
+						  		 								<td> Included</td>
+						  		 								<td> Transportation</td>
+						  		 							</tr>
+
+						  		 							<tr>
+						  		 								<td> Per person</td>
+						  		 								<td> <span class="price">&#0163; 120</span> </td>
+						  		 							</tr>
+						  		 						</tbody>
+						  		 					</table>
+						  		 				</div> <!-- End Hotel Details -->
+						  		 			</div> <!-- End col 6 -->
+
+						  		 			<div class="col-sm-4 col-xs-12">
+						  		 					<button class="btn btn-yellow table-btn tourPopup" data-target="#confirmModal" data-toggle="modal" >Add to Itinerary</button>
+						  		 			</div> <!-- End col 4 -->
+						  		 		</div> <!-- End row -->
+						  	</div> <!-- End Hotel Info -->	
+				  		 		
+						  
+
+						  		 	<div class="row">
+						  		 		<div class="col-sm-12 col-xs-12">
+						  		 			<div class="tab-list-block more-details-block">
+					  		 					<ul class="tab-list more-details-tab tab-2" role="tablist">
+
+						  		 					<li role="presentation" class="active" data-target="#summaryTour" aria-controls="summaryTour" role="tab" data-toggle="tab">Summary</li>
+
+
+												    <li role="presentation" data-target="#mapTour" aria-controls="mapTour" role="tab" data-toggle="tab">Map</li>
+												  </ul>
+
+						  		 					<div class="tab-content">
+
+							  		 					<div role="tabpanel" class="tab-pane active" id="summaryTour">
+								  		 					<span class="title">
+								  		 						General Informations
+								  		 					</span>
+								  		 					<p>
+								  		 						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								  		 					</p>
+							  		 					</div> <!-- End Summary tab -->
+													  
+													  
+													    <div role="tabpanel" class="tab-pane" id="mapTour"> 
+
+													    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202845.11502961593!2d-122.18118132341327!3d37.40272092024147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb68ad0cfc739%3A0x7eb356b66bd4b50e!2sSilicon+Valley%2C+CA!5e0!3m2!1sen!2sus!4v1467302392621" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+
+													     </div> <!-- End Tab -->
+						  		 					</div> <!-- End Tab Content -->
+						  		 			</div> <!-- End tab List -->
+						  		 		</div> <!-- End col 12 -->
+						  		 	</div> <!-- End row -->
+				  	 </div> <!-- End Hotel Details Tab -->
+
+			  	 	
+			  	 </div> <!-- End Tour Details -->
+				  </div> <!-- End Tab Content -->
+
+        	
       </div> <!-- End modal Body -->
     </div> <!-- End Modal Content -->
   </div> <!-- End Modal Dialog -->
-</div> <!-- End Modal -->
-
+</div> <!-- End Modal Tour-->
 
 
 <div class="modal fade" id="hotelBookingForm" tabindex="-1" role="dialog" aria-labelledby="hotelBookingForm">
@@ -563,20 +1970,19 @@
       </div>
       <div class="modal-body">
 					<ul class="info-tab-list at-modal" role="tablist">
-						<li class="active" role="presentation" data-target="#bookHotel" aria-controls="bookHotel" role="tab" data-toggle="tab">
+						<li role="presentation" id="hotelFormTab" data-target="#bookHotel" aria-controls="bookHotel" role="tab" data-toggle="tab">
 
-						 <span class="fa fa-calendar-check-o mr-5"></span> Book Hotel </li>
+						 <span class="fa fa-calendar-check-o mr-5 hidden-xs"></span> Book Hotel </li>
 
-						<li id="bxsliderClick" role="presentation" data-target="#hotelDetails" aria-controls="hotelDetails" role="tab" data-toggle="tab">
-						<span class="fa fa-bed mr-5"></span> Hotel Details</li>
+						<li class="active" id="hotelDetailsTab" role="presentation" data-target="#hotelDetails" aria-controls="hotelDetails" role="tab" data-toggle="tab">
+						<span class="fa fa-bed mr-5 hidden-xs"></span> Hotel Details</li>
 
-						<li role="presentation" data-target="#hotelList" aria-controls="hotelList" role="tab" data-toggle="tab"> 
-						<span class="fa fa-list-alt mr-5"></span> Hotel List </li>
+						<li class="color-red" id="hotelListTrigger" role="presentation" data-target="#hotelListModal" aria-controls="hotelListModal" data-toggle="modal"><span class="fa fa-list-alt mr-5 hidden-xs"></span> Back to List </li>
 				
 					</ul>
 
 					<div class="tab-content">
-				  	 <div role="tabpanel" class="tab-pane active" id="bookHotel">
+				  	 <div role="tabpanel" class="tab-pane" id="bookHotel">
 			        	<span class="transportation-info">Booking Hotel on <span class="selected-date">Tue Apr 19th, 2016</span></span>
 			        	<div class="transportation-form">
 			        		<form action="#" method="post">	
@@ -623,13 +2029,13 @@
 					        							<div class="row">
 					        									<div class="col-sm-6 col-xs-12">
 							        								<label for="room-type">ROOM TYPES</label>
-							        									<select name="pick-up-date" class="form-control">
+							        									<select name="room-type" class="form-control">
 							        										<option value="single-room">single-room</option>
 							        										<option value="single-room">single-room</option>
 							        									</select>
 							        							</div>  <!-- End col -->
 							        							<div class="col-sm-6 col-xs-12">
-							        									<label for="pick-up-time">NUMBER OF ROOMS</label>
+							        									<label for="Number-of-rooms">NUMBER OF ROOMS</label>
 							        									<select name="no-of-rooms" class="form-control">
 							        										<option value="4-Rooms">4 Rooms</option>
 							        										<option value="4-Rooms">4 Rooms</option>
@@ -665,28 +2071,28 @@
 			        		</form> <!-- End form -->
 			        	</div> <!-- End Booking Form -->
 				  	 </div> <!-- End BookHotel Tab Content -->
+				  	 <div role="tabpanel" class="tab-pane active" id="hotelDetails">
+			  		 	<div class="hotel-details-tab">
 
-				  	 <div role="tabpanel" class="tab-pane" id="hotelDetails">
-			  		 		<div class="hotel-details-tab">
-			  		 			<div class="hotel-info">
-			  		 				<div class="row">
-			  		 					<header>
-					  		 					<div class="col-sm-9 col-xs-12">
-					  		 						<div class="hotel-title">
-					  		 							<span class="hotel-name">Shangrila</span> Booking through expedia.com
-					  		 						</div> <!-- End -->
-					  		 					</div> <!-- End col 9 -->
-					  		 					<div class="col-sm-3 col-xs-12">
-					  		 						<ul class="rating-list">
-					  		 							<li>&#9733;</li>
-					  		 							<li>&#9733;</li>
-					  		 							<li>&#9733;</li>
-					  		 							<li>&#9733;</li>
-					  		 							<li>&#9733;</li>
-					  		 						</ul>
-					  		 					</div> <!-- End col 3 -->
-				  		 				</header>
-					  		 		</div> <!-- End row -->
+				  		 	<div class="object-info">
+				  		 			<div class="row">
+				  		 				<header>
+							  		 					<div class="col-sm-9 col-xs-12">
+							  		 						<div class="object-title">
+							  		 							<span class="object-name">Shangrila</span> Booking through expedia.com
+							  		 						</div> <!-- End Hotel Title -->
+							  		 					</div> <!-- End col 9 -->
+							  		 					<div class="col-sm-3 col-xs-12">
+							  		 						<ul class="rating-list">
+							  		 							<li><span class="fa fa-star"></span></li>
+							  		 							<li><span class="fa fa-star"></span></li>
+							  		 							<li><span class="fa fa-star"></span></li>
+							  		 							<li><span class="fa fa-star"></span></li>
+							  		 							<li><span class="fa fa-star"></span></li>
+							  		 						</ul>
+							  		 					</div> <!-- End col 3 -->
+						  		 		</header>
+							  		 </div> <!-- End row -->
 					  		 		<div class="row">
 					  		 			<div class="col-sm-12">
 					  		 				<div class="slider-block">
@@ -705,9 +2111,9 @@
 					  		 					
 					  		 				</div> <!-- End slider block -->
 					  		 			</div>
-					  		 		</div> <!-- End row -->
-
-
+					  		 		</div><!--  End row -->
+	  		 			
+	  		 			
 					  		 		<div class="row">
 					  		 			<div class="col-sm-12 col-xs-12">
 					  		 					<span class="title">
@@ -715,67 +2121,186 @@
 					  		 					</span>
 					  		 			</div> <!-- End Col -->
 					  		 		</div> <!-- End row -->
-								  		 			
+	  		 											  		 			
+	  		 			
+						  		 		<div class="row">
+						  		 			<div class="col-sm-8 col-xs-12">
+						  		 				<div class="hotel-details">
+						  		 					<table class="table borderless">
+						  		 						<tbody>
+						  		 							<tr>
+						  		 								<td>Hotel Name</td>
+						  		 								<td>Shangrilla</td>
+						  		 							</tr>
 
-					  		 		<div class="row">
-					  		 			<div class="col-sm-8 col-xs-12">
-					  		 				<div class="hotel-details">
-					  		 					<table class="table borderless">
-					  		 						<tbody>
-					  		 							<tr>
-					  		 								<td>Hotel Name</td>
-					  		 								<td>Shangrilla</td>
-					  		 							</tr>
+						  		 							<tr>
+						  		 								<td> Free</td>
+						  		 								<td> Breakfast/launch /dinner</td>
+						  		 							</tr>
 
-					  		 							<tr>
-					  		 								<td> Free</td>
-					  		 								<td> Breakfast/launch /dinner</td>
-					  		 							</tr>
+						  		 							<tr>
+						  		 								<td> Room Type</td>
+						  		 								<td>Delux-Single Room</td>
+						  		 							</tr>
 
-					  		 							<tr>
-					  		 								<td> Room Type</td>
-					  		 								<td>Delux-Single Room</td>
-					  		 							</tr>
+						  		 							<tr>
+						  		 								<td> Price avg/height</td>
+						  		 								<td> <span class="price">&#0163; 120</span> </td>
+						  		 							</tr>
+						  		 						</tbody>
+						  		 					</table>
+						  		 				</div> <!-- End Hotel Details -->
+						  		 			</div> <!-- End col 6 -->
 
-					  		 							<tr>
-					  		 								<td> Price avg/height</td>
-					  		 								<td> <span class="price">&#0163; 120</span> </td>
-					  		 							</tr>
-					  		 						</tbody>
-					  		 					</table>
-					  		 				</div>
-					  		 			</div> <!-- End col 6 -->
+						  		 			<div class="col-sm-4 col-xs-12">
+						  		 					<button class="btn btn-yellow table-btn hotelPopup" data-toggle="modal" data-target="#confirmModal">Add to Itinerary</button>
+						  		 			</div> <!-- End col 4 -->
+						  		 		</div> <!-- End row -->
+						  	</div> <!-- End Hotel Info -->	
+				  		 		
+						  
 
-					  		 			<div class="col-sm-4 col-xs-12">
-					  		 					<button class="btn btn-yellow table-btn">Add to Itinerary</button>
-					  		 			</div> <!-- End col -->
-					  		 		</div> <!-- End row -->
-					  		 	</div> <!-- End Hotel Info -->	
+						  		 	<div class="row">
+						  		 		<div class="col-sm-12 col-xs-12">
+						  		 			<div class="tab-list-block more-details-block">
+					  		 					<ul class="tab-list more-details-tab tab-4" role="tablist">
+
+						  		 					<li role="presentation" class="active" data-target="#summary" aria-controls="summary" role="tab" data-toggle="tab">Summary</li>
+
+												    <li role="presentation" data-target="#room_type" aria-controls="room_type" role="tab" data-toggle="tab">Room Type</li>
+
+												    <li role="presentation" data-target="#preferences" aria-controls="preferences"aria-controls="preferences" role="tab" data-toggle="tab">Preferences</a></li>
+
+												    <li role="presentation" data-target="#map" aria-controls="map" role="tab" data-toggle="tab">Map</li>
+												  </ul>
+
+						  		 					<div class="tab-content">
+
+							  		 					<div role="tabpanel" class="tab-pane active" id="summary">
+								  		 					<span class="title">
+								  		 						General Informations
+								  		 					</span>
+								  		 					<p>
+								  		 						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								  		 					</p>
+							  		 					</div> <!-- End Summary tab -->
+													    <div role="tabpanel" class="tab-pane" id="room_type">
+
+													    	<div class="form-group">
+													    		<select class="form-control" id="roomTypeDropdown" onchange="roomTypeChange()">
+													    			<option value="single_room">Single Room</option>
+													    			<option value="double_room">Double Room</option>
+													    		</select>
+													    	</div> <!-- End Form Group -->
+
+													    	<div class="room-feature-div singleRoom">
+													    		<ul class="title-list">
+																		<li><span class="yellow-title">Single Room - $ 90/night</span></li>	
+																		<li><span class="sub-title">Max Occupancy: 1 Adult, 1 Child</span></li>	
+																	</ul>
+
+																	<div class="">
+																		<ul class="feature-list">
+																			<li><span class="fa fa-check-circle-o"></span> Room service</li>
+																			<li><span class="fa fa-check-circle-o"></span> VIP room facilities</li>
+																			<li><span class="fa fa-check-circle-o"></span> Babysitting/child services</li>
+																			<li><span class="fa fa-check-circle-o"></span> Climate control</li>
+																			<li><span class="fa fa-check-circle-o"></span> Air conditionong</li>
+																			<li><span class="fa fa-check-circle-o"></span> Direct Dial phone</li>
+																			<li><span class="fa fa-check-circle-o"></span> Mini bar</li>
+																			<li><span class="fa fa-check-circle-o"></span> Wake-up calls</li>
+																			<li><span class="fa fa-check-circle-o"></span> Private bathroom</li>
+																			<li><span class="fa fa-check-circle-o"></span> Hair drer</li>
+																			<li><span class="fa fa-check-circle-o"></span> Makeup/shaving mirror</li>
+																			<li><span class="fa fa-check-circle-o"></span> Shower/tub combination</li>
+																			<li><span class="fa fa-check-circle-o"></span> Satellite TV service</li>
+																			<li><span class="fa fa-check-circle-o"></span> Electronic/magnetic keys</li>
+																			<li><span class="fa fa-check-circle-o"></span> Free wifi</li>
+																			<li><span class="fa fa-check-circle-o"></span> Free cancellation</li>
+																		</ul>
+
+																	<div class="row mt-15">
+																		<div class="col-sm-6 col-xs-12">
+																			<span class="sub-title">Surface: 75m <sup>2</sup></span>
+																		</div> <!-- End col 12 -->
+																		<div class="col-sm-6 col-xs-12">
+																			<button class="btn btn-yellow pull-right hotelPopup" data-target="#confirmModal" data-toggle="modal">Add to Itinerary</button>
+																		</div> <!-- End col 12 -->
+																	</div> <!-- End row -->
+														    		
+														    	</div> <!-- End room Feature Div -->
+														  	</div> <!-- Feature List Div -->
 
 
-					  		 	<div class="row">
-					  		 		<div class="col-sm-12 col-xs-12">
-					  		 			<div class="tab-list-block">
-					  		 					<ul class="tab-list">
-					  		 						<li class="active">Summary</li>
-					  		 						<li>Room Type</li>
-					  		 						<li>Preferences</li>
-					  		 						<li>Map</li>
-					  		 					</ul>
+														  	<div class="room-feature-div doubleRoom">
+													    		<ul class="title-list">
+																		<li><span class="yellow-title">Double Room - $ 120/night</span></li>	
+																		<li><span class="sub-title">Max Occupancy: 2 Adult, 2 Child</span></li>	
+																	</ul>
 
-					  		 					<div class="tab-content">
-					  		 						
-					  		 					</div> <!-- End Tab Content -->
-					  		 			</div> <!-- End tab List -->
-					  		 		</div> <!-- End col 12 -->
-					  		 	</div> <!-- End row -->
-				  			 </div> <!-- End Hotel Details Tab -->
+																	<div class="">
+																		<ul class="feature-list">
+																			<li><span class="fa fa-check-circle-o"></span> Room service</li>
+																			<li><span class="fa fa-check-circle-o"></span> VIP room facilities</li>
+																			<li><span class="fa fa-check-circle-o"></span> Babysitting/child services</li>
+																			<li><span class="fa fa-check-circle-o"></span> Climate control</li>
+																			<li><span class="fa fa-check-circle-o"></span> Air conditionong</li>
+																			<li><span class="fa fa-check-circle-o"></span> Direct Dial phone</li>
+																			<li><span class="fa fa-check-circle-o"></span> Mini bar</li>
+																			<li><span class="fa fa-check-circle-o"></span> Wake-up calls</li>
+																			<li><span class="fa fa-check-circle-o"></span> Private bathroom</li>
+																			<li><span class="fa fa-check-circle-o"></span> Hair drer</li>
+																			<li><span class="fa fa-check-circle-o"></span> Makeup/shaving mirror</li>
+																			<li><span class="fa fa-check-circle-o"></span> Shower/tub combination</li>
+																			<li><span class="fa fa-check-circle-o"></span> Satellite TV service</li>
+																			<li><span class="fa fa-check-circle-o"></span> Electronic/magnetic keys</li>
+																			<li><span class="fa fa-check-circle-o"></span> Free wifi</li>
+																			<li><span class="fa fa-check-circle-o"></span> Free cancellation</li>
+																		</ul>
+
+																	<div class="row mt-15">
+																		<div class="col-sm-6 col-xs-12">
+																			<span class="sub-title">Surface: 150m <sup>2</sup></span>
+																		</div> <!-- End col 12 -->
+																		<div class="col-sm-6 col-xs-12">
+																			<button class="btn btn-yellow pull-right hotelPopup" data-target="#confirmModal" data-toggle="modal">Add to Itinerary</button>
+																		</div> <!-- End col 12 -->
+																	</div> <!-- End row -->
+														    		
+														    	</div> <!-- End room Feature Div -->
+														  	</div> <!-- Feature List Div -->
+
+													     </div> <!-- End Room Type -->
+													    <div role="tabpanel" class="tab-pane" id="preferences"> 
+
+													    	<div class="preferences-block">
+												    			<ul>
+												    				<li>Outdoors</li>
+												    				<li><span class="fa fa-check-circle-o"></span> Outdoor pool(all year)</li>
+
+												    				<li>Activities</li>
+												    				<li><span class="fa fa-check-circle-o"></span> Sauna pool</li>
+
+												    				<li>Top Features</li>
+												    				<li><span class="fa fa-check-circle-o"></span> Best Price Guaranteed</li>
+
+												    			</ul>
+													    	</div> <!-- End preferences Block -->
+
+													    </div> <!-- End preferences -->
+													    <div role="tabpanel" class="tab-pane" id="map"> 
+
+													    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202845.11502961593!2d-122.18118132341327!3d37.40272092024147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb68ad0cfc739%3A0x7eb356b66bd4b50e!2sSilicon+Valley%2C+CA!5e0!3m2!1sen!2sus!4v1467302392621" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+
+													     </div> <!-- End Tab -->
+						  		 					</div> <!-- End Tab Content -->
+						  		 			</div> <!-- End tab List -->
+						  		 		</div> <!-- End col 12 -->
+						  		 	</div> <!-- End row -->
+				  	 </div> <!-- End Hotel Details Tab -->
 					  	</div> <!-- End Tab Pane -->
-
-   					 <div role="tabpanel" class="tab-pane" id="hotelList">
-							Hotel List
-   					 </div> <!-- End Hotel List -->
-
 					</div> <!-- End tab Content -->
 
 
@@ -783,12 +2308,792 @@
       </div> <!-- End modal Body -->
     </div> <!-- End Modal Content -->
   </div> <!-- End Modal Dialog -->
-</div> <!-- End Modal -->
+</div> <!-- End Modal Hotel -->
+
+
+<div class="modal fade" id="hotelListModal" tabindex="-1" role="dialog" aria-labelledby="hotelListModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header this">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
+        <h4 class="modal-title modal-brand-title">Add Hotel to Your Itinerary</h4>
+      </div>
+      <div class="modal-body object-summary-list">
+
+					<div class="row">
+						<div class="col-sm-6 col-xs-12">
+								<select class="dropdown-filter">
+									<option value="0">Hotel Price (per night) </option>
+									<option value="0_50"> 0- $50  </option>
+									<option value="50_100"> $50 - $100 </option>
+								</select>
+						</div> <!-- End col 6 -->
+						<div class="col-sm-6 col-xs-12">
+							<select class="dropdown-filter rating-list">
+									<option value="0">Star Rating</option>
+									<option value="2_star"> &#x2605; &#x2605; </option>
+									<option value="3_star"> &#x2605; &#x2605; &#x2605; </option>
+									<option value="4_star"> &#x2605; &#x2605; &#x2605; &#x2605;</option>
+									<option value="5_star"> &#x2605; &#x2605; &#x2605; &#x2605;  &#x2605;</option>
+								</select>
+						</div> <!-- End col 6 -->
+					</div> <!-- End row -->
+
+				<div class="list-block">
+					<div class="row">
+						<div class="object-info">
+							<header>
+  		 					<div class="col-sm-9 col-xs-12">
+  		 						<div class="object-title">
+  		 							<span class="object-name">Shangrila</span> <span class="booking-source">Booking through expedia.com
+  		 							 <span class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Room rates can be change at final booking."></span></span>
+
+  		 						</div> <!-- End -->
+  		 					</div> <!-- End col 9 -->
+  		 					<div class="col-sm-3 col-xs-12">
+  		 						<ul class="rating-list">
+  		 							<li><span class="fa fa-star"></span></li>
+  		 							<li><span class="fa fa-star"></span></li>
+  		 							<li><span class="fa fa-star"></span></li>
+  		 							<li><span class="fa fa-star"></span></li>
+  		 							<li><span class="fa fa-star"></span></li>
+  		 						</ul>
+  		 					</div> <!-- End col 3 -->
+		 				</header>
+						</div> <!-- End Hotel Info -->
+					</div> <!-- End row	 -->
+
+
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="object-featured-img">
+								<img src="assets/images/hotel/3.jpg" alt="Manila">
+							</div> <!-- End -->
+						</div> <!-- End col 12 -->
+					</div> <!-- End row	 -->
+
+					<div class="row">
+						<div class="col-sm-12 col-xs-12">
+							<article>
+									<span class="title">Hotel Details</span>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius at maxime ipsa. Illo nulla aliquam eius perferendis quasi, reiciendis, rem nostrum rerum vel ullam molestias id enim necessitatibus quia officia. Quod in magni laudantium, fugit ipsa ex ratione iusto, qui architecto consectetur 
+								</p>
+								
+								<div class="row mt-15">
+									<div class="col-sm-8">
+											<span class="price-tag">
+												Price start at/from <span class="amount"> 120 &pound;</span> 
+											</span>
+												
+									</div> <!-- End col sm 8 -->
+
+									<div class="col-sm-4 col-xs-12">
+										<button class="btn btn-yellow pull-right bookingForm" data-toggle="modal" data-target="#hotelBookingForm">More Details</button>
+									</div> <!-- End col sm 8 -->
+								</div> <!-- End -->
+							</article>
+						</div> <!-- End col 12 -->
+					</div>  <!-- End row	 -->
+				</div> <!-- End list Block -->
+
+				<div class="list-block">
+					<div class="row">
+						<div class="object-info">
+							<header>
+  		 					<div class="col-sm-9 col-xs-12">
+  		 						<div class="object-title">
+  		 							<span class="object-name">Shangrila</span> <span class="booking-source">Booking through expedia.com <span class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Room rates can be change at final booking."></span></span>
 
 
 
-<!-- Start Flight Modal -->
-<div class="modal fade" id="flightModal" tabindex="-1" role="dialog" aria-labelledby="flightModal">
+  		 						</div> <!-- End -->
+  		 					</div> <!-- End col 9 -->
+  		 					<div class="col-sm-3 col-xs-12">
+  		 						<ul class="rating-list">
+  		 							<li><span class="fa fa-star"></span></li>
+  		 							<li><span class="fa fa-star"></span></li>
+  		 							<li><span class="fa fa-star"></span></li>
+  		 							<li><span class="fa fa-star"></span></li>
+  		 							<li><span class="fa fa-star"></span></li>
+  		 						</ul>
+  		 					</div> <!-- End col 3 -->
+		 				</header>
+						</div> <!-- End Hotel Info -->
+					</div> <!-- End row	 -->
+
+
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="object-featured-img">
+								<img src="assets/images/hotel/2.jpg" alt="Manila">
+							</div> <!-- End -->
+						</div> <!-- End col 12 -->
+					</div> <!-- End row	 -->
+
+					<div class="row">
+						<div class="col-sm-12 col-xs-12">
+							<article>
+									<span class="title">Hotel Details</span>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius at maxime ipsa. Illo nulla aliquam eius perferendis quasi, reiciendis, rem nostrum rerum vel ullam molestias id enim necessitatibus quia officia. Quod in magni laudantium, fugit ipsa ex ratione iusto, qui architecto consectetur 
+								</p>
+								
+								<div class="row mt-15">
+									<div class="col-sm-8">
+											<span class="price-tag">
+												Price start at/from <span class="amount"> 120 &pound;</span> 
+											</span>
+												
+									</div> <!-- End col sm 8 -->
+
+									<div class="col-sm-4 col-xs-12">
+										<button class="btn btn-yellow pull-right bookingForm" data-toggle="modal" data-target="#hotelBookingForm">More Details</button>
+									</div> <!-- End col sm 8 -->
+								</div> <!-- End -->
+							</article>
+						</div> <!-- End col 12 -->
+					</div>  <!-- End row	 -->
+				</div> <!-- End list Block -->
+
+
+
+				<div class="list-block">
+					<div class="row">
+						<div class="object-info">
+							<header>
+  		 					<div class="col-sm-9 col-xs-12">
+  		 						<div class="object-title">
+  		 							<span class="object-name">Shangrila</span> <span class="booking-source">Booking through expedia.com <span class="fa fa-info-circle red-icon" data-toggle="tooltip" data-placement="top" title="Room rates can be change at final booking."></span></span>
+
+  		 						</div> <!-- End -->
+  		 					</div> <!-- End col 9 -->
+  		 					<div class="col-sm-3 col-xs-12">
+  		 						<ul class="rating-list">
+  		 							<li><span class="fa fa-star"></span></li>
+  		 							<li><span class="fa fa-star"></span></li>
+  		 							<li><span class="fa fa-star"></span></li>
+  		 							<li><span class="fa fa-star"></span></li>
+  		 							<li><span class="fa fa-star"></span></li>
+  		 						</ul>
+  		 					</div> <!-- End col 3 -->
+		 				</header>
+						</div> <!-- End Hotel Info -->
+					</div> <!-- End row	 -->
+
+
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="object-featured-img">
+								<img src="assets/images/hotel/3.jpg" alt="Manila">
+							</div> <!-- End -->
+						</div> <!-- End col 12 -->
+					</div> <!-- End row	 -->
+
+					<div class="row">
+						<div class="col-sm-12 col-xs-12">
+							<article>
+									<span class="title">Hotel Details</span>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius at maxime ipsa. Illo nulla aliquam eius perferendis quasi, reiciendis, rem nostrum rerum vel ullam molestias id enim necessitatibus quia officia. Quod in magni laudantium, fugit ipsa ex ratione iusto, qui architecto consectetur 
+								</p>
+								
+								<div class="row mt-15">
+									<div class="col-sm-8">
+											<span class="price-tag">
+												Price start at/from <span class="amount"> 120 &pound;</span> 
+											</span>
+												
+									</div> <!-- End col sm 8 -->
+
+									<div class="col-sm-4 col-xs-12">
+										<button class="btn btn-yellow pull-right bookingForm" data-toggle="modal" data-target="#hotelBookingForm">More Details</button>
+									</div> <!-- End col sm 8 -->
+								</div> <!-- End -->
+							</article>
+						</div> <!-- End col 12 -->
+					</div>  <!-- End row	 -->
+				</div> <!-- End list Block -->
+
+
+      </div> <!-- End modal Body -->
+    </div> <!-- End Modal Content -->
+  </div> <!-- End Modal Dialog -->
+</div> <!-- End Modal Hotel -->
+
+<div class="modal fade" id="spotListModal" tabindex="-1" role="dialog" aria-labelledby="spotListModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header this">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
+        <h4 class="modal-title modal-brand-title">Add Tour to Your Itinerary</h4>
+      </div>
+      <div class="modal-body object-summary-list">
+
+					<div class="row">
+						<div class="col-sm-4 col-xs-12">
+								<select class="dropdown-filter">
+									<option value="0">Select Category </option>
+									  <option value="family_tour"> Family Tour</option>
+									  <option value="adventure_tour"> Adventure Tour</option>
+								</select>
+						</div> <!-- End col 6 -->
+						<div class="col-sm-4 col-xs-12">
+							<select class="dropdown-filter">
+									<option value="0">Duration</option>
+									<option value="full_day "> Full Day </option>
+									<option value="half_day "> Half Day </option>
+								</select>
+						</div> <!-- End col 6 -->
+
+						<div class="col-sm-4 col-xs-12">
+							<select class="dropdown-filter">
+									<option value="0">Price start at/from</option>
+									<option value="0_$50 "> 0 - $50 </option>
+									<option value="$50-100$"> $50 - $100 </option>
+								</select>
+						</div> <!-- End col 6 -->
+
+
+					</div> <!-- End row -->
+
+				<div class="list-block">
+					<div class="row">
+						<div class="object-info">
+							<header>
+  		 					<div class="col-sm-6 col-xs-12">
+  		 						<div class="object-title">
+  		 							<span class="object-name">Manila City Tour</span> 
+  		 						</div> <!-- End -->
+  		 					</div> <!-- End col 9 -->
+  		 					<div class="col-sm-6 col-xs-12">
+  		 						 <span class="tour-duration pull-right">Duration: 1/2 Days</span>
+  		 					</div> <!-- End col 3 -->
+		 				</header>
+						</div> <!-- End Hotel Info -->
+					</div> <!-- End row	 -->
+
+
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="object-featured-img">
+								<img src="assets/images/spot/2.jpg" alt="Manila">
+							</div> <!-- End -->
+						</div> <!-- End col 12 -->
+					</div> <!-- End row	 -->
+
+					<div class="row">
+						<div class="col-sm-12 col-xs-12">
+							<article>
+									<span class="title">Tour Details</span>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius at maxime ipsa. Illo nulla aliquam eius perferendis quasi, reiciendis, rem nostrum rerum vel ullam molestias id enim necessitatibus quia officia. Quod in magni laudantium, fugit ipsa ex ratione iusto, qui architecto consectetur 
+								</p>
+								
+								<div class="row mt-15">
+									<div class="col-sm-8">
+											<span class="price-tag">
+												Price start at/from <span class="amount"> 120 &pound;</span> 
+											</span>
+												
+									</div> <!-- End col sm 8 -->
+
+									<div class="col-sm-4">
+										<button class="btn btn-yellow pull-right tourBookingForm" data-toggle="modal" data-target="#tourBookingForm">More Details</button>
+									</div> <!-- End col sm 8 -->
+								</div> <!-- End -->
+							</article>
+						</div> <!-- End col 12 -->
+					</div>  <!-- End row	 -->
+				</div> <!-- End list Block -->
+
+				<div class="list-block">
+					<div class="row">
+						<div class="object-info">
+							<header>
+  		 					<div class="col-sm-6 col-xs-12">
+  		 						<div class="object-title">
+  		 							<span class="object-name">Manila City Tour</span> 
+  		 						</div> <!-- End -->
+  		 					</div> <!-- End col 9 -->
+  		 					<div class="col-sm-6 col-xs-12">
+  		 						 <span class="tour-duration pull-right">Duration: 1/2 Days</span>
+  		 					</div> <!-- End col 3 -->
+		 				</header>
+						</div> <!-- End Hotel Info -->
+					</div> <!-- End row	 -->
+
+
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="object-featured-img">
+								<img src="assets/images/spot/3.jpg" alt="Manila">
+							</div> <!-- End -->
+						</div> <!-- End col 12 -->
+					</div> <!-- End row	 -->
+
+					<div class="row">
+						<div class="col-sm-12 col-xs-12">
+							<article>
+									<span class="title">Tour Details</span>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius at maxime ipsa. Illo nulla aliquam eius perferendis quasi, reiciendis, rem nostrum rerum vel ullam molestias id enim necessitatibus quia officia. Quod in magni laudantium, fugit ipsa ex ratione iusto, qui architecto consectetur 
+								</p>
+								
+								<div class="row mt-15">
+									<div class="col-sm-8">
+											<span class="price-tag">
+												Price start at/from <span class="amount"> 120 &pound;</span> 
+											</span>
+												
+									</div> <!-- End col sm 8 -->
+
+									<div class="col-sm-4">
+										<button class="btn btn-yellow pull-right tourBookingForm" data-toggle="modal" data-target="#tourBookingForm">More Details</button>
+									</div> <!-- End col sm 8 -->
+								</div> <!-- End -->
+							</article>
+						</div> <!-- End col 12 -->
+					</div>  <!-- End row	 -->
+				</div> <!-- End list Block -->
+
+
+				<div class="list-block">
+					<div class="row">
+						<div class="object-info">
+							<header>
+  		 					<div class="col-sm-6 col-xs-12">
+  		 						<div class="object-title">
+  		 							<span class="object-name">Manila City Tour</span> 
+  		 						</div> <!-- End -->
+  		 					</div> <!-- End col 9 -->
+  		 					<div class="col-sm-6 col-xs-12">
+  		 						 <span class="tour-duration pull-right">Duration: 1/2 Days</span>
+  		 					</div> <!-- End col 3 -->
+		 				</header>
+						</div> <!-- End Hotel Info -->
+					</div> <!-- End row	 -->
+
+
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="object-featured-img">
+								<img src="assets/images/spot/1.jpg" alt="Manila">
+							</div> <!-- End -->
+						</div> <!-- End col 12 -->
+					</div> <!-- End row	 -->
+
+					<div class="row">
+						<div class="col-sm-12 col-xs-12">
+							<article>
+									<span class="title">Tour Details</span>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius at maxime ipsa. Illo nulla aliquam eius perferendis quasi, reiciendis, rem nostrum rerum vel ullam molestias id enim necessitatibus quia officia. Quod in magni laudantium, fugit ipsa ex ratione iusto, qui architecto consectetur 
+								</p>
+								
+								<div class="row mt-15">
+									<div class="col-sm-8">
+											<span class="price-tag">
+												Price start at/from <span class="amount"> 120 &pound;</span> 
+											</span>
+												
+									</div> <!-- End col sm 8 -->
+
+									<div class="col-sm-4">
+										<button class="btn btn-yellow pull-right tourBookingForm" data-toggle="modal" data-target="#tourBookingForm">More Details</button>
+									</div> <!-- End col sm 8 -->
+								</div> <!-- End -->
+							</article>
+						</div> <!-- End col 12 -->
+					</div>  <!-- End row	 -->
+				</div> <!-- End list Block -->
+
+
+
+      </div> <!-- End modal Body -->
+    </div> <!-- End Modal Content -->
+  </div> <!-- End Modal Dialog -->
+</div> <!-- End Modal Hotel -->
+
+<div class="modal fade" id="carBookingForm" tabindex="-1" role="dialog" aria-labelledby="carBookingForm">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header this">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
+        <h4 class="modal-title modal-brand-title">Add Transportation to Your Itinerary</h4>
+      </div>
+      <div class="modal-body">
+        	<div class="transportation-form">
+        		<form action="#" method="post">	
+        			<div class="row">
+        				<div class="col-sm-12 col-xs-12">
+        						<ul class="inline-list radio-block">
+	        						<li>
+												<input type="radio" class="form-control" id="carRadioOption" name="flight-type" checked>
+						                     	<label for="carRadioOption"> 
+						                     		  <div class="radio-div">
+											         				 <span class="fa fa-circle"></span>
+											         				 </div> 
+											          			Car
+											           </label>
+											</li>
+
+											<li>
+												<input type="radio" class="form-control" id="busRadioOption" name="flight-type">
+						                     	<label for="busRadioOption"> 
+						                     		  <div class="radio-div">
+											         				 <span class="fa fa-circle"></span>
+											         				 </div> 
+											          			Bus
+											           </label>
+											</li>
+
+											<li>
+												<input type="radio" class="form-control" id="trainRadioOption" name="flight-type">
+						                     	<label for="trainRadioOption"> 
+						                     		  <div class="radio-div">
+											         				 <span class="fa fa-circle"></span>
+											         				 </div> 
+											          			Train
+											           </label>
+											</li>
+
+
+											<li>
+												<input type="radio" class="form-control" id="ferryRadioOption" name="flight-type">
+						                     	<label for="ferryRadioOption"> 
+						                     		  <div class="radio-div">
+											         				 <span class="fa fa-circle"></span>
+											         				 </div> 
+											          			Ferry
+											           </label>
+											</li>
+	        					</ul>
+        					</div> <!-- End col 12 -->
+        			</div> <!-- End row -->
+        			<div id="carTranportUserForm" class="transportForm">
+        				<div class="row">
+        					<div class="col-sm-12">
+        						<span class="transportation-info">Booking Car on <span class="selected-date">Tue Apr 8th, 2016</span></span>
+        					</div> <!-- End col -->
+        				</div> <!-- End row -->
+        				<div class="row">
+		        			<div class="col-sm-12 col-xs-12">
+		        					<div class="form-group">
+		        						<label for="change-car">CHANGE CAR </label>
+		        							<select class="form-control">
+						      					<option value="toyota-innova">Toyota Innova</option>
+						      					<option value="toyota-innova">Toyota Innova</option>
+						      					<option value="toyota-innova">Toyota Innova</option>
+						      					<option value="toyota-innova">Toyota Innova</option>
+					      					</select>	
+		        					</div> <!-- End form-group -->
+
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="pick-up-location">PICK-UP LOCATION</label>
+				        									<input type="text" class="form-control" placeholder="Pick up Location" value="Naia Airport">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="drop-location">DROP LOCATION</label>
+				        									<select name="drop-location" class="form-control">
+				        										<option value="Cubao">Cubao</option>
+				        										<option value="Cubao">Cubao</option>
+				        										<option value="Cubao">Cubao</option>
+				        									</select>
+				        							</div> <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="pick-up-date">PICK-UP Date</label>
+				        								<input type="text" class="form-control" placeholder="Pick-up Date" value="Apr 22, 2016">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="pick-up-time">PICK-UP Time</label>
+				        									<select name="pick-up-time" class="form-control">
+				        										<option value="11.00-AM">11.00 AM</option>
+				        										<option value="11.00-AM">11.00 AM</option>
+				        										<option value="11.00-AM">11.00 AM</option>
+				        									</select>
+				        							</div> <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="No-of-Adults">NUMBER OF ADULTS</label>
+				        									<input type="text" class="form-control" placeholder="Number of Adults" value="5 Adults">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="No-of-children">NUMBER OF CHILDREN (0-12 yrs old)</label>
+				        									<input type="text" class="form-control" placeholder="Number of Children" value="3 Childrens">
+				        							</div>  <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+
+		        					<div class="form-group">
+		        						<div class="row">
+		        							<div class="col-sm-12 col-xs-12">
+		        								<label for="No-of-Adults">DESCRIPTION</label>
+		        								<textarea class="form-control" placeholder="Please provide your transportation details"></textarea>
+		        							</div>	<!-- End col -->
+		        						</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+		        			</div> <!-- End col -->
+		        		</div> <!-- End row -->
+
+		        		<div class="row">
+		        			<div class="col-sm-6 col-xs-12">
+		        					<img class="vehicle-thumb" src="assets/images/car/1.jpg" alt="Toyota">
+		        			</div> <!-- End col -->
+		        			<div class="col-sm-6 col-xs-12">
+		        				<div class="vehicle-info">
+		      							<span class="info">Car Info</span>
+				        				<span class="vehicle-name">Toyota Innova or equivalent</span>
+				        				<span>AC Minivan</span>
+				        				<span class="info f-18">PH 1200</span>
+		        				</div> <!-- End Vehicle Info -->
+		        				
+		        				<a href="#" data-target="#confirmModal" data-toggle="modal" class="btn btn-sm btn-yellow transferPopup">Add to Itinerary</a>
+		        			</div> <!-- End col -->
+		        		</div> <!-- End row -->
+        			</div> <!-- End carTransportUserForm -->
+
+
+        			<div id="busTranportUserForm" class="transportForm">
+        				<div class="row">
+        					<div class="col-sm-12">
+        						<span class="transportation-info">Booking Bus on <span class="selected-date">Tue Apr 8th, 2016</span></span>
+        					</div> <!-- End col -->
+        				</div> <!-- End row -->
+        				<div class="row">
+		        			<div class="col-sm-12 col-xs-12">
+		        					<div class="form-group">
+		        						<label for="change-car">CHANGE BUS </label>
+		        							<select class="form-control">
+						      					<option value="toyota-innova">Toyota Innova</option>
+						      					<option value="toyota-innova">Toyota Innova</option>
+						      					<option value="toyota-innova">Toyota Innova</option>
+						      					<option value="toyota-innova">Toyota Innova</option>
+					      					</select>	
+		        					</div> <!-- End form-group -->
+
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="pick-up-location">PICK-UP LOCATION</label>
+				        									<input type="text" class="form-control" placeholder="Pick up Location" value="Naia Airport">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="drop-location">DROP LOCATION</label>
+				        									<select name="drop-location" class="form-control">
+				        										<option value="Cubao">Cubao</option>
+				        										<option value="Cubao">Cubao</option>
+				        										<option value="Cubao">Cubao</option>
+				        									</select>
+				        							</div> <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="pick-up-date">PICK-UP Date</label>
+				        								<input type="text" class="form-control" placeholder="Pick-up Date" value="Apr 22, 2016">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="pick-up-time">PICK-UP Time</label>
+				        									<select name="pick-up-time" class="form-control">
+				        										<option value="11.00-AM">11.00 AM</option>
+				        										<option value="11.00-AM">11.00 AM</option>
+				        										<option value="11.00-AM">11.00 AM</option>
+				        									</select>
+				        							</div> <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="No-of-Adults">NUMBER OF ADULTS</label>
+				        									<input type="text" class="form-control" placeholder="Number of Adults" value="5 Adults">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="No-of-children">NUMBER OF CHILDREN (0-12 yrs old)</label>
+				        									<input type="text" class="form-control" placeholder="Number of Children" value="3 Childrens">
+				        							</div>  <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+
+		        					<div class="form-group">
+		        						<div class="row">
+		        							<div class="col-sm-12 col-xs-12">
+		        								<label for="No-of-Adults">DESCRIPTION</label>
+		        								<textarea class="form-control" placeholder="Please provide your transportation details"></textarea>
+		        							</div>	<!-- End col -->
+		        						</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+
+		        					<a href="#" data-target="#confirmModal" data-toggle="modal" class="btn btn-sm btn-yellow transferPopup">Add to Itinerary</a>
+
+		        			</div> <!-- End col -->
+		        		</div> <!-- End row -->
+
+		        	
+        			</div> <!-- End carTransportUserForm -->
+
+        			<div id="trainTranportUserForm" class="transportForm">
+        				<div class="row">
+		        			<div class="col-sm-12 col-xs-12">
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="pick-up-location">ORIGIN LOCATION</label>
+				        									<input type="text" class="form-control" placeholder="Origin Location" value="Naia Airport">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="drop-location">DESTINATION LOCATION</label>
+				        									<select name="drop-location" class="form-control">
+				        										<option value="Cubao">Cubao</option>
+				        										<option value="Cubao">Cubao</option>
+				        										<option value="Cubao">Cubao</option>
+				        									</select>
+				        							</div> <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="pick-up-date">DEPARTURE DATE</label>
+				        								<input type="text" class="form-control" placeholder="Departure Date" value="Apr 22, 2016">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="Available-time">AVAILABLE TIME</label>
+				        									<select name="pick-up-time" class="form-control">
+				        										<option value="11.00-AM">11.00 AM</option>
+				        										<option value="11.00-AM">11.00 AM</option>
+				        										<option value="11.00-AM">11.00 AM</option>
+				        									</select>
+				        							</div> <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="No-of-Adults">NUMBER OF ADULTS</label>
+				        									<input type="text" class="form-control" placeholder="Number of Adults" value="5 Adults">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="No-of-children">NUMBER OF CHILDREN (0-12 yrs old)</label>
+				        									<input type="text" class="form-control" placeholder="Number of Children" value="3 Childrens">
+				        							</div>  <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+
+		        					<div class="row">
+					        			<div class="col-sm-6 col-xs-12">
+					        				<div class="vehicle-info">
+					      							<span class="info">Train Info</span>
+							        				<span class="vehicle-name">Train Number: A3024 </span>
+							        				<span>Journey Time: 8hrs</span>
+							        				<span>Cost per adult: 180 pesos</span>
+							        				<span>Cost per child: 140 pesos</span>
+					        				</div> <!-- End Vehicle Info -->
+					        				<a href="#" data-target="#confirmModal" data-toggle="modal" class="btn btn-sm btn-yellow transferPopup">Add to Itinerary</a>
+					        			</div> <!-- End col -->
+		        					</div> <!-- End row -->
+
+
+		        			</div> <!-- End col -->
+		        		</div> <!-- End row -->
+        			</div> <!-- End carTransportUserForm -->
+        			<div id="ferryTranportUserForm" class="transportForm">
+        				<div class="row">
+		        			<div class="col-sm-12 col-xs-12">
+		        					
+
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="pick-up-location">ORIGIN  PORT LOCATION</label>
+				        									<input type="text" class="form-control" placeholder="Pick up Location" value="Naia Airport">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="drop-location">DESTINATION PORT LOCATION</label>
+				        									<select name="drop-location" class="form-control">
+				        										<option value="Cubao">Cubao</option>
+				        										<option value="Cubao">Cubao</option>
+				        										<option value="Cubao">Cubao</option>
+				        									</select>
+				        							</div> <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="pick-up-date"> DEPARTURE DATE</label>
+				        								<input type="text" class="form-control" placeholder="Departure Date" value="Apr 22, 2016">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="pick-up-time">Available Time</label>
+				        									<select name="pick-up-time" class="form-control">
+				        										<option value="11.00-AM">11.00 AM</option>
+				        										<option value="11.00-AM">11.00 AM</option>
+				        										<option value="11.00-AM">11.00 AM</option>
+				        									</select>
+				        							</div> <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+
+		        					<div class="form-group">
+		        							<div class="row">
+		        									<div class="col-sm-6 col-xs-12">
+				        								<label for="No-of-Adults">NUMBER OF ADULTS</label>
+				        									<input type="text" class="form-control" placeholder="Number of Adults" value="5 Adults">
+				        							</div>  <!-- End col -->
+				        							<div class="col-sm-6 col-xs-12">
+				        									<label for="No-of-children">NUMBER OF CHILDREN (0-12 yrs old)</label>
+				        									<input type="text" class="form-control" placeholder="Number of Children" value="3 Childrens">
+				        							</div>  <!-- End col -->
+		        							</div> <!-- End row -->
+		        					</div> <!-- End form group -->
+		        			</div> <!-- End col -->
+		        		</div> <!-- End row -->
+
+		        		<div class="row">
+		        			<div class="col-sm-6 col-xs-12">
+		        					<img class="vehicle-thumb" src="assets/images/vehicle/ferry.jpg" alt="ferry">
+		        			</div> <!-- End col -->
+		        			<div class="col-sm-6 col-xs-12">
+		        				<div class="vehicle-info">
+		      							<span class="info">Ferry Info</span>
+				        				<span>Ferry Number: A3024</span>
+				        				<span>Journey Time: 8hrs</span>
+				        				<span>Cost per adult: 180 pesos</span>
+				        				<span>Journey Time: 8hrs</span>
+				        				<span>Cost per child: 140 pesos</span>
+		        				</div> <!-- End Vehicle Info -->
+		        				<a href="#" data-target="#confirmModal" data-toggle="modal" class="btn btn-sm btn-yellow mtb-20 transferPopup">Add to Itinerary</a>
+		        			</div> <!-- End col -->
+		        		</div> <!-- End row -->
+        			</div> <!-- End carTransportUserForm -->
+        		</form> <!-- End form -->
+        	</div> <!-- End Booking Form -->
+      </div> <!-- End modal Body -->
+    </div> <!-- End Modal Content -->
+  </div> <!-- End Modal Dialog -->
+</div> <!-- End Modal Car-->
+
+
+<div class="modal fade" id="flightBookingForm" tabindex="-1" role="dialog" aria-labelledby="flightBookingForm">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header this">
@@ -813,14 +3118,6 @@
 											          			ONE WAY
 											           </label>
 											</li>
-											<li>
-												<input type="radio" class="form-control" id="round" name="flight-type">
-					                     		<label for="round"> 
-					                     		  <div class="radio-div">
-										         		 <span class="fa fa-circle"></span>
-										          </div> 
-										          ROUND TRIP
-											</li>
 	        					</ul>
 	        			</div> <!-- End col sm 12 -->
         			</div> <!-- End row -->
@@ -831,12 +3128,8 @@
         							<div class="row">
         									<div class="col-sm-6 col-xs-12">
 						        					<label for="departure">DEPARTURE </label>
-				        							<select class="form-control">
-								      					<option value="Manila">Manila</option>
-								      					<option value="Manila">Manila</option>
-								      					<option value="Manila">Manila</option>
-								      					<option value="Manila">Manila</option>
-							      					</select>	
+						        					<input type="text" class="form-control" placeholder="Departure" value="Manila">
+				        							
 		        							</div>  <!-- End col -->
 		        							<div class="col-sm-6 col-xs-12">
 		        									<label for="arrival">ARRIVAL</label>
@@ -852,12 +3145,9 @@
         					<div class="form-group">
         							<div class="row">
         									<div class="col-sm-6 col-xs-12">
-		        									<label for="travel-date">TRAVEL DATE</label>
-		        									<select name="pick-up-date" class="form-control">
-		        										<option value="Apr-22-2016">Apr 22, 2016</option>
-		        										<option value="Apr-22-2016">Apr 22, 2016</option>
-		        										<option value="Apr-22-2016">Apr 22, 2016</option>
-		        									</select>
+		        									<label for="travel-date">DEPARTURE DATE</label>
+		        									<input type="text" class="form-control" placeholder="Departure Date" value="Apr 22, 2016">
+		        									
 		        							</div>  <!-- End col -->
 		        							<div class="col-sm-6 col-xs-12">
 		        									<label for="travel-class">TRAVEL CLASS</label>
@@ -868,47 +3158,20 @@
 		        							</div> <!-- End col -->
         							</div> <!-- End row -->
         					</div> <!-- End form group -->
-
-        					
-
-
-        					<div class="form-group">
-        							<div class="row">
-        									<div class="col-sm-6 col-xs-12" id="roundForm">
-		        									<label for="travel-date">ARRIVAL DATE</label>
-		        									<select name="pick-up-date" class="form-control mb-10">
-		        										<option value="Apr-22-2016">Apr 22, 2016</option>
-		        										<option value="Apr-22-2016">Apr 22, 2016</option>
-		        										<option value="Apr-22-2016">Apr 22, 2016</option>
-		        									</select>
-		        							</div>  <!-- End col -->
-
-        									<div class="col-sm-6 col-xs-12">
-		        								<label for="No-of-Adults">NUMBER OF ADULTS</label>
-		        									<input type="text" class="form-control mb-10" placeholder="Number of Adults" value="5 Adults">
-		        							</div>  <!-- End col -->
-		        							<div class="col-sm-6 col-xs-12">
-		        									<label for="No-of-children">NUMBER OF CHILDREN (0-12 yrs old)</label>
-		        									<input type="text" class="form-control" placeholder="Number of Children" value="3 Childrens">
-		        							</div>  <!-- End col -->
-		        							</div> <!-- End col -->
-        							</div> <!-- End row -->
-        					</div> <!-- End form group -->
-
-
         			</div> <!-- End col -->
         		</div> <!-- End row -->
 
 	        		<div class="row">
 	        			<div class="col-sm-12 col-xs-12">
-	        				<table class="table flight-info-table" id="onewayFlightTable">
+	        				<div class="table-responsive">
+	        						<table class="table flight-info-table" id="onewayFlightTable">
 	        					<thead>
 	        						<tr>
-	        							<th>Airline</th>
-	        							<th>Deaprt</th>
-	        							<th>Arrive</th>
-	        							<th>Duration</th>
-	        							<th>Price</th>
+	        							<th class="col-sm-1">Airline</th>
+	        							<th class="col-sm-4">Departure</th>
+	        							<th class="col-sm-1">Arrive</th>
+	        							<th class="col-sm-2">Duration</th>
+	        							<th class="col-sm-3">Price</th>
 	        						</tr>
 	        					</thead>
 	        					<tbody>
@@ -927,7 +3190,7 @@
 	        							<td>
 	        									<span class="black-bold">$2,457</span>
 	        								<a href="#"><span class="link">See Details</span></a>
-	        								<a href="#" class="btn btn-sm btn-yellow">Add to Itinerary</a>
+	        								<a href="#" data-target="#confirmModal" data-toggle="modal" class="btn btn-sm btn-yellow flightPopup">Add to Itinerary</a>
 	        							</td>
 	        						</tr>
 
@@ -945,59 +3208,15 @@
 	        							<td>
 	        								<span class="black-bold">$2,457</span>
 	        								<a href="#"><span class="link">See Details</span></a>
-	        								<a href="#" class="btn btn-sm btn-yellow">Add to Itinerary</a>
+	        								<a href="#" data-target="#confirmModal" data-toggle="modal" class="btn btn-sm btn-yellow flightPopup">Add to Itinerary</a>
 	        							</td>
 	        						</tr>
 	        					</tbody>
 	        				</table>
 
-
-
-	        				<table class="table flight-info-table" id="roundFlightTable">
-	        					<thead>
-	        						<tr>
-	        							<th>Airline</th>
-	        							<th>Deaprt</th>
-	        							<th>Arrive</th>
-	        							<th>Duration</th>
-	        							<th>Price</th>
-	        						</tr>
-	        					</thead>
-	        					<tbody>
-	        						<tr>
-	        							<td><img src="assets/images/airline/cebu.png" alt="cebu"></td>
-	        							<td>
-			        							
-	        									<span class="block"> 11.50</span>
-			        							<span class="additional-flight-info mb-10"> CEB &rarr; MNL </span>
-
-			        							<span class="block"> 08:15 </span>
-	        									<span class="additional-flight-info"> MNL &rarr; CEB </span>
-			        							
-			        							
-	        							</td>
-	        							<td>
-	        							<span class="block">1:05</span>
-	        								<span class="block">09:30</span>
-	        							</td>
-	        							<td>
-	        								
-	        								<span class="block">1h 15m</span>
-	        								<span class="additional-flight-info mb-10">Non-stop</span>
-
-	        								<span class="block">1h 15m</span>
-	        								<span class="additional-flight-info">Non-stop</span>
-	        								
-	        							</td>
-	        							<td>
-	        									<span class="black-bold">$2,457</span>
-	        								<a href="#"><span class="link">See Details</span></a>
-	        								<a href="#" class="btn btn-sm btn-yellow">Add to Itinerary</a>
-	        							</td>
-	        						</tr>
-	        					</tbody>
-	        				</table>
-	        				<span class="booking-author">Booking through Travelfusion.com <span class="fa fa-info-circle red-icon"></span></span>
+	        					
+	        				</div> <!-- End Table Responsive -->
+	        				<span class="booking-source">Booking through Travelfusion.com <span class="fa fa-info-circle"></span></span>
 	        			</div> <!-- End col -->
 	        		</div> <!-- End row -->
         		</form> <!-- End form -->
@@ -1005,52 +3224,305 @@
       </div> <!-- End modal Body -->
     </div> <!-- End Modal Content -->
   </div> <!-- End Modal Dialog -->
-</div> <!-- End Modal -->
+</div> <!-- End Modal Flight -->
 
-<!-- End Flight Modal -->
+<!-- Start Login Modal -->
+<div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="loginForm">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header user-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        	<h4>Login</h4>
+      </div>
+      <div class="modal-body">
+      	<div class="user-form">
+      			<form action="#">
+      				<div class="form-group">
+      					<label for="email">YOUR EMAIL</label>
+      					<input type="text" class="form-control" placeholder="Your Email Address" required>
+      				</div> <!-- End form group -->
+
+
+      				<div class="form-group">
+      					<label for="password">PASSWORD</label>
+      					<input type="password" class="form-control" placeholder="Password Please" required>
+      				</div> <!-- End form group -->
+
+      				<div class="form-group">
+      					<button class="btn btn-action brand-btn">Login</button>
+      				</div> <!-- End form group -->
+
+      				<div class="form-group">
+      					<a href="#resetForm" data-toggle="modal" class="btn btn-action forgot"  onclick="hideThis()">Forgot Password ?</a>
+      				</div> <!-- End form group -->
+
+      				<div class="form-group">
+      						<span class="alter-sigin-text">OR SIGN IN WITH</span>
+      				</div> <!-- End Form Group -->
+
+      				<div class="form-group">
+      						<a href="#" class="btn btn-action btn-facebook"><span class="fa fa-facebook fb"></span> Facebook</a>
+      				</div> <!-- End Form Group -->
+
+      				<div class="form-group">
+      						<span class="not-having-ac">Have n&#39;t Account ? Sign Up for Travel Planner </span>
+      				</div> <!-- End Form Group -->
+
+      			</form> <!-- End form -->
+      	</div> <!-- End Login Form -->
+      </div> <!-- End modal Body -->
+    </div> <!-- End Modal Content -->
+  </div> <!-- End Modal Dialog -->
+</div> <!-- End Login Modal -->
+
+
+<!-- set up the modal to start hidden and fade in and out -->
+<div id="confirmModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- dialog body -->
+
+      <div id="flightConfirm">
+      	 <div class="modal-body">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        This flight added in your itinerary. Would you like to book transfer
+	      </div>
+	      <!-- dialog buttons -->
+	      <div class="modal-footer">
+		      <button type="button" class="btn btn-default dismissBtn" data-dismiss="modal" target="_blank">No</button>
+		      <button type="button" class="btn btn-success dismissBtn" data-dismiss="modal" target="_blank" data-target="#carBookingForm" data-toggle="modal">Yes</button>
+	      </div> <!-- End Modal Footer -->
+      </div> <!-- End Flight Confirm -->
+
+
+      <div id="transferConfirm">
+      	 <div class="modal-body">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	       		 Transfer added in your itinerary. Would you like to book Hotel ?
+	      </div>
+	      <!-- dialog buttons -->
+	      <div class="modal-footer">
+		      <button type="button" class="btn btn-default dismissBtn" data-dismiss="modal" target="_blank">No</button>
+		      <button type="button" class="btn btn-success dismissBtn" data-dismiss="modal" target="_blank" data-target="#hotelListModal" data-toggle="modal">Yes</button>
+	      </div> <!-- End Modal Footer -->
+      </div> <!-- End Flight Confirm -->
+
+
+      <div id="hotelConfirm">
+      	 <div class="modal-body">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        This hotel added in your itinerary. Would you like to book tour ?
+	      </div>
+	      <!-- dialog buttons -->
+	      <div class="modal-footer">
+		      <button type="button" class="btn btn-default dismissBtn" data-dismiss="modal" target="_blank">No</button>
+		      <button type="button" class="btn btn-success dismissBtn" data-dismiss="modal" target="_blank" data-target="#spotListModal" data-toggle="modal">Yes</button>
+	      </div> <!-- End Modal Footer -->
+      </div> <!-- End Flight Confirm -->
+
+
+
+      <div id="tourConfirm">
+      	 <div class="modal-body">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	              This tour added in your itinerary. Would you like to book another tour ?
+	      </div>
+	      <!-- dialog buttons -->
+	      <div class="modal-footer">
+		      <button type="button" class="btn btn-default dismissBtn" data-dismiss="modal" target="_blank">No</button>
+		      <button type="button" class="btn btn-success dismissBtn" data-dismiss="modal" target="_blank" data-target="#spotListModal" data-toggle="modal">Yes</button>
+	      </div> <!-- End Modal Footer -->
+      </div> <!-- End Flight Confirm -->
+
+
+     
+    </div>
+  </div>
+</div> <!-- End Confirm Modal -->
+
+
+
+
+
+
 	<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 	<script src="assets/bower_components/bxslider-4/dist/jquery.bxslider.min.js"></script>
+	<script src="assets/js/bootbox.js"></script>
+	<script src="assets/js/scripts.js"></script>
 	<script src="live.js"></script>
 
 	<script>
 
+			function roomTypeChange () {
+					var room_type = document.getElementById('roomTypeDropdown').value;
+					switch (room_type) {
+						case 'single_room':
+							$('.doubleRoom').fadeOut();
+							$('.singleRoom').fadeIn();
+							break;
+
+						case 'double_room': 
+							$('.doubleRoom').fadeIn();
+							$('.singleRoom').fadeOut();
+							break;
+					} 
+				}
+
+
 			jQuery(document).ready(function($) {
-				$('#toggleMenu').click(function(){
-						$('#sidebar').toggleClass('visible-sidebar');
-						$('#mainBlock').toggleClass('move-right');
+
+				$('.doubleRoom').fadeOut();
+
+				$('#flightConfirm .dismissBtn').click(function(event) {
+						$('#flightBookingForm').modal('hide');
+						$('#carBookingForm').modal('hide');
 				});
 
-			$('#oneWay').click(function() {
-				$('#roundForm').hide();
-				$('#roundFlightTable').hide();
-				$('#onewayFlightTable').show();
-				console.log('One Way selected');
-			});
-			$('#round').click(function() {
-				$('#roundForm').show();
-				$('#roundFlightTable').show();
-				$('#onewayFlightTable').hide();
-				console.log('Round Trip selected');
-			})
 
-
-
-				$('#bxsliderClick').one('shown.bs.tab', function (e) {
-				    $('#hotelSlider').bxSlider({
-				    		nextSelector: '#slider-next',
-							  prevSelector: '#slider-prev',
-							  nextText: '<span class="fa fa-chevron-right"></span>',
-							  prevText: '<span class="fa fa-chevron-left"></span>',
-						    pager: false
-						});
+				$('#transferConfirm .dismissBtn').click(function(event) {
+					$('#carBookingForm').modal('hide');
 				});
-				
+
+
+				$('#hotelConfirm .dismissBtn').click(function(event) {
+						$('#hotelListModal').modal('hide');
+						$('#hotelBookingForm').modal('hide');
+				});
+
+				$('#tourConfirm .dismissBtn').click(function(event) {
+						$('#tourBookingForm').modal('hide');
+				});
+
+
+
+
+				$('.flightPopup').click(function(event) {
+						$('#flightConfirm').show();
+						$('#transferConfirm').hide();
+						$('#hotelConfirm').hide();
+						$('#tourConfirm').hide();
+				});
+
+
+				$('.transferPopup').click(function(event) {
+						$('#transferConfirm').show();
+						$('#flightConfirm').hide();
+						$('#hotelConfirm').hide();
+						$('#tourConfirm').hide();
+				});
+
+
+				$('.hotelPopup').click(function(event) {
+						$('#hotelConfirm').show();
+						$('#transferConfirm').hide();
+						$('#flightConfirm').hide();
+						$('#tourConfirm').hide();
+				});
+
+				$('.tourPopup').click(function(event) {
+						$('#tourConfirm').show();
+						$('#hotelConfirm').hide();
+						$('#transferConfirm').hide();
+						$('#flightConfirm').hide();
+				});
+
+			
+
+				/* Tab Active onClick*/
+				$('#tabList > li').click(function() {
+					$(this).siblings('li').removeClass('active');
+					$(this).addClass('active');
+				});
+
+				$('#dayTabList > li').click(function() {
+						$(this).siblings('li').removeClass('active-tab');
+						$(this).addClass('active-tab');
+				});
+
+				/* Tooltip */
+				  $('[data-toggle="tooltip"]').tooltip();
+
+
+				 
+
+
+				  $('.bookingForm').click(function() {
+				  			$('#hotelListModal').modal('hide');
+
+				  			setTimeout(function(){
+
+				  				$('#hotelSlider').bxSlider({
+						    		nextSelector: '#slider-next',
+									  prevSelector: '#slider-prev',
+									  nextText: '<span class="fa fa-chevron-right"></span>',
+									  prevText: '<span class="fa fa-chevron-left"></span>',
+								    pager: false
+								});
+
+				  				 
+								}, 300);
+
+
+
+				  });
+
+				  $('.tourBookingForm').click(function() {
+				  		$('#spotListModal').modal('hide');
+
+				  	 /* Bx Slider */
+				  	 setTimeout(function () {
+				  	 		 $('#spotSlider').bxSlider({
+						    		nextSelector: '#spotSlider-next',
+									  prevSelector: '#spotSlider-prev',
+									  nextText: '<span class="fa fa-chevron-right"></span>',
+									  prevText: '<span class="fa fa-chevron-left"></span>',
+								    pager: false
+								});
+
+				  	 },500);
+						 
+
+				  });
+
+
+				  $('#spotListTrigger').click(function(event) {
+				  		$('#tourBookingForm').modal('hide');
+				  });
+
+
+				  $('#hotelListTrigger').click(function(event) {
+				  			$('#hotelBookingForm').modal('hide');
+				  });
+
+				  /* Edit Trigger */
+				  $('.hotelEditFormTrigger').click(function(event) {
+				  		$('#hotelBookingForm .info-tab-list > li').removeClass('active');
+				  		$('#hotelBookingForm .info-tab-list > li#hotelFormTab').addClass('active');
+				  		$('#hotelBookingForm #bookHotel').addClass('active');
+
+				  		$('#hotelBookingForm #hotelDetails').removeClass('active');
+				  		$('#hotelBookingForm .tab-content #bookHotel').addClass('active');
+
+
+				  		$('#hotelDetailsTab').one('shown.bs.tab', function (e) {
+
+				  				$('#hotelSlider').bxSlider({
+						    		nextSelector: '#slider-next',
+									  prevSelector: '#slider-prev',
+									  nextText: '<span class="fa fa-chevron-right"></span>',
+									  prevText: '<span class="fa fa-chevron-left"></span>',
+								    pager: false
+								});
+							});
+				  });
 
 
 
 			});
-					
+
+
+			function resizeEvent () {
 			var w = window,
 			    d = document,
 			    e = d.documentElement,
@@ -1059,16 +3531,107 @@
 			    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
 
 			    if (x > 900) {
-			    	document.getElementById('mapArea').style.height = y + 'px';
+			    	document.getElementById('mapArea').style.height = (y -10) + 'px';
 			    }
 			    else if (x < 560){
 			    		var a = document.getElementById('mapArea').style.height = 400 + 'px';
-							console.log(a);
 			    }
 			    else {
 			    	var b = document.getElementById('mapArea').style.height = y + 'px';
 						console.log(b);
 			    }
+
+
+			    if (x > 900) {
+			    	document.getElementById('mapBlock').style.height = (y-10) + 'px';
+			    }
+			    else if (x < 560){
+			    		var a = document.getElementById('mapBlock').style.height = 600 + 'px';
+			    }
+			    else {
+			    	var b = document.getElementById('mapBlock').style.height = y + 'px';
+			    }
+
+			    var h = (y-255) + 'px';
+
+			}
+
+			resizeEvent();
+					
+
+		
+
+			    $(document).ready(function() {
+			    		var w = window;
+			    		var y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+			    		var w = $( window ).width();
+			    		var h = (y-255) + 'px';
+
+			    		function maxHeight () {
+				    		if (w > 480) {
+				    			$('.spotHolder').css('max-height',h);
+				    		}
+
+					    		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+									 	$('.spotHolder').css('max-height', 400);
+									}
+			    		}
+			    		maxHeight();
+
+			  		  window.addEventListener('resize', maxHeight, resizeEvent);
+			    	
+			    	 
+
+
+			    	$('#viewMapTrigger').click(function(e) {
+			    			e.preventDefault();
+					
+				      $(this).text(function(i, text){
+				          return text === "View on Map" ? "Itinerary Map" : "View on Map";
+				      });
+			
+	    		  	$('#mapArea').slideToggle();
+	    		    $('#mapBlock').slideToggle();
+			    	});
+
+
+			    	/* Transpot Radio Option */
+
+			    	$('#trainTranportUserForm').fadeOut(0);		
+			 			$('#ferryTranportUserForm').fadeOut(0);
+			 			$('#busTranportUserForm').fadeOut(0);
+
+			    	$('#carRadioOption').click(function() {		
+			 					$('#carTranportUserForm').show();		
+			 					$('#busTranportUserForm').hide();		
+			 					$('#trainTranportUserForm').hide();		
+			 					$('#ferryTranportUserForm').hide();		
+			 					
+			 				});		
+			 				$('#trainRadioOption').click(function() {		
+			 					$('#trainTranportUserForm').show();		
+			 					$('#carTranportUserForm').hide();	
+			 					$('#busTranportUserForm').hide();	
+			 					$('#ferryTranportUserForm').hide();	
+			 				});
+
+			 				$('#ferryRadioOption').click(function() {		
+			 					$('#ferryTranportUserForm').show();	
+			 					$('#trainTranportUserForm').hide();		
+			 					$('#carTranportUserForm').hide();		
+			 					$('#busTranportUserForm').hide();
+			 				});
+
+			 				$('#busRadioOption').click(function() {		
+			 					$('#busTranportUserForm').show();
+			 					$('#ferryTranportUserForm').hide();	
+			 					$('#trainTranportUserForm').hide();		
+			 					$('#carTranportUserForm').hide();	
+			 				});	
+			    });
+			    
+
+
 	</script>
 
 </body>

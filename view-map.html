@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<title>Travel Planner</title>
+
+	<link rel="shortcut icon" href="assets/images/favicon.png">
+	
+	<link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="assets/bower_components/bxslider-4/dist/jquery.bxslider.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+<aside class="sidebar" id="sidebar">
+		<span id="closeTrigger" class="fa fa-close"></span>
+		<header>
+			<div class="logo-area">
+				<a href="index.html"><img src="assets/images/logo.png" alt="Travel Plan"></a>
+			</div> <!-- End Logo Area -->
+		</header>
+
+		<div class="user-info">
+			<a href="account.html">
+				<img src="assets/images/user.jpg" alt="John Doe">
+
+				<div class="info">
+						<span class="block bold">Welcome</span>
+						<span>My Account</span>
+				</div> <!-- End Info -->
+			</a>
+		</div> <!-- End -->
+
+		<nav>
+			<ul class="sidebar-nav" id="sidebarLink">
+				<li class="active-nav"><a href="index.html">  <span class="fa fa-calendar nav-icon"></span> ITINERARY</a></li>
+				<li><a href="trips.html"> <span class="fa fa-map-marker nav-icon"></span> TRIPS</a></li>
+				<li><a href="payment-history.html"> <span class="fa fa-undo nav-icon"></span> PAYMENT HISTORY</a></li>
+			</ul>
+		</nav>
+</aside> <!-- End aside -->
+	
+
+	<div class="container-fluid container-margin">
+		<div class="row">
+			<div class="col-md-8 col-sm-12 col-xs-12">
+					<header class="content-header">
+							<div class="toggle-menu" id="toggleMenu">
+								<span class="fa fa-bars"></span>
+							</div> <!-- End Toggle Menu -->
+							<ul class="inline-list header-link">
+								<li> <a href="#"><span class="tab-name"> Itinerary</a></span></li>
+								<li><a href="#" class="btn btn-gray">View on Map</a></li>
+							</ul>
+
+							
+							<div class="access-link">
+									<ul class="inline-list">
+										<li><a href="#loginForm" data-target="#loginForm" data-toggle="modal" aria-controls="loginForm">
+										 <span class="fa fa-sign-in hidden-xs"></span> Login <span class="hidden-xs">|</span> </a></li>
+										<li class="hidden-xs"><a href="#"> <span class="fa fa-question"></span> Help</a></li>
+									</ul>
+							</div> <!-- End -->
+					</header>
+
+				
+
+
+		<section class="trip-section">
+			<div class="row">
+				<div class="col-sm-12">
+						<ul class="day-tab" role="tablist" id="dayTabList">
+							<li role="presentation" class="active-tab active" data-toggle="tab" role="tab" aria-controls="day_01"  data-target="#day_01">Day 01</a></li>
+							<li data-toggle="tab" data-target="#day_02" role="tab" aria-controls="day_02"> Day 02 </li>
+							<li data-toggle="tab" data-target="#day_03" role="tab" aria-controls="day_03"> Day 03 </li>
+							<li data-toggle="tab" data-target="#day_04" role="tab" aria-controls="day_04"> Day 04 </li>
+							<li data-toggle="tab" data-target="#day_05" role="tab" aria-controls="day_05"> Day 05 </li>
+							<li data-toggle="tab" data-target="#day_06" role="tab" aria-controls="day_06"> Day 06 </li>
+						</ul>
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="day_01">
+							<div class="row">
+								<div class="col-sm-3">
+									<div class="trip-info">
+										<span class="trip-name">Our Trip 2016 <span class="fa fa-pencil trip-edit-icon"></span></span>
+										<span class="period">8th April to 16th April 2016</span>
+		      			
+									</div> <!-- End Trip Duration -->
+								</div> <!-- End col 3 -->
+								<div class="col-sm-9">
+										<div class="action-block">
+												<button class="btn brand-btn mr-10">Send Package Request <span class="fa fa-chevron-right chevron-icon"></span></button>
+												<select id="city" class="form-control city-option">
+													<option value="0">Select City</option>
+													<option value="oslo">Oslo</option>
+													<option value="chicago">Chicago</option>
+													<option value="london">London</option>
+													<option value="abu-dhabi">Abu Dhabi</option>
+													<option value="capetown">Capetown</option>
+													<option value="berlin">Berlin</option>
+												</select>
+										</div> <!-- End Action Block -->
+								</div> <!-- End col 9 -->
+							</div> <!-- End row -->
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="tour-details">
+										
+											<ul class="info-tab-list" id="tabList">
+												<li role="presentation" data-target="#spotListModal" aria-controls="spotListModal" data-toggle="modal">
+
+												 <span class="fa fa-map-marker mr-5"></span> Tour </li>
+
+												<li role="presentation" data-target="#hotelListModal" aria-controls="hotelListModal" data-toggle="modal">
+												<span class="fa fa-bed mr-5"></span> Hotels</li>
+
+												<li role="presentation" data-target="#carBookingForm" aria-controls="carBookingForm" data-toggle="modal"> 
+												<span class="fa fa-car mr-5"></span> Car Rental </li>
+
+												<li role="presentation" data-target="#flightBookingForm" aria-controls="flightBookingForm" data-toggle="modal">
+												<span class="fa fa-plane mr-5"></span>  Flights </li>
+											</ul>
+										    <div class="">
+										  	 		<ul class="spot-li">
+															<li class="border-yellow">
+																<div class="row">
+																		<div class="col-sm-8 col-xs-8">
+																				<span class="spot-name"> <span class="fa fa-bed spot-icon bg-yellow"></span> Check in at Shangrila Hotel</span>
+																		</div> <!-- End col 8 -->
+																		<div class="col-sm-4 col-xs-4">
+																				<ul class="inline-list action-list">
+																					<li><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingFormA"></span></li>
+																					<li> <span class="trash-icon fa fa-trash"></span></li>
+																				</ul>
+																		</div> <!-- End col 4 -->
+																</div> <!-- End row	 -->
+																<div class="row">	
+																	<div class="col-sm-12">
+																			<div class="spot-img">
+																				<img src="assets/images/spot/1.jpg" alt="Cape town">
+																			</div> <!-- End Spot Name -->
+
+																			<div class="spot-quick-info">
+																				<h4><span class="spot-name"> Shangrila Hotel </span></h4>
+																				<span class="spot-desc">Lorem imsum doler somet</span>
+																				<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																			</div> <!-- End Spot Quick Info -->
+																			
+																	</div> <!-- End 8 -->
+																</div> <!-- End row -->
+															</li>
+
+										
+
+															<li>
+																<div class="row">
+																		<div class="col-sm-8 col-xs-8">
+																				<span class="spot-name"> <span class="fa fa-map-marker spot-icon"></span> Tour at Manila City</span>
+																		</div> <!-- End col 8 -->
+																		<div class="col-sm-4 col-xs-4">
+																				<ul class="inline-list action-list">
+																				<li><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																					<li><span class="trash-icon fa fa-trash"></span></li>
+																				</ul>
+																		</div> <!-- End col 4 -->
+																</div> <!-- End row	 -->
+																<div class="row">	
+																	<div class="col-sm-12">
+																			<div class="spot-img">
+																				<img src="assets/images/spot/2.jpg" alt="Cape town">
+																			</div> <!-- End Spot Name -->
+
+																			<div class="spot-quick-info">
+																				<h4><span class="spot-name">Manila City </span></h4>
+																				<span class="spot-desc">Lorem imsum doler somet</span>
+																				<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																			</div> <!-- End Spot Quick Info -->
+
+																			
+																	</div> <!-- End 8 -->
+																</div> <!-- End row -->
+															</li>
+
+															<li class="border-red">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="spot-name"> <span class="fa fa-car spot-icon bg-red"></span> Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm" "=""></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/3.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+														<li class="border-yellow">
+															<div class="row">
+																	<div class="col-sm-8 col-xs-8">
+																			<span class="spot-name"> <span class="fa fa-map-marker spot-icon bg-yellow"></span> Tour At Manila City</span>
+																	</div> <!-- End col 8 -->
+																	<div class="col-sm-4 col-xs-4">
+																			<ul class="inline-list action-list">
+																				<li><span class="edit-icon fa fa-pencil" data-toggle="modal" data-target="#hotelBookingForm"></span></li>
+																				<li> <span class="trash-icon fa fa-trash"></span></li>
+																			</ul>
+																	</div> <!-- End col 4 -->
+															</div> <!-- End row	 -->
+															<div class="row">	
+																<div class="col-sm-12">
+																		<div class="spot-img">
+																			<img src="assets/images/spot/1.jpg" alt="Cape town">
+																		</div> <!-- End Spot Name -->
+
+																		<div class="spot-quick-info">
+																			<h4><span class="spot-name">Manila City</span></h4>
+																			<span class="spot-desc">Lorem imsum doler somet</span>
+																			<span class="tour-cost">Total-cost: Ph 1600.00</span>
+																		</div> <!-- End Spot Quick Info -->
+																		
+																</div> <!-- End 8 -->
+															</div> <!-- End row -->
+														</li>
+
+													</ul>
+										  </div> <!-- End Tab Content -->
+									</div> <!-- End Tour Details -->
+								</div> <!-- End Col 12 -->
+							</div> <!-- End row -->
+						</div> <!-- End Day1 Tab -->
+
+						<div role="tabpanel" class="tab-pane" id="day_02">02</div> <!-- End Day1 Tab -->
+						<div role="tabpanel" class="tab-pane" id="day_03">03</div> <!-- End Day1 Tab -->
+						<div role="tabpanel" class="tab-pane" id="day_04">04</div> <!-- End Day1 Tab -->
+						<div role="tabpanel" class="tab-pane" id="day_05">05</div> <!-- End Day1 Tab -->
+						<div role="tabpanel" class="tab-pane" id="day_06">06</div> <!-- End Day1 Tab -->
+					</div> <!-- End Tab Content -->
+		  </div> <!-- End col 12 -->
+		</div> <!-- End row -->
+
+
+
+
+	</section> <!-- End Section -->
+			</div> <!-- End col 8 -->
+			<div class="col-md-4 col-sm-12 col-xs-12 set-padding">
+				<div class="view-map-block" id="mapBlock">
+						<li><img src="assets/images/icons/pin1.png" alt=""></li>
+						<li><img src="assets/images/icons/pin2.png" alt=""></li>
+						<li><img src="assets/images/icons/pin3.png" alt=""></li>
+						<li><img src="assets/images/icons/pin4.png" alt=""></li>
+				</div> <!-- End View Map -->
+			</div> <!-- End Col sm 4 -->
+		</div> <!-- End row -->
+	</div> <!-- End Container Fluid -->
+
+
+
+<!-- Start Login Modal -->
+<div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="loginForm">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header user-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        	<h4>Login</h4>
+      </div>
+      <div class="modal-body">
+      	<div class="user-form">
+      			<form action="#">
+      				<div class="form-group">
+      					<label for="email">YOUR EMAIL</label>
+      					<input type="text" class="form-control" placeholder="Your Email Address" required>
+      				</div> <!-- End form group -->
+
+
+      				<div class="form-group">
+      					<label for="password">PASSWORD</label>
+      					<input type="password" class="form-control" placeholder="Password Please" required>
+      				</div> <!-- End form group -->
+
+      				<div class="form-group">
+      					<button class="btn btn-action brand-btn">Login</button>
+      				</div> <!-- End form group -->
+
+      				<div class="form-group">
+      					<a href="#resetForm" data-toggle="modal" class="btn btn-action forgot"  onclick="hideThis()">Forgot Password ?</a>
+      				</div> <!-- End form group -->
+
+      				<div class="form-group">
+      						<span class="alter-sigin-text">OR SIGN IN WITH</span>
+      				</div> <!-- End Form Group -->
+
+      				<div class="form-group">
+      						<a href="#" class="btn btn-action btn-facebook"><span class="fa fa-facebook fb"></span> Facebook</a>
+      				</div> <!-- End Form Group -->
+
+      				<div class="form-group">
+      						<span class="not-having-ac">Have n&#39;t Account ? Sign Up for Travel Planner </span>
+      				</div> <!-- End Form Group -->
+
+      			</form> <!-- End form -->
+      	</div> <!-- End Login Form -->
+      </div> <!-- End modal Body -->
+    </div> <!-- End Modal Content -->
+  </div> <!-- End Modal Dialog -->
+</div> <!-- End Login Modal -->
+
+
+	<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="assets/js/scripts.js"></script>
+	<script src="live.js"></script>
+
+	<script>
+		
+			var w = window,
+			    d = document,
+			    e = d.documentElement,
+			    g = d.getElementsByTagName('body')[0],
+			    x = w.innerWidth || e.clientWidth || g.clientWidth,
+			    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+
+			    if (x > 900) {
+			    	document.getElementById('mapBlock').style.height = y + 'px';
+			    }
+			    else if (x < 560){
+			    		var a = document.getElementById('mapBlock').style.height = 400 + 'px';
+							console.log(a);
+			    }
+			    else {
+			    	var b = document.getElementById('mapBlock').style.height = y + 'px';
+						console.log(b);
+			    }
+	</script>
+
+
+
+</body>
+</html>
